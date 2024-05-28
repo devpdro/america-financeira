@@ -4,6 +4,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
+import styles from './navbar.module.scss'
+
 import logo from "@/assets/icon-todo.svg";
 import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
@@ -16,7 +18,7 @@ import planningImage from "@/assets/icon-calendar.svg";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { IconBaseProps } from "react-icons";  // Adicione este import
+import { IconBaseProps } from "react-icons"; // Adicione este import
 
 type NavItem = {
   label: string;
@@ -33,24 +35,24 @@ const navItems: NavItem[] = [
       {
         label: "Lista de Tarefas",
         link: "#",
-        iconImage: todoImage
+        iconImage: todoImage,
       },
       {
         label: "Calendário",
         link: "#",
-        iconImage: calendarImage
+        iconImage: calendarImage,
       },
       {
         label: "Lembretes",
         link: "#",
-        iconImage: remindersImage
+        iconImage: remindersImage,
       },
       {
         label: "Planejamento",
         link: "#",
-        iconImage: planningImage
-      }
-    ]
+        iconImage: planningImage,
+      },
+    ],
   },
   {
     label: "Empresa",
@@ -58,26 +60,26 @@ const navItems: NavItem[] = [
     children: [
       {
         label: "História",
-        link: "#"
+        link: "#",
       },
       {
         label: "Nosso Time",
-        link: "#"
+        link: "#",
       },
       {
         label: "Blog",
-        link: "#"
-      }
-    ]
+        link: "#",
+      },
+    ],
   },
   {
     label: "Carreiras",
-    link: "#"
+    link: "#",
   },
   {
     label: "Sobre",
-    link: "#"
-  }
+    link: "#",
+  },
 ];
 
 // Componente wrapper para estender IconBaseProps
@@ -99,49 +101,39 @@ export default function Navbar() {
   function openSideMenu() {
     setSideMenu(true);
   }
-  
+
   function closeSideMenu() {
     setSideMenu(false);
   }
 
   return (
-    <div className="mx-auto flex  w-full max-w-7xl justify-between px-4 py-5 text-sm">
+    <div className={styles.navbar}>
       {/* lado esquerdo */}
-      <section ref={animationParent} className="flex items-center gap-10">
+      <section ref={animationParent} className={styles['left-section']}>
         {/* logo */}
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" className="logo" />
         {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
-        <div className="hidden md:flex items-center gap-4 transition-all">
+        <div className={styles['nav-items']}>
           {navItems.map((d, i) => (
-            <Link
-              key={i}
-              href={d.link ?? "#"}
-              className="relative group px-2 py-3 transition-all"
-            >
-              <p className="flex cursor-pointer items-center gap-2 text-neutral-400 group-hover:text-black">
+            <Link key={i} href={d.link ?? "#"} className={styles['nav-link']}>
+              <p className={styles['link-text']}>
                 <span>{d.label}</span>
                 {d.children && (
-                  <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
+                  <IoIosArrowDown className={`${styles['arrow-icon']} ${styles['rotate-180']}`} />
                 )}
               </p>
 
               {/* dropdown */}
               {d.children && (
-                <div className="absolute right-0 top-10 hidden w-auto flex-col gap-1 rounded-lg bg-white py-3 shadow-md transition-all group-hover:flex">
+                <div className={styles.dropdown}>
                   {d.children.map((ch, i) => (
-                    <Link
-                      key={i}
-                      href={ch.link ?? "#"}
-                      className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-400 hover:text-black"
-                    >
+                    <Link key={i} href={ch.link ?? "#"} className={styles['dropdown-link']}>
                       {/* imagem */}
                       {ch.iconImage && (
-                        <Image src={ch.iconImage} alt="ícone do item" />
+                        <Image src={ch.iconImage} alt="ícone do item" className="icon-image" />
                       )}
                       {/* item */}
-                      <span className="whitespace-nowrap pl-3">
-                        {ch.label}
-                      </span>
+                      <span className={styles['link-label']}>{ch.label}</span>
                     </Link>
                   ))}
                 </div>
@@ -153,17 +145,12 @@ export default function Navbar() {
       </section>
 
       {/* lado direito */}
-      <section className="hidden md:flex items-center gap-8">
-        <button className="h-fit text-neutral-400 transition-all hover:text-black/90">
-          Login
-        </button>
-
-        <button className="h-fit rounded-xl border-2 border-neutral-400 px-4 py-2 text-neutral-400 transition-all hover:border-black hover:text-black/90">
-          Registrar
-        </button>
+      <section className={styles['right-section']}>
+        <button className={styles['login-btn']}>Login</button>
+        <button className={styles['register-btn']}>Registrar</button>
       </section>
 
-      <IconWithProps onClick={openSideMenu} className="cursor-pointer text-4xl md:hidden">
+      <IconWithProps onClick={openSideMenu} className={styles['menu-icon']}>
         <FiMenu />
       </IconWithProps>
     </div>
@@ -175,7 +162,10 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
     <div className="fixed left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/60 md:hidden">
       <div className="h-full w-[65%] bg-white px-4 py-4">
         <section className="flex justify-end">
-          <IconWithProps onClick={closeSideMenu} className="cursor-pointer text-4xl">
+          <IconWithProps
+            onClick={closeSideMenu}
+            className="cursor-pointer text-4xl"
+          >
             <AiOutlineClose />
           </IconWithProps>
         </section>
