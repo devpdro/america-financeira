@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.875rem;
+  background-color: #000040;
 }
 
 .left-section {
@@ -14,7 +15,7 @@
   gap: 2.5rem;
 
   .logo {
-    // Adicione estilos específicos para a logo, se necessário
+    width: 150px;
   }
 
   .nav-items {
@@ -26,6 +27,7 @@
       transition: all 0.3s;
 
       .nav-link {
+        border: 1px solid red;
         position: relative;
         padding: 0.75rem 0.5rem;
         transition: all 0.3s;
@@ -41,7 +43,6 @@
           &:hover {
             color: #000;
           }
-
           .arrow-icon {
             transition: all 0.3s;
           }
@@ -75,7 +76,7 @@
             }
 
             .icon-image {
-              // Adicione estilos específicos para a imagem do ícone, se necessário
+              width: 10px;
             }
 
             .link-label {

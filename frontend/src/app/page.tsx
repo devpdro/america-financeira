@@ -1,5 +1,4 @@
-import { Navbar } from "@/components/Common";
-import Header from "@/components/Common/Header/header";
+import { Navbar, Header } from "@/presentation/components/Common";
 
 export default function Home() {
   return (

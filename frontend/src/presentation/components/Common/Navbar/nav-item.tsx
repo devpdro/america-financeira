@@ -1,0 +1,51 @@
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+import { NavItem } from "@/presentation/@types";
+
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
+import { IoIosArrowDown } from 'react-icons/io';
+
+import styles from './nav-item.module.scss';
+
+const SingleNavItem = ({ label, link, children }: NavItem) => {
+  const [animationParent] = useAutoAnimate();
+  const [isItemOpen, setItem] = useState(false);
+
+  const toggleItem = () => {
+    setItem(!isItemOpen);
+  };
+
+  return (
+    <Link
+      ref={animationParent}
+      onClick={toggleItem}
+      href={link ?? "#"}
+      className={styles['single-nav-item']}
+    >
+      <p className={styles['item-label']}>
+        <span>{label}</span>
+        {children && (
+          <IoIosArrowDown
+            className={`${styles['arrow-icon']} ${isItemOpen && styles['rotate-180']}`}
+          />
+        )}
+      </p>
+
+      {isItemOpen && children && (
+        <div className={styles.dropdown}>
+          {children.map((ch, i) => (
+            <Link key={i} href={ch.link ?? "#"} className={styles['dropdown-link']}>
+              {ch.iconImage && <Image src={ch.iconImage} alt="ícone do item" className={styles['icon-image']} />}
+              <span className={styles['link-label']}>{ch.label}</span>
+            </Link>
+          ))}
+        </div>
+      )}
+    </Link>
+  );
+};
+
+export default SingleNavItem;
