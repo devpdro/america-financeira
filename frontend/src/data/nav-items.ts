@@ -2,7 +2,7 @@ import { NavItem } from "@/presentation/@types";
 
 const NavItems: NavItem[] = [
   {
-    label: "A América",
+    label: "América Financeira",
     link: "#",
     children: [
       {

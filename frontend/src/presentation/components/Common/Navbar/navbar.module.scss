@@ -1,12 +1,11 @@
 .navbar {
   max-width: 7xl;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   padding: 1.25rem 1rem;
   display: flex;
   justify-content: space-between;
   font-size: 0.875rem;
-  background-color: #000040;
 }
 
 .left-section {
@@ -27,7 +26,6 @@
       transition: all 0.3s;
 
       .nav-link {
-        border: 1px solid red;
         position: relative;
         padding: 0.75rem 0.5rem;
         transition: all 0.3s;
@@ -37,7 +35,8 @@
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          color: #737373;
+          color: #000000;
+          font-size: 1.1rem;
           transition: color 0.3s;
 
           &:hover {
