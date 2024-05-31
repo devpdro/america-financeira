@@ -6,7 +6,7 @@ import SingleNavItem from "@/presentation/components/Common/Navbar/nav-item";
 import { AiOutlineClose } from "react-icons/ai";
 import { IconBaseProps } from "react-icons";
 
-import styles from "@/presentation/components/Common/Navbar/nav-mobile.module.scss";
+import styles from "./nav-mobile.module.scss";
 
 type MobileNavProps = {
   closeSideMenu: () => void;

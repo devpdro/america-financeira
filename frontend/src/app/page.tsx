@@ -1,10 +1,9 @@
-import { Navbar, Header } from "@/presentation/components/Common";
+import { HomePage } from "@/presentation/pages";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      <Header />
+      <HomePage />
     </main>
   );
 }

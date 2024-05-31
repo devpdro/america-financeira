@@ -1,11 +1,12 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-import { NavItems } from "@/data";
+import { NavItems, NavLanguages } from "@/data";
 import { Images } from "@/presentation/assets";
 import NavMobile from "@/presentation/components/Common/Navbar/nav-mobile";
 
@@ -13,7 +14,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
 import { IconBaseProps } from "react-icons";
 
-import styles from "@/presentation/components/Common/Navbar/navbar.module.scss";
+import styles from "./navbar.module.scss";
 
 const IconWithProps = (
   props: IconBaseProps & { onClick?: () => void; className?: string }
@@ -80,8 +81,21 @@ export default function Navbar() {
       </section>
 
       <section className={styles["right-section"]}>
-        <button className={styles["login-btn"]}>Login</button>
-        <button className={styles["register-btn"]}>Registrar</button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20px"
+          height="20px"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            fill="#111928"
+            fillRule="evenodd"
+            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414"
+            clipRule="evenodd"
+          ></path>{" "}
+        </svg>
       </section>
 
       <IconWithProps onClick={openSideMenu} className={styles["menu-icon"]}>

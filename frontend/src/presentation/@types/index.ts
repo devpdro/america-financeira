@@ -1,1 +1,1 @@
-export type { default as NavItem } from "./navbar";
+export type { default as NavItem } from "./navbar/navbar";

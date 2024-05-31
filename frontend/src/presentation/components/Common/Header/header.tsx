@@ -3,13 +3,24 @@ import styles from "./header.module.scss";
 const Header = () => {
   return (
     <header className={styles.container}>
-      <h6>Empréstimo com Garantia de Veículo</h6>
-      <h1>O dinheiro que você precisa, com as menores taxas.</h1>
-      <p>
-        Continue dirigindo seu carro ou moto, pague em até 60 meses e aproveite
-        as taxas a partir de 1,27% ao mês.
-      </p>
-      <button></button>
+      <div className={styles["box-section"]}>
+        <div className={styles["text-section"]}>
+          <h6>Solicite seu crédito agora mesmo!</h6>
+          <h1>Realizando sonhos <br /> através do Crédito!</h1>
+          <p>Aqui seu empréstimo é rápido, fácil e descomplicado</p>
+        </div>
+        <div className={styles["form-section"]}>
+          <h1>SOLICITAR AGORA!</h1>
+          <form action="">
+            <input type="text" placeholder="Nome" />
+            <input type="text" placeholder="E-mail" />
+            <input type="text" placeholder="Whatsapp" />
+            <input type="text" placeholder="CPF" />
+            <input type="text" placeholder="Qual tipo de solicitação?" />
+            <input type="submit" value="SOLICITAR" />
+          </form>
+        </div>
+      </div>
     </header>
   );
 };
