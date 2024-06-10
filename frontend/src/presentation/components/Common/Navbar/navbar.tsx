@@ -6,13 +6,14 @@ import Link from "next/link";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-import { NavItems, NavLanguages } from "@/data";
-import { Images } from "@/presentation/assets";
+import { NavItems } from "@/data";
 import NavMobile from "@/presentation/components/Common/Navbar/nav-mobile";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
 import { IconBaseProps } from "react-icons";
+
+import { Images } from "@/presentation/assets";
 
 import styles from "./navbar.module.scss";
 
@@ -67,7 +68,7 @@ export default function Navbar() {
                         <Image
                           src={ch.iconImage}
                           alt="ícone do item"
-                          className="icon-image"
+                          className={styles["icon-image"]}
                         />
                       )}
                       <span className={styles["link-label"]}>{ch.label}</span>
