@@ -36,11 +36,15 @@
     }
 
     .form-section {
+      background-color: #fff;
+      border-radius: 2px;
       margin-top: 4rem;
       height: 600px;
       width: 400px;
-      background-color: #fff;
-
+      padding: 1.275rem 1.275rem;
+      h1 {
+        color: #000;
+      }
       form {
         display: flex;
         flex-direction: column;

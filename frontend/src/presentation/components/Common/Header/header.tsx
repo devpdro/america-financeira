@@ -10,7 +10,7 @@ const Header = () => {
           <p>Aqui seu empréstimo é rápido, fácil e descomplicado</p>
         </div>
         <div className={styles["form-section"]}>
-          <h1>SOLICITAR AGORA!</h1>
+          <h1>Solicitar agora com apenas 4 cliques</h1>
           <form action="">
             <input type="text" placeholder="Nome" />
             <input type="text" placeholder="E-mail" />

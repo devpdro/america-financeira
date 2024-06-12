@@ -1,26 +1,60 @@
-import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
+"use client";
+
+import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
-// Função para prevenir o arrasto das imagens
-const handleDragStart = (e) => e.preventDefault();
+import styles from "./carousel.module.scss";
 
 const items = [
-    <img src="path-to-img1" onDragStart={handleDragStart} role="presentation" alt="Image 1" />,
-    <img src="path-to-img2" onDragStart={handleDragStart} role="presentation" alt="Image 2" />,
-    <img src="path-to-img3" onDragStart={handleDragStart} role="presentation" alt="Image 3" />,
+  <div className={styles.item} role="presentation" key="1">
+    <h1>Empréstimo Consignado</h1>
+    <p>
+      Para aposentados e pensionistas do INSS, com desconto em folha, taxas
+      reduzidas e até 84 vezes pra pagar. Contrate em poucos cliques, sem sair
+      de casa!
+    </p>
+  </div>,
+  <div className={styles.item} role="presentation" key="2">
+    <h1>Texto 2</h1>
+  </div>,
+  <div className={styles.item} role="presentation" key="3">
+    <h1>Texto 3</h1>
+  </div>,
+  <div className={styles.item} role="presentation" key="3">
+    <h1>Texto 3</h1>
+  </div>,
 ];
 
-const Gallery = () => {
-    return (
-        <AliceCarousel 
-            mouseTracking 
-            items={items} 
-            autoPlay 
-            autoPlayInterval={3000}
-            infinite 
-        />
-    );
+const responsive = {
+  0: { items: 1 },
+  600: { items: 2 },
+  1024: { items: 3 }, // A partir de 1024px de largura, 3 itens serão exibidos
 };
 
-export default Gallery;
+const Carousel = () => {
+  return (
+    <section className={styles.container}>
+      <h1 className={styles.title}>
+        Encontre o empréstimo que mais combina com você aqui na América
+        Financeira
+      </h1>
+      <AliceCarousel
+        paddingLeft={10}
+        paddingRight={10}
+        mouseTracking
+        items={items}
+        autoPlay
+        responsive={responsive}
+        autoPlayInterval={3000}
+        renderPrevButton={() => (
+          <button className={styles["carousel-button"]["carousel-button-prev"]}>‹</button>
+        )}
+        renderNextButton={() => (
+          <button className="carousel-button carousel-button-next">›</button>
+        )}
+      />
+    </section>
+  );
+};
+
+export default Carousel;
