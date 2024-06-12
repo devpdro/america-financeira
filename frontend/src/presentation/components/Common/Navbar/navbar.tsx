@@ -1,32 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
+import { IconWithProps } from '@/presentation/utils'
+import { Images } from "@/presentation/assets";
 import { NavItems } from "@/data";
-import NavMobile from "@/presentation/components/Common/Navbar/nav-mobile";
+import { NavMobile } from "..";
 
 import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
-import { IconBaseProps } from "react-icons";
-
-import { Images } from "@/presentation/assets";
 
 import styles from "./navbar.module.scss";
-
-const IconWithProps = (
-  props: IconBaseProps & { onClick?: () => void; className?: string }
-) => {
-  const { onClick, className, children, ...restProps } = props;
-  return (
-    <span onClick={onClick} className={className}>
-      {React.cloneElement(children as React.ReactElement, restProps)}
-    </span>
-  );
-};
 
 export default function Navbar() {
   const [animationParent] = useAutoAnimate();

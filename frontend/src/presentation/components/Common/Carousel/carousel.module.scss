@@ -1,37 +1,33 @@
+@import "../../../styles/base/variables.scss";
+
 .container {
   max-width: 1280px;
   margin: 3.5rem auto 0 auto;
+
   .title {
     text-align: center;
     font-size: 2.275rem;
     margin-bottom: 3rem;
     font-weight: 700;
   }
+
   .item {
-    border: 1px solid black;
+    border: 1px solid $black-color;
     height: 200px;
   }
 
   .carousel-button {
     position: absolute;
-    top: 50%;
+    color: $white-color;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    color: white;
-    font-size: 24px;
     cursor: pointer;
+    user-select: none;
+    top: 50%;
+    font-size: 24px;
     z-index: 10;
     padding: 10px;
     border-radius: 50%;
-    user-select: none;
-  }
-
-  .carousel-button-prev {
-    left: -40px; /* Ajuste a posição horizontal conforme necessário */
-  }
-
-  .carousel-button-next {
-    right: -40px; /* Ajuste a posição horizontal conforme necessário */
   }
 }

@@ -1,29 +1,17 @@
-import React from "react";
-
 import { NavItems } from "@/data";
-import SingleNavItem from "@/presentation/components/Common/Navbar/nav-item";
+import { NavItem } from "..";
+
+import { IconWithProps } from '@/presentation/utils'
 
 import { AiOutlineClose } from "react-icons/ai";
-import { IconBaseProps } from "react-icons";
 
 import styles from "./nav-mobile.module.scss";
 
-type MobileNavProps = {
+type NavMobileProps = {
   closeSideMenu: () => void;
 };
 
-const IconWithProps = (
-  props: IconBaseProps & { onClick?: () => void; className?: string }
-) => {
-  const { onClick, className, children, ...restProps } = props;
-  return (
-    <span onClick={onClick} className={className}>
-      {React.cloneElement(children as React.ReactElement, restProps)}
-    </span>
-  );
-};
-
-const MobileNav = ({ closeSideMenu }: MobileNavProps) => {
+const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
   return (
     <div className={styles["mobile-nav-container"]}>
       <div className={styles["mobile-nav"]}>
@@ -37,14 +25,14 @@ const MobileNav = ({ closeSideMenu }: MobileNavProps) => {
         </section>
         <div className={styles["nav-items"]}>
           {NavItems.map((d, i) => (
-            <SingleNavItem
+            <NavItem
               key={i}
               label={d.label}
               iconImage={d.iconImage}
               link={d.link}
             >
               {d.children}
-            </SingleNavItem>
+            </NavItem>
           ))}
         </div>
         <section className={styles["auth-buttons"]}>
@@ -56,4 +44,4 @@ const MobileNav = ({ closeSideMenu }: MobileNavProps) => {
   );
 };
 
-export default MobileNav;
+export default NavMobile;

@@ -1,8 +1,10 @@
+"use client"
+
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { NavItem } from "@/presentation/@types";
+import { NavItemTypes } from "@/presentation/@types";
 
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
@@ -10,7 +12,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 import styles from './nav-item.module.scss';
 
-const SingleNavItem = ({ label, link, children }: NavItem) => {
+const NavItem = ({ label, link, children }: NavItemTypes) => {
   const [animationParent] = useAutoAnimate();
   const [isItemOpen, setItem] = useState(false);
 
@@ -48,4 +50,4 @@ const SingleNavItem = ({ label, link, children }: NavItem) => {
   );
 };
 
-export default SingleNavItem;
+export default NavItem;

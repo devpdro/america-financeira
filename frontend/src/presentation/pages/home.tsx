@@ -1,5 +1,4 @@
-import { Navbar, Header } from "@/presentation/components/Common";
-import Carousel from "../components/Carousel/carousel";
+import { Navbar, Header, Carousel } from "@/presentation/components/Common";
 
 const Home = () => {
   return (

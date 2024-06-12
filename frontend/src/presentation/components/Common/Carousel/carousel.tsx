@@ -46,12 +46,6 @@ const Carousel = () => {
         autoPlay
         responsive={responsive}
         autoPlayInterval={3000}
-        renderPrevButton={() => (
-          <button className={styles["carousel-button"]["carousel-button-prev"]}>‹</button>
-        )}
-        renderNextButton={() => (
-          <button className="carousel-button carousel-button-next">›</button>
-        )}
       />
     </section>
   );
