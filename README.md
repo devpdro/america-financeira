@@ -29,13 +29,11 @@ A América Financeira é uma plataforma que oferece serviços financeiros variad
 ### Funcionalidades
 
 - Gestão de contas bancárias
-- Investimentos e portfólio
-- Consultoria financeira
-- Ferramentas de análise financeira
 
 ### Tecnologias Utilizadas e o Porque?
 
-#### **Front-end**
+- Front-end
+    -  1sadas 
 [!NOTE]
 - ```Next.js:``` Framework React com renderização do lado do servidor (SSR) e geração de páginas estáticas para melhorar o SEO e a velocidade de carregamento das páginas.
 - ```Storybook:``` Ferramenta utilizada para desenvolvimento e documentação de componentes de UI de forma isolada, facilitando a colaboração e o teste de componentes.
