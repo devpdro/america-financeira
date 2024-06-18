@@ -4,27 +4,27 @@ Este repositório é dedicado ao desenvolvimento do site da América Financeira.
 
 Explore nosso código-fonte e participe do desenvolvimento contínuo das ferramentas que impulsionam nossa plataforma financeira.
 
-## Sumário
+## 📖 Sumário
 
 > [!NOTE]
-> 1. [Introdução](#1-introdução)
+> 1.[Introdução](#1-introdução)
 
 > [!IMPORTANT]
-> 2. [Requisitos](#2-requisitos)
-
-> [!CAUTION]
-> 3. [Instalação](#3-instalação)
+> 2.[Requisitos](#2-requisitos)
 
 > [!IMPORTANT]
-> 4. [Estrutura do Projeto](#6-arquitetura-do-projeto)
+> 3.[Instalação](#3-instalação)
+
+> [!IMPORTANT]
+> 4.[Estrutura do Projeto](#6-arquitetura-do-projeto)
 
 > [!NOTE]
-> 5. [Testes](#11-testes)
+> 5.[Testes](#11-testes)
 
 > [!NOTE]
-> 6. [Segurança](#12-segurança)
+> 6.[Segurança](#12-segurança)
 
-## 1. 🚀 Introdução 
+## 🚀 Introdução 
 
 ### 🌐 Visão Geral
 
@@ -48,7 +48,7 @@ A América Financeira é uma empresa dedicada a oferecer uma ampla variedade de 
 - Testes
     - ```Jest:``` Framework de testes de JavaScript selecionado pela sua simplicidade, eficiência e suporte robusto para testes unitários e de integração.
 
-## 2. 📝 Requisitos
+## 📝 Requisitos
 
 Antes de começar, certifique-se de ter os seguintes requisitos instalados:
 
@@ -56,7 +56,7 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados:
 - npm (v6 ou superior)
 - Git
 
-## 3. 🛠️ Instalação
+## 🛠️ Instalação
 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
@@ -86,7 +86,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
         - npm start: Inicia o servidor em modo de produção após a construção do site.
     - Certifique-se de ajustar as configurações necessárias no arquivo de configuração do projeto antes de iniciar o servidor em modo de produção.
    
-## 4. ⚙️ Estrutura do projeto
+## 📁 Estrutura do projeto
 
 Estrutura do projeto
 ./pages: É uma página que o Next.js usa para montar o sistema de roteamento
