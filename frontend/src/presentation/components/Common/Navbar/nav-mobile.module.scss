@@ -1,3 +1,5 @@
+@import "../../../styles/base/variables.scss";
+
 .mobile-nav-container {
     position: fixed;
     left: 0;
@@ -14,9 +16,9 @@
   }
   
   .mobile-nav {
+    background-color: $white-color;
     height: 100%;
     width: 65%;
-    background-color: white;
     padding: 1rem;
   
     .close-section {
@@ -40,13 +42,13 @@
     .auth-buttons {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 2rem;
       margin-top: 1rem;
-      align-items: center;
   
       .login-button {
         height: fit-content;
-        color: #a3a3a3;
+        color: $gray-color;
         transition: all 0.2s ease;
   
         &:hover {

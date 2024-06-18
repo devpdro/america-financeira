@@ -1,8 +1,10 @@
-type NavItem = {
+export type NavItemTypes = {
   label: string;
   link?: string;
-  children?: NavItem[];
+  children?: NavItemTypes[];
   iconImage?: string;
 };
 
-export default NavItem;
+export type NavMobileProps = {
+  closeSideMenu: () => void;
+};
