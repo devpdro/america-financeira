@@ -3,9 +3,8 @@
   background: url("../../../assets/image/img/header-initial-opacity4.jpg") left
     center;
   background-size: cover;
-  height: calc(100vh - 80px);
-  max-width: 100%;
-
+  height: calc(100vh - 90px);
+  
   .box-section {
     display: flex;
     align-items: center;
@@ -37,9 +36,8 @@
 
     .form-section {
       background-color: #fff;
-      border-radius: 2px;
-      margin-top: 4rem;
-      height: 600px;
+      border-radius: 5px;
+
       width: 400px;
       padding: 1.275rem 1.275rem;
       h1 {
@@ -48,6 +46,12 @@
       form {
         display: flex;
         flex-direction: column;
+        gap: 20px;
+        input {
+          width: 100%;
+          padding: 5px 0;
+          border-bottom: 1px solid #ccc;
+        }
       }
     }
   }

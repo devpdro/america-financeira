@@ -1,5 +1,6 @@
 import { Navbar, Header } from "@/presentation/components/Common";
 import Carousel from "../components/Carousel/carousel";
+import Preview from "../components/Preview/preview";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <Carousel />
+      <Preview />
     </>
   );
 };

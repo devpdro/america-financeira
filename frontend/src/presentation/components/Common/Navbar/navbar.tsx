@@ -45,6 +45,9 @@ export default function Navbar() {
       <section ref={animationParent} className={styles["left-section"]}>
         <Image src={Images.logoWhite} alt="Logo" className={styles.logo} />
         {isSideMenuOpen && <NavMobile closeSideMenu={closeSideMenu} />}
+      </section>
+
+      <section className={styles["right-section"]}>
         <div className={styles["nav-items"]}>
           {NavItems.map((d, i) => (
             <Link key={i} href={d.link ?? "#"} className={styles["nav-link"]}>
@@ -79,9 +82,6 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-      </section>
-
-      <section className={styles["right-section"]}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20px"
