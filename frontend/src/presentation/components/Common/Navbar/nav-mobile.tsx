@@ -1,15 +1,12 @@
 import { NavItems } from "@/data";
 import { NavItem } from "..";
 
-import { IconWithProps } from '@/presentation/utils'
+import { NavMobileProps } from "@/presentation/@types";
+import { IconWithProps } from "@/presentation/utils";
 
 import { AiOutlineClose } from "react-icons/ai";
 
 import styles from "./nav-mobile.module.scss";
-
-type NavMobileProps = {
-  closeSideMenu: () => void;
-};
 
 const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
   return (

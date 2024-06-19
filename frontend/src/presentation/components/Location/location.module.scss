@@ -1,0 +1,37 @@
+@import "../../styles/base/variables.scss";
+
+.container {
+  background-color: $blue-color;
+  color: $white-color;
+  margin: 0rem 0 7rem 0;
+
+  .box-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 2rem;
+    .image-section {
+      width: 100%;
+      .img {
+        border-radius: $radius-image;
+        height: 300px;
+      }
+    }
+    .text-section {
+      width: 100%;
+      .title {
+        font-size: $large;
+        font-weight: $bold;
+        line-height: 2.225rem;
+        margin: 1.5rem 0 1rem 0;
+      }
+      .subtitle {
+        font-size: $medium;
+        margin-bottom: 1.5rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../styles/base/variables.scss";
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto 7rem auto;
+  gap: 3rem;
+  .image-section {
+    width: 100%;
+    .img {
+      border-radius: $radius-image;
+      box-shadow: $box-shadow;
+    }
+  }
+  .text-section {
+    width: 100%;
+    .title {
+      font-size: $large;
+      font-weight: $bold;
+      margin: 1.5rem 0 1rem 0;
+    }
+    .subtitle {
+      font-size: $medium;
+      margin-bottom: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+}

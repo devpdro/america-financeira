@@ -4,15 +4,11 @@
   background: url("../../../assets/image/img/header-initial-opacity4.jpg") left
   center;
   background-size: cover;
-<<<<<<< HEAD
   height: calc(100vh - 90px);
-  
-=======
   color: $white-color;
   height: calc(100vh - 90px);
   max-width: 100%;
 
->>>>>>> a5855d316625562e8ce0d4223ee68a22e26ad08b
   .box-section {
     display: flex;
     align-items: center;
@@ -43,16 +39,10 @@
     }
 
     .form-section {
-<<<<<<< HEAD
-      background-color: #fff;
-      border-radius: 5px;
-
-=======
       background-color: $white-color;
       border-radius: 2px;
       margin-top: 4rem;
       height: 600px;
->>>>>>> a5855d316625562e8ce0d4223ee68a22e26ad08b
       width: 400px;
       padding: 1.275rem 1.275rem;
       h1 {

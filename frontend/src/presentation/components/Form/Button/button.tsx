@@ -1,11 +1,14 @@
-import styles from './button.module.scss';
+import styles from "./button.module.scss";
 
-const Button = () => {
-  return (
-    <button className={styles.btn}>
-      Quero contratar agora
-    </button>
-  )
-}
+export type ButtonTypes = {
+  type: "btn1" | "btn2";
+  text: string;
+};
 
-export default Button
+const Button: React.FC<ButtonTypes> = ({ type, text }) => {
+  const buttonClass = type === "btn1" ? styles.btn1 : styles.btn2;
+
+  return <button className={`${styles.btn} ${buttonClass}`}>{text}</button>;
+};
+
+export default Button;

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-import { IconWithProps } from '@/presentation/utils'
+import { IconWithProps } from "@/presentation/utils";
 import { Images } from "@/presentation/assets";
 import { NavItems } from "@/data";
 import { NavMobile } from "..";
@@ -49,7 +49,7 @@ export default function Navbar() {
               </p>
               {d.children && (
                 <div className={styles.dropdown}>
-                  {d.children.map((ch, i) => (
+                  {d.children.map((ch: any, i: any) => (
                     <Link
                       key={i}
                       href={ch.link ?? "#"}

@@ -1,6 +1,32 @@
+@import "../../../styles/base/variables.scss";
+
 .btn {
-  background-color: #000040;
-  color: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 15px;
+  font-family: $font-default;
+  border-radius: $radius-button;
+  font-weight: $normal;
+  margin-bottom: 1rem;
+}
+
+.btn1 {
+  background-color: $blue-color;
+  border: 1px solid $blue-color;
+  color: $white-color;
+  padding: 0.8rem 0;
+  width: 350px;
+  &:hover {
+    background-color: $blue-color-strong;
+  }
+}
+
+.btn2 {
+  background-color: $white-color;
+  border: 1px solid $blue-color;
+  color: $blue-color;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.8rem 0;
+  width: 350px;
+  &:hover {
+    background-color: $blue-color;
+    color: $white-color;
+  }
 }
