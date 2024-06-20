@@ -12,7 +12,15 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <Header />
+      <Header
+        title="Solicite seu crédito agora mesmo!"
+        subtitle={
+          <>
+            Realizando sonhos <br /> através do Crédito!
+          </>
+        }
+        paragraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
+      />
       <Carousel />
       <Wrapper
         image={Images.payrollLoan.src}

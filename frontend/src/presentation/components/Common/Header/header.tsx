@@ -1,24 +1,27 @@
+import { ToastContainer } from 'react-toastify';
+
+import LoanRequest from "../../Form/LoanRequest/loan-request";
+
 import styles from "./header.module.scss";
 
-const Header = () => {
+type HeaderTypes = {
+  title: string;
+  subtitle: React.ReactNode;
+  paragraph: string;
+};
+
+const Header: React.FC<HeaderTypes> = ({ title, subtitle, paragraph }) => {
   return (
     <header className={styles.container}>
       <div className={styles["box-section"]}>
         <div className={styles["text-section"]}>
-          <h6>Solicite seu crédito agora mesmo!</h6>
-          <h1>Realizando sonhos <br /> através do Crédito!</h1>
-          <p>Aqui seu empréstimo é rápido, fácil e descomplicado</p>
+          <h6 className={styles.subtitle}>{title}</h6>
+          <h1 className={styles.title}>{subtitle}</h1>
+          <p className={styles.paragraph}>{paragraph}</p>
         </div>
         <div className={styles["form-section"]}>
-          <h1>Solicitar agora com apenas 4 cliques</h1>
-          <form action="">
-            <input type="text" placeholder="Nome" />
-            <input type="text" placeholder="E-mail" />
-            <input type="text" placeholder="Whatsapp" />
-            <input type="text" placeholder="CPF" />
-            <input type="text" placeholder="Qual tipo de solicitação?" />
-            <input type="submit" value="SOLICITAR" />
-          </form>
+          <ToastContainer />
+          <LoanRequest />
         </div>
       </div>
     </header>

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
   @font-face {
     font-family: "Satoshi";
     src: url("../../assets/fonts/Satoshi-Variable.woff2") format("woff2"),
@@ -14,18 +15,18 @@
 }
 
 img {
-    image-rendering: -webkit-optimize-contrast;
-    /* Propriedade para melhorar o contraste e a qualidade da imagem */
-    image-rendering: crisp-edges;
-    /* Propriedade para tornar as bordas mais nítidas */
-    image-rendering: optimizeQuality;
-    /* Propriedade para otimizar a qualidade da imagem */
-    image-rendering: smooth;
-    /* Propriedade para suavizar a imagem */
-    image-resolution: 300dpi;
-    /* Definindo a resolução da imagem */
+  image-rendering: -webkit-optimize-contrast;
+  /* Propriedade para melhorar o contraste e a qualidade da imagem */
+  image-rendering: crisp-edges;
+  /* Propriedade para tornar as bordas mais nítidas */
+  image-rendering: optimizeQuality;
+  /* Propriedade para otimizar a qualidade da imagem */
+  image-rendering: smooth;
+  /* Propriedade para suavizar a imagem */
+  image-resolution: 300dpi;
+  /* Definindo a resolução da imagem */
 }
 
-a { 
-    text-decoration: none;
+a {
+  text-decoration: none;
 }

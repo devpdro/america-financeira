@@ -1,11 +1,10 @@
 @import "../../../styles/base/variables.scss";
 
 .container {
-  background: url("../../../assets/image/img/header-initial-opacity4.jpg") left
-  center;
-  background-size: cover;
-  height: calc(100vh - 90px);
   color: $white-color;
+  background: url("../../../assets/image/img/header-initial-opacity4.jpg") left
+    center;
+  background-size: cover;
   height: calc(100vh - 90px);
   max-width: 100%;
 
@@ -19,45 +18,31 @@
     .text-section {
       gap: 8px;
 
-      h6 {
-        font-size: 1.275rem;
+      .subtitle {
+        font-size: $medium-large;
+        font-weight: $normal;
         margin-bottom: 24px;
-        font-weight: 500;
       }
 
-      h1 {
+      .title {
+        font-weight: $bold;
         font-size: 3.175rem;
-        line-height: 3.675rem;
-        font-weight: 700;
-        margin-bottom: 40px;
+        line-height: 3.5rem;
+        margin-bottom: 2.5rem;
       }
 
-      p {
-        font-size: 1rem;
-        font-weight: 400;
+      .paragraph {
+        font-weight: $light;
+        font-size: $small;
       }
     }
 
     .form-section {
       background-color: $white-color;
-      border-radius: 2px;
-      margin-top: 4rem;
-      height: 600px;
-      width: 400px;
+      border-radius: $radius-image;
       padding: 1.275rem 1.275rem;
-      h1 {
-        color: $black-color;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        input {
-          width: 100%;
-          padding: 5px 0;
-          border-bottom: 1px solid #ccc;
-        }
-      }
+      margin-top: 5.275rem;
+      width: 400px;
     }
   }
 }
