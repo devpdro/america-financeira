@@ -5,36 +5,27 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  font-weight: $semi-bold;
   max-width: 7xl;
   height: 90px;
   padding: 1.25rem 2.25rem;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: $semi-bold;
 }
 
 .left-section {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.275rem;
 
   .logo {
-    width: 200px;
-  }
-}
-
-.right-section {
-  display: none;
-  align-items: center;
-  gap: 2rem;
-
-  .nav-items {
+    width: 60px;
+  }.nav-items {
     display: none;
     @media (min-width: 768px) {
       display: flex;
       align-items: center;
       transition: all 0.3s;
-      gap: 1rem;
+      gap: 0.5rem;
 
       .nav-link {
         position: relative;
@@ -111,6 +102,11 @@
       }
     }
   }
+}
+
+.right-section {
+  display: none;
+  align-items: center;
 
   @media (min-width: 768px) {
     display: flex;

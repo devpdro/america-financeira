@@ -31,11 +31,8 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <section ref={animationParent} className={styles["left-section"]}>
-        <Image src={Images.logoWhite} alt="Logo" className={styles.logo} />
+        <Image src={Images.logoAmerica} alt="Logo" className={styles.logo} />
         {isSideMenuOpen && <NavMobile closeSideMenu={closeSideMenu} />}
-      </section>
-
-      <section className={styles["right-section"]}>
         <div className={styles["nav-items"]}>
           {NavItems.map((d, i) => (
             <Link key={i} href={d.link ?? "#"} className={styles["nav-link"]}>
@@ -70,21 +67,10 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20px"
-          height="20px"
-          fill="none"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path
-            fill="#111928"
-            fillRule="evenodd"
-            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414"
-            clipRule="evenodd"
-          ></path>{" "}
-        </svg>
+      </section>
+
+      <section className={styles["right-section"]}>
+       <h1>Entrar</h1>
       </section>
 
       <IconWithProps onClick={openSideMenu} className={styles["menu-icon"]}>

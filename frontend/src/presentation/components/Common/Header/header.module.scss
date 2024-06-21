@@ -7,9 +7,13 @@
   background-size: cover;
   height: calc(100vh - 90px);
   max-width: 100%;
-
-  .box-section {
+  
+  .box-section { position: absolute;
+    width: 100vw;
     display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
@@ -17,7 +21,7 @@
 
     .text-section {
       gap: 8px;
-
+      
       .subtitle {
         font-size: $medium-large;
         font-weight: $normal;
@@ -41,8 +45,8 @@
       background-color: $white-color;
       border-radius: $radius-image;
       padding: 1.275rem 1.275rem;
-      margin-top: 5.275rem;
-      width: 400px;
+width: 400px;
+margin-top: 4.275rem;
     }
   }
 }

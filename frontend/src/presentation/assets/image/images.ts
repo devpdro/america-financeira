@@ -10,6 +10,7 @@ import logoItau from "./img/logo-itau.png";
 import logoPan from "./img/logo-pan.png";
 import logoSafra from "./img/logo-safra.png";
 import logoSantander from "./img/logo-santander.png";
+import logoAmerica from "./img/logo_america.jpg";
 
 const Images = {
   logoBlue,
@@ -23,7 +24,7 @@ const Images = {
   logoItau,
   logoPan,
   logoSafra,
-  logoSantander,
+  logoSantander,logoAmerica
 };
 
 export default Images;
