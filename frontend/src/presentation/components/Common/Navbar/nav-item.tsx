@@ -5,10 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { NavItemTypes } from "@/presentation/@types";
+import { Icons } from "@/presentation/assets"
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-
-import { IoIosArrowDown } from "react-icons/io";
 
 import styles from "./nav-item.module.scss";
 
@@ -30,7 +29,7 @@ const NavItem = ({ label, link, children }: NavItemTypes) => {
       <p className={styles["item-label"]}>
         <span>{label}</span>
         {children && (
-          <IoIosArrowDown
+          <Icons.IoIosArrowDown
             className={`${styles["arrow-icon"]} ${
               isItemOpen && styles["rotate-180"]
             }`}

@@ -1,10 +1,8 @@
-import { NavItems } from "@/data";
-import { NavItem } from "..";
-
 import { NavMobileProps } from "@/presentation/@types";
 import { IconWithProps } from "@/presentation/utils";
-
-import { AiOutlineClose } from "react-icons/ai";
+import { Icons } from '@/presentation/assets'
+import { NavItems } from "@/data";
+import { NavItem } from "..";
 
 import styles from "./nav-mobile.module.scss";
 
@@ -17,7 +15,7 @@ const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
             onClick={closeSideMenu}
             className={styles["close-icon"]}
           >
-            <AiOutlineClose />
+            <Icons.AiOutlineClose />
           </IconWithProps>
         </section>
         <div className={styles["nav-items"]}>
@@ -33,8 +31,8 @@ const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
           ))}
         </div>
         <section className={styles["auth-buttons"]}>
-          <button className={styles["login-button"]}>Login</button>
-          <button className={styles["register-button"]}>Registrar</button>
+          <Icons.IoPersonOutline className={styles.icon} />
+          <h1>Entrar</h1>
         </section>
       </div>
     </div>

@@ -4,7 +4,6 @@ export type WrapperTypes = {
   title: string;
   subtitle: string;
   buttonPrimaryText: string;
-  buttonSecondaryText: string;
   imageWidth: number;
   imageHeight: number;
   imagePosition: "left" | "right";

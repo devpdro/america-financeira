@@ -1,28 +1,38 @@
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 
-import LoanRequest from "../../Form/LoanRequest/loan-request";
+import { Button, LoanRequest } from "@/presentation/components/Form";
+import { HeaderTypes } from "@/presentation/@types";
 
 import styles from "./header.module.scss";
 
-type HeaderTypes = {
-  title: string;
-  subtitle: React.ReactNode;
-  paragraph: string;
-};
-
-const Header: React.FC<HeaderTypes> = ({ title, subtitle, paragraph }) => {
+const Header: React.FC<HeaderTypes> = ({
+  title,
+  subtitle,
+  showDetails,
+  showParagraph = true,
+  showLoanRequest = true,
+}) => {
   return (
-    <header className={styles.container}>
+    <header className={`${styles.container}`}>
       <div className={styles["box-section"]}>
         <div className={styles["text-section"]}>
           <h6 className={styles.subtitle}>{title}</h6>
           <h1 className={styles.title}>{subtitle}</h1>
-          <p className={styles.paragraph}>{paragraph}</p>
+          {showParagraph && <p className={styles.paragraph}>{showParagraph}</p>}
+          {showDetails && (
+            <>
+              <p className={styles["paragraph-details"]}>{showDetails}</p>
+              <Button type="btn3" text="Conheça mais" />{" "}
+              {/* Renderiza o botão se showDetails for true */}
+            </>
+          )}
         </div>
-        <div className={styles["form-section"]}>
-          <ToastContainer />
-          <LoanRequest />
-        </div>
+        {showLoanRequest && (
+          <div className={styles["form-section"]}>
+            <ToastContainer />
+            <LoanRequest />
+          </div>
+        )}
       </div>
     </header>
   );

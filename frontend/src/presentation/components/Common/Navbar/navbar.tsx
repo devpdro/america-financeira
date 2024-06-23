@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import { IconWithProps } from "@/presentation/utils";
-import { Images } from "@/presentation/assets";
+import { Images, Icons } from "@/presentation/assets";
 import { NavItems } from "@/data";
 import { NavMobile } from "..";
 
@@ -15,6 +15,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
 
 import styles from "./navbar.module.scss";
+
 
 export default function Navbar() {
   const [animationParent] = useAutoAnimate();
@@ -70,7 +71,8 @@ export default function Navbar() {
       </section>
 
       <section className={styles["right-section"]}>
-       <h1>Entrar</h1>
+        <Icons.IoPersonOutline className={styles.icon} />
+        <h1>Entrar</h1>
       </section>
 
       <IconWithProps onClick={openSideMenu} className={styles["menu-icon"]}>

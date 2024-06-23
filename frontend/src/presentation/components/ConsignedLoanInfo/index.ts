@@ -1,0 +1,1 @@
+export { default as ConsinedLoanInfo } from "./consined-loan-info";

@@ -1,18 +1,18 @@
-import { NavItem } from "@/presentation/@types";
+import { NavItemTypes } from "@/presentation/@types";
 
-const NavItems: NavItem[] = [
+const NavItems: NavItemTypes[] = [
   {
     label: "América Financeira",
-    link: "#",
+    link: "/",
     children: [
       {
         label: "Quem somos",
-        link: "#",
+        link: "/quem-somos",
         // iconImage: todoImage,
       },
       {
         label: "Trabalhe conosco",
-        link: "#",
+        link: "/trabalhe-conosco",
       },
       {
         label: "Intranet",
@@ -26,15 +26,15 @@ const NavItems: NavItem[] = [
     children: [
       {
         label: "Empréstimo Pessoal",
-        link: "#",
+        link: "/emprestimo-pessoal",
       },
       {
         label: "Empréstimo Consignado",
-        link: "#",
+        link: "/emprestimo-consignado",
       },
       {
         label: "Antecipação FGTS",
-        link: "#",
+        link: "/antecipacao-fgts",
       },
       {
         label: "Consórcio",
@@ -44,11 +44,11 @@ const NavItems: NavItem[] = [
   },
   {
     label: "Seja parceiro",
-    link: "#",
+    link: "/seja-parceiro",
   },
   {
-    label: "Ajuda",
-    link: "#",
+    label: "Blog",
+    link: "/blog",
   },
 ];
 

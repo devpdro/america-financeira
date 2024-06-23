@@ -1,22 +1,25 @@
+@import "../../../styles/base/variables.scss";
+
 .single-nav-item {
   position: relative;
-  padding: 0.5rem 1rem;
   transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
 
   .item-label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #a3a3a3;
+    color: #000;
     cursor: pointer;
     transition: color 0.2s ease;
+    font-size: 1.125rem;
 
     &:hover {
-      color: red;
+      color: $blue-color;
     }
 
     .arrow-icon {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       transition: transform 0.2s ease;
       &.rotate-180 {
         transform: rotate(180deg);
@@ -38,10 +41,11 @@
       align-items: center;
       padding: 0.25rem 1.5rem;
       color: #a3a3a3;
-      transition: color 0.2s ease;
+      transition: color 0.2s ease;  
+      font-size: 1.1rem;
 
       &:hover {
-        color: rgba(0, 0, 0, 0.9);
+        color: #000;
       }
 
       .icon-image {

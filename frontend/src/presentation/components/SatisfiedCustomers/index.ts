@@ -1,0 +1,1 @@
+export { default as SatisfiedCustomers } from "./satisfied-customers";

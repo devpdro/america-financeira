@@ -2,9 +2,9 @@
 
 .container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  max-width: 1080px;
+  max-width: 980px;
   margin: 0 auto 7rem auto;
   gap: 3rem;
   .image-section {
@@ -19,12 +19,13 @@
     .title {
       font-size: $large;
       font-weight: $bold;
-      margin: 1.5rem 0 1rem 0;
+      margin: 0rem 0 1rem 0;
     }
     .subtitle {
       font-size: $medium;
       margin-bottom: 1.5rem;
       line-height: 1.5rem;
+      font-weight: 450;
     }
   }
 }

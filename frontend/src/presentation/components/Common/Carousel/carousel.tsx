@@ -1,53 +1,69 @@
 "use client";
 
+import React, { useRef } from "react";
 import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/scss/alice-carousel.scss";
+import "react-alice-carousel/lib/alice-carousel.css";
+
+import { CarouselProps } from "@/presentation/@types";
+import { itemsCarousel } from "@/data";
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import styles from "./carousel.module.scss";
 
-const items = [
-  <div className={styles.item} role="presentation" key="1">
-    <h1>Empréstimo Consignado</h1>
-    <p>
-      Para aposentados e pensionistas do INSS, com desconto em folha, taxas
-      reduzidas e até 84 vezes pra pagar. Contrate em poucos cliques, sem sair
-      de casa!
-    </p>
-  </div>,
-  <div className={styles.item} role="presentation" key="2">
-    <h1>Texto 2</h1>
-  </div>,
-  <div className={styles.item} role="presentation" key="3">
-    <h1>Texto 3</h1>
-  </div>,
-  <div className={styles.item} role="presentation" key="3">
-    <h1>Texto 3</h1>
-  </div>,
-];
-
 const responsive = {
   0: { items: 1 },
-  600: { items: 2 },
-  1024: { items: 3 }, // A partir de 1024px de largura, 3 itens serão exibidos
+  880: { items: 2 },
+  1280: { items: 3 },
 };
 
-const Carousel = () => {
+const Carousel: React.FC<CarouselProps> = ({ title, subtitle }) => {
+  const carouselRef = useRef<AliceCarousel>(null);
+
+  const handlePrev = () => {
+    if (carouselRef.current) {
+      carouselRef.current.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (carouselRef.current) {
+      carouselRef.current.slideNext();
+    }
+  };
+
   return (
-    <section className={styles.container}>
-      <h1 className={styles.title}>
-        Encontre o empréstimo que mais combina com você aqui na América
-        Financeira
-      </h1>
-      <AliceCarousel
-        paddingLeft={10}
-        paddingRight={10}
-        mouseTracking
-        items={items}
-        autoPlay
-        responsive={responsive}
-        autoPlayInterval={3000}
-      />
-    </section>
+    <div className={styles.container}>
+      <div>
+        <p className={styles["subtitle-section"]}>{subtitle}</p>
+        <h1 className={styles["title-section"]}>{title}</h1>
+      </div>
+      <div className={styles["custom-arrow-left"]} onClick={handlePrev}>
+        <FaArrowLeft size={20} />
+      </div>
+      <div className={styles["carousel-section"]}>
+        <AliceCarousel
+          mouseTracking
+          items={itemsCarousel.map((item) => (
+            <div key={item.key} className={styles.item} data-value={item.key}>
+              <div className={styles["text-section"]}>
+                <h1 className={styles.title}>{item.title}</h1>
+                <p className={styles.subtitle}>{item.subtitle}</p>
+              </div>
+              <div className={styles["icon-section"]}></div>
+            </div>
+          ))}
+          responsive={responsive}
+          disableButtonsControls={true}
+          controlsStrategy="alternate"
+          disableDotsControls
+          ref={carouselRef}
+        />
+      </div>
+      <div className={styles["custom-arrow-right"]} onClick={handleNext}>
+        <FaArrowRight size={20} />
+      </div>
+    </div>
   );
 };
 

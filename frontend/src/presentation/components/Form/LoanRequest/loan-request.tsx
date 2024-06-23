@@ -18,7 +18,7 @@ const LoanRequest = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting  },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       nome: "",
@@ -151,6 +151,7 @@ const LoanRequest = () => {
         <Button
           type="btn1"
           text={isSubmitting ? "Enviando..." : "Solicitar agora"}
+          width="100%"
         ></Button>
       </fieldset>
     </form>
