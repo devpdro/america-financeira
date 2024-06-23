@@ -16,7 +16,6 @@ import { FiMenu } from "react-icons/fi";
 
 import styles from "./navbar.module.scss";
 
-
 export default function Navbar() {
   const [animationParent] = useAutoAnimate();
   const [isSideMenuOpen, setSideMenu] = useState(false);

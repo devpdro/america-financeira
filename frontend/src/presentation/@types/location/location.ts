@@ -1,4 +1,4 @@
-export type LocationProps = {
+export type LocationTypes = {
   imageWidth: number;
   imageHeight: number;
 };

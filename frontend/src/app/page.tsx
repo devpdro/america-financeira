@@ -1,12 +1,10 @@
 import {
-  Carousel,
+  CarouselLoan,
   Header,
   Navbar,
   Wrapper,
 } from "@/presentation/components/Common";
-import { SatisfiedCustomers } from "@/presentation/components/SatisfiedCustomers";
-import { Location } from "@/presentation/components/Location";
-import { Banks } from "@/presentation/components/Banks";
+import { SatisfiedCustomers, Location, Banks } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
 
 export default function Home() {
@@ -21,9 +19,10 @@ export default function Home() {
               Realizando sonhos <br /> através do Crédito!
             </>
           }
-          paragraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
+          showParagraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
+          showDetails={false}
         />
-        <Carousel
+        <CarouselLoan
           subtitle="Ofertas personalizadas"
           title={
             <>

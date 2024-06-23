@@ -32,12 +32,8 @@
 .btn3 {
   background-color: $white-color;
   color: #000;
-  transition: background-color 0.3s ease, color 0.3s ease;
   padding: 0.8rem 2.8rem;
-  &:hover {
-    background-color: #8d807d;
-    color: $white-color;
-  }
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn4 {

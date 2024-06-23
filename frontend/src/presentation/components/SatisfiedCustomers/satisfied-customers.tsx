@@ -1,6 +1,6 @@
-import styles from "./satisfied-customers.module.scss";
+import { SatisfiedCustomersItems } from "@/data";
 
-import { itemsSatisfiedCustomers } from "@/data";
+import styles from "./satisfied-customers.module.scss";
 
 const SatisfiedCustomers = () => {
   return (
@@ -10,7 +10,7 @@ const SatisfiedCustomers = () => {
         O que estão falando da América Financeira
       </h6>
       <div className={styles["testimonials-section"]}>
-        {itemsSatisfiedCustomers.map((item, index) => (
+        {SatisfiedCustomersItems.map((item, index) => (
           <div key={index} className={styles.testimonial}>
             <p className={styles.paragraph}>{item.paragraph}</p>
             <div>

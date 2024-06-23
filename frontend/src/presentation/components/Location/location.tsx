@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 import { Button } from "@/presentation/components/Form";
-import { LocationProps } from "@/presentation/@types";
+import { LocationTypes } from "@/presentation/@types";
 import { Images } from "@/presentation/assets";
 
 import styles from "./location.module.scss";
 
-const Location: React.FC<LocationProps> = ({ imageWidth, imageHeight }) => {
+const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
   return (
     <section className={styles.container}>
       <div className={styles["box-container"]}>
@@ -35,7 +35,7 @@ const Location: React.FC<LocationProps> = ({ imageWidth, imageHeight }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button type="btn2" text="Localize a loja mais próxima" />
+            <Button type="btn3" text="Localize a loja mais próxima" />
           </a>
         </div>
       </div>

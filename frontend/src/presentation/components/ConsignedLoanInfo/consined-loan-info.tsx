@@ -1,4 +1,5 @@
 import React from "react";
+import emprestimoImg from "../../assets/image/img/emprestimo-consignado.jpg";
 
 const ConsinedLoanInfo = () => {
   return (
@@ -7,16 +8,17 @@ const ConsinedLoanInfo = () => {
         <h6></h6>
         <h1>O que é empréstimo consignado?</h1>
         <p>
-          O emprèstimo Consginado é uma forma de credito vantosa com taxa de
-          juros mais baixas para aposentados e poensionistas do INSS, serviodres
-          publicos, alem de beneficairios de algum oprograms socais, no qual o
-          pagamento das parcelas é descontao diretamente da folha de pagamento
-          solkiciitante
+          O empréstimo consignado é uma forma de crédito vantajosa com taxa de
+          juros mais baixas para aposentados e pensionistas do INSS, servidores
+          públicos, além de beneficiários de programas sociais, no qual o
+          pagamento das parcelas é descontado diretamente da folha de pagamento
+          do solicitante.
         </p>
       </div>
-      <button>Simular Empr3estimo</button>
+      <button>Simular Empréstimo</button>
       <div>
-
+        <img src="../../assets/image/img/emprestimo-consignado.jpg" alt="Imagem de Empréstimo Consignado" />
+        <h1>Teste</h1>
       </div>
     </section>
   );

@@ -1,4 +1,8 @@
-import { Header, Navbar } from "@/presentation/components/Common";
+import {
+  Header,
+  Navbar,
+  CarouselAbout,
+} from "@/presentation/components/Common";
 
 const About = () => {
   return (
@@ -19,6 +23,14 @@ const About = () => {
           </>
         }
         showLoanRequest={false}
+      />
+      <CarouselAbout
+        subtitle="Cultura e valores"
+        title={
+          <>
+            Escolha o empréstimo que <br /> mais combina com você
+          </>
+        }
       />
     </>
   );

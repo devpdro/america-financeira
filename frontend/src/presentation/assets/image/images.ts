@@ -24,7 +24,8 @@ const Images = {
   logoItau,
   logoPan,
   logoSafra,
-  logoSantander,logoAmerica
+  logoSantander,
+  logoAmerica,
 };
 
 export default Images;
