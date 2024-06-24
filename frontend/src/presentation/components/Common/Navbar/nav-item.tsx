@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { NavItemTypes } from "@/presentation/@types";
-import { Icons } from "@/presentation/assets"
+import { Icons } from "@/presentation/assets";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 

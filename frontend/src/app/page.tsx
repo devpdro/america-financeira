@@ -3,6 +3,8 @@ import {
   Header,
   Navbar,
   Wrapper,
+  Footer,
+  CreditDetails,
 } from "@/presentation/components/Common";
 import { SatisfiedCustomers, Location, Banks } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
@@ -30,6 +32,7 @@ export default function Home() {
             </>
           }
         />
+        <CreditDetails />
         <Banks />
         <Location imageWidth={100} imageHeight={100} />
         <Wrapper
@@ -53,6 +56,7 @@ export default function Home() {
           imagePosition="right"
         />
         <SatisfiedCustomers />
+        <Footer />
       </main>
     </>
   );

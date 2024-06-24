@@ -6,3 +6,5 @@ export { default as CarouselLoan } from "./CarouselLoan/carousel-loan";
 export { default as CarouselAbout } from "./CarouselAbout/carousel-about";
 export { default as Wrapper } from "./Wrapper/wrapper";
 export { default as Faq } from "./Faq/faq";
+export { default as Footer } from "./Footer/footer";
+export { default as CreditDetails } from "./CreditDetails/credit-details";

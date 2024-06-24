@@ -2,6 +2,7 @@
   max-width: 1180px;
   margin: 0 auto 4rem auto;
   text-align: left;
+  padding: 0 2rem;
   .title-section {
     font-size: 2.5rem;
     font-weight: 650;
@@ -18,9 +19,9 @@
     justify-content: flex-start;
     gap: 30px;
     .testimonial {
-      border: 2px solid rgba(0, 0, 64, 0.1);
+      border: 1px solid rgba(0, 0, 64, 0.2);
       background-color: rgba(241, 242, 245, 0.2);
-      border-radius: 5px;
+      border-radius: 10px;
       width: 365px;
       height: 300px;
       padding: 2rem;
