@@ -43,12 +43,12 @@ const Footer = () => {
       <div className={styles["container-info"]}>
         <div className={styles["rights-reserved-section"]}>
           <p className={styles.paragraph}>
-            Agibank - Todos os direitos reservados | CNPJ: 10.664.513/0001-50 |
-            Banco Agibank S.A
+            América Financeira - Todos os direitos reservados | CNPJ: CNPJ: 16.965.518/0001-08 |
+            Instituição América Financeira 
           </p>
           <p className={styles.paragraph}>
-            Rua Sergio Fernandes Borges Soares, 1000 | Prédio E1- Distrito
-            Industrial, Campinas - SP, 13054-709
+            Rua | Prédio E1 - 
+            , São Pedro - SP, 13520-000
           </p>
         </div>
         <div className={styles["terms-section"]}>
