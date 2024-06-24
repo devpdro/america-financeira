@@ -35,36 +35,37 @@ export default function Navbar() {
         {isSideMenuOpen && <NavMobile closeSideMenu={closeSideMenu} />}
         <div className={styles["nav-items"]}>
           {NavItems.map((d, i) => (
-            <Link key={i} href={d.link ?? "#"} className={styles["nav-link"]}>
-              <p className={styles["link-text"]}>
-                <span>{d.label}</span>
-                {d.children && (
-                  <IoIosArrowDown
-                    className={`${styles["arrow-icon"]} ${styles["rotate-180"]}`}
-                  />
-                )}
-              </p>
+            <div key={i} className={styles["nav-link"]}>
+              {/* Aplicação correta do Link para elementos clicáveis */}
+              <Link legacyBehavior href={d.link ?? "#"}>
+                <a className={styles["link-text"]}>
+                  <span>{d.label}</span>
+                  {d.children && (
+                    <IoIosArrowDown
+                      className={`${styles["arrow-icon"]} ${styles["rotate-180"]}`}
+                    />
+                  )}
+                </a>
+              </Link>
               {d.children && (
                 <div className={styles.dropdown}>
-                  {d.children.map((ch: any, i: any) => (
-                    <Link
-                      key={i}
-                      href={ch.link ?? "#"}
-                      className={styles["dropdown-link"]}
-                    >
-                      {ch.iconImage && (
-                        <Image
-                          src={ch.iconImage}
-                          alt="ícone do item"
-                          className={styles["icon-image"]}
-                        />
-                      )}
-                      <span className={styles["link-label"]}>{ch.label}</span>
+                  {d.children.map((ch: any, j: any) => (
+                    <Link legacyBehavior key={j} href={ch.link ?? "#"}>
+                      <a className={styles["dropdown-link"]}>
+                        {ch.iconImage && (
+                          <Image
+                            src={ch.iconImage}
+                            alt="ícone do item"
+                            className={styles["icon-image"]}
+                          />
+                        )}
+                        <span className={styles["link-label"]}>{ch.label}</span>
+                      </a>
                     </Link>
                   ))}
                 </div>
               )}
-            </Link>
+            </div>
           ))}
         </div>
       </section>
