@@ -1,0 +1,62 @@
+@import "../../../styles/base/variables.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  .title {
+    color: $black-color;
+    font-size: $medium-large;
+    font-weight: $bold;
+  }
+  .input-text {
+    color: $black-color;
+    font-size: $medium;
+    font-weight: $semi-bold;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1.275rem;
+    padding: 7px 0;
+    width: 100%;
+    &:focus {
+      border-bottom: 1px solid $black-color;
+    }
+  }
+  .terms-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .checkbox {
+      border: 2px solid $black-color;
+      border-radius: 5px;
+      margin: 1.5rem 0 1.5rem 0;
+      width: 1.275rem;
+      height: 1.275rem;
+      &:hover {
+        cursor: pointer;
+      }
+      &:checked {
+        box-shadow: $box-shadow;
+      }
+    }
+    .label-checkbox {
+      color: $black-color;
+      font-size: 0.825rem;
+      font-weight: $bold;
+      padding-left: 0.5rem;
+    }
+  }
+  .error {
+    color: #ff5045;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .input-text-error {
+    border-color: #ff5045;
+    &:focus {
+      border-color: #ff5045;
+    }
+  }
+  .checkbox-error {
+    color: #ff5045;
+  }
+}

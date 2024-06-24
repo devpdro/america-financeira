@@ -1,0 +1,45 @@
+@import "../../../styles/base/variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1180px;
+  margin: 0 auto 7rem auto;
+  gap: 2.5rem;
+  padding: 0 2rem;
+  @media (max-width: 880px) {
+    flex-direction: column;
+    margin: 0 auto 3rem auto;
+  }
+  .image-section {
+    width: 100%;
+    .img {
+      border-radius: $radius-image;
+      box-shadow: $box-shadow;
+      @media (max-width: 880px) {
+        
+      }
+    }
+  }
+  .text-section {
+    width: 100%;
+    .title {
+      font-size: $large;
+      font-weight: $bold;
+      margin: 0rem 0 1rem 0;
+      @media (max-width: 880px) {
+        font-size: 1.275rem;
+      }
+    }
+    .subtitle {
+      font-size: $medium;
+      margin-bottom: 1.5rem;
+      line-height: 1.5rem;
+      font-weight: 450;
+      @media (max-width: 880px) {
+        font-size: 1.075rem;
+      }
+    }
+  }
+}
