@@ -22,8 +22,8 @@ const Header: React.FC<HeaderTypes> = ({
           {showDetails && (
             <>
               <p className={styles["paragraph-details"]}>{showDetails}</p>
-              <Button type="btn3" text="Conheça mais" />{" "}
-              {/* Renderiza o botão se showDetails for true */}
+              <Button typeStyle="btn3" text="Conheça mais" />{" "}
+          
             </>
           )}
         </div>
