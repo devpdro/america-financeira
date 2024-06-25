@@ -5,6 +5,8 @@ import styles from "./satisfied-customers.module.scss";
 const SatisfiedCustomers = () => {
   return (
     <section className={styles.container}>
+      <div className={styles["container-section"]}>
+        
       <h1 className={styles["title-section"]}>Quem usa recomenda</h1>
       <h6 className={styles["subtitle-section"]}>
         O que estão falando da América Financeira
@@ -19,6 +21,7 @@ const SatisfiedCustomers = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

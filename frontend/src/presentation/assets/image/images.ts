@@ -15,8 +15,10 @@ import workWithUs from "./img/trabalhe-conosco.webp";
 import BankSafra from "./img/banco-safra.webp";
 import BankPan from "./img/banco-pan.webp";
 import BankC6 from "./img/banco-c6.webp";
+import America from './img/america.jpg'
+import ColorParty from './img/festa-das-cores.jpg'
 
-const Images = {
+const Images = {America,ColorParty,
   BankC6,
   BankPan,
   BankSafra,

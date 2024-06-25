@@ -175,8 +175,7 @@ const LoanRequest: React.FC = () => {
         {errors.termos && (
           <p className={styles.error}>{errors.termos.message}</p>
         )}
-        <Button type="btn1" width="350px" style={{ border: "1px solid red" }}>
-          Testando
+        <Button typeStyle="btn1" width="350px" text="Simular agora">
         </Button>
       </fieldset>
     </form>

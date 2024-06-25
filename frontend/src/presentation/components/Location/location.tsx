@@ -14,7 +14,7 @@ const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
           <Image
             style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
             className={styles.img}
-            src={Images.workWithUs}
+            src={Images.ColorParty}
             alt="Loja presencial da América Financeira"
             layout="responsive"
             width={imageWidth}
@@ -35,7 +35,7 @@ const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button type="btn3" text="Localize a loja mais próxima" />
+            <Button typeStyle="btn3" text="Localize a loja mais próxima" />
           </a>
         </div>
       </div>

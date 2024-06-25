@@ -39,14 +39,14 @@ export default function Home() {
           image={Images.workWithUs.src}
           alt="Quem somos"
           title="Prazer, nós somos a América Financeira"
-          subtitle="Uma unidade financeira com mais de 20 anos de experiência. Oferecemos soluções simples para facilitar sua vida financeira. Fácil quando você acessa, próximo quando você visita."
+          subtitle="Uma unidade financeira com mais de 10 anos de experiência. Oferecemos soluções simples para facilitar sua vida financeira. Fácil quando você acessa, próximo quando você visita."
           buttonPrimaryText="Saiba Mais"
           imageWidth={100}
           imageHeight={100}
           imagePosition="left"
         />
         <Wrapper
-          image={Images.payrollLoan.src}
+          image={Images.workWithUs.src}
           alt="Trabalhe conosco"
           title="Vamos crescer juntos?"
           subtitle="Somos mais de mil pessoas que inovam e trabalham em conjunto pra gerar oportunidades de desenvolvimento a todos. Acesse nossa página de carreiras e veja as vagas abertas aqui na América Financeira. Vem curtir a jornada com a gente!"
