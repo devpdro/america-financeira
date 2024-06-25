@@ -36,7 +36,7 @@ export default function Home() {
         <Banks />
         <Location imageWidth={100} imageHeight={100} />
         <Wrapper
-          image={Images.payrollLoan.src}
+          image={Images.workWithUs.src}
           alt="Quem somos"
           title="Prazer, nós somos a América Financeira"
           subtitle="Uma unidade financeira com mais de 20 anos de experiência. Oferecemos soluções simples para facilitar sua vida financeira. Fácil quando você acessa, próximo quando você visita."

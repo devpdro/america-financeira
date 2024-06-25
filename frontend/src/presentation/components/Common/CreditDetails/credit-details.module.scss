@@ -1,10 +1,13 @@
 .container {
-  max-width: 1180px;
+  max-width: 1280px;
   margin: 11rem auto 9rem auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 0 2rem;
+  @media (max-width: 880px) {
+   flex-direction: column;
+  }
   .text-section {
     width: 100%;
     .title {
@@ -12,6 +15,8 @@
       font-weight: 650;
       line-height: 2.4rem;
       margin-bottom: 1rem;
+      @media (max-width: 880px) {
+        font-size: 2rem; line-height: 2rem;  }
     }
     .subtitle {
       font-size: 1.175rem;
@@ -22,15 +27,17 @@
   }
   .details-section {
     width: 100%;
+    @media (max-width: 880px) {
+      margin-top: 2rem;    }
     .box {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 2rem;
-      .icon-section {
+      .image-section {
+        width: 200px;
         margin-right: 1.5rem;
         color: #000040;
-        font-size: 3rem;
       }
       .info-section {
         .title {

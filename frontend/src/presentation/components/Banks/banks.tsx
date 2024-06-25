@@ -12,14 +12,14 @@ const Banks = () => {
         trabalhamos
       </h1>
       <div className={styles["image-section"]}>
-        <img src={Images.logoBanrisul.src} alt="test" />
-        <img src={Images.logoBradesco.src} alt="test" />
-        <img src={Images.logoC6.src} alt="test" />
-        <img src={Images.logoItau.src} alt="test" />
-        <img src={Images.logoPan.src} alt="test" />
+        <img src={Images.BankBradesco.src} alt="test" />
+        <img src={Images.BankCaixa.src} alt="test" />
+        <img src={Images.BankSantander.src} alt="test" />
+        <img src={Images.BankBrasil.src} alt="test" />
+        <img src={Images.BankBanrisul.src} alt="test" />
         <img src={Images.logoSafra.src} alt="test" />
-        <img src={Images.logoSantander.src} alt="test" />
-        <img src={Images.logoDaycoval.src} alt="test" />
+        <img src={Images.BankItau.src} alt="test" />
+        <img src={Images.logoPan.src} alt="test" />
       </div>
     </section>
   );
