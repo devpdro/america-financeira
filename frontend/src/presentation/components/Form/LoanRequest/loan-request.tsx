@@ -1,25 +1,31 @@
 "use client";
 
+import React from "react";
 import { useForm } from "react-hook-form";
-
 import InputMask from "react-input-mask";
-
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import { useAutoAnimate } from "@formkit/auto-animate/react";
-
 import { Button } from "@/presentation/components/Form";
-
 import styles from "./loan-request.module.scss";
 
-const LoanRequest = () => {
+import API from "@/pages/api/proxy";
+
+export type FormTypes = {
+  nome: string;
+  email: string;
+  whatsapp: string;
+  cpf: string;
+  tipoSolicitacao: string;
+  termos: boolean;
+};
+
+const LoanRequest: React.FC = () => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm({
+  } = useForm<FormTypes>({
     defaultValues: {
       nome: "",
       email: "",
@@ -30,12 +36,29 @@ const LoanRequest = () => {
     },
   });
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: FormTypes) => {
+    try {
+      const response = await fetch("https://n8n.americaintegracao.com.br/webhook/site_teste", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    toast.success("Enviado com sucesso");
+      if (!response.ok) {
+        throw new Error("Erro ao enviar os dados");
+      }
 
-    reset();
+      console.log(data);
+
+      toast.success("Enviado com sucesso");
+
+      reset();
+    } catch (error) {
+      console.error("erro", error);
+      toast.error("Falha ao enviar os dados");
+    }
   };
 
   return (
@@ -79,7 +102,7 @@ const LoanRequest = () => {
             required: "Campo obrigatório",
             pattern: {
               value: /^\(\d{2}\) \d{5}-\d{4}$/,
-              message: "Numero inválido",
+              message: "Número inválido",
             },
           })}
           mask="(99) 99999-9999"
@@ -89,7 +112,7 @@ const LoanRequest = () => {
           }`}
           type="text"
           placeholder="Whatsapp"
-        />{" "}
+        />
         {errors.whatsapp && (
           <p className={styles.error}>{errors.whatsapp.message}</p>
         )}
@@ -118,10 +141,10 @@ const LoanRequest = () => {
             errors.tipoSolicitacao ? styles["input-text-error"] : ""
           }`}
         >
-          <option value="" disabled selected hidden>
+          <option value="" disabled hidden>
             Qual tipo de solicitação?
           </option>
-          <option className={styles["option"]} value="antecipacao-fgts">
+          <option className={styles["option"]} value="credito-pessoal">
             Crédito Pessoal
           </option>
           <option className={styles["option"]} value="credito-consignado">
@@ -130,10 +153,13 @@ const LoanRequest = () => {
           <option className={styles["option"]} value="antecipacao-fgts">
             Antecipação FGTS
           </option>
-          <option className={styles["option"]} value="antecipacao-fgts">
+          <option className={styles["option"]} value="consorcio">
             Consórcio
           </option>
         </select>
+        {errors.tipoSolicitacao && (
+          <p className={styles.error}>{errors.tipoSolicitacao.message}</p>
+        )}
         <div className={styles["terms-box"]}>
           <input
             {...register("termos", {
@@ -146,13 +172,14 @@ const LoanRequest = () => {
           />
           <label className={styles["label-checkbox"]} htmlFor="termos">
             Aceito receber comunicações da América Financeira
-          </label>{" "}
+          </label>
         </div>
-        <Button
-          type="btn1"
-          text={isSubmitting ? "Enviando..." : "Solicitar agora"}
-          width="100%"
-        ></Button>
+        {errors.termos && (
+          <p className={styles.error}>{errors.termos.message}</p>
+        )}
+        <button type="submit" style={{ border: "1px solid red" }}>
+          Testando
+        </button>
       </fieldset>
     </form>
   );
