@@ -36,7 +36,7 @@ const Simulation = () => {
             </p>
           </div>
         </div>
-        <Button type="btn3" text="Simular empréstimo"></Button>
+        <Button typeStyle="btn3" text="Simular empréstimo"></Button>
       </div>
     </section>
   );
