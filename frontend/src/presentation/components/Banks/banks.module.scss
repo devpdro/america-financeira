@@ -8,6 +8,13 @@
     font-size: 2.5rem;
     font-weight: 650;
     line-height: 2.575rem;
+    @media (max-width: 880px) {
+      font-size: 1.7rem;
+      line-height: 1.9rem;
+    }
+    @media (min-width: 880px) and (max-width: 1280px) {
+      font-size: 2.175rem;
+    }
   }
   .image-section {
     display: flex;
@@ -16,8 +23,7 @@
     flex-wrap: wrap;
     margin-top: 3rem;
     gap: 2.5rem;
-    img {
-   
+    .img {
       width: 180px;
       padding: 0.25rem 3rem;
     }

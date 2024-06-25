@@ -8,8 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { Button } from "@/presentation/components/Form";
 import styles from "./loan-request.module.scss";
 
-import API from "@/pages/api/proxy";
-
 export type FormTypes = {
   nome: string;
   email: string;
@@ -177,9 +175,9 @@ const LoanRequest: React.FC = () => {
         {errors.termos && (
           <p className={styles.error}>{errors.termos.message}</p>
         )}
-        <button type="submit" style={{ border: "1px solid red" }}>
+        <Button type="btn1" width="350px" style={{ border: "1px solid red" }}>
           Testando
-        </button>
+        </Button>
       </fieldset>
     </form>
   );

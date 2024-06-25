@@ -14,7 +14,7 @@ const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
           <Image
             style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
             className={styles.img}
-            src={Images.americaFinanceira.src}
+            src={Images.workWithUs}
             alt="Loja presencial da América Financeira"
             layout="responsive"
             width={imageWidth}

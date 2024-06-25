@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Images } from "@/presentation/assets";
+import { bankItems } from "@/data";
 
 import styles from "./banks.module.scss";
 
@@ -12,14 +12,16 @@ const Banks = () => {
         trabalhamos
       </h1>
       <div className={styles["image-section"]}>
-        <img src={Images.BankBradesco.src} alt="test" />
-        <img src={Images.BankCaixa.src} alt="test" />
-        <img src={Images.BankSantander.src} alt="test" />
-        <img src={Images.BankBrasil.src} alt="test" />
-        <img src={Images.BankBanrisul.src} alt="test" />
-        <img src={Images.logoSafra.src} alt="test" />
-        <img src={Images.BankItau.src} alt="test" />
-        <img src={Images.logoPan.src} alt="test" />
+        {bankItems.map((bank, index) => (
+          <Image
+            width={180}
+            height={0}
+            key={index}
+            src={bank.src}
+            alt={bank.alt}
+            className={styles.img}
+          />
+        ))}
       </div>
     </section>
   );

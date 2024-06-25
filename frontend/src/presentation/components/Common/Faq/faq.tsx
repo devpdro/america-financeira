@@ -67,19 +67,21 @@ const Faq: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>
-        Tire suas dúvidas sobre empréstimo consignado
-      </h1>
-      {faqs.map((faq, index) => (
-        <div
-          className={`${styles.faq} ${faq.open ? styles.open : ""}`}
-          key={index}
-          onClick={() => toggleFAQ(index)}
-        >
-          <div className={styles["faq-question"]}>{faq.question}</div>
-          {faq.open && <div className={styles["faq-answer"]}>{faq.answer}</div>}
-        </div>
-      ))}
+      <div className={styles["container-section"]}>
+        <h1 className={styles.title}>
+          Tire suas dúvidas sobre empréstimo consignado
+        </h1>
+        {faqs.map((faq, index) => (
+          <div
+            className={`${styles.faq} ${faq.open ? styles.open : ""}`}
+            key={index}
+            onClick={() => toggleFAQ(index)}
+          >
+            <div className={styles["faq-question"]}>{faq.question}</div>
+            {faq.open && <div className={styles["faq-answer"]}>{faq.answer}</div>}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

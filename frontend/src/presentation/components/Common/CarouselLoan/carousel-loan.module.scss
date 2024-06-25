@@ -2,10 +2,13 @@
 
 .container {
   max-width: 1180px;
-  margin: 5em auto 5rem auto;
+  margin: 4.5rem auto 5rem auto;
   position: relative;
   width: 100%;
   padding: 0 2rem;
+  @media (max-width: 880px) {
+    margin: 4rem auto 5rem auto;
+  }
   .subtitle-section {
     text-align: center;
     font-size: 1.225rem;
@@ -61,7 +64,7 @@
     top: 68%;
     transform: translateY(-50%);
     z-index: 2;
-    color: $blue-color;
+    color: #4682b4;
     border: 1px solid rgba(0, 0, 64, 0.5);
     width: 55px;
     height: 55px;
@@ -102,8 +105,11 @@
   justify-content: space-between;
   flex-direction: column;
   margin: 0 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
   &:hover {
     cursor: pointer;
+    background-color: rgba(0, 0, 64, 0.2);
     .icon {
       transform: scale(1.1);
     }
