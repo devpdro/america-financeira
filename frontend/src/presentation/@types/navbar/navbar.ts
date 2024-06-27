@@ -5,6 +5,6 @@ export type NavItemTypes = {
   iconImage?: string;
 };
 
-export type NavMobileProps = {
+export type NavMobileTypes = {
   closeSideMenu: () => void;
 };

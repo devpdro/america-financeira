@@ -36,7 +36,6 @@ export default function Navbar() {
         <div className={styles["nav-items"]}>
           {NavItems.map((d, i) => (
             <div key={i} className={styles["nav-link"]}>
-              {/* Aplicação correta do Link para elementos clicáveis */}
               <Link legacyBehavior href={d.link ?? "#"}>
                 <a className={styles["link-text"]}>
                   <span>{d.label}</span>

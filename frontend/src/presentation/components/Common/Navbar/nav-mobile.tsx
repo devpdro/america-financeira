@@ -1,4 +1,4 @@
-import { NavMobileProps } from "@/presentation/@types";
+import { NavMobileTypes } from "@/presentation/@types";
 import { IconWithProps } from "@/presentation/utils";
 import { Icons } from '@/presentation/assets'
 import { NavItems } from "@/data";
@@ -6,7 +6,7 @@ import { NavItem } from "..";
 
 import styles from "./nav-mobile.module.scss";
 
-const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
+const NavMobile = ({ closeSideMenu }: NavMobileTypes) => {
   return (
     <div className={styles["mobile-nav-container"]}>
       <div className={styles["mobile-nav"]}>

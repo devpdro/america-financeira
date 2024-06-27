@@ -9,7 +9,6 @@ const bankItems = [
   { src: Images.BankSafra.src, alt: "Imagem do banco Safra" },
   { src: Images.BankItau.src, alt: "Imagem do banco Itaú" },
   { src: Images.BankPan.src, alt: "Imagem do banco Pan" },
-  { src: Images.BankC6.src, alt: "Imagem do banco C6" },
 ];
 
 export default bankItems;
