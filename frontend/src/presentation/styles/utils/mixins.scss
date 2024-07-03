@@ -1,29 +1,15 @@
-@mixin flex-center-between {
+@mixin display-flex($align: center, $justify: center ) {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    align-items: $align;
+    justify-content: $justify;
+  }
 
-@mixin flex-center-start {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-@mixin flex-center-end {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-@mixin flex-center-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin hover-pointer {
+@mixin hover-pointer($transition: all 0.2s ease) {
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: $transition;
 }
   
+@mixin container-center($max-width: 1380px) {
+    max-width: $max-width;
+    margin: 0 auto;
+  }

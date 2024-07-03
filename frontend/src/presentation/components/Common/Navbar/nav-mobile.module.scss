@@ -2,9 +2,8 @@
 @import "../../../styles/utils/mixins.scss";
 
 .mobile-nav-container {
+  @include display-flex(none, flex-end);
   background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: flex-end;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -19,13 +18,13 @@
 
 .mobile-nav {
   background-color: $white-color;
-
   height: 100%;
   width: 65%;
   padding: 1rem;
 
   .close-section {
-
+    @include display-flex(none, flex-end);
+    
     .close-icon {
       cursor: pointer;
       font-size: 2.5rem;
@@ -40,8 +39,7 @@
   }
 
   .auth-buttons {
-    display: flex;
-    align-items: flex-start;
+    @include display-flex(flex-start, none);
     padding: 1rem;
     font-size: 1.075rem;
     .icon {
@@ -81,10 +79,9 @@
     padding: 1rem;
 
     .dropdown-link {
+      @include display-flex(flex-start, none);
       @include hover-pointer;
       color:$gray-color;
-      display: flex;
-      justify-content: flex-start;
       padding: 0.25rem 1.5rem;
 
       &:hover {
