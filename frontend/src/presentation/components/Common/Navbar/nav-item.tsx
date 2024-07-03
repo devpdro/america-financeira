@@ -4,10 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+
 import { NavItemTypes } from "@/presentation/@types";
 import { Icons } from "@/presentation/assets";
-
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import styles from "./nav-item.module.scss";
 
@@ -39,20 +39,20 @@ const NavItem = ({ label, link, children }: NavItemTypes) => {
 
       {isItemOpen && children && (
         <div className={styles.dropdown}>
-          {children.map((ch, i) => (
+          {children.map((item, key) => (
             <Link
-              key={i}
-              href={ch.link ?? "#"}
+              key={key}
+              href={item.link ?? "#"}
               className={styles["dropdown-link"]}
             >
-              {ch.iconImage && (
+              {item.iconImage && (
                 <Image
-                  src={ch.iconImage}
+                  src={item.iconImage}
                   alt="ícone do item"
                   className={styles["icon-image"]}
                 />
               )}
-              <span className={styles["link-label"]}>{ch.label}</span>
+              <span className={styles["link-label"]}>{item.label}</span>
             </Link>
           ))}
         </div>

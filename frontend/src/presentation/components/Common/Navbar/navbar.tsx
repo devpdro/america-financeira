@@ -31,34 +31,34 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <section ref={animationParent} className={styles["left-section"]}>
-        <Image src={Images.logoAmerica} alt="Logo" className={styles.logo} />
+        <Image src={Images.logoAmerica} alt="Logo América Financeira" className={styles.logo} />
         {isSideMenuOpen && <NavMobile closeSideMenu={closeSideMenu} />}
         <div className={styles["nav-items"]}>
-          {NavItems.map((d, i) => (
-            <div key={i} className={styles["nav-link"]}>
-              <Link legacyBehavior href={d.link ?? "#"}>
+          {NavItems.map((item, key) => (
+            <div key={key} className={styles["nav-link"]}>
+              <Link legacyBehavior href={item.link ?? "#"}>
                 <a className={styles["link-text"]}>
-                  <span>{d.label}</span>
-                  {d.children && (
+                  <span>{item.label}</span>
+                  {item.children && (
                     <IoIosArrowDown
                       className={`${styles["arrow-icon"]} ${styles["rotate-180"]}`}
                     />
                   )}
                 </a>
               </Link>
-              {d.children && (
+              {item.children && (
                 <div className={styles.dropdown}>
-                  {d.children.map((ch: any, j: any) => (
-                    <Link legacyBehavior key={j} href={ch.link ?? "#"}>
+                  {item.children.map((item, key) => (
+                    <Link legacyBehavior key={key} href={item.link ?? "#"}>
                       <a className={styles["dropdown-link"]}>
-                        {ch.iconImage && (
+                        {item.iconImage && (
                           <Image
-                            src={ch.iconImage}
-                            alt="ícone do item"
+                            src={item.iconImage}
+                            alt="Ícone do item"
                             className={styles["icon-image"]}
                           />
                         )}
-                        <span className={styles["link-label"]}>{ch.label}</span>
+                        <span className={styles["link-label"]}>{item.label}</span>
                       </a>
                     </Link>
                   ))}

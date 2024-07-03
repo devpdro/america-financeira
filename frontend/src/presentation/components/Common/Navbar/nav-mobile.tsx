@@ -19,14 +19,14 @@ const NavMobile = ({ closeSideMenu }: NavMobileTypes) => {
           </IconWithProps>
         </section>
         <div className={styles["nav-items"]}>
-          {NavItems.map((d, i) => (
+          {NavItems.map((item, key) => (
             <NavItem
-              key={i}
-              label={d.label}
-              iconImage={d.iconImage}
-              link={d.link}
+              key={key}
+              label={item.label}
+              iconImage={item.iconImage}
+              link={item.link}
             >
-              {d.children}
+              {item.children}
             </NavItem>
           ))}
         </div>
