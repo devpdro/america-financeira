@@ -4,7 +4,6 @@
 .form {
   display: flex;
   flex-direction: column;
-width: 90%;
   .title {
     color: $black-color;
     font-size: $size-medium;
@@ -23,7 +22,7 @@ width: 90%;
     padding: 7px 0;
     width: 100%;
     @media (max-width: 994px) {
-     font-size: $size-small;
+      font-size: $size-small;
     }
     &:focus {
       border-bottom: 1px solid $black-color;

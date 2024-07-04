@@ -6,10 +6,10 @@
   height: 100vh;
   max-width: 100%;
   @media (min-width: 625px) and (max-width: 994px) {
-    height: 135vh;
+    height: 145vh !important;
   }
   @media (max-width: 624px) {
-    height: 155vh !important;
+    height: 140vh !important;
   }
   .box-section {
     @include display-flex(center, space-between);
@@ -24,12 +24,12 @@
     @media (min-width: 625px) and (max-width: 994px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 12rem;
+      margin-top: 13rem;
     }
     @media (max-width: 624px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 14rem;
+      margin-top: 12rem;
     }
 
     .text-section {
@@ -88,7 +88,7 @@
       @media (max-width: 994px) {
         margin-top: 2.375rem;
         padding: 1.275rem 0.875rem;
-        width: 350px;
+        width: 300px;
       }
     }
   }
