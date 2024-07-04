@@ -3,16 +3,13 @@
 
 .container {
   color: $white-color;
-  background: url("../../../assets/image/img/header-initial.webp") left
-    center;
-  background-size: cover;
   height: 100vh;
   max-width: 100%;
   @media (min-width: 625px) and (max-width: 994px) {
     height: 135vh;
   }
   @media (max-width: 624px) {
-    height: 155vh;
+    height: 155vh !important;
   }
   .box-section {
     @include display-flex(center, space-between);
@@ -23,11 +20,16 @@
     left: 50%;
     padding: 0 2rem;
     transform: translate(-50%, -50%);
-    
-    @media (max-width: 994px) {
+
+    @media (min-width: 625px) and (max-width: 994px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 11rem;
+      margin-top: 12rem;
+    }
+    @media (max-width: 624px) {
+      @include display-flex(center, flex-start);
+      flex-direction: column;
+      margin-top: 14rem;
     }
 
     .text-section {
@@ -35,12 +37,13 @@
       .subtitle {
         font-weight: $weight-normal;
         font-size: $size-medium;
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $size-small;
         }
         @media (max-width: 624px) {
           font-size: $size-extra-small;
+          margin-bottom: 1rem;
         }
       }
 
@@ -48,7 +51,7 @@
         font-size: $size-extra-large;
         font-weight: $weight-bold;
         line-height: 3rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $size-large;
           line-height: 3rem;
@@ -56,21 +59,23 @@
         @media (max-width: 624px) {
           font-size: $size-extra-medium;
           line-height: 2.1rem;
+          margin-bottom: 1rem;
         }
       }
 
       .paragraph {
         font-weight: $weight-light;
-        font-size: $size-small;
+        font-size: $size-extra-small;
+        margin-top: 1.5rem;
         @media (max-width: 994px) {
           font-size: $size-extra-small;
         }
       }
       .paragraph-details {
-        font-size: $size-normal;
+        font-size: $size-medium;
         font-weight: $weight-normal;
-        line-height: 1.6rem;
-        margin-bottom: 2.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -81,7 +86,9 @@
       width: 400px;
       margin-top: 5.85rem;
       @media (max-width: 994px) {
-        margin-top: 2.725rem;
+        margin-top: 2.375rem;
+        padding: 1.275rem 0.875rem;
+        width: 380px;
       }
     }
   }

@@ -17,6 +17,7 @@ import BankPan from "./img/banco-pan.webp";
 import BankC6 from "./img/banco-c6.webp";
 import America from './img/america.jpg'
 import ColorParty from './img/festa-das-cores.jpg'
+import HeaderInitial from './img/header-initial.webp'
 
 const Images = {America,ColorParty,
   BankC6,
@@ -35,7 +36,7 @@ const Images = {America,ColorParty,
   logoWhite,
   payrollLoan,
   personalEntrepreneur,
-  logoAmerica,
+  logoAmerica,HeaderInitial,
 };
 
 export default Images;

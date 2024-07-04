@@ -4,4 +4,5 @@ export type HeaderTypes = {
   showDetails: React.ReactNode;
   showParagraph?: string;
   showLoanRequest?: boolean;
+  backgroundImage?: string;
 };

@@ -10,6 +10,7 @@ import { CarouselLoan } from "@/presentation/components/Carousel";
 import { Images } from "@/presentation/assets";
 
 export default function Home() {
+  const backgroundImageUrl = Images.HeaderInitial;
   return (
     <>
       <main>
@@ -23,6 +24,7 @@ export default function Home() {
           }
           showParagraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
           showDetails={false}
+          backgroundImage={backgroundImageUrl.src}
         />
         <CarouselLoan
           subtitle="Ofertas personalizadas"

@@ -1,10 +1,9 @@
-import {
-  Header,
-  Navbar,
-} from "@/presentation/components/Common";
+import { Header, Navbar } from "@/presentation/components/Common";
 import { CarouselAbout } from "@/presentation/components/Carousel";
+import { Images } from "@/presentation/assets";
 
 const About = () => {
+  const backgroundImageUrl = Images.HeaderInitial;
   return (
     <>
       <Navbar />
@@ -23,6 +22,7 @@ const About = () => {
           </>
         }
         showLoanRequest={false}
+        backgroundImage={backgroundImageUrl.src}
       />
       <CarouselAbout
         subtitle="Cultura e valores"
