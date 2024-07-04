@@ -1,15 +1,15 @@
-@mixin display-flex($align: center, $justify: center ) {
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-  }
+@mixin display-flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
 
 @mixin hover-pointer($transition: all 0.2s ease) {
-    cursor: pointer;
-    transition: $transition;
+  cursor: pointer;
+  transition: $transition;
 }
-  
-@mixin container-center($max-width: 1380px) {
-    max-width: $max-width;
-    margin: 0 auto;
-  }
+
+@mixin container-center($max-width: 1380px, $margin: 0 auto) {
+  max-width: $max-width;
+  margin: $margin;
+}

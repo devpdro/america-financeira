@@ -4,29 +4,32 @@ $font-default: "Satoshi", sans-serif;
 // Colors
 $blue-color: #000040;
 $blue-color-strong: #000030;
+$red-color: #ff5045;
 $black-color: #0A0909;
 $white-color: #fff;
 $gray-color: #a3a3a3;
 $border-color: #e5e7eb;
 $gray-light-color: #f3f4f6;
 
-// Font-Size
-$large: 1.725rem;
-$medium-large: 1.325rem;
-$medium: 1.125rem;
-$small: 1.025rem;
 
-$semi-bold: 550;
+// Font-Size
+$size-extra-large: 3rem;
+$size-large: 2.725rem;
+$size-extra-medium: 1.925rem;
+$size-medium: 1.325rem;
+$size-normal: 1.125rem;
+$size-small: 1.025rem;
+$size-extra-small: 0.925rem;
 
 // Font-Weight
-$light: 400;
-$normal: 500;
-$medium: 600;
-$bold: 700;
+$weight-light: 400;
+$weight-normal: 500;
+$weight-medium: 600;
+$weight-bold: 700;
 
 // Border-Radius
-$radius-image: 10px;
-$radius-button: 25px;
+$radius-medium: 10px;
+$radius-large: 25px;
 
 // Box-Shadows
-$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-normal: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

@@ -15,8 +15,7 @@
   .image-section {
     width: 100%;
     .img {
-      border-radius: $radius-image;
-      box-shadow: $box-shadow;
+      border-radius: $radius-medium;
       @media (max-width: 880px) {
         
       }
@@ -25,15 +24,15 @@
   .text-section {
     width: 100%;
     .title {
-      font-size: $large;
-      font-weight: $bold;
+      font-size: $size-large;
+      font-weight: $weight-bold;
       margin: 0rem 0 1rem 0;
       @media (max-width: 880px) {
         font-size: 1.275rem;
       }
     }
     .subtitle {
-      font-size: $medium;
+      font-size: $size-medium;
       margin-bottom: 1.5rem;
       line-height: 1.5rem;
       font-weight: 450;

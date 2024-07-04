@@ -1,8 +1,8 @@
 import {
   Header,
   Navbar,
-  CarouselAbout,
 } from "@/presentation/components/Common";
+import { CarouselAbout } from "@/presentation/components/Carousel";
 
 const About = () => {
   return (

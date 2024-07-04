@@ -1,5 +1,4 @@
 import {
-  CarouselLoan,
   Header,
   Navbar,
   Wrapper,
@@ -7,6 +6,7 @@ import {
   CreditDetails,
 } from "@/presentation/components/Common";
 import { SatisfiedCustomers, Location, Banks } from "@/presentation/components";
+import { CarouselLoan } from "@/presentation/components/Carousel";
 import { Images } from "@/presentation/assets";
 
 export default function Home() {

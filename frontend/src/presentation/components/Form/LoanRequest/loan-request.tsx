@@ -160,9 +160,6 @@ const LoanRequest: React.FC = () => {
         )}
         <div className={styles["terms-box"]}>
           <input
-            {...register("termos", {
-              required: "Selecione uma opção",
-            })}
             className={styles.checkbox}
             type="checkbox"
             name="termos"

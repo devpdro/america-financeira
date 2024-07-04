@@ -4,7 +4,7 @@
 .navbar {
   @include display-flex(center, space-between);
   background-color: $white-color;
-  font-weight: $medium;
+  font-weight: $weight-medium;
   position: fixed;
   margin: 0 auto;
   width: 100%;
@@ -67,11 +67,11 @@
                 color: $white-color;
                 border-radius: 0.2rem;
               }
-  
-             .link-label {
-               white-space: nowrap;
+
+              .link-label {
+                white-space: nowrap;
                 padding: 0 0.25rem;
-              } 
+              }
             }
           }
 
@@ -98,7 +98,7 @@
       font-size: 1.475rem;
       margin-right: 0.5rem;
     }
-  
+
     @media (min-width: 994px) {
       display: flex;
     }
@@ -108,10 +108,9 @@
     cursor: pointer;
     display: block;
     font-size: 2rem;
-  
+
     @media (min-width: 994px) {
       display: none;
     }
-  }  
+  }
 }
-
