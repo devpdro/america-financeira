@@ -9,6 +9,9 @@ width: 90%;
     color: $black-color;
     font-size: $size-medium;
     font-weight: $weight-bold;
+    @media (max-width: 994px) {
+      font-size: $size-normal;
+    }
   }
   .input-text {
     color: $black-color;
@@ -19,6 +22,9 @@ width: 90%;
     margin-top: 1.275rem;
     padding: 7px 0;
     width: 100%;
+    @media (max-width: 994px) {
+     font-size: $size-small;
+    }
     &:focus {
       border-bottom: 1px solid $black-color;
     }

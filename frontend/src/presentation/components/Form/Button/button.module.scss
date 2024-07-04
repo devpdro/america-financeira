@@ -11,7 +11,10 @@
   background-color: $blue-color;
   border: 1px solid $blue-color;
   color: $white-color;
-  padding: 0.8rem 0;
+  padding: 0.8rem 0; 
+  @media (max-width: 994px) {
+    width: 320px!important;
+  }
   &:hover {
     background-color: $blue-color-strong;
   }
