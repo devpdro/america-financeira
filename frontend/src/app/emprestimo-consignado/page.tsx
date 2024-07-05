@@ -1,9 +1,11 @@
-import { Header, Navbar, Faq } from "@/presentation/components/Common";
+import { Header, Navbar, Faq, ContractorVerifier } from "@/presentation/components/Common";
 import { ConsinedLoanInfo, Simulation } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
+import payrollLoansCategories from "@/data/categories/payroll-loans-categories";
+import HiringBenefits from "@/presentation/components/Common/HiringBenefits/hiring-benefits";
 
 export default function payrollLoan() {
-  const backgroundImageUrl = Images.personalEntrepreneur;
+  const backgroundImageUrl = Images.payrollLoan;
   return (
     <div>
       <Navbar />
@@ -16,11 +18,12 @@ export default function payrollLoan() {
           </>
         }
         showParagraph="*Sujeito à analise de crédito e condições do produto"
-        showDetails={false}
+        showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
       <ConsinedLoanInfo />
-      <Simulation />
+      <ContractorVerifier categories={payrollLoansCategories}/>
+      <HiringBenefits />
       <Faq />
     </div>
   );

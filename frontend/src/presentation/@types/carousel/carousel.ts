@@ -1,6 +1,6 @@
 export type CarouselTypes = {
-  title: React.ReactNode;
-  subtitle: string;
+  title?: React.ReactNode;
+  subtitle?: string;
 };
 
 export type CarouselItemsTypes = {

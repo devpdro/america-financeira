@@ -1,5 +1,5 @@
 import logoWhite from "./img/logo-white.webp";
-import payrollLoan from "./img/emprestimo-consignado.webp";
+import payrollLoan from "./img/emprestimo-consignado.jpg";
 import personalEntrepreneur from "./img/emprestimo-pessoal.webp";
 import logoAmerica from "./img/logo-america.webp";
 import Business from "./img/crescimento-empresa.webp";

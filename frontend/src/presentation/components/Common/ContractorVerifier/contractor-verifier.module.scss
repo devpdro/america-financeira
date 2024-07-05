@@ -1,0 +1,63 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
+.container {
+  background-color: rgba(100, 149, 237, 0.1);
+  .box-container {
+    @include container-center(1280px, 5rem auto 0 auto);
+    padding: 6rem 2rem 8rem 2rem;
+    .title-section {
+      font-size: $size-large;
+      font-weight: $weight-medium;
+      text-align: center;
+      line-height: 2.8rem;
+    }
+    .subtitle-section {
+      margin-top: 0.925rem;
+      font-size: $size-normal;
+      font-weight: $weight-normal;
+      text-align: center;
+    }
+    .box-section {
+      background-color: $white-color;
+      margin-top: 2.5rem;
+      margin-bottom: 4.5rem;
+      gap: 2rem;
+      padding: 1.125rem 1.5rem 1.075rem 1.5rem;
+      border-radius: 15px;
+      border: 1px solid $blue-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        font-size: $size-normal;
+        font-weight: $weight-normal;
+        border-bottom: 2px solid $white-color;
+        transition: border-bottom 0.3s ease;
+        &:hover {
+          border-bottom: 2px solid $blue-color;
+        }
+      }
+    }
+    .content-wrapper {
+      display: flex;
+      .content-text {
+        width: 100%;
+        padding-right: 4rem;
+        .paragraph {
+          font-size: $size-small;
+          font-weight: $weight-normal;
+          line-height: 1.4rem;
+          margin-bottom: 2rem;
+        }
+      }
+      .content-image {
+        width: 100%;
+        .img {
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
