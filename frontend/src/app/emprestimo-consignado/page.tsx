@@ -21,7 +21,13 @@ export default function payrollLoan() {
         showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
-      <ConsinedLoanInfo />
+      <ConsinedLoanInfo   title="O que é a antecipação FGTS"
+        subtitle="Saiba mais"
+        paragraph="O empréstimo consignado é uma forma de crédito vantajosa com taxa de
+          juros mais baixas para aposentados e pensionistas do INSS, servidores
+          públicos, além de beneficiários de programas sociais, no qual o
+          pagamento das parcelas é descontado diretamente da folha de pagamento
+          do solicitante."/>
       <ContractorVerifier categories={payrollLoansCategories}/>
       <HiringBenefits />
       <Faq />
