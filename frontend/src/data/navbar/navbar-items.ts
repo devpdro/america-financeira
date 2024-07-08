@@ -14,10 +14,6 @@ const NavItems: NavItemTypes[] = [
         label: "Trabalhe conosco",
         link: "/trabalhe-conosco",
       },
-      {
-        label: "Intranet",
-        link: "#",
-      },
     ],
   },
   {
@@ -35,10 +31,6 @@ const NavItems: NavItemTypes[] = [
       {
         label: "Antecipação FGTS",
         link: "/antecipacao-fgts",
-      },
-      {
-        label: "Consórcio",
-        link: "#",
       },
     ],
   },

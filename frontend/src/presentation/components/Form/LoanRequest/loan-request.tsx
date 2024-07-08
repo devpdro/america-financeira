@@ -29,20 +29,21 @@ const LoanRequest: React.FC = () => {
       email: "",
       whatsapp: "",
       cpf: "",
-      tipoSolicitacao: "",
-      termos: false,
     },
   });
 
   const onSubmit = async (data: FormTypes) => {
     try {
-      const response = await fetch("https://n8n.americaintegracao.com.br/webhook/site_teste", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://n8n.americaintegracao.com.br/webhook/site_teste",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Erro ao enviar os dados");
@@ -132,9 +133,6 @@ const LoanRequest: React.FC = () => {
         />
         {errors.cpf && <p className={styles.error}>{errors.cpf.message}</p>}
         <select
-          {...register("tipoSolicitacao", {
-            required: "Selecione uma opção",
-          })}
           className={`${styles["input-text"]} ${
             errors.tipoSolicitacao ? styles["input-text-error"] : ""
           }`}
@@ -172,8 +170,7 @@ const LoanRequest: React.FC = () => {
         {errors.termos && (
           <p className={styles.error}>{errors.termos.message}</p>
         )}
-        <Button typeStyle="btn1" width="350px" text="Simular agora">
-        </Button>
+        <Button typeStyle="btn1" width="350px" text="Simular agora"></Button>
       </fieldset>
     </form>
   );

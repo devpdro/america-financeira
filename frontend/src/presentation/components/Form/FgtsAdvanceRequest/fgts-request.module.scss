@@ -1,0 +1,21 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
+.container {
+  @include display-flex(flex-end, center);
+  flex-direction: column;
+  .simulation-box {
+    .input-box {
+      .label {
+        font-size: $size-extra-small;
+        font-weight: $weight-medium;
+        font-size: $size-small;
+        display: inline-block;
+      }
+      .input {
+        font-size: $size-extra-small;
+        padding: 0 4rem;
+      }
+    }
+  }
+}

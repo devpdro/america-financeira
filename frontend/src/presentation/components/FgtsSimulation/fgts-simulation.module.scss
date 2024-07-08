@@ -1,5 +1,40 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+  @include container-center(980px, 5rem auto);
+  @include display-flex(flex-start, flex-start);
+  border-radius: $radius-large;
+  background-color: $light-blue;
+  padding: 2.575rem 3.75rem;
+  .text-box {
+    @include display-flex(center, space-between);
+    flex-direction: column;
+    width: 100%;
+    margin-right: 2rem;
+    .title-box {
+      margin-bottom: 2.75rem;
+      .subtitle {
+        font-size: $size-normal;
+        font-weight: $weight-medium;
+        margin-bottom: 0.575rem;
+      }
+      .title {
+        font-size: $size-extra-medium;
+        font-weight: $weight-medium;
+        line-height: 2.275rem;
+      }
+    }
+    .description-box {
+      .paragraph {
+        font-weight: $weight-normal;
+        font-size: $size-extra-small;
+        color: $gray-color;
+        line-height: 1.175rem;
+      }
+    }
+  }
+  .form-box {
+    width: 100%;
+  }
 }

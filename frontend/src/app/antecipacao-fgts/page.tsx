@@ -10,6 +10,7 @@ import payrollLoansCategories from "@/data/categories/payroll-loans-categories";
 import HiringBenefits from "@/presentation/components/Common/HiringBenefits/hiring-benefits";
 import FgtsSimulation from "@/presentation/components/FgtsSimulation/fgts-simulation";
 import LoanBenefits from "@/presentation/components/Common/LoanBenefits/loan-benefits";
+import QuickAccess from "@/presentation/components/Common/QuickAccess/quick-access";
 
 export default function FgtsAdvance() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -39,6 +40,7 @@ export default function FgtsAdvance() {
           do solicitante."
       />
       <LoanBenefits />
+      <QuickAccess />
     </div>
   );
 }

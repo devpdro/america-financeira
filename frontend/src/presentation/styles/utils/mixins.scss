@@ -9,7 +9,7 @@
   transition: $transition;
 }
 
-@mixin container-center($max-width: 1380px, $margin: 0 auto) {
+@mixin container-center($max-width: 1280px, $margin: 0 auto) {
   max-width: $max-width;
   margin: $margin;
 }
