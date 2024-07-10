@@ -4,6 +4,7 @@ import {
   Wrapper,
   Footer,
   CreditDetails,
+  BlogInitial,
 } from "@/presentation/components/Common";
 import { SatisfiedCustomers, Location, Banks } from "@/presentation/components";
 import { CarouselLoan } from "@/presentation/components/Carousel";
@@ -58,6 +59,7 @@ export default function Home() {
           imagePosition="right"
         />
         <SatisfiedCustomers />
+        <BlogInitial />
         <Footer />
       </main>
     </>
