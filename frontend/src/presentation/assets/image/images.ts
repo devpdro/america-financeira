@@ -15,11 +15,15 @@ import workWithUs from "./img/trabalhe-conosco.webp";
 import BankSafra from "./img/banco-safra.webp";
 import BankPan from "./img/banco-pan.webp";
 import BankC6 from "./img/banco-c6.webp";
-import America from './img/america.jpg'
-import ColorParty from './img/festa-das-cores.jpg'
-import HeaderInitial from './img/header-initial.webp'
+import America from "./img/america.jpg";
+import ColorParty from "./img/festa-das-cores.jpg";
+import HeaderInitial from "./img/header-initial.webp";
+import LogoAmericaWhite from "./img/logo-america-branco.png";
+import QrCode from "./img/qr-code.png";
 
-const Images = {America,ColorParty,
+const Images = {
+  America,
+  ColorParty,
   BankC6,
   BankPan,
   BankSafra,
@@ -36,7 +40,10 @@ const Images = {America,ColorParty,
   logoWhite,
   payrollLoan,
   personalEntrepreneur,
-  logoAmerica,HeaderInitial,
+  logoAmerica,
+  HeaderInitial,
+  LogoAmericaWhite,
+  QrCode,
 };
 
 export default Images;

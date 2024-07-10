@@ -23,7 +23,8 @@ const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
         </div>
         <div className={styles["text-section"]}>
           <h1 className={styles.title}>
-            Prefere atendimento presencial? Conheça nossas unidades
+          Prefere atendimento presencial? Conheça nossas unidades localizadas
+          perto de você!
           </h1>
           <p className={styles.subtitle}>
             Mais de 10 unidades espalhadas pelo Brasil. Venha nós conhecer e

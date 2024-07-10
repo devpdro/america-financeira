@@ -4,7 +4,7 @@
 .container {
   background-color: $light-blue;
   .container-section {
-    @include container-center(1280px, 6.075rem auto 4.275rem auto);
+    @include container-center(1280px, 6.075rem auto 5.175rem auto);
     @include display-flex(flex-start, space-between);
     padding: 5.075rem 2.075rem 4.575rem 2.075rem;
 

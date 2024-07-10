@@ -2,152 +2,67 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 2rem auto 5rem auto);
-  font-weight: $weight-normal;
+  @include container-center(1280px, 5.075rem auto 5.075rem auto);
+  padding: 0 2.075rem;
 
-  overflow-x: hidden;
-  padding: 0 2rem;
-
-  .texts_container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 3.5rem;
-
-    .texts_box {
-      .subtitle {
-        .linha {
-          display: inline-block;
-          margin-bottom: 0.4rem;
-          width: 2.5rem;
-          border: 1px solid #dda827;
-        }
-
-        font-size: 1.2rem;
-        margin-bottom: 0.7rem;
-        margin-left: 0.2rem;
-      }
-
-      .title {
-        font-size: 3rem;
-        font-weight: 500;
-      }
+  .text-section {
+    text-align: center;
+    .subtitle-section {
+      font-size: $size-normal;
+      font-weight: $weight-normal;
     }
-
-    .read_box {
-      margin-right: 3rem;
-
-      .link {
-        color: #1c1c1c;
-
-        .read_more {
-          font-size: 1rem;
-          text-transform: uppercase;
-          overflow: hidden;
-          position: relative;
-          transition: color 0.3s ease;
-
-          &::after,
-          &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            height: 1px;
-            background-color: #dda827;
-            transition: width 0.5s ease, right 8s ease 1.5s;
-          }
-
-          &:hover::after {
-            width: 100%;
-            left: 0;
-          }
-
-          &:hover {
-            color: #dda827;
-          }
-        }
-      }
+    .title-section {
+      font-size: $size-large;
+      font-weight: $weight-medium;
+      margin: 0.675rem 0 2.975rem 0;
+      line-height: 2rem;
     }
   }
-
   .news {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
+    @include display-flex(flex-start, center);
     .link {
       width: 100%;
-
       .article {
-        transition: all 0.3s ease;
+        @include hover-pointer;
 
         &:hover {
-          .img1 {
-            transform: scale(1.1);
-            transform: translateY(-5px);
-          }
-
-          .img2 {
-            transform: scale(1.1);
-            transform: translateY(-5px);
-          }
-
-          .img3 {
+          .img {
             transform: scale(1.1);
             transform: translateY(-5px);
           }
         }
 
-        .img1 {
-          width: 93%;
-          border-radius: 7px;
-          height: 230px;
-          transition: all 0.3s ease;
+        .img {
+          @include hover-pointer;
+          border-radius: $radius-medium;
           object-fit: cover;
-        }
-
-        .img2 {
           width: 93%;
           height: 230px;
-          border-radius: 7px;
-          transition: all 0.3s ease;
-          object-fit: cover;
-          transition: all 0.3s ease;
-        }
-
-        .img3 {
-          width: 93%;
-          height: 230px;
-          border-radius: 7px;
-          transition: all 0.3s ease;
-          object-fit: cover;
-          transition: all 0.3s ease;
         }
 
         .subtitle {
-          padding: 1.1rem 0 0.6rem 0;
-          font-size: 1.2rem;
-          color: #dda827;
-          font-weight: 400;
+          color: $blue-color;
+          font-size: $size-small;
+          font-weight: $weight-normal;
+          padding: 1.175rem 0 0.675rem 0;
         }
 
         .title {
-          color: #1c1c1c;
-          font-size: 1.6rem;
-          font-weight: 500;
+          @include hover-pointer;
+          color: $black-color;
+          font-size: $size-medium;
+          font-weight: $weight-normal;
+          line-height: 1.575rem;
           width: 93%;
-          transition: all 0.3s ease;
           overflow: hidden;
           position: relative;
         }
 
         .data {
-          font-size: 1rem;
-          padding: 1rem 0 1rem 0;
-          font-weight: 400;
-          color: #6b7280;
+          color: $gray-color;
+          font-size: $size-extra-small;
+          font-weight: $size-normal;
+          padding: 1.075rem 0 1.075rem 0;
         }
       }
     }
@@ -156,42 +71,21 @@
 
 @media screen and (max-width: 600px) {
   .container {
-    margin: 4rem auto 5rem auto;
+    margin: 4.075rem auto 5.075rem auto;
 
-    .texts_container {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 2.5rem;
+    .text-section {
+      @include display-flex(flex-end, space-between);
+      margin-bottom: 2.575rem;
 
-      .texts_box {
-        .subtitle {
-          .linha {
-            display: inline-block;
-            margin-bottom: 0.4rem;
-            width: 2.5rem;
-            border: 1px solid #dda827;
-          }
-
-          font-size: 1.1rem;
-          margin-bottom: 0.5rem;
-          font-weight: 400;
-          margin-left: 0.2rem;
-        }
-
-        .title {
-          font-size: 2.3rem;
-        }
+      .subtitle {
+        font-size: $size-normal;
+        font-weight: $weight-normal;
+        margin-bottom: 0.575rem;
+        margin-left: 0.275rem;
       }
 
-      .read_box {
-        margin-right: 0.8rem;
-
-        .read_more {
-          padding-bottom: 0.3rem;
-          font-size: 0.9rem !important;
-          text-transform: uppercase;
-        }
+      .title.section {
+        font-size: $size-extra-medium;
       }
     }
 
@@ -200,38 +94,27 @@
 
       .link {
         .article {
-          margin-bottom: 2rem;
+          margin-bottom: 2.075rem;
 
-          .img1 {
-            width: 100% !important;
-          }
-
-          .img2 {
-            width: 100% !important;
-          }
-
-          .img3 {
-            width: 100% !important;
+          .img {
+            width: 100%;
           }
 
           .title {
-            font-size: 1.5rem !important;
-            font-weight: 500;
-            width: 100% !important;
+            font-size: $size-medium;
+            font-weight: $weight-normal;
+            width: 100%;
           }
 
           .subtitle {
-            padding: 1.1rem 0 0.7rem 0;
-            font-size: 1.1rem !important;
-            color: #dda827;
-            font-weight: 400;
+            padding: 1.175rem 0 0.775rem 0;
+            font-size: 1.175rem;
           }
 
           .data {
-            font-size: 0.9rem;
-            padding: 0.8rem 0 1rem 0;
-            font-weight: 400;
-            color: #6b7280;
+            font-size: $size-extra-small;
+            font-weight: $weight-light;
+            padding: 0.875rem 0 1.075rem 0;
           }
         }
       }
@@ -241,85 +124,52 @@
 
 @media screen and (min-width: 601px) and (max-width: 793px) {
   .container {
-    margin: 5rem auto 8rem auto;
+    margin: 5.075rem auto 8.075rem auto;
 
     .texts_container {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 2.5rem;
+      @include display-flex(flex-end, space-between);
+      margin-bottom: 2.575rem;
 
-      .texts_box {
-        .subtitle {
-          .linha {
-            display: inline-block;
-            margin-bottom: 0.4rem;
-            width: 2.5rem;
-            border: 1px solid #dda827;
-          }
-
-          font-size: 1.1rem;
-          margin-bottom: 0.5rem;
-          margin-left: 0.2rem;
+      .text-section {
+        .subtitle-section {
+          font-size: $size-normal;
+          margin-bottom: 0.575rem;
+          margin-left: 0.275rem;
         }
 
-        .title {
-          font-size: 2.5rem;
-        }
-      }
-
-      .read_box {
-        margin-right: 0.8rem;
-
-        .read_more {
-          padding-bottom: 0.7rem;
-          font-size: 0.9rem;
-          text-transform: uppercase;
+        .title-section {
+          font-size: $size-extra-medium;
         }
       }
     }
 
     .news {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include display-flex;
       flex-direction: column;
 
       .link {
         .article {
-          margin-bottom: 2rem;
+          margin-bottom: 2.075rem;
 
-          .img1 {
-            width: 100%;
-          }
-
-          .img2 {
-            width: 100%;
-          }
-
-          .img3 {
+          .img {
             width: 100%;
           }
 
           .title {
+            font-size: $size-medium;
+            font-weight: $weight-normal;
             width: 100%;
-            font-size: 1.5rem;
-            font-weight: 500;
             width: 100%;
           }
 
           .subtitle {
-            padding: 0.9rem 0 0.5rem 0;
-            font-size: 1.1rem;
-            color: #dda827;
-            font-weight: 400;
+            padding: 0.975rem 0 0.575rem 0;
+            font-size: $size-normal;
           }
 
           .data {
-            font-size: 0.9rem;
-            padding: 0.8rem 0 1rem 0;
-            font-weight: 400;
-            color: #6b7280;
+            font-size: $size-small;
+            padding: 0.875rem 0 1.075rem 0;
           }
         }
       }

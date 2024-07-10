@@ -7,74 +7,54 @@ import styles from "./blog-initial.module.scss";
 
 const BlogInitial = () => {
   return (
-    <section className={`${styles.container} panel`} data-color="white">
-      <div className={styles.texts_container}>
-        <div className={styles.texts_box}>
-          <p className={styles.subtitle}>
-            Blog <hr className={styles.linha} />
-          </p>
-          <h1 className={styles.title}>Matérias</h1>
-        </div>
-        <div className={styles.read_box}>
-          <Link className={styles.link} href="/blog">
-            <p className={styles.read_more}>Leia mais</p>
-          </Link>
-        </div>
+    <section className={`${styles.container}`}>
+      <div className={styles["text-section"]}>
+        <p className={styles["subtitle-section"]}>Blog da América Financeira</p>
+        <h1 className={styles["title-section"]}>
+          Acompanhe as novidades e nossas dicas!
+        </h1>
       </div>
       <div className={styles.news}>
-        <Link
-          className={styles.link}
-          href="/blog/o-papel-fundamental-de-um-arquiteto-de-software-em-seu-projeto-de-desenvolvimento"
-        >
+        <Link className={styles.link} href="">
           <div className={styles.article}>
             <Image
-              loading="lazy"
-              className={styles.img1}
+              className={styles.img}
               src={Images.payrollLoan}
-              alt="Software personalizado"
+              alt="Empréstimos"
             />
-            <p className={styles.subtitle}>Tecnologia</p>
+            <p className={styles.subtitle}>Empréstimos</p>
             <h1 className={styles.title}>
-              <span className={styles.span}>
-                O papel fundamental de um Arquiteto de Software em seu projeto
-                de desenvolvimento
-              </span>
+              Como fazer uma simulação para empréstimo FGTS
             </h1>
             <p className={styles.data}>11 de março de 2024</p>
           </div>
         </Link>
-        <Link
-          className={styles.link}
-          href="/blog/guia-de-marketing-digital-para-restaurantes"
-        >
+        <Link className={styles.link} href="">
           <div className={styles.article}>
             <Image
-              className={styles.img2}
+              className={styles.img}
               loading="lazy"
               src={Images.payrollLoan}
               alt="Sistema"
             />
-            <p className={styles.subtitle}>Marketing</p>
+            <p className={styles.subtitle}>Investimentos</p>
             <h1 className={styles.title}>
-              Como fazer seu site engajar os leads?
+              CDB: Tudo o que você precisa saber sobre e como investir!
             </h1>
-            <p className={styles.data}>21 de julho de 2023</p>
+            <p className={styles.data}>21 de julho de 2024</p>
           </div>
         </Link>
-        <Link
-          className={styles.link}
-          href="/blog/site-institucional-o-que-e-e-qual-a-importancia"
-        >
+        <Link className={styles.link} href="">
           <div className={styles.article}>
             <Image
-              className={styles.img3}
+              className={styles.img}
               loading="lazy"
               src={Images.payrollLoan}
               alt="Web Design"
             />
-            <p className={styles.subtitle}>Negócios</p>
+            <p className={styles.subtitle}>Cartão de Crédito</p>
             <h1 className={styles.title}>
-              Site Institucional: O Que é e Qual a Importância?
+              Pagar boleto no cartão de crédito é possível?
             </h1>
             <p className={styles.data}>21 de janeiro de 2024</p>
           </div>

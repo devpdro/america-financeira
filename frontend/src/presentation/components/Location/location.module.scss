@@ -9,7 +9,7 @@
     margin: 0 auto 5.075rem auto;
   }
   .box-container {
-    @include container-center(1380px);
+    @include container-center;
     @include display-flex;
     padding: 6.575rem 2.075rem;
     @media (max-width: 880px) {

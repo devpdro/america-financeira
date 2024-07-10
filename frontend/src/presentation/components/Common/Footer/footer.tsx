@@ -1,4 +1,8 @@
 import { FooterItems } from "@/data";
+import Image from "next/image";
+
+import { Icons } from "@/presentation/assets";
+import { Images } from "@/presentation/assets";
 
 import styles from "./footer.module.scss";
 
@@ -7,8 +11,25 @@ const Footer = () => {
     <footer className={styles.container}>
       <div className={styles["container-section"]}>
         <div className={styles["info-section"]}>
+          <Image
+            className={styles.img}
+            src={Images.LogoAmericaWhite}
+            alt="Logo América Financeira"
+          />
           <p className={styles.paragraph}>América Financeira@2024</p>
-          <h6 className={styles.subtitle}>Nos siga nas redes sociais:</h6>
+          <h6 className={styles.subtitle}>Nos siga nas redes sociais</h6>
+          <div className={styles["icons-section"]}>
+            <Icons.FaLinkedin className={styles.icon} />
+            <Icons.FaFacebook className={styles.icon} />
+            <Icons.FaInstagram className={styles.icon} />
+            <Icons.FaYoutube className={styles.icon} />
+          </div>
+          <div className={styles["whatsapp-section"]}>
+            <h6 className={styles.title}>
+              Fale com a gente por <br /> WhatsApp.
+            </h6>
+            <Image src={Images.QrCode} alt="QR Code para o WhatsApp" />
+          </div>
         </div>
         <div className={styles["details-section"]}>
           {FooterItems.map((section, index) => (
