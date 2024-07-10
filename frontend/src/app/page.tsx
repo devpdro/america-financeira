@@ -43,8 +43,8 @@ export default function Home() {
           title="Prazer, nós somos a América Financeira"
           subtitle="Uma unidade financeira com mais de 10 anos de experiência. Oferecemos soluções simples para facilitar sua vida financeira. Fácil quando você acessa, próximo quando você visita."
           buttonPrimaryText="Saiba Mais"
-          imageWidth={100}
-          imageHeight={100}
+          imageWidth={98}
+          imageHeight={98}
           imagePosition="left"
         />
         <Wrapper
@@ -53,8 +53,8 @@ export default function Home() {
           title="Vamos crescer juntos?"
           subtitle="Somos mais de mil pessoas que inovam e trabalham em conjunto pra gerar oportunidades de desenvolvimento a todos. Acesse nossa página de carreiras e veja as vagas abertas aqui na América Financeira. Vem curtir a jornada com a gente!"
           buttonPrimaryText="Quero fazer parte"
-          imageWidth={100}
-          imageHeight={100}
+          imageWidth={98}
+          imageHeight={98}
           imagePosition="right"
         />
         <SatisfiedCustomers />

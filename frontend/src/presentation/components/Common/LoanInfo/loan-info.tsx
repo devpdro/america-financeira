@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "./consined-loan-info.module.scss";
+import styles from "./loan-info.module.scss";
 
 import emprestimoImg from "../../../assets/image/img/emprestimo-consignado.jpg";
 import { Button } from "../../Form";

@@ -1,31 +1,30 @@
 @import "../../styles/base/variables.scss";
+@import "../../styles/utils/mixins.scss";
 
 .container {
-  margin: 0 auto 7rem 0;
+  margin: 0 auto 6.075rem auto;
   padding: 0 2rem;
   .title {
+    font-size: $size-large;
+    font-weight: $weight-medium;
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: 650;
-    line-height: 2.575rem;
+    line-height: 2.775rem;
     @media (max-width: 880px) {
-      font-size: 1.7rem;
-      line-height: 1.9rem;
+      font-size: $size-extra-medium;
+      line-height: 1.975rem;
     }
     @media (min-width: 880px) and (max-width: 1280px) {
-      font-size: 2.175rem;
+      font-size: $size-extra-medium;
     }
   }
   .image-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display-flex;
     flex-wrap: wrap;
-    margin-top: 3rem;
-    gap: 2.5rem;
+    margin-top: 3.075rem;
+    gap: 2.575rem;
     .img {
       width: 180px;
-      padding: 0.25rem 3rem;
+      padding: 0.2575rem 3.075rem;
     }
   }
 }

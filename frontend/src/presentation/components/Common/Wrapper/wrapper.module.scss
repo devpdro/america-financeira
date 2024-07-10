@@ -1,23 +1,20 @@
 @import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 0 auto 7rem auto;
-  gap: 2.5rem;
-  padding: 0 2rem;
+  @include container-center(1280px, 0 auto 7.075rem auto);
+  @include display-flex;
+  gap: 2.575rem;
+  padding: 0 2.075rem;
   @media (max-width: 880px) {
     flex-direction: column;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 3.075rem auto;
   }
   .image-section {
     width: 100%;
     .img {
       border-radius: $radius-medium;
       @media (max-width: 880px) {
-        
       }
     }
   }
@@ -25,19 +22,19 @@
     width: 100%;
     .title {
       font-size: $size-extra-medium;
-      font-weight: $weight-bold;
-      margin: 0rem 0 1rem 0;
+      font-weight: $weight-medium;
+      margin: 0rem 0 1.075rem 0;
       @media (max-width: 880px) {
-        font-size: 1.275rem;
+        font-size: $size-normal;
       }
     }
     .subtitle {
-      font-size: $size-medium;
-      margin-bottom: 1.5rem;
-      line-height: 1.5rem;
-      font-weight: 450;
+      font-size: $size-normal;
+      font-weight: $weight-light;
+      margin-bottom: 1.575rem;
+      line-height: 1.375rem;
       @media (max-width: 880px) {
-        font-size: 1.075rem;
+        font-size: $size-small;
       }
     }
   }

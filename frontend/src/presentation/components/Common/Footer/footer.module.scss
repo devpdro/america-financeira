@@ -1,71 +1,63 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
 .container {
-  background-color: #0d1317;
-  color: #fff;
+  background-color: $blue-strong-color;
+  color: $white-color;
   .container-section {
-    max-width: 1380px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 4rem 2rem;
-    border-bottom: 1px solid #cbcbc0;
+    @include container-center;
+    @include display-flex(flex-start, space-between);
+    padding: 4.075rem 2.075rem;
+    border-bottom: 1px solid $light-blue;
     .info-section {
       .paragraph {
-        font-size: 0.975rem;
-        font-weight: 500;
-        color: #cbcbc0;
-        margin-bottom: 1rem;
+        font-size: $size-extra-small;
+        font-weight: $weight-medium;
+        color: $gray-color;
+        margin-bottom: 1.075rem;
       }
       .subtitle {
-        font-weight: 650;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
+        font-weight: $weight-medium;
+        font-size: $size-normal;
+        margin-bottom: 1.075rem;
       }
     }
     .details-section {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 5.5rem;
+      @include display-flex(flex-start, center);
+      gap: 6.575rem;
       .list-section {
         .title {
-          font-size: 1.275rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: $size-normal;
+          font-weight: $weight-medium;
+          margin-bottom: 1.075rem;
         }
-        ul {
-          li {
-            color: #cbcbc0;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
+        .list-box {
+          .list {
+            font-size: $size-small;
+            font-weight: $weight-medium;
+            color: $gray-color;
+            margin-bottom: 0.775rem;
           }
         }
       }
     }
   }
   .container-info {
-    max-width: 1380px;
-    margin: 0rem auto;
-    padding: 0.5rem 2rem 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include container-center;
+    @include display-flex(flex-start, space-between);
+    padding: 0.875rem 2.075rem 1.075rem 2.075rem;
     .rights-reserved-section {
-      .paragraph {
-        color: #cbcbc0;
-        font-size: 0.9rem;
-        margin-bottom: 0.2rem;
-      }
+      font-size: $size-extra-small;
+      font-weight: $weight-medium;
+      color: $gray-color;
+      margin-bottom: 0.275rem;
     }
     .terms-section {
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #cbcbc0;
-        font-size: 0.95rem;
-        gap: 2rem;
-      }
+      @include display-flex;
+      font-size: $size-extra-small;
+      font-weight: $weight-medium;
+      color: $gray-color;
+      gap: 2.075rem;
     }
   }
 }

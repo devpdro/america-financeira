@@ -14,7 +14,7 @@ const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
           <Image
             style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
             className={styles.img}
-            src={Images.ColorParty}
+            src={Images.workWithUs}
             alt="Loja presencial da América Financeira"
             layout="responsive"
             width={imageWidth}
@@ -23,8 +23,7 @@ const Location: React.FC<LocationTypes> = ({ imageWidth, imageHeight }) => {
         </div>
         <div className={styles["text-section"]}>
           <h1 className={styles.title}>
-            Prefere atendimento presencial? Conheça nossas unidades localizadas
-            perto de você!
+            Prefere atendimento presencial? Conheça nossas unidades
           </h1>
           <p className={styles.subtitle}>
             Mais de 10 unidades espalhadas pelo Brasil. Venha nós conhecer e
