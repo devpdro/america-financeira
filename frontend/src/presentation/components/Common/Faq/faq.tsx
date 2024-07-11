@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+
 import styles from "./faq.module.scss";
 
 const ItemsFaq = [
@@ -67,21 +68,19 @@ const Faq: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles["container-section"]}>
-        <h1 className={styles.title}>
-          Tire suas dúvidas sobre empréstimo consignado
-        </h1>
-        {faqs.map((faq, index) => (
-          <div
-            className={`${styles.faq} ${faq.open ? styles.open : ""}`}
-            key={index}
-            onClick={() => toggleFAQ(index)}
-          >
-            <div className={styles["faq-question"]}>{faq.question}</div>
-            {faq.open && <div className={styles["faq-answer"]}>{faq.answer}</div>}
-          </div>
-        ))}
-      </div>
+      <h1 className={styles.title}>
+        Ficou com alguma dúvida sobre Empréstimos?
+      </h1>
+      {faqs.map((faq, index) => (
+        <div
+          className={`${styles["faq-section"]} ${faq.open ? styles.open : ""}`}
+          key={index}
+          onClick={() => toggleFAQ(index)}
+        >
+          <div className={styles["faq-question"]}>{faq.question}</div>
+          {faq.open && <div className={styles["faq-answer"]}>{faq.answer}</div>}
+        </div>
+      ))}
     </section>
   );
 };

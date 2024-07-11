@@ -1,31 +1,29 @@
-.container {
-  background-color: rgba(100, 149, 237, 0.1);
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
 
-.container-section {
-  max-width: 1280px;
- 
-  margin: 2rem auto 4rem auto;
+.container {
+  @include container-center(1280px, 2.075rem auto 6.275rem auto);
 
   .title {
-    font-size: 1.5rem;
-    font-weight: 650;
-    text-align: center; border: 1px solid red;
+    font-size: $size-large;
+    font-weight: $weight-medium;
+    margin-bottom: 3.075rem;
+    text-align: center;
   }
 
-  .faq {
-    margin: 15px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  .faq-section {
+    background-color: $white-color;
+    box-shadow: $box-shadow-normal;
+    border-radius: $radius-medium;
+    margin: 1.075rem;
+    padding: 1.275rem;
 
     .faq-question {
+      @include hover-pointer;
+      font-size: $size-normal;
+      font-weight: $weight-normal;
       position: relative;
-      font-size: 20px;
-      padding-right: 30px;
-      transition: all 0.4s ease;
-      margin-bottom: 15px;
-      cursor: pointer;
+      margin: 0.275rem 0;
 
       &::after {
         content: "+";
@@ -44,6 +42,7 @@
     }
 
     .faq-answer {
+      font-size: $size-normal;
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -51,7 +50,7 @@
     }
 
     &.open .faq-answer {
-      max-height: 1000px; /* Ajuste conforme necessário */
+      max-height: 1000px;
       opacity: 1;
       animation: expand 0.4s ease forwards;
     }
@@ -61,7 +60,6 @@
     }
   }
 }
-}
 
 @keyframes expand {
   0% {
@@ -69,14 +67,14 @@
     opacity: 0;
   }
   100% {
-    max-height: 1000px; /* Ajuste conforme necessário */
+    max-height: 1000px;
     opacity: 1;
   }
 }
 
 @keyframes collapse {
   0% {
-    max-height: 1000px; /* Ajuste conforme necessário */
+    max-height: 1000px;
     opacity: 1;
   }
   100% {

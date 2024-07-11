@@ -1,0 +1,153 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
+.container {
+  background-color: $blue-strong-color;
+  color: $white-color;
+  font-weight: $weight-light;
+
+  .box-section {
+    @include container-center(1380px, 8.075rem auto);
+    @include display-flex(center, flex-start);
+    padding: 6.075rem 0rem 6.075rem 0rem;
+
+    .text-section {
+      margin-top: 0.475rem;
+      padding: 0 2.075rem 0 2.075rem;
+      width: 60%;
+
+      .subtitle {
+        font-size: $size-normal;
+        font-weight: $weight-light;
+        margin-bottom: 1.275rem;
+
+      
+      }
+
+      .title {
+        font-size: $size-extra-large;
+        font-weight: $weight-normal;
+        margin-bottom: 4.375rem;
+        letter-spacing: 2px;
+        line-height: 3.475rem;
+      }
+    }
+  }
+
+  .contents {
+    width: 40%;
+    margin: 0 4rem 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 3rem auto 5.2rem auto !important;
+
+    .background {
+      flex-wrap: wrap;
+      padding: 3.5rem 0rem 3rem 0rem;
+
+      .texts_box {
+        padding: 0 0rem 0 0rem;
+        width: 87%;
+
+        .texts {
+          .subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+          }
+
+          .title {
+            font-size: 2.3rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+          }
+
+          .btn {
+            padding: 1.3rem 1.4rem;
+            margin-top: 1.3rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .contents {
+        width: 70%;
+        margin: 0 4rem 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    margin: 3rem auto 6.5rem auto !important;
+
+    .background {
+      flex-wrap: wrap;
+      padding: 3.5rem 0rem 3rem 0rem;
+
+      .texts_box {
+        padding: 0 0rem 0 0rem;
+        width: 87%;
+
+        .texts {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .subtitle {
+            font-weight: 400;
+          }
+
+          .title {
+            text-align: center;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+          }
+
+          .btn {
+            padding: 1.3rem 1.6rem;
+            margin-top: 1.3rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 0rem 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1224px) {
+  .container {
+    .background {
+      .texts_box {
+        padding: 0 0rem 0 2rem;
+
+        .title {
+          font-size: 3.5rem !important;
+        }
+
+        .btn {
+          padding: 1.7rem 1.8rem !important;
+        }
+      }
+
+      .contents {
+        width: 40%;
+        margin: 0 4rem 0 0;
+      }
+    }
+  }
+}

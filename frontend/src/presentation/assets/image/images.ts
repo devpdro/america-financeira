@@ -20,8 +20,18 @@ import ColorParty from "./img/festa-das-cores.jpg";
 import HeaderInitial from "./img/header-initial.webp";
 import LogoAmericaWhite from "./img/logo-america-branco.png";
 import QrCode from "./img/qr-code.png";
+import CellPhoneInsurance from "./img/seguro-de-celular.webp";
+import Investment from "./img/investimentos.webp";
+import InvestmentBanks from "./img/investment-banks.jpg";
+import CardCredit from "./img/cartao-credito.webp";
+import CardDebit from "./img/card-debit.jpg";
 
 const Images = {
+  CardDebit,
+  InvestmentBanks,
+  CellPhoneInsurance,
+  Investment,
+  CardCredit,
   America,
   ColorParty,
   BankC6,

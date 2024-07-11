@@ -11,7 +11,7 @@ const BlogInitial = () => {
       <div className={styles["text-section"]}>
         <p className={styles["subtitle-section"]}>Blog da América Financeira</p>
         <h1 className={styles["title-section"]}>
-          Acompanhe as novidades e nossas dicas!
+          Acompanhe as novidades e <br /> nossas dicas!
         </h1>
       </div>
       <div className={styles.news}>
@@ -19,7 +19,7 @@ const BlogInitial = () => {
           <div className={styles.article}>
             <Image
               className={styles.img}
-              src={Images.payrollLoan}
+              src={Images.InvestmentBanks}
               alt="Empréstimos"
             />
             <p className={styles.subtitle}>Empréstimos</p>
@@ -34,7 +34,7 @@ const BlogInitial = () => {
             <Image
               className={styles.img}
               loading="lazy"
-              src={Images.payrollLoan}
+              src={Images.CellPhoneInsurance}
               alt="Sistema"
             />
             <p className={styles.subtitle}>Investimentos</p>
@@ -49,7 +49,7 @@ const BlogInitial = () => {
             <Image
               className={styles.img}
               loading="lazy"
-              src={Images.payrollLoan}
+              src={Images.CardDebit}
               alt="Web Design"
             />
             <p className={styles.subtitle}>Cartão de Crédito</p>

@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  background-color: $blue-strong-color;
+  background-color: $light-blue;
   color: $white-color;
   .container-section {
     @include container-center;

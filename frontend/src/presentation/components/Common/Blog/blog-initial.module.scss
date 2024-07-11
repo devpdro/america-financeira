@@ -10,12 +10,13 @@
     .subtitle-section {
       font-size: $size-normal;
       font-weight: $weight-normal;
+      color: $blue-strong-color
     }
     .title-section {
       font-size: $size-large;
       font-weight: $weight-medium;
-      margin: 0.675rem 0 2.975rem 0;
-      line-height: 2rem;
+      margin: 0.375rem 0 3.975rem 0;
+      line-height: 2.675rem;
     }
   }
   .news {

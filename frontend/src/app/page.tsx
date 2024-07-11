@@ -5,10 +5,12 @@ import {
   Footer,
   CreditDetails,
   BlogInitial,
+  Faq,
 } from "@/presentation/components/Common";
-import { SatisfiedCustomers, Location, Banks } from "@/presentation/components";
+import { CreditAcess, Location } from "@/presentation/components";
 import { CarouselLoan } from "@/presentation/components/Carousel";
 import { Images } from "@/presentation/assets";
+import Decorative from "@/presentation/components/Decorative/decorative";
 
 export default function Home() {
   const backgroundImageUrl = Images.HeaderInitial;
@@ -36,30 +38,28 @@ export default function Home() {
           }
         />
         <CreditDetails />
-        <Banks />
-        <Location imageWidth={100} imageHeight={100} />
-        <Wrapper
-          image={Images.workWithUs.src}
-          alt="Quem somos"
-          title="Prazer, nós somos a América Financeira"
-          subtitle="Uma unidade financeira com mais de 10 anos de experiência. Oferecemos soluções simples para facilitar sua vida financeira. Fácil quando você acessa, próximo quando você visita."
-          buttonPrimaryText="Saiba Mais"
-          imageWidth={98}
-          imageHeight={98}
-          imagePosition="left"
-        />
-        <Wrapper
-          image={Images.workWithUs.src}
-          alt="Trabalhe conosco"
-          title="Vamos crescer juntos?"
-          subtitle="Somos mais de mil pessoas que inovam e trabalham em conjunto pra gerar oportunidades de desenvolvimento a todos. Acesse nossa página de carreiras e veja as vagas abertas aqui na América Financeira. Vem curtir a jornada com a gente!"
-          buttonPrimaryText="Quero fazer parte"
-          imageWidth={98}
-          imageHeight={98}
+        <Decorative
+          imageWidth={91}
+          imageHeight={100}
+          image={Images.Investment.src}
+          alt="Antecipação FGTS"
+          title="Antecipação FGTS"
+          subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
+          paragraph="Antecipar FGTS"
           imagePosition="right"
         />
-        <SatisfiedCustomers />
+        <Decorative
+          image={Images.CardCredit.src}
+          imageWidth={91}
+          imageHeight={100}
+          alt="Cartão de Crédito"
+          title="Cartão de Crédito"
+          subtitle="A América oferece cartões de crédito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
+          paragraph="Solicitar agora"
+          imagePosition="left"
+        />
         <BlogInitial />
+        <Faq />
         <Footer />
       </main>
     </>

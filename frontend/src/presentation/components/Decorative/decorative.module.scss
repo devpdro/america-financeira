@@ -1,0 +1,32 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
+.container {
+  .box-section {
+    @include display-flex;
+    background-color: $light-blue;
+    .text-section {
+      width: 80%;
+      padding: 0 10.075rem;
+      .title {
+        font-size: $size-large;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-size: $size-medium;
+        font-weight: $weight-medium;
+        line-height: 1.575rem;
+        margin-bottom: 1.075rem;
+      }
+      .paragraph {
+        font-size: $size-small;
+        font-weight: $weight-normal;
+        border-bottom: 1px solid $blue-strong-color;
+        color: $blue-strong-color;
+      }
+    }
+    .image-section {
+      width: 100%;
+    }
+  }
+}

@@ -1,5 +1,12 @@
-import { Header, Navbar, Faq, ContractorVerifier } from "@/presentation/components/Common";
-import { ConsinedLoanInfo, Simulation } from "@/presentation/components";
+import {
+  Header,
+  Navbar,
+  Faq,
+  ContractorVerifier,
+  Footer,
+  BlogInitial,
+} from "@/presentation/components/Common";
+import { LoanInfo } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
 import payrollLoansCategories from "@/data/categories/payroll-loans-categories";
 import HiringBenefits from "@/presentation/components/Common/HiringBenefits/hiring-benefits";
@@ -21,16 +28,20 @@ export default function payrollLoan() {
         showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
-      <ConsinedLoanInfo   title="O que é a antecipação FGTS"
+      <LoanInfo
+        title="O que é a antecipação FGTS"
         subtitle="Saiba mais"
         paragraph="O empréstimo consignado é uma forma de crédito vantajosa com taxa de
           juros mais baixas para aposentados e pensionistas do INSS, servidores
           públicos, além de beneficiários de programas sociais, no qual o
           pagamento das parcelas é descontado diretamente da folha de pagamento
-          do solicitante."/>
-      <ContractorVerifier categories={payrollLoansCategories}/>
+          do solicitante."
+      />
+      <ContractorVerifier categories={payrollLoansCategories} />
       <HiringBenefits />
       <Faq />
+      <BlogInitial />
+      <Footer />
     </div>
   );
 }
