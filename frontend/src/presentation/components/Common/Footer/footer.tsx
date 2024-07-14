@@ -16,7 +16,7 @@ const Footer = () => {
             src={Images.LogoAmericaWhite}
             alt="Logo América Financeira"
           />
-          <p className={styles.paragraph}>América Financeira@2024</p>
+    
           <h6 className={styles.subtitle}>Nos siga nas redes sociais</h6>
           <div className={styles["icons-section"]}>
             <Icons.FaLinkedin className={styles.icon} />

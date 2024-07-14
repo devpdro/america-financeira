@@ -1,12 +1,13 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import { CarouselTypes } from "@/presentation/@types";
 import { Icons } from "@/presentation/assets";
-import { CarouselItems } from "@/data";
+import { CarouselLoanItems } from "@/data";
 
 import styles from "./carousel-loan.module.scss";
 
@@ -43,16 +44,18 @@ const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
       <div className={styles["carousel-section"]}>
         <AliceCarousel
           mouseTracking
-          items={CarouselItems.map((item) => (
-            <div key={item.key} className={styles.item} data-value={item.key}>
-              <div className={styles["text-section"]}>
-                <h1 className={styles.title}>{item.title}</h1>
-                <p className={styles.subtitle}>{item.subtitle}</p>
+          items={CarouselLoanItems.map((item) => (
+            <Link href={item.link} key={item.key}>
+              <div key={item.key} className={styles.item} data-value={item.key}>
+                <div className={styles["text-section"]}>
+                  <h1 className={styles.title}>{item.title}</h1>
+                  <p className={styles.subtitle}>{item.subtitle}</p>
+                </div>
+                <div className={styles["icon-section"]}>
+                  <Icons.FaArrowRightLong className={styles.icon} />
+                </div>
               </div>
-              <div className={styles["icon-section"]}>
-                <Icons.FaArrowRightLong className={styles.icon} />
-              </div>
-            </div>
+            </Link>
           ))}
           responsive={responsive}
           disableButtonsControls={true}

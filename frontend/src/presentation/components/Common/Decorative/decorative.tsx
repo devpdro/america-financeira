@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { Icons } from "@/presentation/assets";
 import styles from "./decorative.module.scss";
 
 export type DecorativeTypes = {
@@ -29,7 +32,12 @@ const Decorative: React.FC<DecorativeTypes> = ({
           <div className={styles["text-section"]}>
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
-            <span className={styles.paragraph}>{paragraph}</span>
+            <div className={styles["link-section"]}>
+              <Link href="#header">
+                <span className={styles.paragraph}>{paragraph}</span>
+              </Link>
+              <Icons.FaArrowRight className={styles.icon} />
+            </div>
           </div>
           <div className={styles["image-section"]}>
             <Image
@@ -60,7 +68,13 @@ const Decorative: React.FC<DecorativeTypes> = ({
           <div className={styles["text-section"]}>
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
-            <span className={styles.paragraph}>{paragraph}</span>
+
+            <div className={styles["link-section"]}>
+              <Link href="./antecipacao-fgts">
+                <span className={styles.paragraph}>{paragraph}</span>
+              </Link>
+              <Icons.FaArrowRight className={styles.icon} />
+            </div>
           </div>
         </div>
       )}

@@ -7,4 +7,5 @@ export type CarouselItemsTypes = {
   key: number;
   title: string;
   subtitle: string;
+  link: string;
 };

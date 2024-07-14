@@ -145,6 +145,9 @@ const LoanRequest: React.FC = () => {
             <option className={styles["option"]} value="antecipacao-fgts">
               Antecipação FGTS
             </option>
+            <option className={styles["option"]} value="cartao-credito">
+              Cartão de Crédito
+            </option>
           </select>
           {errors.tipoSolicitacao && (
             <p className={styles.error}>{errors.tipoSolicitacao.message}</p>

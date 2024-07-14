@@ -17,6 +17,7 @@ const Header: React.FC<
 }) => {
   return (
     <header
+      id="header"
       className={`${styles.container}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,

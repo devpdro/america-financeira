@@ -2,14 +2,14 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 5.075rem auto 5.075rem auto);
+  @include container-center(1280px, 6.175rem auto 5.075rem auto);
   padding: 0 2.075rem;
 
   .text-section {
     text-align: center;
     .subtitle-section {
       font-size: $size-normal;
-      font-weight: $weight-normal;
+      font-weight: $weight-medium;
       color: $blue-strong-color
     }
     .title-section {

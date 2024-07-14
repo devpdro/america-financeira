@@ -9,9 +9,9 @@ const BlogInitial = () => {
   return (
     <section className={`${styles.container}`}>
       <div className={styles["text-section"]}>
-        <p className={styles["subtitle-section"]}>Blog da América Financeira</p>
+        <p className={styles["subtitle-section"]}>Nossas últimas postagens</p>
         <h1 className={styles["title-section"]}>
-          Acompanhe as novidades e <br /> nossas dicas!
+          Acompanhe nossas novidades <br /> e dicas!
         </h1>
       </div>
       <div className={styles.news}>
