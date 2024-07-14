@@ -69,7 +69,7 @@ const Faq: React.FC = () => {
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>
-        Ficou com alguma dúvida sobre Empréstimos?
+        Ficou com alguma dúvida sobre empréstimos?
       </h1>
       {faqs.map((faq, index) => (
         <div

@@ -3,14 +3,15 @@ import {
   Navbar,
   Faq,
   ContractorVerifier,
+  BlogInitial,
+  Footer,
 } from "@/presentation/components/Common";
-import { ConsinedLoanInfo, Simulation } from "@/presentation/components";
+import { LoanInfo } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
-import payrollLoansCategories from "@/data/categories/payroll-loans-categories";
-import HiringBenefits from "@/presentation/components/Common/HiringBenefits/hiring-benefits";
+
 import FgtsSimulation from "@/presentation/components/FgtsSimulation/fgts-simulation";
 import LoanBenefits from "@/presentation/components/Common/LoanBenefits/loan-benefits";
-import QuickAccess from "@/presentation/components/Common/QuickAccess/quick-access";
+import Decorative from "@/presentation/components/Common/Decorative/decorative";
 
 export default function FgtsAdvance() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -30,7 +31,7 @@ export default function FgtsAdvance() {
         backgroundImage={backgroundImageUrl.src}
       />
       <FgtsSimulation />
-      <ConsinedLoanInfo
+      <LoanInfo
         title="O que é a antecipação FGTS"
         subtitle="Saiba mais"
         paragraph="O empréstimo consignado é uma forma de crédito vantajosa com taxa de
@@ -40,7 +41,29 @@ export default function FgtsAdvance() {
           do solicitante."
       />
       <LoanBenefits />
-      <QuickAccess />
+      <Decorative
+        imageWidth={91}
+        imageHeight={100}
+        image={Images.Investment.src}
+        alt="Antecipação FGTS"
+        title="Antecipação FGTS"
+        subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
+        paragraph="Antecipar FGTS"
+        imagePosition="right"
+      />
+      <Decorative
+        image={Images.CardCredit.src}
+        imageWidth={91}
+        imageHeight={100}
+        alt="Cartão de Crédito"
+        title="Cartão de Crédito"
+        subtitle="A América oferece cartões de crédito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
+        paragraph="Solicitar agora"
+        imagePosition="left"
+      />
+      <Faq />
+      <BlogInitial />
+      <Footer />
     </div>
   );
 }

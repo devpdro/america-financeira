@@ -18,7 +18,7 @@
     .title {
       font-size: $size-large;
       font-weight: $weight-medium;
-      margin-top: 1.075rem;
+      margin-top: 0.775rem;
       margin-bottom: 1.575rem;
       line-height: 2.875rem;
     }
@@ -32,7 +32,7 @@
   .image-section {
     width: 100%;
     .img {
-      border-radius: 2px;
+      border-radius: $radius-medium;
     }
   }
 }

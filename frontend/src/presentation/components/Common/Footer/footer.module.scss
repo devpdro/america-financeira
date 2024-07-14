@@ -2,38 +2,38 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  background-color: $light-blue;
+  background-color: $blue-strong-color;
   color: $white-color;
   .container-section {
-    @include container-center;
+    @include container-center(1380px, 0 auto);
     @include display-flex(flex-start, space-between);
     padding: 4.075rem 2.075rem;
     border-bottom: 1px solid $light-blue;
     .info-section {
       .img {
-        width: 240px;
+        width: 270px;
         margin-bottom: 1.075rem;
       }
       .paragraph {
         font-size: $size-small;
         font-weight: $weight-medium;
         color: $gray-color;
-        margin-bottom: 1.075rem;
+        margin-bottom: 1.275rem;
       }
       .subtitle {
         font-size: $size-medium;
         font-weight: $weight-medium;
-        margin-bottom: 1.075rem;
+        margin-bottom: 1.275rem;
       }
       .icons-section {
         @include display-flex(center, flex-start);
 
-        gap: 1.375rem;
+        gap: 1.775rem;
         .icon {
           background-color: $white-color;
           color: $black-color;
           font-size: $size-extra-medium;
-          padding: 0.275rem;
+          padding: 0.225rem;
           border-radius: 50%;
         }
       }
@@ -42,7 +42,7 @@
         border-radius: $radius-medium;
         width: 150px;
         padding: 0.975rem 1.075rem;
-        margin-top: 1.575rem;
+        margin-top: 1.775rem;
         .title {
           color: $black-color;
           font-size: $size-extra-small;
@@ -55,7 +55,7 @@
     }
     .details-section {
       @include display-flex(flex-start, center);
-      gap: 7.275rem;
+      gap: 6.775rem;
       .list-section {
         .title {
           font-size: $size-medium;
@@ -64,7 +64,7 @@
         }
         .list-box {
           .list {
-            font-size: $size-small;
+            font-size: $size-normal;
             font-weight: $weight-medium;
             color: $gray-color;
             margin-bottom: 0.575rem;
@@ -74,18 +74,18 @@
     }
   }
   .container-info {
-    @include container-center;
+    @include container-center(1380px, 0 auto);
     @include display-flex(flex-start, space-between);
     padding: 0.875rem 2.075rem 1.075rem 2.075rem;
     .rights-reserved-section {
-      font-size: $size-extra-small;
+      font-size: $size-small;
       font-weight: $weight-medium;
       color: $gray-color;
       margin-bottom: 0.275rem;
     }
     .terms-section {
       @include display-flex;
-      font-size: $size-extra-small;
+      font-size: $size-small;
       font-weight: $weight-medium;
       color: $gray-color;
       gap: 2.075rem;

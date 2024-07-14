@@ -1,5 +1,3 @@
-import { ToastContainer } from "react-toastify";
-
 import { Button, LoanRequest } from "@/presentation/components/Form";
 import { HeaderTypes } from "@/presentation/@types";
 
@@ -41,7 +39,6 @@ const Header: React.FC<
         </div>
         {showLoanRequest && (
           <div className={styles["form-section"]}>
-            <ToastContainer />
             <LoanRequest />
           </div>
         )}

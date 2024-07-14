@@ -44,6 +44,8 @@
       }
     }
     .label-checkbox {
+      position: relative;
+      user-select: none;
       color: $black-color;
       font-weight: $weight-bold;
       font-size: 0.825rem;
@@ -54,6 +56,9 @@
     color: $red-color;
     font-weight: $weight-normal;
     font-size: $size-extra-small;
+  }
+  .checkbox-error + .label-checkbox {
+    color: $red-color ;
   }
   .input-text-error {
     border-color: $red-color;

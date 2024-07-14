@@ -6,18 +6,22 @@ const NavItems: NavItemTypes[] = [
     link: "/",
     children: [
       {
-        label: "Quem somos",
+        label: "Quem Somos",
         link: "/quem-somos",
         // iconImage: todoImage,
       },
       {
-        label: "Trabalhe conosco",
+        label: "Trabalhe Conosco",
         link: "/trabalhe-conosco",
+      },
+      {
+        label: "Nossas Lojas",
+        link: "#",
       },
     ],
   },
   {
-    label: "Simule seu crédito",
+    label: "Simule seu Crédito",
     link: "#",
     children: [
       {
@@ -35,7 +39,7 @@ const NavItems: NavItemTypes[] = [
     ],
   },
   {
-    label: "Seja parceiro",
+    label: "Seja Parceiro",
     link: "/seja-parceiro",
   },
   {

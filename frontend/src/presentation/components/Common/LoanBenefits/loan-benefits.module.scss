@@ -1,5 +1,34 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 4 auto;
+  @include container-center(1280px, 0 auto);
+  padding: 0 2.075rem;
+  .title-section {
+    font-size: $size-large;
+    font-weight: $weight-medium;
+    text-align: center;
+    margin-bottom: 2.075rem
+  }
+  .box-section {
+    @include display-flex;
+    gap: 2.075rem;
+    .box {
+      background-color: #f3f4f9;
+      border-radius: $radius-medium;
+      padding: 2.075rem;
+      width: 275px;
+      height: 325px;
+
+      .title {
+        font-size: $size-small;
+        font-weight: $weight-medium;
+        margin: 1.075rem 0rem;
+      }
+      .paragraph {
+        font-size: $size-extra-small;
+        font-weight: $weight-normal;
+      }
+    }
+  }
 }

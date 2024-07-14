@@ -1,16 +1,14 @@
 import {
   Header,
   Navbar,
-  Wrapper,
   Footer,
-  CreditDetails,
   BlogInitial,
+  Decorative,
+  CreditDetails,
   Faq,
 } from "@/presentation/components/Common";
-import { CreditAcess, Location } from "@/presentation/components";
 import { CarouselLoan } from "@/presentation/components/Carousel";
 import { Images } from "@/presentation/assets";
-import Decorative from "@/presentation/components/Decorative/decorative";
 
 export default function Home() {
   const backgroundImageUrl = Images.HeaderInitial;
