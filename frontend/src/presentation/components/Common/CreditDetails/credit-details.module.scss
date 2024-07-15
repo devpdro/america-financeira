@@ -8,7 +8,7 @@
 
   @media (max-width: 880px) {
     flex-direction: column;
-    margin: 5.075rem auto 5.075rem auto;
+    margin: 1.5075rem auto 2.575rem auto;
   }
   @media (min-width: 880px) and (max-width: 1280px) {
     font-size: $size-small;
@@ -35,7 +35,7 @@
       line-height: 1.575rem;
       @media (max-width: 880px) {
         font-size: $size-small;
-        line-height: 1.375rem;
+        line-height: 1.275rem;
       }
       @media (min-width: 880px) and (max-width: 1280px) {
         ont-size: $size-small;
@@ -51,11 +51,17 @@
     .box {
       @include display-flex;
       margin-bottom: 2.075rem;
+      @media (max-width: 624px) {
+        display: block;
+      }
       .image-section {
         color: $blue-color;
         margin-right: 1.575rem;
         width: 200px;
-        @media (max-width: 880px) {
+        @media (max-width: 624px) {
+          width: 100%;
+        }
+        @media (min-width: 625px) and (max-width: 880px) {
           width: 130px;
         }
         @media (min-width: 880px) and (max-width: 1280px) {

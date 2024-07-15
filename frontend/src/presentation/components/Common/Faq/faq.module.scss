@@ -3,27 +3,42 @@
 
 .container {
   @include container-center(1280px, 4.275rem auto 5.275rem auto);
-
+  padding: 0 2.075rem;
+  @media (max-width: 800px) {
+    margin: 3.675rem auto 3.675rem auto;
+  }
   .title {
     font-size: $size-large;
     font-weight: $weight-medium;
     margin-bottom: 3.075rem;
     text-align: center;
+    @media (max-width: 800px) {
+      font-size: $size-extra-medium;
+      margin: 0.375rem 0 2.575rem 0;
+      line-height: 2.1275rem;
+      text-align: left;
+    }
+    @media (min-width: 801px) and (max-width: 1024px) {
+      line-height: 2.675rem;
+    }
   }
 
   .faq-section {
-    background-color: $white-color;
+    background-color: $light-blue;
     box-shadow: $box-shadow-normal;
     border-radius: $radius-medium;
-    margin: 1.075rem;
     padding: 1.275rem;
-
+    margin-bottom: 1.075rem;
+    @media (max-width: 800px) {
+      line-height: 1.475rem;
+    }
     .faq-question {
       @include hover-pointer;
       font-size: $size-normal;
       font-weight: $weight-normal;
       position: relative;
       margin: 0.275rem 0;
+      padding-right: 2rem;
 
       &::after {
         content: "+";

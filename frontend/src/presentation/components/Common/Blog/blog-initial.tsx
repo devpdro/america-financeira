@@ -8,12 +8,10 @@ import styles from "./blog-initial.module.scss";
 const BlogInitial = () => {
   return (
     <section className={`${styles.container}`}>
-      <div className={styles["text-section"]}>
-        <p className={styles["subtitle-section"]}>Nossas últimas postagens</p>
-        <h1 className={styles["title-section"]}>
-          Acompanhe nossas novidades <br /> e dicas!
-        </h1>
-      </div>
+      <p className={styles["subtitle-section"]}>Nossas últimas postagens</p>
+      <h1 className={styles["title-section"]}>
+        Acompanhe nossas novidades <br /> e dicas!
+      </h1>
       <div className={styles.news}>
         <Link className={styles.link} href="">
           <div className={styles.article}>
