@@ -9,10 +9,17 @@
     @include display-flex(flex-start, space-between);
     padding: 4.075rem 2.075rem;
     border-bottom: 1px solid $light-blue;
+    @media (max-width: 884px) {
+      flex-direction: column;
+      padding: 3.075rem 2.075rem;
+    }
     .info-section {
       .img {
-        width: 270px;
+        width: 260px;
         margin-bottom: 1.075rem;
+        @media (max-width: 884px) {
+          width: 250px;
+        }
       }
       .paragraph {
         font-size: $size-small;
@@ -24,17 +31,29 @@
         font-size: $size-medium;
         font-weight: $weight-medium;
         margin-bottom: 1.275rem;
+        @media (min-width: 885px) and (max-width: 1224px) {
+          font-size: $size-normal;
+        }
+        @media (max-width: 884px) {
+          font-size: $size-normal;
+        }
       }
       .icons-section {
         @include display-flex(center, flex-start);
-
         gap: 1.775rem;
+
         .icon {
           background-color: $white-color;
           color: $black-color;
           font-size: $size-extra-medium;
           padding: 0.225rem;
           border-radius: 50%;
+          @media (min-width: 885px) and (max-width: 1224px) {
+            font-size: 1.675rem;
+          }
+          @media (max-width: 884px) {
+            font-size: 1.775rem;
+          }
         }
       }
       .whatsapp-section {
@@ -56,11 +75,25 @@
     .details-section {
       @include display-flex(flex-start, center);
       gap: 6.775rem;
+      @media (min-width: 885px) and (max-width: 1224px) {
+        gap: 2.075rem !important;
+        padding: 0 0 0 1.675rem;
+        @include display-flex(flex-start, space-between);
+      }
+      @media (max-width: 884px) {
+        flex-direction: column;
+        margin-top: 1.775rem;
+        gap: 2.075rem;
+      }
       .list-section {
         .title {
           font-size: $size-medium;
           font-weight: $weight-medium;
           margin-bottom: 1.075rem;
+          @media (max-width: 884px) {
+            font-size: $size-normal;
+            margin-bottom: 0.775rem;
+          }
         }
         .list-box {
           .list {
@@ -68,6 +101,14 @@
             font-weight: $weight-medium;
             color: $gray-color;
             margin-bottom: 0.575rem;
+            @media (min-width: 885px) and (max-width: 1224px) {
+              font-size: $size-small;
+              margin-bottom: 0.275rem;
+            }
+            @media (max-width: 884px) {
+              font-size: $size-small;
+              margin-bottom: 0.275rem;
+            }
           }
         }
       }
@@ -77,11 +118,22 @@
     @include container-center(1380px, 0 auto);
     @include display-flex(flex-start, space-between);
     padding: 0.875rem 2.075rem 1.075rem 2.075rem;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
     .rights-reserved-section {
       font-size: $size-small;
       font-weight: $weight-medium;
       color: $gray-color;
       margin-bottom: 0.275rem;
+      @media (min-width: 885px) and (max-width: 1224px) {
+        font-size: $size-extra-small;
+      }
+      @media (max-width: 884px) {
+        font-size: $size-extra-small;
+        margin-bottom: 0.775rem;
+        line-height: 1.275rem;
+      }
     }
     .terms-section {
       @include display-flex;
@@ -89,6 +141,14 @@
       font-weight: $weight-medium;
       color: $gray-color;
       gap: 2.075rem;
+      @media (min-width: 885px) and (max-width: 1224px) {
+        font-size: $size-extra-small;
+      }
+      @media (max-width: 884px) {
+        font-size: $size-extra-small;
+        line-height: 1.175rem;
+        margin: 0.375rem 0 0.775rem 0;
+      }
     }
   }
 }

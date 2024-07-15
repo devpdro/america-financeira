@@ -16,7 +16,7 @@ const Footer = () => {
             src={Images.LogoAmericaWhite}
             alt="Logo América Financeira"
           />
-    
+
           <h6 className={styles.subtitle}>Nos siga nas redes sociais</h6>
           <div className={styles["icons-section"]}>
             <Icons.FaLinkedin className={styles.icon} />
@@ -49,7 +49,7 @@ const Footer = () => {
       <div className={styles["container-info"]}>
         <div className={styles["rights-reserved-section"]}>
           <p>
-            América Financeira - Todos os direitos reservados | CNPJ: CNPJ:
+            América Financeira - Todos os direitos reservados <br /> | CNPJ:
             16.965.518/0001-08 | Instituição América Financeira
           </p>
           <p>Rua | Prédio E1 - , São Pedro - SP, 13520-000</p>
