@@ -1,4 +1,4 @@
-const FaqLoanItems = [
+const FaqItems = [
   {
     question: "O que é Margem Consignável?",
     answer: "É o valor máximo do salário ou benefício líquido mensal que pode ser comprometido com parcelas de empréstimo consignado e despesas do cartão de crédito consignado. Não pode ultrapassar 40%, sendo 35% para empréstimo e 5% para o cartão."
@@ -21,4 +21,4 @@ const FaqLoanItems = [
   }
 ];
 
-export default FaqLoanItems;
+export default FaqItems;

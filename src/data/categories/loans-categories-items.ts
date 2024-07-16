@@ -1,6 +1,6 @@
 import { Images } from "@/presentation/assets";
 
-const payrollLoansCategories = [
+const LoansCategoriesItems = [
   {
     title: "Aposentados e Pensionistas",
     text: "O Crédito Consignado para aposentados e pensionistas do INSS é uma modalidade de empréstimo, com baixas taxas de juros e prazo de até 84 meses, na qual as parcelas são descontadas diretamente do benefício do aposentado/pensionista. Tudo de forma fácil, rápida, sem burocracia e com toda comodidade que você precisa.",
@@ -25,7 +25,6 @@ const payrollLoansCategories = [
     imageSrc: Images.personalEntrepreneur.src,
     buttonText: "Eu quero contratar",
   },
-  // Adicione mais categorias conforme necessário
 ];
 
-export default payrollLoansCategories
+export default LoansCategoriesItems;

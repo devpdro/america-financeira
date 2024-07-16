@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { creditDetailsItems } from "@/data";
+import { LoanQualityItems } from "@/data";
 
 import styles from "./loan-quality.module.scss";
 
@@ -17,7 +17,7 @@ const LoanQuality = () => {
         </p>
       </div>
       <div className={styles["details-section"]}>
-        {creditDetailsItems.map((item, index) => (
+        {LoanQualityItems.map((item, index) => (
           <div className={styles.box} key={index}>
             <Image
               src={item.image}
