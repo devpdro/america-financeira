@@ -1,0 +1,58 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
+.container {
+  .box-section {
+    @include display-flex;
+    background-color: $light-blue;
+    .text-section {
+      width: 100%;
+
+      @media (max-width: 624px) {
+        width: 100%;
+        padding: 1.575rem 2.075rem;
+      }
+      .title {
+        font-size: $size-extra-medium;
+        font-weight: $weight-medium;
+        padding: 0 9.075rem;
+        @media (max-width: 624px) {
+          font-size: $size-medium;
+        }
+      }
+      .subtitle {
+        font-size: $size-small;
+        font-weight: $weight-medium;
+        line-height: 1.175rem;
+        margin: 0.675rem 0 1.075rem 0;
+        padding: 0 9.075rem;
+        @media (max-width: 624px) {
+          font-size: $size-extra-small;
+          line-height: 1.075rem;
+        }
+      }
+      .link-section {
+        @include display-flex(center, flex-start);
+        padding: 0 9.075rem;
+        .icon {
+          color: $blue-strong-color;
+          font-size: $size-small;
+          margin-left: 0.675rem;
+        }
+        .paragraph {
+          font-size: $size-small;
+          font-weight: $weight-normal;
+          border-bottom: 1px solid $blue-strong-color;
+          color: $blue-strong-color;
+          @include hover-pointer;
+        }
+      }
+    }
+    .image-section {
+      width: 110%;
+      @media (max-width: 624px) {
+        display: none;
+      }
+    }
+  }
+}
