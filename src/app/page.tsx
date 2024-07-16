@@ -1,18 +1,19 @@
 import {
   Header,
   Navbar,
-  Footer,
-  BlogInitial,
-  Decorative,
-  CreditDetails,
+  LoanQuality,
+  LoanPresentation,
+  BlogHighlights,
   Faq,
-} from "@/presentation/components/Common";
-import { CarouselLoan } from "@/presentation/components/Carousel";
+  Footer,
+} from "@/presentation/components/common";
+import { LoanCarousel } from "@/presentation/components/carousel";
 import { Images } from "@/presentation/assets";
 import { FaqLoanItems } from "@/data";
 
 export default function Home() {
   const backgroundImageUrl = Images.HeaderInitial;
+
   return (
     <>
       <main>
@@ -28,7 +29,7 @@ export default function Home() {
           showDetails={false}
           backgroundImage={backgroundImageUrl.src}
         />
-        <CarouselLoan
+        <LoanCarousel
           subtitle="Ofertas personalizadas"
           title={
             <>
@@ -36,8 +37,8 @@ export default function Home() {
             </>
           }
         />
-        <CreditDetails />
-        <Decorative
+        <LoanQuality />
+        <LoanPresentation
           imageWidth={91}
           imageHeight={100}
           image={Images.Investment.src}
@@ -47,7 +48,7 @@ export default function Home() {
           paragraph="Antecipar FGTS"
           imagePosition="right"
         />
-        <Decorative
+        <LoanPresentation
           image={Images.CardCredit.src}
           imageWidth={91}
           imageHeight={100}
@@ -57,7 +58,7 @@ export default function Home() {
           paragraph="Solicitar agora"
           imagePosition="left"
         />
-        <BlogInitial />
+        <BlogHighlights />
         <Faq items={FaqLoanItems} title="Ficou com alguma dúvida?" />
         <Footer />
       </main>

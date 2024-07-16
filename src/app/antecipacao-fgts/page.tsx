@@ -1,19 +1,19 @@
 import {
   Header,
   Navbar,
+  LoanInfo,
+  LoanBenefits,
+  LoanPresentation,
+  BlogHighlights,
   Faq,
-  BlogInitial,
   Footer,
-} from "@/presentation/components/Common";
-import { LoanInfo } from "@/presentation/components";
+} from "@/presentation/components/common";
+import { FgtsSimulation } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
-
-import FgtsSimulation from "@/presentation/components/FgtsSimulation/fgts-simulation";
-import LoanBenefits from "@/presentation/components/Common/LoanBenefits/loan-benefits";
-import Decorative from "@/presentation/components/Common/Decorative/decorative";
 
 export default function FgtsAdvance() {
   const backgroundImageUrl = Images.payrollLoan;
+  
   return (
     <div>
       <Navbar />
@@ -40,7 +40,7 @@ export default function FgtsAdvance() {
           do solicitante."
       />
       <LoanBenefits />
-      <Decorative
+      <LoanPresentation
         imageWidth={91}
         imageHeight={100}
         image={Images.Investment.src}
@@ -50,7 +50,7 @@ export default function FgtsAdvance() {
         paragraph="Antecipar FGTS"
         imagePosition="right"
       />
-      <Decorative
+      <LoanPresentation
         image={Images.CardCredit.src}
         imageWidth={91}
         imageHeight={100}
@@ -60,8 +60,8 @@ export default function FgtsAdvance() {
         paragraph="Solicitar agora"
         imagePosition="left"
       />
+      <BlogHighlights />
       <Faq />
-      <BlogInitial />
       <Footer />
     </div>
   );

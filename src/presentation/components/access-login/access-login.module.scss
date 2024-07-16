@@ -2,47 +2,52 @@
 @import "../../styles/utils/mixins.scss";
 
 .container {
-  @include display-flex(flex-start, space-between);
-  flex-direction: column;
   background-color: $light-blue;
-  padding: 0 2.075rem;
   height: 100%;
-
-  .icon {
-    font-size: $size-medium;
-    border: 1px solid red;
-  }
-  .form-section {
-    width: 70%;
+  .box-container {
+    @include display-flex(flex-start, space-between);
+    @include container-center(1580px, 0 auto);
     position: absolute;
+    width: 100vw;
     top: 50%;
     left: 50%;
+    padding: 0 2.075rem;
     transform: translate(-50%, -50%);
-    @include display-flex(flex-start, space-between);
-    flex-direction: column;
+    .text-section {
+      width: 45%;
+      .input-text {
+        background-color: #eff4fd;
+        color: $black-color;
+        font-size: $size-extra-large;
+        font-weight: $weight-light;
+        transition: border-bottom 0.3s ease;
+        border-bottom: 1px solid $light-blue;
+        margin-top: 1.775rem;
+        padding: 7px 0;
+        width: 100%;
+        margin-bottom: 2.075rem;
+        @media (max-width: 994px) {
+          font-size: $size-small;
+        }
+        &:focus {
+          border-bottom: 1px solid $black-color;
+        }
+      }
+      .title {
+        color: $blue-color;
+        font-size: $size-extra-medium;
+        font-weight: $weight-medium;
+        line-height: 2.075rem;
+      }
 
-    .title {
-      font-size: $size-extra-medium;
-      font-weight: $weight-normal;
-      line-height: 2.175rem;
+      .img {
+        width: 550px;
+      }
     }
-    .input-text {
-      background-color: #EFF4FD;
-      color: $black-color;
-      font-size: $size-extra-large;
-      font-weight: $weight-light;
-      transition: border-bottom 0.3s ease;
-      border-bottom: 1px solid $light-blue;
-      margin-top: 1.775rem;
-      padding: 7px 0;
-      width: 100%;
-      margin-bottom: 2.075rem;
-      @media (max-width: 994px) {
-        font-size: $size-small;
-      }
-      &:focus {
-        border-bottom: 1px solid $black-color;
-      }
+    .form-section {
+    }
+    .logo {
+      width: 100px;
     }
   }
 }

@@ -1,2 +1,3 @@
-export { default as CarouselLoan } from "./CarouselLoan/carousel-loan";
-export { default as CarouselAbout } from "./CarouselAbout/carousel-about";
+export { default as ConsignedCarousel } from "./consigned-carousel/consigned-carousel";
+export { default as AboutCarousel } from "./about-carousel/about-carousel";
+export { default as LoanCarousel } from "./loan-carousel/loan-carousel";

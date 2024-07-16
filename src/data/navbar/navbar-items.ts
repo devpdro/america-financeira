@@ -1,5 +1,4 @@
 import { NavItemTypes } from "@/presentation/@types";
-import { Images } from "@/presentation/assets";
 
 const NavItems: NavItemTypes[] = [
   {
@@ -9,17 +8,14 @@ const NavItems: NavItemTypes[] = [
       {
         label: "Quem Somos",
         link: "/quem-somos",
-        iconImage: Images.AboutIlustration,
       },
       {
         label: "Trabalhe Conosco",
         link: "/trabalhe-conosco",
-        iconImage: Images.AboutIlustration,
       },
       {
         label: "Nossas Lojas",
         link: "#",
-        iconImage: Images.AboutIlustration,
       },
     ],
   },

@@ -1,19 +1,19 @@
 import {
-  Header,
   Navbar,
+  Header,
+  OurChannel,
+  LoanInfo,
+  LoanQuality,
+  LoanPresentation,
+  BlogHighlights,
   Faq,
   Footer,
-  BlogInitial,
-  CreditDetails,
-  Decorative,
-  LoanBenefits,
-  OurChannel,
-} from "@/presentation/components/Common";
-import { LoanInfo } from "@/presentation/components";
+} from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 
 export default function PersonalLoan() {
   const backgroundImageUrl = Images.personalEntrepreneur;
+
   return (
     <div>
       <Navbar />
@@ -39,9 +39,8 @@ export default function PersonalLoan() {
         subtitle="Entenda essa modalidade de crédito"
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências. Normalmente, ele não requer um motivo específico para a solicitação."
       />
-      <CreditDetails />
-      <LoanBenefits />
-      <Decorative
+      <LoanQuality />
+      <LoanPresentation
         imageWidth={91}
         imageHeight={100}
         image={Images.Investment.src}
@@ -51,7 +50,7 @@ export default function PersonalLoan() {
         paragraph="Antecipar FGTS"
         imagePosition="right"
       />
-      <Decorative
+      <LoanPresentation
         image={Images.CardCredit.src}
         imageWidth={91}
         imageHeight={100}
@@ -61,8 +60,8 @@ export default function PersonalLoan() {
         paragraph="Solicitar agora"
         imagePosition="left"
       />
+      <BlogHighlights />
       <Faq title="Ficou com alguma dúvida sobre o empréstimo pesssoal?" />
-      <BlogInitial />
       <Footer />
     </div>
   );

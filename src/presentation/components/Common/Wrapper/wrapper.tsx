@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Button } from "@/presentation/components/Form";
+import { Button } from "@/presentation/components/form";
 import { WrapperTypes } from "@/presentation/@types";
 
 import styles from "./wrapper.module.scss";

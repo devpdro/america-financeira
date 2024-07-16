@@ -1,18 +1,17 @@
 import {
-  Header,
   Navbar,
+  Header,
+  LoanInfo,
+  HiringBenefits,
+  BlogHighlights,
   Faq,
-  ContractorVerifier,
   Footer,
-  BlogInitial,
-} from "@/presentation/components/Common";
-import { EligibilityInfo, LoanInfo } from "@/presentation/components";
-import { payrollLoansCategories } from "@/data";
+} from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
-import HiringBenefits from "@/presentation/components/Common/HiringBenefits/hiring-benefits";
 
-export default function payrollLoan() {
+export default function PayrollLoan() {
   const backgroundImageUrl = Images.payrollLoan;
+
   return (
     <div>
       <Navbar />
@@ -37,10 +36,9 @@ export default function payrollLoan() {
           pagamento das parcelas é descontado diretamente da folha de pagamento
           do solicitante."
       />
-      <EligibilityInfo />
       <HiringBenefits />
+      <BlogHighlights />
       <Faq />
-      <BlogInitial />
       <Footer />
     </div>
   );

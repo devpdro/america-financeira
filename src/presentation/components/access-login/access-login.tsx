@@ -1,25 +1,29 @@
-import { Icons } from "@/presentation/assets";
-import styles from "./access-login.module.scss";
-import { Button } from "../Form";
+import { LoginRequest, Button } from "@/presentation/components/form";
 
-const AccessLogin = () => {
+import styles from "./access-login.module.scss";
+
+const AccessLogin= () => {
   return (
     <main className={styles.container}>
-      <Icons.FaArrowLeft className={styles.icon} />
-      <form className={styles["form-section"]}>
-        <fieldset>
-          <legend className={styles.title}>
-            Pra acessar <br /> a Área do Funcionário, precisamos <br />
-            do seu CPF.
-          </legend>
+      <div className={styles["box-container"]}>
+        <div className={styles["text-section"]}>
+          <h1 className={styles.title}>
+            Pra acessar <br /> a Área dos Colaboradores, precisamos <br /> do
+            seu Código de Segurança.
+          </h1>
           <input
+            placeholder="Digite seu Código de Segurança"
             className={styles["input-text"]}
             type="text"
-            placeholder="Digite seu CPF para continuar"
-          />{" "}
-          <Button typeStyle="btn3" width="100%" text="Entrar" />
-        </fieldset>
-      </form>
+            name=""
+            id=""
+          />
+          <Button typeStyle="btn3" text="Entrar" width="100%" />
+        </div>
+        <div className={styles["form-section"]}>
+          <LoginRequest />
+        </div>
+      </div>
     </main>
   );
 };
