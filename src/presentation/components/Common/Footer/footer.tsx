@@ -1,8 +1,8 @@
-import { FooterItems } from "@/data";
 import Image from "next/image";
+import Link from "next/link";
 
-import { Icons } from "@/presentation/assets";
-import { Images } from "@/presentation/assets";
+import { Images, Icons } from "@/presentation/assets";
+import { FooterItems } from "@/data";
 
 import styles from "./footer.module.scss";
 
@@ -26,6 +26,12 @@ const Footer = () => {
           </div>
           <div className={styles["whatsapp-section"]}>
             <h6 className={styles.title}>
+              Fale com a gente pelo <br /> Telefone.
+            </h6>
+            <Image src={Images.QrCode} alt="QR Code para o WhatsApp" />
+          </div>
+          <div className={styles["whatsapp-section"]}>
+            <h6 className={styles.title}>
               Fale com a gente por <br /> WhatsApp.
             </h6>
             <Image src={Images.QrCode} alt="QR Code para o WhatsApp" />
@@ -38,7 +44,9 @@ const Footer = () => {
               <ul className={styles["list-box"]}>
                 {section.items.map((item, index) => (
                   <li key={index} className={styles.list}>
-                    {item}
+                    <Link legacyBehavior href={item.link}>
+                      <p className={styles.link}>{item.label}</p>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -55,8 +63,16 @@ const Footer = () => {
           <p>Rua | Prédio E 1- , São Pedro - SP, 13520-000</p>
         </div>
         <div className={styles["terms-section"]}>
-          <p>Política de Privacidade</p>
-          <p>Termos de uso</p>
+          <p>
+            <Link legacyBehavior href="/politica-de-privacidade">
+              <p className={styles.link}>Política de Privacidade</p>
+            </Link>
+          </p>
+          <p>
+            <Link legacyBehavior href="/termos-de-uso">
+              <p className={styles.link}>Termos de uso</p>
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

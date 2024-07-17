@@ -1,8 +1,9 @@
 export type NavItemTypes = {
-  label: string;
-  link?: string;
   children?: NavItemTypes[];
-  iconImage?: string;
+  label: string;
+  link: string;
+  new?: string;
+  blank?: string;
 };
 
 export type NavMobileTypes = {

@@ -2,10 +2,10 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 4.275rem auto 6.275rem auto);
+  @include container-center(1280px, 4.0275rem auto 6.275rem auto);
   padding: 0 2.075rem;
   @media (max-width: 800px) {
-    margin: 3.675rem auto 3.675rem auto;
+    margin: 0.675rem auto 3.675rem auto!important;
   }
   .title {
     font-size: $size-large;

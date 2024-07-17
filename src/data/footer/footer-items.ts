@@ -2,20 +2,23 @@ const FooterItems = [
   {
     title: "Produtos",
     items: [
-      "Empréstimo Pessoal",
-      "Empréstimo Consignado",
-      "Antecipação FGTS",
-      "Cartão de Crédito",
-      "Cartão Consignado",
+      { label: "Empréstimo Pessoal", link: "/emprestimo-pessoal" },
+      { label: "Empréstimo Consignado", link: "/emprestimo-consignado" },
+      { label: "Antecipação FGTS", link: "/antecipacao-fgts" },
     ],
   },
   {
     title: "Atendimento",
-    items: ["Segunda à Sexta das 9h às 18h", "Sábado e Domingo fechado"],
+    items: [{ label: "Segunda à Sexta das 9h às 18h", link: "#" }],
   },
   {
     title: "Outras informações",
-    items: ["Quem somos", "Trabalhe Conosco", "Seja parceiro", "Blog"],
+    items: [
+      { label: "Quem somos", link: "/quem-somos" },
+      { label: "Trabalhe Conosco", link: "/trabalhe-conosco" },
+      { label: "Seja parceiro", link: "/seja-parceiro" },
+      { label: "Blog", link: "/blog" },
+    ],
   },
 ];
 

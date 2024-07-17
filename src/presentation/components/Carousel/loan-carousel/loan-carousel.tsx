@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import classnames from "classnames";
 
 import { CarouselTypes } from "@/presentation/@types";
 import { Icons } from "@/presentation/assets";
@@ -19,6 +20,8 @@ const responsive = {
 
 const LoanCarousel: React.FC<CarouselTypes> = ({ title, subtitle }) => {
   const carouselRef = useRef<AliceCarousel>(null);
+  const [isPrevDisabled, setIsPrevDisabled] = useState(true);
+  const [isNextDisabled, setIsNextDisabled] = useState(false);
 
   const handlePrev = () => {
     if (carouselRef.current) {
@@ -32,13 +35,24 @@ const LoanCarousel: React.FC<CarouselTypes> = ({ title, subtitle }) => {
     }
   };
 
+  const handleSlideChange = (event) => {
+    const { item, slideItems } = event;
+    setIsPrevDisabled(item === 0);
+    setIsNextDisabled(item === slideItems.length - 1);
+  };
+
   return (
     <div className={styles.container}>
       <div>
         <p className={styles["subtitle-section"]}>{subtitle}</p>
         <h1 className={styles["title-section"]}>{title}</h1>
       </div>
-      <div className={styles["custom-arrow-left"]} onClick={handlePrev}>
+      <div
+        className={classnames(styles["custom-arrow-left"], {
+          [styles.disabled]: isPrevDisabled,
+        })}
+        onClick={handlePrev}
+      >
         <Icons.FaArrowLeft size={20} />
       </div>
       <div className={styles["carousel-section"]}>
@@ -62,9 +76,15 @@ const LoanCarousel: React.FC<CarouselTypes> = ({ title, subtitle }) => {
           controlsStrategy="alternate"
           disableDotsControls
           ref={carouselRef}
+          onSlideChanged={handleSlideChange}
         />
       </div>
-      <div className={styles["custom-arrow-right"]} onClick={handleNext}>
+      <div
+        className={classnames(styles["custom-arrow-right"], {
+          [styles.disabled]: isNextDisabled,
+        })}
+        onClick={handleNext}
+      >
         <Icons.FaArrowRight size={20} />
       </div>
     </div>

@@ -2,8 +2,9 @@
 @import "../../../styles/utils/mixins.scss";
 
 .form {
-  display: flex;
+  @include display-flex;
   flex-direction: column;
+  
   .title {
     color: $black-color;
     font-size: $size-medium;
@@ -58,7 +59,7 @@
     font-size: $size-extra-small;
   }
   .checkbox-error + .label-checkbox {
-    color: $red-color ;
+    color: $red-color;
   }
   .input-text-error {
     border-color: $red-color;

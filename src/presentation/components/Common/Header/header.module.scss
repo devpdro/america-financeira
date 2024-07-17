@@ -6,7 +6,7 @@
   height: 100vh;
   max-width: 100%;
   @media (min-width: 625px) and (max-width: 994px) {
-    height: 145vh !important;
+    height: 130vh !important;
   }
   @media (max-width: 624px) {
     height: 140vh !important;
@@ -24,7 +24,7 @@
     @media (min-width: 625px) and (max-width: 994px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 13rem;
+      margin-top: 9.775rem;
     }
     @media (max-width: 624px) {
       @include display-flex(center, flex-start);
@@ -83,9 +83,14 @@
       background-color: $white-color;
       border-radius: $radius-medium;
       padding: 1.275rem 1.275rem;
-      width: 400px;
       margin-top: 5.85rem;
-      @media (max-width: 994px) {
+      width: 400px;
+      @media (min-width: 625px) and (max-width: 994px) {
+        margin-top: 2.375rem;
+        padding: 1.275rem 0.875rem;
+        width: 380px;
+      }
+      @media (max-width: 624px) {
         margin-top: 2.375rem;
         padding: 1.275rem 0.875rem;
         width: 310px;

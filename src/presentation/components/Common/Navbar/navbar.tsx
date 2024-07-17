@@ -53,18 +53,18 @@ export default function Navbar() {
               {item.children && (
                 <div className={styles.dropdown}>
                   {item.children.map((item, key) => (
-                    <Link legacyBehavior key={key} href={item.link ?? "#"}>
-                      <a className={styles["dropdown-link"]}>
-                        {item.iconImage && (
-                          <Image
-                            src={item.iconImage}
-                            alt="Ícone do item"
-                            className={styles["icon-image"]}
-                          />
-                        )}
+                    <Link legacyBehavior key={key} href={item.link} passHref>
+                      <a
+                        className={styles["dropdown-link"]}
+                        target={
+                          item.link.startsWith("https://") ? "_blank" : ""
+                        }
+                        rel="noopener noreferrer"
+                      >
                         <span className={styles["link-label"]}>
                           {item.label}
                         </span>
+                        {item.new && <p className={styles.new}>{item.new}</p>}
                       </a>
                     </Link>
                   ))}
@@ -78,7 +78,7 @@ export default function Navbar() {
       <section className={styles["right-section"]}>
         <Icons.IoPersonOutline className={styles.icon} />
         <Link className={styles.link} legacyBehavior href="/login">
-          <h1>Entrar</h1>
+          <span>Entrar</span>
         </Link>
       </section>
 

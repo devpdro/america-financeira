@@ -33,7 +33,7 @@ const Header: React.FC<
           {showDetails && (
             <>
               <p className={styles["paragraph-details"]}>{showDetails}</p>
-              <Button typeStyle="btn3" text="Conheça mais" />{" "}
+              <Button typeStyle="btn3" text="Conheça mais" />
             </>
           )}
           {showParagraph && <p className={styles.paragraph}>{showParagraph}</p>}

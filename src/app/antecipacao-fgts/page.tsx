@@ -13,7 +13,7 @@ import { Images } from "@/presentation/assets";
 
 export default function FgtsAdvance() {
   const backgroundImageUrl = Images.payrollLoan;
-  
+
   return (
     <div>
       <Navbar />

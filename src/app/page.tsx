@@ -9,7 +9,7 @@ import {
 } from "@/presentation/components/common";
 import { LoanCarousel } from "@/presentation/components/carousel";
 import { Images } from "@/presentation/assets";
-import { FaqLoanItems } from "@/data";
+import { FaqItems } from "@/data";
 
 export default function Home() {
   const backgroundImageUrl = Images.HeaderInitial;
@@ -59,7 +59,7 @@ export default function Home() {
           imagePosition="left"
         />
         <BlogHighlights />
-        <Faq items={FaqLoanItems} title="Ficou com alguma dúvida?" />
+        <Faq items={FaqItems} title="Ficou com alguma dúvida?" />
         <Footer />
       </main>
     </>
