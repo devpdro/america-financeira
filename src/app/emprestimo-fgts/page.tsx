@@ -8,8 +8,9 @@ import {
   Faq,
   Footer,
 } from "@/presentation/components/common";
-import { FgtsSimulation } from "@/presentation/components";
+import { Banks, FgtsSimulation } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
+import { FaqFgtsLoanItems } from "@/data";
 
 export default function FgtsAdvance() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -18,7 +19,7 @@ export default function FgtsAdvance() {
     <div>
       <Navbar />
       <Header
-        title="Antecipação FGTS"
+        title="Empréstimo FGTS"
         subtitle={
           <>
             Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
@@ -29,9 +30,8 @@ export default function FgtsAdvance() {
         showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
-      <FgtsSimulation />
       <LoanInfo
-        title="O que é a antecipação FGTS"
+        title="O que é Empréstimo FGTS?"
         subtitle="Saiba mais"
         paragraph="O empréstimo consignado é uma forma de crédito vantajosa com taxa de
           juros mais baixas para aposentados e pensionistas do INSS, servidores
@@ -39,7 +39,9 @@ export default function FgtsAdvance() {
           pagamento das parcelas é descontado diretamente da folha de pagamento
           do solicitante."
       />
+      <FgtsSimulation />
       <LoanBenefits />
+      <Banks />
       <LoanPresentation
         imageWidth={91}
         imageHeight={100}
@@ -61,7 +63,7 @@ export default function FgtsAdvance() {
         imagePosition="left"
       />
       <BlogHighlights />
-      <Faq />
+      <Faq items={FaqFgtsLoanItems} title="Ficou com alguma dúvida sobre Empréstimo FGTS?"/>
       <Footer />
     </div>
   );

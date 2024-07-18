@@ -16,7 +16,7 @@
     .info-section {
       .img {
         width: 260px;
-        margin-bottom: 1.075rem;
+        margin-bottom: 1.175rem;
         @media (max-width: 884px) {
           width: 250px;
         }
@@ -30,7 +30,7 @@
       .subtitle {
         font-size: $size-medium;
         font-weight: $weight-medium;
-        margin-bottom: 1.275rem;
+        margin-bottom: 1.075rem;
         @media (min-width: 885px) and (max-width: 1224px) {
           font-size: $size-normal;
         }
@@ -40,14 +40,14 @@
       }
       .icons-section {
         @include display-flex(center, flex-start);
-        gap: 1.775rem;
-
+        gap: 1.375rem;
+        margin-bottom: 1.575rem;
         .icon {
-          background-color: $white-color;
-          color: $black-color;
-          font-size: $size-extra-medium;
-          padding: 0.225rem;
+          background-color: $gray-light-color;
+          color: $blue-strong-color;
+          font-size: 1.875rem;
           border-radius: 50%;
+          padding: 0.225rem;
           @media (min-width: 885px) and (max-width: 1224px) {
             font-size: 1.675rem;
           }
@@ -57,11 +57,11 @@
         }
       }
       .whatsapp-section {
-        background-color: $white-color;
+        background-color: $gray-light-color;
         border-radius: $radius-medium;
         width: 150px;
         padding: 0.975rem 1.075rem;
-        margin-top: 1.775rem;
+        margin-bottom: 1.775rem;
         .title {
           color: $black-color;
           font-size: $size-extra-small;
@@ -97,10 +97,15 @@
         }
         .list-box {
           .list {
+            @include hover-pointer;
             font-size: $size-normal;
             font-weight: $weight-medium;
             color: $gray-color;
-            margin-bottom: 0.575rem;
+            white-space: wrap;
+            margin-bottom: 0.425rem;
+            &:hover {
+              color: $gray-light-color;
+            }
             @media (min-width: 885px) and (max-width: 1224px) {
               font-size: $size-small;
               margin-bottom: 0.275rem;

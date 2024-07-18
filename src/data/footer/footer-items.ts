@@ -8,8 +8,11 @@ const FooterItems = [
     ],
   },
   {
-    title: "Atendimento",
-    items: [{ label: "Segunda à Sexta das 9h às 18h", link: "#" }],
+    title: "Ouvidora",
+    items: [
+      { label: "0800 000 0120", link: "#" },
+      { label: "Atendimento das 9h às 18h (dias úteis)", link: "#" },
+    ],
   },
   {
     title: "Outras informações",

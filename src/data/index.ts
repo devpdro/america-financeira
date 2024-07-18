@@ -1,9 +1,11 @@
 export { default as LoansCategoriesItems } from "./categories/loans-categories-items";
+export { default as LoanBenefitsItems } from "./loan-benefits/loan-benefits-items";
+export { default as FaqConsignedLoanItems } from "./faq/faq-consigned-loan-items";
 export { default as LoanQualityItems } from "./loan-quality/loan-quality-items";
 export { default as FaqPersonalLoanItems } from "./faq/faq-personal-loan-items";
 export { default as LoanCarouselItems } from "./carousel/loan-carousel-items";
+export { default as FaqFgtsLoanItems } from "./faq/faq-fgts-loan-items";
 export { default as FooterItems } from "./footer/footer-items";
+export { default as FaqLoanItems } from "./faq/faq-loan-items";
 export { default as NavItems } from "./navbar/navbar-items";
 export { default as bankItems } from "./banks/banks-items";
-export { default as FaqItems } from "./faq/faq-loan-items";
-export { default as Faqtems } from "./faq/faq-loan-items";

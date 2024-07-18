@@ -8,6 +8,7 @@ import {
   Footer,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
+import { FaqConsignedLoanItems } from "@/data";
 
 export default function PayrollLoan() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -38,7 +39,10 @@ export default function PayrollLoan() {
       />
       <HiringBenefits />
       <BlogHighlights />
-      <Faq />
+      <Faq
+        items={FaqConsignedLoanItems}
+        title="Ficou com alguma dúvida sobre Empréstimo Consignado?"
+      />
       <Footer />
     </div>
   );

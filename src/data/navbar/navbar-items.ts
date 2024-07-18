@@ -37,14 +37,14 @@ const NavItems: NavItemTypes[] = [
         link: "/emprestimo-consignado",
       },
       {
-        label: "Antecipação FGTS",
-        link: "/antecipacao-fgts",
+        label: "Empréstimo FGTS",
+        link: "/emprestimo-fgts",
       },
     ],
   },
   {
     label: "Seja Parceiro",
-    link: "/seja-parceiro",
+    link: "/parceiros",
   },
   {
     label: "Blog",

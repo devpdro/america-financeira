@@ -3,11 +3,11 @@ import styles from "./button.module.scss";
 export type ButtonTypes = {
   typeStyle: "btn1" | "btn2" | "btn3" | "btn4";
   text: string;
-  onClick?: () => void;
   width?: string;
+  onClick?: () => void;
 };
 
-const Button: React.FC<ButtonTypes> = ({ typeStyle, text, width }) => {
+const Button: React.FC<ButtonTypes> = ({ typeStyle, text, width, onClick }) => {
   let buttonClass;
   switch (typeStyle) {
     case "btn1":
@@ -29,6 +29,7 @@ const Button: React.FC<ButtonTypes> = ({ typeStyle, text, width }) => {
     <button
       className={`${styles.btn} ${buttonClass}`}
       style={{ width: width || "auto" }}
+      onClick={onClick}
     >
       {text}
     </button>

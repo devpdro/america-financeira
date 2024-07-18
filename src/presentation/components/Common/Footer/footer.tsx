@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Images, Icons } from "@/presentation/assets";
+
 import { FooterItems } from "@/data";
 
 import styles from "./footer.module.scss";
@@ -16,19 +17,20 @@ const Footer = () => {
             src={Images.LogoAmericaWhite}
             alt="Logo América Financeira"
           />
-
-          <h6 className={styles.subtitle}>Nos siga nas redes sociais</h6>
+          <h6 className={styles.subtitle}>Redes sociais:</h6>
           <div className={styles["icons-section"]}>
             <Icons.FaLinkedin className={styles.icon} />
-            <Icons.FaFacebook className={styles.icon} />
-            <Icons.FaInstagram className={styles.icon} />
-            <Icons.FaYoutube className={styles.icon} />
+            <Icons.FaLinkedin className={styles.icon} />
+            <Icons.FaLinkedin className={styles.icon} />
+            <Icons.FaLinkedin className={styles.icon} />
+            <Icons.FaLinkedin className={styles.icon} />
           </div>
+          <h6 className={styles.subtitle}>Precisando de ajuda?</h6>
           <div className={styles["whatsapp-section"]}>
             <h6 className={styles.title}>
               Fale com a gente pelo <br /> Telefone.
             </h6>
-            <Image src={Images.QrCode} alt="QR Code para o WhatsApp" />
+            <Image src={Images.QrCode} alt="QR Code para o Telefone" />
           </div>
           <div className={styles["whatsapp-section"]}>
             <h6 className={styles.title}>
@@ -45,7 +47,7 @@ const Footer = () => {
                 {section.items.map((item, index) => (
                   <li key={index} className={styles.list}>
                     <Link legacyBehavior href={item.link}>
-                      <p className={styles.link}>{item.label}</p>
+                      <span className={styles.link}>{item.label}</span>
                     </Link>
                   </li>
                 ))}
@@ -60,17 +62,17 @@ const Footer = () => {
             América Financeira - Todos os direitos reservados <br /> | CNPJ:
             16.965.518/0001-08 | Instituição América Financeira
           </p>
-          <p>Rua | Prédio E 1- , São Pedro - SP, 13520-000</p>
+          <p>Av. Pres. Getulio Vargas, 832 - Santa Cruz, São Pedro - SP, 13520-000</p>
         </div>
         <div className={styles["terms-section"]}>
           <p>
             <Link legacyBehavior href="/politica-de-privacidade">
-              <p className={styles.link}>Política de Privacidade</p>
+              <span className={styles.link}>Política de Privacidade</span>
             </Link>
           </p>
           <p>
             <Link legacyBehavior href="/termos-de-uso">
-              <p className={styles.link}>Termos de uso</p>
+              <span className={styles.link}>Termos de uso</span>
             </Link>
           </p>
         </div>

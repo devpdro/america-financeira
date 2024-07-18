@@ -2,8 +2,8 @@
 @import "../../styles/utils/mixins.scss";
 
 .container {
-  margin: 0 auto 6.375rem auto;
-  padding: 0 2rem;
+  margin: 6.375rem auto 7.375rem auto;
+  padding: 0 2.075rem;
   .title {
     font-size: $size-large;
     font-weight: $weight-medium;

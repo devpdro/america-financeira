@@ -1,46 +1,31 @@
 import {
-  Navbar,
-  Header,
-  OurChannel,
-  LoanInfo,
-  LoanQuality,
-  LoanPresentation,
-  BlogHighlights,
-  Faq,
   Footer,
+  Header,
+  LoanBenefits,
+  LoanPresentation,
+  LoanQuality,
+  Navbar,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
-import { FaqPersonalLoanItems } from "@/data";
 
-export default function PersonalLoan() {
-  const backgroundImageUrl = Images.personalEntrepreneur;
-
+export default function Partners() {
+  const backgroundImageUrl = Images.payrollLoan;
   return (
-    <div>
+    <>
       <Navbar />
       <Header
-        title="Empréstimo Pessoal"
+        title="Seja Parceiro"
         subtitle={
           <>
-            Empréstimo pra você, <br /> rápido e fácil
-          </>
-        }
-        showDetails={
-          <>
-            Realize seus sonhos com a América Financeira e aproveite <br /> as
-            menores taxas do mercado!
+            Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
+            seus sonhos
           </>
         }
         showParagraph="*Sujeito à analise de crédito e condições do produto"
+        showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
-      <OurChannel />
-      <LoanInfo
-        title="O que é o Empréstimo Pessoal?"
-        subtitle="Entenda essa modalidade de crédito"
-        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências. Normalmente, ele não requer um motivo específico para a solicitação."
-      />
-      <LoanQuality />
+      <LoanBenefits />
       <LoanPresentation
         imageWidth={91}
         imageHeight={100}
@@ -61,12 +46,9 @@ export default function PersonalLoan() {
         paragraph="Solicitar agora"
         imagePosition="left"
       />
-      <BlogHighlights />
-      <Faq
-        items={FaqPersonalLoanItems}
-        title="Ficou com alguma dúvida sobre Empréstimo Pessoal?"
-      />
+      <LoanQuality />
+      <LoanBenefits />
       <Footer />
-    </div>
+    </>
   );
 }
