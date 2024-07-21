@@ -1,6 +1,6 @@
-import { CarouselItemsTypes } from "@/presentation/@types";
+import { CombinedCarouselTypes } from "@/presentation/@types";
 
-const LoanCarouselItems: CarouselItemsTypes[] = [
+const LoanCarouselItems: CombinedCarouselTypes[] = [
   {
     key: 1,
     title: "Empréstimo Pessoal",
@@ -19,7 +19,7 @@ const LoanCarouselItems: CarouselItemsTypes[] = [
     title: "Empréstimo FGTS",
     subtitle:
       "Antecipe até 10 parcelas do seu saque-aniversário FGTS com a menor taxa do mercado",
-    link: "/antecipacao-fgts",
+    link: "/emprestimo-fgts",
   },
 ];
 

@@ -45,14 +45,8 @@ const NavItem = ({ label, link, children }: NavItemTypes) => {
               href={item.link ?? "#"}
               className={styles["dropdown-link"]}
             >
-              {item.iconImage && (
-                <Image
-                  src={item.iconImage}
-                  alt="ícone do item"
-                  className={styles["icon-image"]}
-                />
-              )}
               <span className={styles["link-label"]}>{item.label}</span>
+              <div>{item.new && <p className={styles.new}>{item.new}</p>}</div>
             </Link>
           ))}
         </div>

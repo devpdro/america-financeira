@@ -9,3 +9,4 @@ export { default as FooterItems } from "./footer/footer-items";
 export { default as FaqLoanItems } from "./faq/faq-loan-items";
 export { default as NavItems } from "./navbar/navbar-items";
 export { default as bankItems } from "./banks/banks-items";
+export { default as BlogPageItems } from "./blog/blog-page-items";

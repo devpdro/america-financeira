@@ -12,7 +12,7 @@ const LoanQuality = () => {
           O crédito de qualidade <br /> que você merece
         </h1>
         <p className={styles.subtitle}>
-          Um empréstimo pode ser a solução financeira que você precisa <br />
+          Um empréstimo pode ser a solução financeira que você precisa 
           para melhorar sua vida.
         </p>
       </div>

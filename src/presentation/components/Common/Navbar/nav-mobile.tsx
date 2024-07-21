@@ -1,6 +1,6 @@
 import { NavMobileTypes } from "@/presentation/@types";
 import { IconWithProps } from "@/presentation/utils";
-import { Icons } from '@/presentation/assets'
+import { Icons } from "@/presentation/assets";
 import { NavItems } from "@/data";
 import { NavItem } from "..";
 
@@ -23,7 +23,7 @@ const NavMobile = ({ closeSideMenu }: NavMobileTypes) => {
             <NavItem
               key={key}
               label={item.label}
-              iconImage={item.iconImage}
+              new={item.new}
               link={item.link}
             >
               {item.children}

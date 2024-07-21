@@ -1,10 +1,8 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import Link from "next/link";
+import { useRef } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import classnames from "classnames";
 
 import { CarouselTypes } from "@/presentation/@types";
 import { Icons } from "@/presentation/assets";
@@ -18,10 +16,8 @@ const responsive = {
   1280: { items: 3 },
 };
 
-const LoanCarousel: React.FC<CarouselTypes> = ({ title, subtitle }) => {
+const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
   const carouselRef = useRef<AliceCarousel>(null);
-  const [isPrevDisabled, setIsPrevDisabled] = useState(true);
-  const [isNextDisabled, setIsNextDisabled] = useState(false);
 
   const handlePrev = () => {
     if (carouselRef.current) {
@@ -35,60 +31,41 @@ const LoanCarousel: React.FC<CarouselTypes> = ({ title, subtitle }) => {
     }
   };
 
-  const handleSlideChange = (event) => {
-    const { item, slideItems } = event;
-    setIsPrevDisabled(item === 0);
-    setIsNextDisabled(item === slideItems.length - 1);
-  };
-
   return (
     <div className={styles.container}>
       <div>
         <p className={styles["subtitle-section"]}>{subtitle}</p>
         <h1 className={styles["title-section"]}>{title}</h1>
       </div>
-      <div
-        className={classnames(styles["custom-arrow-left"], {
-          [styles.disabled]: isPrevDisabled,
-        })}
-        onClick={handlePrev}
-      >
+      <div className={styles["custom-arrow-left"]} onClick={handlePrev}>
         <Icons.FaArrowLeft size={20} />
       </div>
       <div className={styles["carousel-section"]}>
         <AliceCarousel
           mouseTracking
           items={LoanCarouselItems.map((item) => (
-            <Link href={item.link} key={item.key}>
-              <div key={item.key} className={styles.item} data-value={item.key}>
-                <div className={styles["text-section"]}>
-                  <h1 className={styles.title}>{item.title}</h1>
-                  <p className={styles.subtitle}>{item.subtitle}</p>
-                </div>
-                <div className={styles["icon-section"]}>
-                  <Icons.FaArrowRightLong className={styles.icon} />
-                </div>
+            <div key={item.key} className={styles.item} data-value={item.key}>
+              <div className={styles["text-section"]}>
+                <h1 className={styles.title}>{item.title}</h1>
+                <p className={styles.subtitle}>{item.subtitle}</p>
               </div>
-            </Link>
+              <div className={styles["icon-section"]}>
+                <Icons.FaArrowRightLong className={styles.icon} />
+              </div>
+            </div>
           ))}
           responsive={responsive}
           disableButtonsControls={true}
           controlsStrategy="alternate"
           disableDotsControls
           ref={carouselRef}
-          onSlideChanged={handleSlideChange}
         />
       </div>
-      <div
-        className={classnames(styles["custom-arrow-right"], {
-          [styles.disabled]: isNextDisabled,
-        })}
-        onClick={handleNext}
-      >
+      <div className={styles["custom-arrow-right"]} onClick={handleNext}>
         <Icons.FaArrowRight size={20} />
       </div>
     </div>
   );
 };
 
-export default LoanCarousel;
+export default CarouselLoan;
