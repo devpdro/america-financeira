@@ -38,10 +38,12 @@
       font-weight: $weight-normal;
       position: relative;
       margin: 0.275rem 0;
-      padding-right: 2rem;
+      padding-right: 4.075rem;
 
       &::after {
         content: "+";
+        color: $blue-color;
+        font-size: 1.475rem;
         position: absolute;
         top: 50%;
         right: 0px;

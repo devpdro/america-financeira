@@ -8,6 +8,7 @@ import {
   BlogHighlights,
   Faq,
   Footer,
+  Wrapper,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 import { FaqPersonalLoanItems } from "@/data";
@@ -34,13 +35,13 @@ export default function PersonalLoan() {
         showParagraph="*Sujeito à analise de crédito e condições do produto"
         backgroundImage={backgroundImageUrl.src}
       />
-      <OurChannel />
       <LoanInfo
         title="O que é o Empréstimo Pessoal?"
         subtitle="Entenda essa modalidade de crédito"
-        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências. Normalmente, ele não requer um motivo específico para a solicitação."
+        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
+        imagePosition="right"
       />
-      <LoanQuality />
+      <LoanQuality titleSection="" subtitleSection=""/>
       <LoanPresentation
         imageWidth={91}
         imageHeight={100}

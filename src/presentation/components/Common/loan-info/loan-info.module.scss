@@ -8,7 +8,7 @@
 
   .text-section {
     width: 100%;
-    padding-right: 3.275rem;
+    padding: 0 3.075rem;
     .subtitle {
       color: $blue-color;
       font-size: $size-normal;
@@ -20,7 +20,7 @@
       font-weight: $weight-medium;
       margin-top: 0.775rem;
       margin-bottom: 1.575rem;
-      line-height: 2.875rem;
+      line-height: 2.775rem;
     }
     .paragraph {
       font-size: $size-small;
@@ -32,7 +32,7 @@
   .image-section {
     width: 90%;
     .img {
-      border-radius: 2px;
+      border-radius: $radius-medium;
     }
   }
 }

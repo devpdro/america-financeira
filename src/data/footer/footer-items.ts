@@ -1,17 +1,22 @@
-const FooterItems = [
+type FooterTypes = {
+  title: string;
+  items: Array<{ label: string; link?: string }>;
+};
+
+const FooterItems: FooterTypes[] = [
   {
     title: "Produtos",
     items: [
       { label: "Empréstimo Pessoal", link: "/emprestimo-pessoal" },
       { label: "Empréstimo Consignado", link: "/emprestimo-consignado" },
-      { label: "Antecipação FGTS", link: "/antecipacao-fgts" },
+      { label: "Empréstimo FGTS", link: "/emprestimo-fgts" },
     ],
   },
   {
-    title: "Ouvidora",
+    title: "Central de Atendimento",
     items: [
-      { label: "0800 000 0120", link: "#" },
-      { label: "Atendimento das 9h às 18h (dias úteis)", link: "#" },
+      { label: "0800 000 0120 (ouvidoria)" },
+      { label: "Atendimento das 9h às 18h (dias úteis)" },
     ],
   },
   {

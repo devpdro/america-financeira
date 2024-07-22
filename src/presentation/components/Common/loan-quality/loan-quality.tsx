@@ -1,10 +1,16 @@
 import Image from "next/image";
-
 import { LoanQualityItems } from "@/data";
-
 import styles from "./loan-quality.module.scss";
 
-const LoanQuality = () => {
+type LoanQualityProps = {
+  titleSection: string;
+  subtitleSection: string;
+  image: string;
+  title: string;
+  subtitle: string;
+};
+
+const LoanQuality: React.FC<LoanQualityProps> = ({ titleSection, subtitleSection, image, title, subtitle }) => {
   return (
     <section className={styles.container}>
       <div className={styles["text-section"]}>
@@ -23,7 +29,9 @@ const LoanQuality = () => {
               src={item.image}
               className={styles["image-section"]}
               alt="Imagens ilustrativas"
-            ></Image>
+              width={500}  // Ajuste o valor conforme necessário
+              height={500} // Ajuste o valor conforme necessário
+            />
             <div className={styles["info-section"]}>
               <h1 className={styles.title}>{item.title}</h1>
               <p className={styles.subtitle}>{item.subtitle}</p>

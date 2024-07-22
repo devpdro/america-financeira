@@ -20,6 +20,7 @@ import ColorParty from "./img/festa-das-cores.jpg";
 import HeaderInitial from "./img/header-initial.webp";
 import LogoAmericaWhite from "./img/logo-america-branco.png";
 import QrCode from "./img/qr-code.png";
+import QrCodeWhats from "./img/qr-code-whats.png";
 import CellPhoneInsurance from "./img/seguro-de-celular.webp";
 import Investment from "./img/investimentos.webp";
 import InvestmentBanks from "./img/investment-banks.jpg";
@@ -29,6 +30,7 @@ import AboutIlustration from "./img/about-ilustration.png";
 import LoginIlustration from "./img/login-ilustration.png";
 
 const Images = {
+  QrCodeWhats,
   LoginIlustration,
   AboutIlustration,
   CardDebit,

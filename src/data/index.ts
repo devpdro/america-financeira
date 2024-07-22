@@ -10,3 +10,4 @@ export { default as FaqLoanItems } from "./faq/faq-loan-items";
 export { default as NavItems } from "./navbar/navbar-items";
 export { default as bankItems } from "./banks/banks-items";
 export { default as BlogPageItems } from "./blog/blog-page-items";
+export { default as IconsItems } from "./footer/icons-items";

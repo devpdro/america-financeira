@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Images, Icons } from "@/presentation/assets";
+import { Images } from "@/presentation/assets";
 
-import { FooterItems } from "@/data";
+import { FooterItems, IconsItems } from "@/data";
 
 import styles from "./footer.module.scss";
 
@@ -17,15 +17,20 @@ const Footer = () => {
             src={Images.LogoAmericaWhite}
             alt="Logo América Financeira"
           />
-          <h6 className={styles.subtitle}>Redes sociais:</h6>
+          <h6 className={styles.subtitle}>Nos siga nas redes sociais:</h6>
           <div className={styles["icons-section"]}>
-            <Icons.FaLinkedin className={styles.icon} />
-            <Icons.FaLinkedin className={styles.icon} />
-            <Icons.FaLinkedin className={styles.icon} />
-            <Icons.FaLinkedin className={styles.icon} />
-            <Icons.FaLinkedin className={styles.icon} />
+            {IconsItems.map(({ icon: Icon, link }, index) => (
+              <a
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon className={styles.icon} />
+              </a>
+            ))}
           </div>
-          <h6 className={styles.subtitle}>Precisando de ajuda?</h6>
+          <h6 className={styles.subtitle}>Precisando de ajuda?</h6>{" "}
           <div className={styles["whatsapp-section"]}>
             <h6 className={styles.title}>
               Fale com a gente pelo <br /> Telefone.
@@ -36,7 +41,7 @@ const Footer = () => {
             <h6 className={styles.title}>
               Fale com a gente por <br /> WhatsApp.
             </h6>
-            <Image src={Images.QrCode} alt="QR Code para o WhatsApp" />
+            <Image src={Images.QrCodeWhats} alt="QR Code para o WhatsApp" />
           </div>
         </div>
         <div className={styles["details-section"]}>
@@ -46,9 +51,13 @@ const Footer = () => {
               <ul className={styles["list-box"]}>
                 {section.items.map((item, index) => (
                   <li key={index} className={styles.list}>
-                    <Link legacyBehavior href={item.link}>
+                    {item.link ? (
+                      <Link legacyBehavior href={item.link}>
+                        <span className={styles.link}>{item.label}</span>
+                      </Link>
+                    ) : (
                       <span className={styles.link}>{item.label}</span>
-                    </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -62,7 +71,10 @@ const Footer = () => {
             América Financeira - Todos os direitos reservados <br /> | CNPJ:
             16.965.518/0001-08 | Instituição América Financeira
           </p>
-          <p>Av. Pres. Getulio Vargas, 832 - Santa Cruz, São Pedro - SP, 13520-000</p>
+          <p>
+            Av. Pres. Getulio Vargas, 832 - Santa Cruz, São Pedro - SP,
+            13520-000
+          </p>
         </div>
         <div className={styles["terms-section"]}>
           <p>
