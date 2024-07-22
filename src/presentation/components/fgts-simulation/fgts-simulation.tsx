@@ -1,71 +1,101 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./fgts-simulation.module.scss";
+import { Button } from "../form";
 
 const FgtsSimulation = () => {
-  const [saldo, setSaldo] = useState("");
-  const [mesAniversario, setMesAniversario] = useState("");
-  const [valorAntecipar, setValorAntecipar] = useState(null);
+  const [saldo, setSaldo] = useState(0);
+  const [mesAniversario, setMesAniversario] = useState(1);
 
-  const calcularAntecipacao = () => {
-    // Simulação simples: vamos assumir que o usuário pode antecipar 50% do saldo do FGTS.
-    const saldoNumerico = parseFloat(saldo.replace(/[^0-9.-]+/g, ""));
-    if (isNaN(saldoNumerico)) {
-      alert("Por favor, insira um saldo válido.");
-      return;
-    }
-
-    const valorCalculado = saldoNumerico * 0.721274;
-    // Define o valor final, garantindo que ele não ultrapasse R$ 1.000
-    const valorFinal = Math.min(valorCalculado);
-
-    setValorAntecipar(valorFinal.toFixed(2));
+  const incrementarSaldo = () => {
+    setSaldo((prevSaldo) => prevSaldo + 100);
   };
+
+  const decrementarSaldo = () => {
+    setSaldo((prevSaldo) => (prevSaldo > 0 ? prevSaldo - 100 : 0));
+  };
+
+  const incrementarMes = () => {
+    setMesAniversario((prevMes) => (prevMes < 12 ? prevMes + 1 : 1));
+  };
+
+  const decrementarMes = () => {
+    setMesAniversario((prevMes) => (prevMes > 1 ? prevMes - 1 : 12));
+  };
+
+  const calcularValor = (saldo: number) => {
+    return saldo * 0.721274;
+  };
+
+  const nomeMeses = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Seu dinheiro pode virar mais dinheiro</h1>
+      <h1 className={styles.title}>
+        Seu dinheiro pode virar mais <br /> dinheiro
+      </h1>
       <p className={styles.subtitle}>
-        O seu dinheiro com rendimento maior que a poupança, a 100% do CDI e <br />
+        O seu dinheiro com rendimento maior que a poupança, a 100% do CDI e
+        <br />
         disponível para qualquer momento
       </p>
-      <div>
-        <div>
-          <h6>Qual é seu saldo do FGTS?</h6>
-          <input
-            type="text"
-            value={saldo}
-            onChange={(e) => setSaldo(e.target.value)}
-            placeholder="R$ 23.213,00"
-          />
-          <h6>Seu mês de aniversário</h6>
-          <select
-            value={mesAniversario}
-            onChange={(e) => setMesAniversario(e.target.value)}
-          >
-            <option value="">Selecione</option>
-            <option value="janeiro">Janeiro</option>
-            <option value="fevereiro">Fevereiro</option>
-            <option value="marco">Março</option>
-            <option value="abril">Abril</option>
-            <option value="maio">Maio</option>
-            <option value="junho">Junho</option>
-            <option value="julho">Julho</option>
-            <option value="agosto">Agosto</option>
-            <option value="setembro">Setembro</option>
-            <option value="outubro">Outubro</option>
-            <option value="novembro">Novembro</option>
-            <option value="dezembro">Dezembro</option>
-          </select>
+      <div className={styles["form-container"]}>
+        <div className={styles["form-section"]}>
+          <div className={styles["balance-section"]}>
+            <h6 className={styles["title-form"]}>Qual é seu saldo do FGTS?</h6>
+            <input
+              className={styles["input-placeholder"]}
+              type="text"
+              value={`R$ ${saldo}`}
+              readOnly
+            />
+            <button className={styles["btn"]} onClick={decrementarSaldo}>
+              -
+            </button>
+            <button className={styles["btn"]} onClick={incrementarSaldo}>
+              +
+            </button>
+          </div>
+          <div className={styles["balance-section"]}>
+            <h6 className={styles["title-form"]}>Seu mês de aniversário</h6>
+            <input
+              className={styles["input-placeholder"]}
+              type="text"
+              value={nomeMeses[mesAniversario - 1]}
+              readOnly
+            />
+            <button className={styles["btn"]} onClick={decrementarMes}>
+              -
+            </button>
+            <button className={styles["btn"]} onClick={incrementarMes}>
+              +
+            </button>
+          </div>
         </div>
-        <button onClick={calcularAntecipacao}>Calcular</button>
-        <div>
-          {valorAntecipar !== null && (
-            <div>
-              <h6>Você pode antecipar até:</h6>
-              <p>R$ {valorAntecipar}</p>
-            </div>
-          )}
+        <div className={styles["result-section"]}>
+          <h6 className={styles["title-form"]}>Você pode antecipar até</h6>
+          <p className={styles["result"]}>
+            R$ {calcularValor(saldo).toFixed(2)}
+          </p>
+          <p className={styles.paragraph}>
+            Os valores apresentados nesta simulação são sem IOF e são calculados
+            de acordo com dados médios oferecidos pelo bancos e podem mudar
+            de acordo com o seu saldo no FGTS.
+          </p>
+          <Button typeStyle="btn1" text="Quero contratar" width="350px" />
         </div>
       </div>
     </section>

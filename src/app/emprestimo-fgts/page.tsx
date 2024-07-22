@@ -38,9 +38,9 @@ export default function FgtsAdvance() {
           públicos, além de beneficiários de programas sociais, no qual o
           pagamento das parcelas é descontado diretamente da folha de pagamento
           do solicitante."
+        imagePosition="left"
       />
       <FgtsSimulation />
-      <LoanBenefits />
       <Banks />
       <LoanPresentation
         imageWidth={91}
@@ -63,7 +63,10 @@ export default function FgtsAdvance() {
         imagePosition="left"
       />
       <BlogHighlights />
-      <Faq items={FaqFgtsLoanItems} title="Ficou com alguma dúvida sobre Empréstimo FGTS?"/>
+      <Faq
+        items={FaqFgtsLoanItems}
+        title="Ficou com alguma dúvida sobre Empréstimo FGTS?"
+      />
       <Footer />
     </div>
   );

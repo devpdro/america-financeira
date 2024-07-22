@@ -6,9 +6,11 @@ import {
   BlogHighlights,
   Faq,
   Footer,
+  LoanQuality,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 import { FaqConsignedLoanItems } from "@/data";
+import { Banks } from "@/presentation/components";
 
 export default function PayrollLoan() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -36,7 +38,10 @@ export default function PayrollLoan() {
           públicos, além de beneficiários de programas sociais, no qual o
           pagamento das parcelas é descontado diretamente da folha de pagamento
           do solicitante."
+        imagePosition="left"
       />
+      <LoanQuality titleSection="text" subtitleSection="" />
+      <Banks />
       <HiringBenefits />
       <BlogHighlights />
       <Faq

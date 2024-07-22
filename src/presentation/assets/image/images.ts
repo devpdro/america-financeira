@@ -28,8 +28,10 @@ import CardCredit from "./img/cartao-credito.webp";
 import CardDebit from "./img/card-debit.jpg";
 import AboutIlustration from "./img/about-ilustration.png";
 import LoginIlustration from "./img/login-ilustration.png";
+import NoDebt from "./img/sem-divida.png";
 
 const Images = {
+  NoDebt,
   QrCodeWhats,
   LoginIlustration,
   AboutIlustration,

@@ -1,17 +1,16 @@
 import {
   Navbar,
   Header,
-  OurChannel,
   LoanInfo,
   LoanQuality,
   LoanPresentation,
   BlogHighlights,
   Faq,
   Footer,
-  Wrapper,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 import { FaqPersonalLoanItems } from "@/data";
+import { Banks } from "@/presentation/components";
 
 export default function PersonalLoan() {
   const backgroundImageUrl = Images.personalEntrepreneur;
@@ -41,7 +40,8 @@ export default function PersonalLoan() {
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
         imagePosition="right"
       />
-      <LoanQuality titleSection="" subtitleSection=""/>
+      <LoanQuality titleSection="text" subtitleSection="" />
+      <Banks />
       <LoanPresentation
         imageWidth={91}
         imageHeight={100}
