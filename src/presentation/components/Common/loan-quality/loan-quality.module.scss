@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 9.075rem auto 5.075rem auto);
+  @include container-center(1280px, 9.075rem auto 4.075rem auto);
   @include display-flex(flex-start, space-between);
   padding: 0 2.075rem;
 

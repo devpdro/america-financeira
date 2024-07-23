@@ -1,32 +1,38 @@
-import { Images } from "@/presentation/assets";
-import Image from "next/image";
+import styles from "./about.module.scss";
 
-const About = () => {
+export function AboutUs() {
   return (
-    <div>
-      <div>
-        <h1>Sobre a América Financeira</h1>
-        <p>
-          O Nu é a maior plataforma de banco digital do mundo fora da Ásia,
-          atendendo a mais de 100 milhões de clientes no Brasil, México e
-          Colômbia. A empresa tem liderado uma transformação na indústria,
-          usando dados e tecnologia proprietária para desenvolver produtos e
-          serviços inovadores. Guiado por sua missão de combater a complexidade
-          e empoderar as pessoas, o Nu atende à jornada financeira completa dos
-          clientes, promovendo acesso e avanço financeiro com crédito
-          responsável e transparência. A empresa se apoia em um modelo de
-          negócios eficiente e escalável que combina baixo custo de atendimento
-          com retornos crescentes. O impacto do Nu tem sido reconhecido em
-          diversos prêmios, incluindo as 100 Empresas mais Influentes da Time,
-          as Empresas Mais Inovadoras da Fast Company e os Melhores Bancos do
-          Mundo da Forbes.
+    <section
+      id="quem-somos"
+      className={`${styles.container} panel`}
+      data-color="white"
+    >
+      <div className={styles.about_box}>
+        <p className={styles.subtitle}>
+        </p>
+        <h1 className={styles.title}>
+          Quem Somos <hr className={styles.linha} />
+          Somos especialistas em resolver problemas. Integrantes de equipe com
+          um único objetivo: entregar seu projeto dentro do prazo, do orçamento
+          e conforme sua visão.
+        </h1>
+      </div>
+      <div className={styles.explication}>
+        <p className={styles.paragraph}>
+          Uma empresa de desenvolvimento web é especializada em projetar,
+          planejar e implementar soluções digitais para empresas de diversos
+          setores. Nosso objetivo é fornecer sites de alta qualidade que sejam
+          visualmente atraentes e funcionais.
+        </p>
+        <p className={styles.paragraph}>
+          Com mais de 2 anos de experiência na área, nossa empresa tem se
+          destacado pela excelência na entrega de projetos e pela habilidade de
+          compreender as necessidades específicas de cada cliente. Durante esse
+          tempo, desenvolvemos um profundo conhecimento em diversas tecnologias
+          e metodologias de desenvolvimento web, permitindo-nos oferecer
+          soluções personalizadas e eficazes para nossos clientes.
         </p>
       </div>
-      <div>
-        <Image src={Images.AboutIlustration} alt="Sobre nós" />
-      </div>
-    </div>
+    </section>
   );
-};
-
-export default About;
+}

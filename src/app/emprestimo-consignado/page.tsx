@@ -40,7 +40,7 @@ export default function PayrollLoan() {
           do solicitante."
         imagePosition="left"
       />
-      <LoanQuality titleSection="text" subtitleSection="" />
+      <LoanQuality/>
       <Banks />
       <HiringBenefits />
       <BlogHighlights />

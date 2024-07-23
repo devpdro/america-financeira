@@ -1,7 +1,7 @@
 export type NavItemTypes = {
-  children?: NavItemTypes[];
   label: string;
   link: string;
+  children: NavItemTypes[];
   new?: string;
   blank?: string;
 };

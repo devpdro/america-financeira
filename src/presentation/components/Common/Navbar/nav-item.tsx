@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
@@ -13,16 +12,14 @@ import styles from "./nav-item.module.scss";
 
 const NavItem = ({ label, link, children }: NavItemTypes) => {
   const [animationParent] = useAutoAnimate();
-  const [isItemOpen, setItem] = useState(false);
-
-  const toggleItem = () => {
-    setItem(!isItemOpen);
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const handleClick = () => setIsOpen(!isOpen);
 
   return (
     <Link
       ref={animationParent}
-      onClick={toggleItem}
+      onClick={handleClick}
       href={link ?? "#"}
       className={styles["single-nav-item"]}
     >
@@ -31,13 +28,12 @@ const NavItem = ({ label, link, children }: NavItemTypes) => {
         {children && (
           <Icons.IoIosArrowDown
             className={`${styles["arrow-icon"]} ${
-              isItemOpen && styles["rotate-180"]
+              isOpen && styles["rotate-180"]
             }`}
           />
         )}
       </p>
-
-      {isItemOpen && children && (
+      {isOpen && children && (
         <div className={styles.dropdown}>
           {children.map((item, key) => (
             <Link

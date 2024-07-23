@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 0 auto);
+  @include container-center(1280px, 6.075rem auto 2.075rem auto);
   padding: 0 2.075rem;
   .title-section {
     font-size: $size-large;

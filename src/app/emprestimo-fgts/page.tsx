@@ -2,7 +2,6 @@ import {
   Header,
   Navbar,
   LoanInfo,
-  LoanBenefits,
   LoanPresentation,
   BlogHighlights,
   Faq,

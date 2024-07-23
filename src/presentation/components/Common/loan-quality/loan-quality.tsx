@@ -1,16 +1,10 @@
 import Image from "next/image";
+
 import { LoanQualityItems } from "@/data";
+
 import styles from "./loan-quality.module.scss";
 
-type LoanQualityProps = {
-  titleSection: string;
-  subtitleSection: string;
-  image: string;
-  title: string;
-  subtitle: string;
-};
-
-const LoanQuality: React.FC<LoanQualityProps> = ({ titleSection, subtitleSection, image, title, subtitle }) => {
+const LoanQuality = () => {
   return (
     <section className={styles.container}>
       <div className={styles["text-section"]}>
@@ -18,8 +12,8 @@ const LoanQuality: React.FC<LoanQualityProps> = ({ titleSection, subtitleSection
           O crédito de qualidade <br /> que você merece
         </h1>
         <p className={styles.subtitle}>
-          Um empréstimo pode ser a solução financeira que você precisa 
-          para melhorar sua vida.
+          Um empréstimo pode ser a solução financeira que você precisa para
+          melhorar sua vida.
         </p>
       </div>
       <div className={styles["details-section"]}>
@@ -29,7 +23,7 @@ const LoanQuality: React.FC<LoanQualityProps> = ({ titleSection, subtitleSection
               src={item.image}
               className={styles["image-section"]}
               alt="Imagens ilustrativas"
-              width={500}  // Ajuste o valor conforme necessário
+              width={500} // Ajuste o valor conforme necessário
               height={500} // Ajuste o valor conforme necessário
             />
             <div className={styles["info-section"]}>

@@ -13,7 +13,7 @@ import { FaqPersonalLoanItems } from "@/data";
 import { Banks } from "@/presentation/components";
 
 export default function PersonalLoan() {
-  const backgroundImageUrl = Images.personalEntrepreneur;
+  const backgroundImageUrl = Images.BannerDesktop;
 
   return (
     <div>
@@ -25,12 +25,7 @@ export default function PersonalLoan() {
             Empréstimo pra você, <br /> rápido e fácil
           </>
         }
-        showDetails={
-          <>
-            Realize seus sonhos com a América Financeira e aproveite <br /> as
-            menores taxas do mercado!
-          </>
-        }
+        showDetails={false}
         showParagraph="*Sujeito à analise de crédito e condições do produto"
         backgroundImage={backgroundImageUrl.src}
       />
@@ -38,9 +33,9 @@ export default function PersonalLoan() {
         title="O que é o Empréstimo Pessoal?"
         subtitle="Entenda essa modalidade de crédito"
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
-        imagePosition="right"
+        imagePosition="left"
       />
-      <LoanQuality titleSection="text" subtitleSection="" />
+      <LoanQuality />
       <Banks />
       <LoanPresentation
         imageWidth={91}

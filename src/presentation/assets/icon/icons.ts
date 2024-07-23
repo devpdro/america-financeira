@@ -2,14 +2,13 @@ import {
   FaArrowLeft,
   FaArrowRight,
   FaInstagram,
-  FaLinkedinIn,
   FaYoutube,
   FaPercentage,
   FaMoneyCheckAlt,
   FaUserCheck,
   FaRegClock,
 } from "react-icons/fa";
-import { IoPersonOutline } from "react-icons/io5";
+import { IoPersonOutline, IoConstructOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoIosArrowDown, IoLogoWhatsapp } from "react-icons/io";
@@ -18,9 +17,15 @@ import {
   BiLogoInstagramAlt,
   BiLogoFacebook,
   BiLogoLinkedin,
+  BiBullseye,
 } from "react-icons/bi";
+import { FiEye, FiMenu } from "react-icons/fi";
 
 const Icons = {
+  IoIosArrowDown,
+  BiBullseye,
+  FiEye,
+  IoConstructOutline,
   BiLogoFacebook,
   BiLogoInstagramAlt,
   FaPercentage,
@@ -28,7 +33,7 @@ const Icons = {
   FaUserCheck,
   FaRegClock,
   PiFacebookLogoLight,
-  IoIosArrowDown,
+  FiMenu,
   FaArrowRightLong,
   IoPersonOutline,
   AiOutlineClose,

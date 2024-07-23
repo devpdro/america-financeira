@@ -4,6 +4,7 @@ export { default as FaqConsignedLoanItems } from "./faq/faq-consigned-loan-items
 export { default as LoanQualityItems } from "./loan-quality/loan-quality-items";
 export { default as FaqPersonalLoanItems } from "./faq/faq-personal-loan-items";
 export { default as LoanCarouselItems } from "./carousel/loan-carousel-items";
+export { default as ConsignedCarouselItems } from "./carousel/consigned-carousel-items";
 export { default as FaqFgtsLoanItems } from "./faq/faq-fgts-loan-items";
 export { default as FooterItems } from "./footer/footer-items";
 export { default as FaqLoanItems } from "./faq/faq-loan-items";

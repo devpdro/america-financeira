@@ -1,11 +1,13 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
 .container {
-  font-family: "Archivo", sans-serif;
-  background-color: #f9f7f1;
+  background-color: $gray-light-color;
   padding: 0 2rem;
 
   .results_container {
-    max-width: 1240px;
-    margin: 5rem auto 0 auto;
+    max-width: 1280px;
+    margin: 0rem auto 0 auto;
 
     .title {
       font-weight: 500;
@@ -28,14 +30,14 @@
       .btn_load {
         font-family: "Archivo", sans-serif;
         font-weight: 600;
-        background-color: #f9f7f1;
-        color: #1c1c1c;
+        background-color: $gray-light-color;
+        color: $black-color;
         text-transform: uppercase;
         padding: 0.9rem 1.3rem 0.8rem 1.3rem;
         margin-top: 1rem;
         outline: none;
         cursor: pointer;
-        border: 2px solid #dda827;
+        border: 2px solid $blue-color;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
@@ -60,7 +62,7 @@
             right: 0;
             width: 0;
             height: 1px;
-            background-color: #1c1c1c;
+            background-color: $black-color;
             transition: width 0.5s ease, right 8s ease 1.5s;
           }
         }

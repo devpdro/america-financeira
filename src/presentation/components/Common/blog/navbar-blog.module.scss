@@ -1,7 +1,8 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
 .container {
-  font-family: "Archivo", sans-serif;
   font-weight: 500;
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 8.3rem auto 0rem auto;
 
   .box_navbar {
@@ -25,7 +26,7 @@
         overflow: hidden;
 
         &.active {
-          color: #dda827;
+          color: $blue-color;
           text-decoration: underline;
         }
       }
@@ -42,23 +43,23 @@
         font-weight: 500;
         padding: 0.5rem 1.3rem 0.5rem 2.5rem;
         border-radius: 7px;
-        border: 2px solid #dda827;
+        border: 2px solid $blue-color;
         outline: none;
         font-weight: 400;
         font-size: 1.1rem;
-        color: #1c1c1ce1;
+        color: $black-color;
 
         &::placeholder {
           font-size: 1.1rem;
-          color: #1c1c1cb9;
+          color: $black-color;
         }
       }
 
       .searchIcon {
         position: absolute;
-        top: 56%;
-        font-size: 1.6rem;
-        color: #1c1c1cb9;
+        top: 50%;
+        font-size: 1.3rem;
+        color: $black-color;
         left: 10px;
         transform: translateY(-50%);
       }

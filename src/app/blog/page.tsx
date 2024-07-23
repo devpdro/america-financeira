@@ -1,4 +1,4 @@
-import { Footer, Header } from "@/presentation/components/common";
+import { Footer, Header, Navbar } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 import BlogRecent from "@/presentation/components/common/blog/blog-recent";
 
@@ -7,6 +7,7 @@ export default function Blog() {
 
   return (
     <>
+      <Navbar />
       <Header
         title="Empréstimo Consignado"
         subtitle={

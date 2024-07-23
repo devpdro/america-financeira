@@ -17,7 +17,7 @@ const BlogHighlights = () => {
           <div className={styles.article}>
             <Image
               className={styles.img}
-              src={Images.InvestmentBanks}
+              src={Images.CellPhoneInsurance}
               alt="Empréstimos"
             />
             <p className={styles.subtitle}>Empréstimos</p>
@@ -32,7 +32,7 @@ const BlogHighlights = () => {
             <Image
               className={styles.img}
               loading="lazy"
-              src={Images.CellPhoneInsurance}
+              src={Images.InvestmentBanks}
               alt="Sistema"
             />
             <p className={styles.subtitle}>Investimentos</p>
