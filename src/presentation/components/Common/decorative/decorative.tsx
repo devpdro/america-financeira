@@ -1,22 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { DecorativeTypes } from "@/presentation/@types";
 import { Icons } from "@/presentation/assets";
 
-import styles from "./loan-presentation.module.scss";
+import styles from "./decorative.module.scss";
 
-export type DecorativeTypes = {
-  image: string;
-  alt: string;
-  title: string;
-  subtitle: string;
-  paragraph: string;
-  imageWidth: number;
-  imageHeight: number;
-  imagePosition: "left" | "right";
-};
-
-const Loans: React.FC<DecorativeTypes> = ({
+const Decorative: React.FC<DecorativeTypes> = ({
   image,
   alt,
   title,
@@ -52,7 +42,6 @@ const Loans: React.FC<DecorativeTypes> = ({
           </div>
         </div>
       )}
-
       {imagePosition === "right" && (
         <div className={styles["box-section"]}>
           <div
@@ -71,7 +60,6 @@ const Loans: React.FC<DecorativeTypes> = ({
           <div className={styles["text-section"]}>
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
-
             <div className={styles["link-section"]}>
               <Link href="./antecipacao-fgts">
                 <span className={styles.paragraph}>{paragraph}</span>
@@ -85,4 +73,4 @@ const Loans: React.FC<DecorativeTypes> = ({
   );
 };
 
-export default Loans;
+export default Decorative;

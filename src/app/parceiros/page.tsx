@@ -2,8 +2,8 @@ import {
   Footer,
   Header,
   LoanBenefits,
-  LoanPresentation,
-  LoanQuality,
+  Decorative,
+  Benefits,
   Navbar,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
@@ -27,8 +27,8 @@ export default function Partners() {
         showLoanRequest={false}
       />
       <LoanBenefits title="Vantagens do empréstimo FGTS" />
-      <LoanQuality />
-      <LoanPresentation
+      <Benefits />
+      <Decorative
         imageWidth={91}
         imageHeight={100}
         image={Images.payrollLoan.src}

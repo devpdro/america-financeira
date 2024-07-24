@@ -1,23 +1,17 @@
-import styles from "./about.module.scss";
+import styles from "./introduction-about.module.scss";
 
-export function AboutUs() {
+const IntroductionAbout = () => {
   return (
-    <section
-      id="quem-somos"
-      className={`${styles.container} panel`}
-      data-color="white"
-    >
-      <div className={styles.about_box}>
-        <p className={styles.subtitle}>
-        </p>
+    <section className={styles.container}>
+      <header className={styles["title-section"]}>
+        <h2 className={styles.subtitle}>Quem Somos</h2>
         <h1 className={styles.title}>
-          Quem Somos <hr className={styles.linha} />
           Somos especialistas em resolver problemas. Integrantes de equipe com
           um único objetivo: entregar seu projeto dentro do prazo, do orçamento
           e conforme sua visão.
         </h1>
-      </div>
-      <div className={styles.explication}>
+      </header>
+      <article className={styles["explication-section"]}>
         <p className={styles.paragraph}>
           Uma empresa de desenvolvimento web é especializada em projetar,
           planejar e implementar soluções digitais para empresas de diversos
@@ -32,7 +26,9 @@ export function AboutUs() {
           e metodologias de desenvolvimento web, permitindo-nos oferecer
           soluções personalizadas e eficazes para nossos clientes.
         </p>
-      </div>
+      </article>
     </section>
   );
-}
+};
+
+export default IntroductionAbout;

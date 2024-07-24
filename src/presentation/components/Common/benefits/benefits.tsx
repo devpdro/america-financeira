@@ -1,11 +1,17 @@
 import Image from "next/image";
 
-import { LoanQualityItems } from "@/data";
+import { BenefitsItems } from "@/data";
+
 import { BenefitsTypes } from "@/presentation/@types";
 
 import styles from "./benefits.module.scss";
 
-const Benefits: React.FC<BenefitsTypes> = ({ title, subtitle }) => {
+const Benefits: React.FC<BenefitsTypes> = ({
+  title,
+  subtitle,
+  imageWidth,
+  imageHeight,
+}) => {
   return (
     <section className={styles.container}>
       <div className={styles["text-section"]}>
@@ -13,14 +19,18 @@ const Benefits: React.FC<BenefitsTypes> = ({ title, subtitle }) => {
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <div className={styles["details-section"]}>
-        {LoanQualityItems.map((item, index) => (
-          <div className={styles.box} key={index}>
+        {BenefitsItems.map((item, index) => (
+          <div
+            style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
+            className={styles.box}
+            key={index}
+          >
             <Image
               src={item.image}
               className={styles["image-section"]}
               alt="Imagens ilustrativas"
-              width={500}
-              height={500}
+              width={imageWidth}
+              height={imageHeight}
             />
             <div className={styles["info-section"]}>
               <h1 className={styles.title}>{item.title}</h1>

@@ -7,7 +7,6 @@
     background-color: $light-blue;
     .text-section {
       width: 100%;
-
       @media (max-width: 1024px) {
         width: 100%;
         padding: 1.575rem 2.075rem;
@@ -36,8 +35,8 @@
         }
         @media (max-width: 1024px) {
           font-size: $size-extra-small;
-          padding: 0;
           line-height: 1.075rem;
+          padding: 0;
         }
       }
       .link-section {
@@ -55,11 +54,11 @@
           margin-left: 0.675rem;
         }
         .paragraph {
+          @include hover-pointer;
+          color: $blue-strong-color;
+          border-bottom: 1px solid $blue-strong-color;
           font-size: $size-small;
           font-weight: $weight-normal;
-          border-bottom: 1px solid $blue-strong-color;
-          color: $blue-strong-color;
-          @include hover-pointer;
         }
       }
     }

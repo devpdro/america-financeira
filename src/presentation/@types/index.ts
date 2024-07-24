@@ -1,4 +1,5 @@
 export type { CombinedCarouselTypes } from "./carousel/carousel";
+export type { DecorativeTypes } from "./decorative/decorative";
 export type { LoanRequestTypes } from "./form/loan-request";
 export type { BenefitsTypes } from "./benefits/benefits";
 export type { CarouselTypes } from "./carousel/carousel";

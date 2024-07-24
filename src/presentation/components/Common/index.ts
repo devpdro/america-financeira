@@ -5,7 +5,7 @@ export { default as Benefits } from "./benefits/benefits";
 export { default as BlogHighlights } from "./blog/blog-highlights";
 export { default as OurChannel } from "./our-channel/our-channel";
 export { default as LoanInfo } from "./loan-info/loan-info";
-export { default as LoanPresentation } from "./loan-presentation/loan-presentation";
+export { default as Decorative } from "./decorative/decorative";
 export { default as NavMobile } from "./navbar/nav-mobile";
 export { default as Blog } from "./blog/blog-highlights";
 export { default as NavItem } from "./navbar/nav-item";

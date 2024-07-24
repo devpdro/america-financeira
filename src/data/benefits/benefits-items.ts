@@ -1,6 +1,6 @@
 import { Images } from "@/presentation/assets";
 
-const creditDetailsItems = [
+const BenefitsItems = [
   {
     title: "Quitar as dívidas",
     subtitle:
@@ -21,4 +21,4 @@ const creditDetailsItems = [
   },
 ];
 
-export default creditDetailsItems;
+export default BenefitsItems;

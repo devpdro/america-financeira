@@ -30,7 +30,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <h6 className={styles.subtitle}>Precisando de ajuda?</h6>{" "}
+          <h6 className={styles.subtitle}>Precisando de ajuda?</h6>
           <div className={styles["whatsapp-section"]}>
             <h6 className={styles.title}>
               Fale com a gente pelo <br /> Telefone.

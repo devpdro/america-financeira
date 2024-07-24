@@ -23,7 +23,7 @@ export default function Navbar() {
         <Link href="/" legacyBehavior>
           <a aria-label="Logo América Financeira">
             <Image
-              src={Images.logoAmerica}
+              src={Images.logoAmericaBlue}
               alt="Logo América Financeira"
               className={styles.logo}
             />

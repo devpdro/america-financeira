@@ -1,0 +1,57 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/utils/mixins.scss";
+
+.container {
+  @include container-center(1280px, 6.075rem auto 7.075rem auto);
+  @include display-flex(flex-start, center);
+  overflow-x: hidden;
+  padding: 0 2.075rem;
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    margin: 5.075rem auto 7.075rem auto;
+    padding: 0 2.075rem !important;
+  }
+  @media (max-width: 1024px) {
+    @include display-flex(center, center);
+    flex-direction: column;
+    margin: 4.275rem auto 6.075rem auto;
+    padding: 0rem 0rem;
+  }
+  .title-section {
+    width: 70%;
+    padding-right: 8.075rem;
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0 2.575rem 0 2.075rem;
+    }
+    .subtitle {
+      color: $black-color;
+      font-size: $size-normal;
+      margin-bottom: 0.375rem;
+      @media (max-width: 1024px) {
+        font-size: $size-small;
+      }
+    }
+    .title {
+      color: $blue-color;
+      font-size: $size-extra-medium;
+      font-weight: $weight-light;
+      line-height: 2.475rem;
+      @media (max-width: 1024px) {
+        font-size: $size-extra-medium;
+      }
+    }
+  }
+  .explication-section {
+    width: 55%;
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0 2.075rem;
+    }
+    .paragraph {
+      font-size: $size-normal;
+      font-weight: 300;
+      line-height: 1.575rem;
+      margin-top: 1.875rem;
+    }
+  }
+}

@@ -32,7 +32,7 @@ const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div>
         <p className={styles["subtitle-section"]}>{subtitle}</p>
         <h1 className={styles["title-section"]}>{title}</h1>
@@ -64,7 +64,7 @@ const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
       <div className={styles["custom-arrow-right"]} onClick={handleNext}>
         <Icons.FaArrowRight size={20} />
       </div>
-    </div>
+    </section>
   );
 };
 

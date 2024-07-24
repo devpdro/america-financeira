@@ -1,15 +1,9 @@
+import { Timeline, IntroductionAbout, Team } from "@/presentation/components";
+import { Footer, Header, Navbar } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
-import { AboutUs } from "@/presentation/components/about/about";
-import { OurMission } from "@/presentation/components/about/our-misson";
-import {
-  BlogHighlights,
-  Footer,
-  Header,
-  Navbar,
-} from "@/presentation/components/common";
 
 const AboutCompany = () => {
-  const backgroundImageUrl = Images.QuemSomos;
+  const backgroundImageUrl = Images.CellPhoneInsurance;
 
   return (
     <>
@@ -18,17 +12,23 @@ const AboutCompany = () => {
         title="Sobre a América Financeira"
         subtitle={
           <>
-            Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
-            seus sonhos
+            Inovação e confiança <br /> para realizar seus sonhos <br />{" "}
+            financeiros
           </>
         }
-        showParagraph="*Sujeito à analise de crédito e condições do produto"
-        showDetails={false}
+        showParagraph="*Conheça nossa trajetória e conquistas ao longo dos anos"
+        showLoanRequest={false}
+        showDetails={
+          <>
+            Pioneiros em soluções financeiras que se adaptam às
+            <br /> suas necessidades
+          </>
+        }
         backgroundImage={backgroundImageUrl.src}
       />
-      <AboutUs />
-      <OurMission />
-      <BlogHighlights />
+      <IntroductionAbout />
+      <Timeline />
+      <Team />
       <Footer />
     </>
   );

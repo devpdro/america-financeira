@@ -2,7 +2,7 @@ import {
   Header,
   Navbar,
   Benefits,
-  LoanPresentation,
+  Decorative,
   BlogHighlights,
   Faq,
   Footer,
@@ -45,7 +45,7 @@ export default function Home() {
           subtitle="Um empréstimo pode ser a solução financeira que você precisa para
           melhorar sua vida."
         />
-        <LoanPresentation
+        <Decorative
           imageWidth={91}
           imageHeight={100}
           image={Images.Investment.src}
@@ -55,7 +55,7 @@ export default function Home() {
           paragraph="Antecipar FGTS"
           imagePosition="right"
         />
-        <LoanPresentation
+        <Decorative
           image={Images.CardCredit.src}
           imageWidth={91}
           imageHeight={100}

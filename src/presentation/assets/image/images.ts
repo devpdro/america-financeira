@@ -1,7 +1,8 @@
-import logoWhite from "./img/logo-white.webp";
+import logoAmericaWhite from "./img/logo-white.webp";
+import logoAmericaBlue from "./img/logo-america.webp";
+
 import payrollLoan from "./img/emprestimo-consignado.jpg";
 import personalEntrepreneur from "./img/emprestimo-pessoal.webp";
-import logoAmerica from "./img/logo-america.webp";
 import Business from "./img/crescimento-empresa.webp";
 import Money from "./img/divida.webp";
 import Dreamer from "./img/sonho.webp";
@@ -28,17 +29,9 @@ import CardCredit from "./img/cartao-credito.webp";
 import CardDebit from "./img/card-debit.jpg";
 import AboutIlustration from "./img/about-ilustration.png";
 import LoginIlustration from "./img/login-ilustration.png";
-import BannerDesktop from "./img/banner-desktop-casal-juntos-em-sua-nova-casa.webp";
-import PostoDesktop from "./img/post_desktop.webp";
-import BannerMobile from "./img/banner_mobile.webp";
 import NoDebt from "./img/card-debit.jpg";
-import QuemSomos from "./img/quem-somos.jpg";
 
 const Images = {
-  QuemSomos,
-  BannerDesktop,
-  PostoDesktop,
-  BannerMobile,
   NoDebt,
   QrCodeWhats,
   LoginIlustration,
@@ -63,10 +56,10 @@ const Images = {
   Dreamer,
   Business,
   Money,
-  logoWhite,
+  logoAmericaBlue,
+  logoAmericaWhite,
   payrollLoan,
   personalEntrepreneur,
-  logoAmerica,
   HeaderInitial,
   LogoAmericaWhite,
   QrCode,
