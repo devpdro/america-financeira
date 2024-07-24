@@ -6,21 +6,20 @@
   height: 100vh;
   max-width: 100%;
   @media (min-width: 625px) and (max-width: 994px) {
-    height: 130vh !important;
+    height: 130vh;
   }
   @media (max-width: 624px) {
-    height: 140vh !important;
+    height: 140vh;
   }
   .box-section {
     @include display-flex(center, space-between);
     @include container-center(1380px);
+    transform: translate(-50%, -50%);
     position: absolute;
     width: 100vw;
     top: 50%;
     left: 50%;
-    padding: 0 2rem;
-    transform: translate(-50%, -50%);
-
+    padding: 0 2.075rem;
     @media (min-width: 625px) and (max-width: 994px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
@@ -31,42 +30,39 @@
       flex-direction: column;
       margin-top: 10.575rem;
     }
-
     .text-section {
       gap: 8px;
       .subtitle {
         font-weight: $weight-normal;
         font-size: $size-medium;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.575rem;
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $size-small;
         }
         @media (max-width: 624px) {
           font-size: $size-extra-small;
-          margin-bottom: 1rem;
+          margin-bottom: 1.075rem;
         }
       }
-
       .title {
         font-size: $size-extra-large;
         font-weight: $weight-bold;
-        line-height: 3rem;
-        margin-bottom: 2rem;
+        line-height: 3.075rem;
+        margin-bottom: 2.075rem;
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $size-large;
-          line-height: 3rem;
+          line-height: 3.075rem;
         }
         @media (max-width: 624px) {
           font-size: $size-extra-medium;
-          line-height: 2.1rem;
-          margin-bottom: 1rem;
+          line-height: 2.175rem;
+          margin-bottom: 1.075rem;
         }
       }
-
       .paragraph {
         font-weight: $weight-light;
         font-size: $size-extra-small;
-        margin-top: 1.5rem;
+        margin-top: 1.575rem;
         @media (max-width: 994px) {
           font-size: $size-extra-small;
         }
@@ -74,16 +70,15 @@
       .paragraph-details {
         font-size: $size-medium;
         font-weight: $weight-normal;
-        line-height: 1.5rem;
-        margin-bottom: 2rem;
+        line-height: 1.575rem;
+        margin-bottom: 2.075rem;
       }
     }
-
     .form-section {
       background-color: $white-color;
       border-radius: $radius-medium;
       padding: 1.275rem 1.275rem;
-      margin-top: 5.85rem;
+      margin-top: 5.875rem;
       width: 400px;
       @media (min-width: 625px) and (max-width: 994px) {
         margin-top: 2.375rem;

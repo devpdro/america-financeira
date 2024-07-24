@@ -1,7 +1,8 @@
 export type HeaderTypes = {
   title: string;
   subtitle: React.ReactNode;
-  showDetails: React.ReactNode;
-  showParagraph?: string;
+  backgroundImage: string;
   showLoanRequest?: boolean;
+  showDetails?: React.ReactNode;
+  showParagraph?: string;
 };

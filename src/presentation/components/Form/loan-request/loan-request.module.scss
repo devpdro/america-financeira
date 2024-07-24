@@ -4,7 +4,6 @@
 .form {
   @include display-flex;
   flex-direction: column;
-  
   .title {
     color: $black-color;
     font-size: $size-medium;
@@ -18,7 +17,7 @@
     font-size: $size-normal;
     font-weight: $weight-medium;
     transition: border-bottom 0.3s ease;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $gray-color;
     margin-top: 1.275rem;
     padding: 7px 0;
     width: 100%;
@@ -33,10 +32,10 @@
     @include display-flex(center, flex-start);
     .checkbox {
       border: 2px solid $black-color;
-      border-radius: 5px;
-      margin: 1.5rem 0 1.5rem 0;
+      margin: 1.575rem 0 1.575rem 0;
       width: 1.275rem;
       height: 1.275rem;
+      border-radius: 5px;
       &:hover {
         cursor: pointer;
       }
@@ -49,8 +48,8 @@
       user-select: none;
       color: $black-color;
       font-weight: $weight-bold;
-      font-size: 0.825rem;
-      padding-left: 0.5rem;
+      font-size: 0.875rem;
+      padding-left: 0.575rem;
     }
   }
   .error {

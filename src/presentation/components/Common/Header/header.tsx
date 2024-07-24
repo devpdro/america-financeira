@@ -3,17 +3,13 @@ import { HeaderTypes } from "@/presentation/@types";
 
 import styles from "./header.module.scss";
 
-const Header: React.FC<
-  HeaderTypes & {
-    backgroundImage: string;
-  }
-> = ({
+const Header: React.FC<HeaderTypes> = ({
   title,
   subtitle,
-  showDetails,
-  showParagraph = true,
-  showLoanRequest = true,
   backgroundImage,
+  showLoanRequest = true,
+  showParagraph = false,
+  showDetails = false,
 }) => {
   return (
     <header
@@ -23,7 +19,6 @@ const Header: React.FC<
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: "left center",
         backgroundSize: "cover",
-        height: "100vh",
       }}
     >
       <div className={styles["box-section"]}>

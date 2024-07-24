@@ -1,7 +1,7 @@
 export { default as LoanRequirements } from "./loan-requirements/loan-requirements";
 export { default as HiringBenefits } from "./hiring-benefits/hiring-benefits";
 export { default as LoanBenefits } from "./loan-benefits/loan-benefits";
-export { default as LoanQuality } from "./loan-quality/loan-quality";
+export { default as Benefits } from "./benefits/benefits";
 export { default as BlogHighlights } from "./blog/blog-highlights";
 export { default as OurChannel } from "./our-channel/our-channel";
 export { default as LoanInfo } from "./loan-info/loan-info";

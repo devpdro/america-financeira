@@ -1,20 +1,16 @@
 import Image from "next/image";
 
 import { LoanQualityItems } from "@/data";
+import { BenefitsTypes } from "@/presentation/@types";
 
-import styles from "./loan-quality.module.scss";
+import styles from "./benefits.module.scss";
 
-const LoanQuality = () => {
+const Benefits: React.FC<BenefitsTypes> = ({ title, subtitle }) => {
   return (
     <section className={styles.container}>
       <div className={styles["text-section"]}>
-        <h1 className={styles.title}>
-          O crédito de qualidade <br /> que você merece
-        </h1>
-        <p className={styles.subtitle}>
-          Um empréstimo pode ser a solução financeira que você precisa para
-          melhorar sua vida.
-        </p>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <div className={styles["details-section"]}>
         {LoanQualityItems.map((item, index) => (
@@ -23,8 +19,8 @@ const LoanQuality = () => {
               src={item.image}
               className={styles["image-section"]}
               alt="Imagens ilustrativas"
-              width={500} // Ajuste o valor conforme necessário
-              height={500} // Ajuste o valor conforme necessário
+              width={500}
+              height={500}
             />
             <div className={styles["info-section"]}>
               <h1 className={styles.title}>{item.title}</h1>
@@ -37,4 +33,4 @@ const LoanQuality = () => {
   );
 };
 
-export default LoanQuality;
+export default Benefits;

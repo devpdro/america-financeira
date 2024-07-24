@@ -1,7 +1,7 @@
 import {
   Header,
   Navbar,
-  LoanQuality,
+  Benefits,
   LoanPresentation,
   BlogHighlights,
   Faq,
@@ -26,7 +26,6 @@ export default function Home() {
             </>
           }
           showParagraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
-          showDetails={false}
           backgroundImage={backgroundImageUrl.src}
         />
         <LoanCarousel
@@ -37,7 +36,15 @@ export default function Home() {
             </>
           }
         />
-        <LoanQuality />
+        <Benefits
+          title={
+            <>
+              O crédito de qualidade <br /> que você merece
+            </>
+          }
+          subtitle="Um empréstimo pode ser a solução financeira que você precisa para
+          melhorar sua vida."
+        />
         <LoanPresentation
           imageWidth={91}
           imageHeight={100}

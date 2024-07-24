@@ -1,22 +1,14 @@
 "use client";
 
-import { Button } from "@/presentation/components/form";
 import { useForm } from "react-hook-form";
-
 import InputMask from "react-input-mask";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import styles from "./loan-request.module.scss";
+import { Button } from "@/presentation/components/form";
+import { LoanRequestTypes } from "@/presentation/@types";
 
-export type FormTypes = {
-  nome: string;
-  email: string;
-  whatsapp: string;
-  cpf: string;
-  tipoSolicitacao: string;
-  termos: boolean;
-};
+import styles from "./loan-request.module.scss";
 
 const LoanRequest: React.FC = () => {
   const {
@@ -24,7 +16,7 @@ const LoanRequest: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormTypes>({
+  } = useForm<LoanRequestTypes>({
     defaultValues: {
       nome: "",
       email: "",
@@ -33,7 +25,7 @@ const LoanRequest: React.FC = () => {
     },
   });
 
-  const onSubmit = async (data: FormTypes) => {
+  const onSubmit = async (data: LoanRequestTypes) => {
     try {
       const response = await fetch(
         "https://n8n.americaintegracao.com.br/webhook/site_teste",
