@@ -5,31 +5,24 @@ import { Images } from "@/presentation/assets";
 interface LoanBenefitItem {
   title: string;
   subtitle: string;
-  image: string;
+  image?: string;
 }
 
 const LoanBenefitsItems: LoanBenefitItem[] = [
   {
-    title: "A taxa mais baixa",
+    title: "Seguro Acidentes Pessoais com Sorteio",
     subtitle:
-      "A partir de 1,29% a.m. A menor em relação aos outros empréstimos e bancos.",
-    image: Images.NoDebt.src,
+      "Tenha estabilidade financeira em caso de acidente ou morte e conte ainda com a cobertura desemprego e com sorteios de até R$ 10.000.",
   },
   {
-    title: "Sem dívidas",
-    subtitle: "O pagamento é descontado do saldo do próprio FGTS.",
-    image: Images.NoDebt.src,
-  },
-  {
-    title: "Disponível para negativado",
-    subtitle: "Você pode contratar, mesmo com o nome negativado.",
-    image: Images.NoDebt.src,
-  },
-  {
-    title: "Receba no mesmo dia",
+    title: "Seguro Empréstimo",
     subtitle:
-      "São 10 parcelas anuais do seu Saque-aniversário direto na sua conta de uma vez.",
-    image: Images.NoDebt.src,
+      "Garanta o pagamento de suas parcelas em situações imprevistas e tenha mais tranquilidade para organizar sua vida financeira.",
+  },
+  {
+    title: "Seguro Cartão Protegido com Sorteio",
+    subtitle:
+      "Tranquilidade para você em caso de roubo ou furto do seu cartão. Conte ainda com as melhores coberturas e sorteios mensais de até R$ 50.000.",
   },
 ];
 

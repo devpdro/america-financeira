@@ -7,3 +7,5 @@ export type { WrapperTypes } from "./wrapper/wrapper";
 export type { NavMobileTypes } from "./navbar/navbar";
 export type { NavItemTypes } from "./navbar/navbar";
 export type { HeaderTypes } from "./header/header";
+export type { TeamTypes } from "./team/team";
+export type { PartnersBenefitsTypes } from "./partners-benefits/partners-benefits";

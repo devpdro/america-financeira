@@ -6,14 +6,14 @@ import {
   BlogHighlights,
   Faq,
   Footer,
-  LoanQuality,
+  Benefits,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 import { FaqConsignedLoanItems } from "@/data";
 import { Banks } from "@/presentation/components";
 
 export default function PayrollLoan() {
-  const backgroundImageUrl = Images.payrollLoan;
+  const backgroundImageUrl = Images.HeaderInitial;
 
   return (
     <div>
@@ -40,7 +40,15 @@ export default function PayrollLoan() {
           do solicitante."
         imagePosition="left"
       />
-      <LoanQuality/>
+      <Benefits
+        title={
+          <>
+            O crédito de qualidade <br /> que você merece
+          </>
+        }
+        subtitle="Um empréstimo pode ser a solução financeira que você precisa para
+          melhorar sua vida."
+      />
       <Banks />
       <HiringBenefits />
       <BlogHighlights />

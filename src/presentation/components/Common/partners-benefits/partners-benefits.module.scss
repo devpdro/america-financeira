@@ -2,40 +2,42 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 6.075rem auto 2.075rem auto);
+  @include container-center(1280px, 5.075rem auto 6.075rem auto);
   padding: 0 2.075rem;
   .title-section {
     font-size: $size-large;
     font-weight: $weight-medium;
     text-align: center;
+  }
+  .subtitle-section {
+    font-size: $size-normal;
+    font-weight: $weight-medium;
+    line-height: 1.375rem;
     margin-bottom: 2.075rem;
+    text-align: center;
   }
   .box-section {
     @include display-flex;
     gap: 3.075rem;
     .box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include display-flex(flex-start, flex-start);
+      background-color: #f3f4f9;
+      border-radius: $radius-medium;
       flex-direction: column;
-      text-align: center;
-      width: 400px;
-      height: 300px;
-      .img {
-        width: 90px;
-        margin-bottom: 2.375rem;
-      }
+      padding: 2.075rem;
+      width: 300px;
+      height: 400px;
       .title {
-        font-size: $size-medium;
+        font-size: $size-extra-medium;
         font-weight: $weight-medium;
         margin-bottom: 0.875rem;
-        line-height: 1.375rem;
+        line-height: 1.975rem;
       }
       .paragraph {
         color: $gray-color;
-        font-size: $size-small;
+        font-size: $size-normal;
         font-weight: $weight-normal;
-        line-height: 1.275rem;
+        line-height: 1.475rem;
       }
     }
   }

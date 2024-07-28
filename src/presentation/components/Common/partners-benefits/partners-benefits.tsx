@@ -1,18 +1,18 @@
-import React from "react";
-
-import { LoanBenefitsItems } from "@/data";
-
-import styles from "./loan-benefits.module.scss";
 import Image from "next/image";
 
-type LoanBenefitsTypes = {
-  title: string;
-};
+import { PartnersBenefitsTypes } from "@/presentation/@types";
+import { LoanBenefitsItems } from "@/data";
 
-const LoanBenefits: React.FC<LoanBenefitsTypes> = ({ title }) => {
+import styles from "./partners-benefits.module.scss";
+
+const PartnersBenefits: React.FC<PartnersBenefitsTypes> = ({
+  subtitle,
+  title,
+}) => {
   return (
     <section className={styles.container}>
       <h1 className={styles["title-section"]}>{title}</h1>
+      <h3 className={styles["subtitle-section"]}>{subtitle}</h3>
       <div className={styles["box-section"]}>
         {LoanBenefitsItems.map((item, index) => (
           <div className={styles.box} key={index}>
@@ -34,4 +34,4 @@ const LoanBenefits: React.FC<LoanBenefitsTypes> = ({ title }) => {
   );
 };
 
-export default LoanBenefits;
+export default PartnersBenefits;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { bankItems } from "@/data";
+import { BankItems } from "@/data";
 
 import styles from "./banks.module.scss";
 
@@ -12,7 +12,7 @@ const Banks = () => {
         trabalhamos
       </h1>
       <div className={styles["image-section"]}>
-        {bankItems.map((bank, index) => (
+        {BankItems.map((bank, index) => (
           <Image
             width={180}
             height={0}

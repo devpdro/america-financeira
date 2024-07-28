@@ -1,42 +1,64 @@
 import {
   Footer,
   Header,
-  LoanBenefits,
-  Decorative,
-  Benefits,
+  PartnersBenefits,
   Navbar,
+  Benefits,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
+import { PartnersApresentation } from "@/presentation/components";
 
 export default function Partners() {
   const backgroundImageUrl = Images.payrollLoan;
+
   return (
     <>
       <Navbar />
       <Header
-        title="Seja Parceiro"
+        title="Sobre a América Financeira"
         subtitle={
           <>
-            Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
-            seus sonhos
+            Inovação e confiança <br /> para realizar seus sonhos <br />{" "}
+            financeiros
           </>
         }
-        showParagraph="*Sujeito à analise de crédito e condições do produto"
-        showDetails={false}
-        backgroundImage={backgroundImageUrl.src}
+        showParagraph="*Conheça nossa trajetória e conquistas ao longo dos anos"
         showLoanRequest={false}
+        showDetails={
+          <>
+            Pioneiros em soluções financeiras que se adaptam às
+            <br /> suas necessidades
+          </>
+        }
+        backgroundImage={backgroundImageUrl.src}
       />
-      <LoanBenefits title="Vantagens do empréstimo FGTS" />
-      <Benefits />
-      <Decorative
-        imageWidth={91}
-        imageHeight={100}
-        image={Images.payrollLoan.src}
-        alt="Seja parceiro"
-        title="Seja parceiro"
-        subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
-        paragraph="Antecipar FGTS"
-        imagePosition="right"
+      <PartnersBenefits
+        subtitle={
+          <>
+            Pioneiros em soluções financeiras que se adaptam às
+            <br /> suas necessidades
+          </>
+        }
+        title="America Partners"
+      />
+      <PartnersApresentation />
+      <Benefits
+        title={
+          <>
+            O crédito de qualidade <br /> que você merece
+          </>
+        }
+        subtitle="Um empréstimo pode ser a solução financeira que você precisa para
+          melhorar sua vida."
+      />
+      <PartnersBenefits
+        subtitle={
+          <>
+            Pioneiros em soluções financeiras que se adaptam às
+            <br /> suas necessidades
+          </>
+        }
+        title="America Partners"
       />
       <Footer />
     </>

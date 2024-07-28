@@ -2,18 +2,18 @@ import {
   Navbar,
   Header,
   LoanInfo,
-  LoanQuality,
-  LoanPresentation,
   BlogHighlights,
   Faq,
   Footer,
+  Decorative,
+  Benefits,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 import { FaqPersonalLoanItems } from "@/data";
 import { Banks } from "@/presentation/components";
 
 export default function PersonalLoan() {
-  const backgroundImageUrl = Images.BannerDesktop;
+  const backgroundImageUrl = Images.HeaderInitial;
 
   return (
     <div>
@@ -35,9 +35,17 @@ export default function PersonalLoan() {
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
         imagePosition="left"
       />
-      <LoanQuality />
+      <Benefits
+        title={
+          <>
+            O crédito de qualidade <br /> que você merece
+          </>
+        }
+        subtitle="Um empréstimo pode ser a solução financeira que você precisa para
+          melhorar sua vida."
+      />
       <Banks />
-      <LoanPresentation
+      <Decorative
         imageWidth={91}
         imageHeight={100}
         image={Images.Investment.src}
@@ -47,7 +55,7 @@ export default function PersonalLoan() {
         paragraph="Antecipar FGTS"
         imagePosition="right"
       />
-      <LoanPresentation
+      <Decorative
         image={Images.CardCredit.src}
         imageWidth={91}
         imageHeight={100}

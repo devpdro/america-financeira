@@ -1,6 +1,6 @@
 import { Images } from "@/presentation/assets";
 
-const bankItems = [
+const BankItems = [
   { src: Images.BankBradesco.src, alt: "Imagem do banco Bradesco" },
   { src: Images.BankCaixa.src, alt: "Imagem do banco Caixa" },
   { src: Images.BankSantander.src, alt: "Imagem do banco Santander" },
@@ -11,4 +11,4 @@ const bankItems = [
   { src: Images.BankPan.src, alt: "Imagem do banco Pan" },
 ];
 
-export default bankItems;
+export default BankItems;

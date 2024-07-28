@@ -1,6 +1,13 @@
-import { Footer, Header, Navbar } from "@/presentation/components/common";
+import {
+  BlogHighlights,
+  Faq,
+  Footer,
+  Header,
+  Navbar,
+} from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
-import BlogRecent from "@/presentation/components/common/blog/blog-recent";
+import BlogMostReads from "@/presentation/components/common/blog/blog-most-reads";
+import BlogLatestPosts from "@/presentation/components/common/blog/blog-latest-posts";
 
 export default function Blog() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -20,7 +27,9 @@ export default function Blog() {
         showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
-      <BlogRecent />
+      <BlogMostReads />
+      <BlogLatestPosts />
+      <BlogHighlights />
       <Footer />
     </>
   );

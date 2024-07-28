@@ -1,12 +1,12 @@
+export { default as PartnersBenefits } from "./partners-benefits/partners-benefits";
 export { default as LoanRequirements } from "./loan-requirements/loan-requirements";
 export { default as HiringBenefits } from "./hiring-benefits/hiring-benefits";
-export { default as LoanBenefits } from "./loan-benefits/loan-benefits";
-export { default as Benefits } from "./benefits/benefits";
 export { default as BlogHighlights } from "./blog/blog-highlights";
 export { default as OurChannel } from "./our-channel/our-channel";
-export { default as LoanInfo } from "./loan-info/loan-info";
 export { default as Decorative } from "./decorative/decorative";
+export { default as LoanInfo } from "./loan-info/loan-info";
 export { default as NavMobile } from "./navbar/nav-mobile";
+export { default as Benefits } from "./benefits/benefits";
 export { default as Blog } from "./blog/blog-highlights";
 export { default as NavItem } from "./navbar/nav-item";
 export { default as Wrapper } from "./wrapper/wrapper";

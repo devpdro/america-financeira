@@ -5,7 +5,7 @@ import { TeamItems } from "@/data";
 import classNames from "classnames";
 import styles from "./team.module.scss";
 
-const Team = () => {
+const Team: React.FC = () => {
   return (
     <section className={styles.container}>
       <div className={classNames(styles.row, styles["justify-content-center"])}>
@@ -39,7 +39,7 @@ const Team = () => {
       >
         <div className={classNames(styles.col, styles["col-3"])}>
           <div className={styles["img-square"]}>
-            <Image
+            <img
               src={TeamItems[0].src}
               alt={TeamItems[0].alt}
               className={styles["img-cover"]}
@@ -64,7 +64,7 @@ const Team = () => {
                 )}
               >
                 <div className={styles["img-square"]}>
-                  <Image
+                  <img
                     src={img.src}
                     alt={img.alt}
                     className={styles["img-cover"]}
@@ -83,7 +83,7 @@ const Team = () => {
                 )}
               >
                 <div className={styles["img-square"]}>
-                  <Image
+                  <img
                     src={img.src}
                     alt={img.alt}
                     className={styles["img-cover"]}
@@ -95,7 +95,7 @@ const Team = () => {
         </div>
         <div className={classNames(styles.col, styles["col-3"])}>
           <div className={styles["img-square"]}>
-            <Image
+            <img
               src={TeamItems[5].src}
               alt={TeamItems[5].alt}
               className={styles["img-cover"]}
