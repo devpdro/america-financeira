@@ -24,10 +24,10 @@ const Decorative: React.FC<DecorativeTypes> = ({
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
             <div className={styles["link-section"]}>
-              <Link href="#header">
+              <Link href="#header" aria-label={`Saiba mais sobre ${title}`}>
                 <span className={styles.paragraph}>{paragraph}</span>
               </Link>
-              <Icons.FaArrowRight className={styles.icon} />
+              <Icons.FaArrowRight className={styles.icon} aria-hidden="true" />
             </div>
           </div>
           <div className={styles["image-section"]}>
@@ -38,6 +38,7 @@ const Decorative: React.FC<DecorativeTypes> = ({
               src={image}
               layout="responsive"
               alt={alt}
+              aria-hidden="true"
             />
           </div>
         </div>
@@ -55,16 +56,20 @@ const Decorative: React.FC<DecorativeTypes> = ({
               src={image}
               layout="responsive"
               alt={alt}
+              aria-hidden="true"
             />
           </div>
           <div className={styles["text-section"]}>
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
             <div className={styles["link-section"]}>
-              <Link href="./antecipacao-fgts">
+              <Link
+                href="./antecipacao-fgts"
+                aria-label={`Saiba mais sobre ${title}`}
+              >
                 <span className={styles.paragraph}>{paragraph}</span>
               </Link>
-              <Icons.FaArrowRight className={styles.icon} />
+              <Icons.FaArrowRight className={styles.icon} aria-hidden="true" />
             </div>
           </div>
         </div>

@@ -18,8 +18,12 @@ export default function Navbar() {
   const [isSideMenuOpen, setSideMenu] = useState(false);
 
   return (
-    <nav className={styles.navbar}>
-      <section ref={animationParent} className={styles["left-section"]}>
+    <nav className={styles.navbar} aria-label="Navegação Principal">
+      <section
+        ref={animationParent}
+        className={styles["left-section"]}
+        aria-label="Seção de Navegação Esquerda"
+      >
         <Link href="/" legacyBehavior>
           <a aria-label="Logo América Financeira">
             <Image
@@ -32,11 +36,11 @@ export default function Navbar() {
         {isSideMenuOpen && (
           <NavMobile closeSideMenu={() => setSideMenu(false)} />
         )}
-        <div className={styles["nav-items"]}>
+        <div className={styles["nav-items"]} aria-label="Itens de Navegação">
           {NavItems.map((item, index) => (
             <div key={index} className={styles["nav-link"]}>
               <Link href={item.link ?? "#"} legacyBehavior>
-                <a className={styles["link-text"]}>
+                <a className={styles["link-text"]} aria-label={item.label}>
                   <span>{item.label}</span>
                   {item.children && (
                     <Icons.IoIosArrowDown
@@ -47,7 +51,7 @@ export default function Navbar() {
                 </a>
               </Link>
               {item.children && (
-                <div className={styles.dropdown}>
+                <div className={styles.dropdown} aria-label="Menu Suspenso">
                   {item.children.map((child, childIndex) => (
                     <Link key={childIndex} href={child.link} legacyBehavior>
                       <a
@@ -56,6 +60,7 @@ export default function Navbar() {
                           child.link.startsWith("https://") ? "_blank" : ""
                         }
                         rel="noopener noreferrer"
+                        aria-label={child.label}
                       >
                         <span className={styles["link-label"]}>
                           {child.label}
@@ -71,10 +76,13 @@ export default function Navbar() {
         </div>
       </section>
 
-      <aside className={styles["right-section"]}>
+      <aside
+        className={styles["right-section"]}
+        aria-label="Seção de Navegação Direita"
+      >
         <Icons.IoPersonOutline className={styles.icon} aria-hidden="true" />
         <Link href="/login" legacyBehavior>
-          <a className={styles.link}>
+          <a className={styles.link} aria-label="Login">
             <span>Entrar</span>
           </a>
         </Link>
@@ -83,6 +91,7 @@ export default function Navbar() {
       <IconWithProps
         onClick={() => setSideMenu(true)}
         className={styles["menu-icon"]}
+        aria-label="Abrir Menu"
       >
         <Icons.FiMenu aria-hidden="true" />
       </IconWithProps>

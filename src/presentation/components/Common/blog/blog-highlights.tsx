@@ -7,13 +7,17 @@ import styles from "./blog-highlights.module.scss";
 
 const BlogHighlights = () => {
   return (
-    <section className={`${styles.container}`}>
+    <section className={styles.container}>
       <p className={styles["subtitle-section"]}>Nossas últimas postagens</p>
       <h1 className={styles["title-section"]}>
         Acompanhe nossas novidades <br /> e dicas!
       </h1>
       <div className={styles.news}>
-        <Link className={styles.link} href="">
+        <Link
+          className={styles.link}
+          href=""
+          aria-label="Leia mais sobre Empréstimos"
+        >
           <div className={styles.article}>
             <Image
               className={styles.img}
@@ -27,13 +31,17 @@ const BlogHighlights = () => {
             <p className={styles.data}>11 de março de 2024</p>
           </div>
         </Link>
-        <Link className={styles.link} href="">
+        <Link
+          className={styles.link}
+          href=""
+          aria-label="Leia mais sobre Investimentos"
+        >
           <div className={styles.article}>
             <Image
               className={styles.img}
               loading="lazy"
               src={Images.InvestmentBanks}
-              alt="Sistema"
+              alt="Investimentos"
             />
             <p className={styles.subtitle}>Investimentos</p>
             <h1 className={styles.title}>
@@ -42,13 +50,17 @@ const BlogHighlights = () => {
             <p className={styles.data}>21 de julho de 2024</p>
           </div>
         </Link>
-        <Link className={styles.link} href="">
+        <Link
+          className={styles.link}
+          href=""
+          aria-label="Leia mais sobre Cartão de Crédito"
+        >
           <div className={styles.article}>
             <Image
               className={styles.img}
               loading="lazy"
               src={Images.CardDebit}
-              alt="Web Design"
+              alt="Cartão de Crédito"
             />
             <p className={styles.subtitle}>Cartão de Crédito</p>
             <h1 className={styles.title}>

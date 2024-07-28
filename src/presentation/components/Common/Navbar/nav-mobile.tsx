@@ -8,31 +8,42 @@ import styles from "./nav-mobile.module.scss";
 
 const NavMobile = ({ closeSideMenu }: NavMobileTypes) => {
   return (
-    <div className={styles["mobile-nav-container"]}>
-      <nav className={styles["mobile-nav"]}>
+    <div
+      className={styles["mobile-nav-container"]}
+      aria-label="Navegação Móvel"
+    >
+      <nav
+        className={styles["mobile-nav"]}
+        aria-label="Menu de Navegação Móvel"
+      >
         <section className={styles["close-section"]}>
           <IconWithProps
             onClick={closeSideMenu}
             className={styles["close-icon"]}
+            aria-label="Fechar Menu"
           >
-            <Icons.AiOutlineClose />
+            <Icons.AiOutlineClose aria-hidden="true" />
           </IconWithProps>
         </section>
-        <div className={styles["nav-items"]}>
+        <div className={styles["nav-items"]} aria-label="Itens de Navegação">
           {NavItems.map((item, key) => (
             <NavItem
               key={key}
               label={item.label}
               new={item.new}
               link={item.link}
+              aria-label={item.label}
             >
               {item.children}
             </NavItem>
           ))}
         </div>
-        <section className={styles["auth-buttons"]}>
-          <Icons.IoPersonOutline className={styles.icon} />
-          <h1>Entrar</h1>
+        <section
+          className={styles["auth-buttons"]}
+          aria-label="Botões de Autenticação"
+        >
+          <Icons.IoPersonOutline className={styles.icon} aria-hidden="true" />
+          <h1 aria-label="Entrar">Entrar</h1>
         </section>
       </nav>
     </div>

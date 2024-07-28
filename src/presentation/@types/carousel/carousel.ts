@@ -5,7 +5,7 @@ export type CarouselTypes = {
 
 export type CarouselItemsTypes = {
   key: number;
-  link?: string;
+  link: string;
 };
 
 export type CombinedCarouselTypes = CarouselTypes & CarouselItemsTypes;

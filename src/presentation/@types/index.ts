@@ -1,11 +1,12 @@
+export type { PartnersBenefitsTypes } from "./partners-benefits/partners-benefits";
 export type { CombinedCarouselTypes } from "./carousel/carousel";
 export type { DecorativeTypes } from "./decorative/decorative";
 export type { LoanRequestTypes } from "./form/loan-request";
 export type { BenefitsTypes } from "./benefits/benefits";
 export type { CarouselTypes } from "./carousel/carousel";
+export type { FaqTypes } from "./faq/faq";
 export type { WrapperTypes } from "./wrapper/wrapper";
 export type { NavMobileTypes } from "./navbar/navbar";
 export type { NavItemTypes } from "./navbar/navbar";
 export type { HeaderTypes } from "./header/header";
 export type { TeamTypes } from "./team/team";
-export type { PartnersBenefitsTypes } from "./partners-benefits/partners-benefits";

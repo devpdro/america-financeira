@@ -3,20 +3,11 @@
 import { useState } from "react";
 
 import { Button } from "@/presentation/components/form";
+import { FaqTypes } from "@/presentation/@types";
 
 import styles from "./faq.module.scss";
 
-interface FaqItemTypes {
-  question: string;
-  answer: string;
-}
-
-interface FaqProps {
-  items: FaqItemTypes[];
-  title: string;
-}
-
-const Faq: React.FC<FaqProps> = ({ items, title }) => {
+const Faq: React.FC<FaqTypes> = ({ items, title }) => {
   const [faqs, setFaqs] = useState(
     items ? items.map((faq) => ({ ...faq, open: false })) : []
   );
@@ -45,9 +36,16 @@ const Faq: React.FC<FaqProps> = ({ items, title }) => {
           className={`${styles["faq-section"]} ${faq.open ? styles.open : ""}`}
           key={index}
           onClick={() => toggleFAQ(index)}
+          aria-expanded={faq.open}
+          role="button"
+          tabIndex={0}
         >
           <div className={styles["faq-question"]}>{faq.question}</div>
-          {faq.open && <div className={styles["faq-answer"]}>{faq.answer}</div>}
+          {faq.open && (
+            <div className={styles["faq-answer"]} aria-hidden={!faq.open}>
+              {faq.answer}
+            </div>
+          )}
         </div>
       ))}
       {!showAll && faqs.length > 5 && (

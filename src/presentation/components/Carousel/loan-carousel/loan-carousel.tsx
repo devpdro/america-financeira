@@ -32,21 +32,33 @@ const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
   };
 
   return (
-    <section className={styles.container}>
-      <div>
-        <p className={styles["subtitle-section"]}>{subtitle}</p>
-        <h1 className={styles["title-section"]}>{title}</h1>
-      </div>
-      <div className={styles["custom-arrow-left"]} onClick={handlePrev}>
+    <section
+      className={styles.container}
+      aria-labelledby="carousel-title"
+      aria-describedby="carousel-subtitle"
+    >
+      <header>
+        <p id="carousel-subtitle" className={styles["subtitle-section"]}>
+          {subtitle}
+        </p>
+        <h1 id="carousel-title" className={styles["title-section"]}>
+          {title}
+        </h1>
+      </header>
+      <button
+        className={styles["custom-arrow-left"]}
+        onClick={handlePrev}
+        aria-label="Anterior"
+      >
         <Icons.FaArrowLeft size={20} />
-      </div>
+      </button>
       <div className={styles["carousel-section"]}>
         <AliceCarousel
           mouseTracking
           items={LoanCarouselItems.map((item) => (
             <div key={item.key} className={styles.item} data-value={item.key}>
               <div className={styles["text-section"]}>
-                <h1 className={styles.title}>{item.title}</h1>
+                <h2 className={styles.title}>{item.title}</h2>
                 <p className={styles.subtitle}>{item.subtitle}</p>
               </div>
               <div className={styles["icon-section"]}>
@@ -61,9 +73,13 @@ const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
           ref={carouselRef}
         />
       </div>
-      <div className={styles["custom-arrow-right"]} onClick={handleNext}>
+      <button
+        className={styles["custom-arrow-right"]}
+        onClick={handleNext}
+        aria-label="Próximo"
+      >
         <Icons.FaArrowRight size={20} />
-      </div>
+      </button>
     </section>
   );
 };

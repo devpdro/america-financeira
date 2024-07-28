@@ -25,6 +25,7 @@ const Footer = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Link para ${link}`}
               >
                 <Icon className={styles.icon} />
               </a>
@@ -53,10 +54,17 @@ const Footer = () => {
                   <li key={index} className={styles.list}>
                     {item.link ? (
                       <Link legacyBehavior href={item.link}>
-                        <span className={styles.link}>{item.label}</span>
+                        <span
+                          className={styles.link}
+                          aria-label={`Link para ${item.label}`}
+                        >
+                          {item.label}
+                        </span>
                       </Link>
                     ) : (
-                      <span className={styles.link}>{item.label}</span>
+                      <span className={styles.link} aria-label={item.label}>
+                        {item.label}
+                      </span>
                     )}
                   </li>
                 ))}
@@ -69,22 +77,26 @@ const Footer = () => {
         <div className={styles["rights-reserved-section"]}>
           <p>
             América Financeira - Todos os direitos reservados <br /> | CNPJ:
-            16.965.518/0001-08 | Instituição América Financeira
-          </p>
-          <p>
-            Av. Pres. Getulio Vargas, 832 - Santa Cruz, São Pedro - SP,
-            13520-000
+            16.965.518/0001-08 | Av. Pres. Getulio <br /> Vargas, 832 - Santa
+            Cruz, São Pedro - SP, 13520-000
           </p>
         </div>
         <div className={styles["terms-section"]}>
           <p>
             <Link legacyBehavior href="/politica-de-privacidade">
-              <span className={styles.link}>Política de Privacidade</span>
+              <span
+                className={styles.link}
+                aria-label="Política de Privacidade"
+              >
+                Política de Privacidade
+              </span>
             </Link>
           </p>
           <p>
             <Link legacyBehavior href="/termos-de-uso">
-              <span className={styles.link}>Termos de uso</span>
+              <span className={styles.link} aria-label="Termos de uso">
+                Termos de uso
+              </span>
             </Link>
           </p>
         </div>

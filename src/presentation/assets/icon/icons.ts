@@ -9,8 +9,10 @@ import {
 } from "react-icons/bi";
 import { FiEye, FiMenu } from "react-icons/fi";
 import { BiBullseye } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Icons = {
+  AiOutlineClose,
   IoConstructOutline,
   BiBullseye,
   FiEye,
