@@ -6,6 +6,7 @@ import {
   BlogHighlights,
   Faq,
   Footer,
+  ModalLoanRequest,
 } from "@/presentation/components/common";
 import { LoanCarousel } from "@/presentation/components/carousel";
 import { Images } from "@/presentation/assets";
@@ -13,7 +14,7 @@ import { FaqLoanItems } from "@/data";
 
 export default function Home() {
   const backgroundImageUrl = Images.HeaderInitial;
-
+  
   return (
     <>
       <main>

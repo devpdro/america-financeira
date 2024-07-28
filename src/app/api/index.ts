@@ -1,4 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+// pages/api/prox/index.ts
+
+import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
   req: NextApiRequest,
@@ -17,27 +19,16 @@ export default async function handler(
         }
       );
 
-      const data = await response.json();
-
       if (!response.ok) {
         return res
           .status(response.status)
-          .json({ error: "Erro ao enviar os dados", details: data });
+          .json({ message: "Erro ao processar a solicitação." });
       }
 
+      const data = await response.json();
       return res.status(200).json(data);
     } catch (error) {
-      if (error instanceof Error) {
-        return res
-          .status(500)
-          .json({ error: "Falha ao enviar os dados", details: error.message });
-      }
-      return res
-        .status(500)
-        .json({
-          error: "Falha ao enviar os dados",
-          details: "Erro desconhecido",
-        });
+      return res.status(500).json({ message: "Erro interno do servidor." });
     }
   } else {
     res.setHeader("Allow", ["POST"]);

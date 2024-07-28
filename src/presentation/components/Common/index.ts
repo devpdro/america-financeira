@@ -14,3 +14,4 @@ export { default as Footer } from "./footer/footer";
 export { default as Header } from "./header/header";
 export { default as Navbar } from "./navbar/navbar";
 export { default as Faq } from "./faq/faq";
+export { default as ModalLoanRequest } from "./modal/modal-loan-request";
