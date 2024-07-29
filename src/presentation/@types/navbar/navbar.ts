@@ -1,9 +1,9 @@
 export type NavItemTypes = {
   label: string;
   link: string;
-  children: NavItemTypes[];
   new?: string;
   blank?: string;
+  children?: NavItemTypes[];
 };
 
 export type NavMobileTypes = {

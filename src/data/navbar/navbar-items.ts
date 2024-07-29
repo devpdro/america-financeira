@@ -1,4 +1,6 @@
-const NavItems = [
+import { NavItemTypes } from "@/presentation/@types";
+
+const NavItems: NavItemTypes[] = [
   {
     label: "América Financeira",
     link: "/",
