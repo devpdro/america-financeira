@@ -16,7 +16,7 @@ export default function Blog() {
     <>
       <Navbar />
       <Header
-        title="Empréstimo Consignado"
+        title="Empréstimo Consignadoa"
         subtitle={
           <>
             Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
