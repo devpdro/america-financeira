@@ -1,7 +1,7 @@
 import {
   Header,
   Navbar,
-  LoanInfo,
+  Wrapper,
   BlogHighlights,
   Faq,
   Footer,
@@ -28,15 +28,16 @@ export default function FgtsAdvance() {
         showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
-      <LoanInfo
-        title="O que é Empréstimo FGTS?"
-        subtitle="Saiba mais"
-        paragraph="O empréstimo consignado é uma forma de crédito vantajosa com taxa de
-          juros mais baixas para aposentados e pensionistas do INSS, servidores
-          públicos, além de beneficiários de programas sociais, no qual o
-          pagamento das parcelas é descontado diretamente da folha de pagamento
-          do solicitante."
-        imagePosition="left"
+      <Wrapper
+        image={backgroundImageUrl.src}
+        imageWidth={100}
+        imageHeight={98}
+        alt="O que é o Empréstimo Pessoal?"
+        subtitle="Sobre om prestimo pessoal"
+        title="O que é o Empréstimo Pessoal?"
+        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
+        buttonPrimaryText="Simular emprestimo"
+        imagePosition="right"
       />
       <FgtsSimulation />
       <Banks />

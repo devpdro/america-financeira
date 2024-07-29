@@ -5,8 +5,9 @@ import {
   Navbar,
   Benefits,
 } from "@/presentation/components/common";
-import { Images } from "@/presentation/assets";
 import { PartnersApresentation } from "@/presentation/components";
+import { Images } from "@/presentation/assets";
+import { BenefitsPartnersItems } from "@/data";
 
 export default function Partners() {
   const backgroundImageUrl = Images.payrollLoan;
@@ -50,6 +51,9 @@ export default function Partners() {
         }
         subtitle="Um empréstimo pode ser a solução financeira que você precisa para
           melhorar sua vida."
+        imageWidth={100}
+        imageHeight={100}
+        items={BenefitsPartnersItems}
       />
       <PartnersBenefits
         subtitle={

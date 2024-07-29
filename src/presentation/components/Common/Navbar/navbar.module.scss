@@ -84,8 +84,8 @@
   }
   .right-section {
     @include hover-pointer;
-    border-radius: $radius-medium;
     font-size: $size-small;
+    border-radius: $radius-small;
     padding: 0.675rem 1.175rem;
     @media (max-width: 1124px) {
       display: none;

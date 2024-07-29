@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { BenefitsItems } from "@/data";
+
 import { BenefitsTypes } from "@/presentation/@types";
+
 import styles from "./benefits.module.scss";
 
 const Benefits: React.FC<BenefitsTypes> = ({
@@ -8,6 +9,7 @@ const Benefits: React.FC<BenefitsTypes> = ({
   subtitle,
   imageWidth,
   imageHeight,
+  items,
 }) => {
   return (
     <section
@@ -16,15 +18,11 @@ const Benefits: React.FC<BenefitsTypes> = ({
       aria-describedby="benefits-subtitle"
     >
       <header className={styles["text-section"]}>
-        <h1 id="benefits-title" className={styles.title}>
-          {title}
-        </h1>
-        <p id="benefits-subtitle" className={styles.subtitle}>
-          {subtitle}
-        </p>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
       </header>
       <div className={styles["details-section"]}>
-        {BenefitsItems.map((item, index) => (
+        {items.map((item, index) => (
           <div
             style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
             className={styles.box}

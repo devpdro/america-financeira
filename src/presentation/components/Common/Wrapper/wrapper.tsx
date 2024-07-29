@@ -10,6 +10,7 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
   alt,
   title,
   subtitle,
+  paragraph,
   buttonPrimaryText,
   imageWidth,
   imageHeight,
@@ -33,8 +34,9 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
             />
           </div>
           <div className={styles["text-section"]}>
+            <h3 className={styles.subtitle}>{subtitle}</h3>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>{subtitle}</p>
+            <p className={styles.paragraph}>{paragraph}</p>
             <Button typeStyle="btn2" text={buttonPrimaryText} width="350px" />
           </div>
         </>
@@ -42,8 +44,9 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
       {imagePosition === "right" && (
         <>
           <div className={styles["text-section"]}>
+            <h3 className={styles.subtitle}>{subtitle}</h3>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>{subtitle}</p>
+            <p className={styles.paragraph}>{paragraph}</p>
             <Button typeStyle="btn2" text={buttonPrimaryText} width="350px" />
           </div>
           <div

@@ -3,6 +3,7 @@ export type WrapperTypes = {
   alt: string;
   title: string;
   subtitle: string;
+  paragraph: string;
   buttonPrimaryText: string;
   imageWidth: number;
   imageHeight: number;

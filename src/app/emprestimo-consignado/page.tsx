@@ -1,16 +1,16 @@
 import {
   Navbar,
   Header,
-  LoanInfo,
   HiringBenefits,
   BlogHighlights,
   Faq,
   Footer,
   Benefits,
+  Wrapper,
 } from "@/presentation/components/common";
-import { Images } from "@/presentation/assets";
-import { FaqConsignedLoanItems } from "@/data";
+import { BenefitsLoanConsignedItems, FaqConsignedLoanItems } from "@/data";
 import { Banks } from "@/presentation/components";
+import { Images } from "@/presentation/assets";
 
 export default function PayrollLoan() {
   const backgroundImageUrl = Images.HeaderInitial;
@@ -30,14 +30,15 @@ export default function PayrollLoan() {
         showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
-      <LoanInfo
-        title="O que é a antecipação FGTS?"
-        subtitle="Saiba mais"
-        paragraph="O empréstimo consignado é uma forma de crédito vantajosa com taxa de
-          juros mais baixas para aposentados e pensionistas do INSS, servidores
-          públicos, além de beneficiários de programas sociais, no qual o
-          pagamento das parcelas é descontado diretamente da folha de pagamento
-          do solicitante."
+      <Wrapper
+        image={backgroundImageUrl.src}
+        imageWidth={100}
+        imageHeight={98}
+        alt="O que é o Empréstimo Pessoal?"
+        subtitle="Sobre om prestimo pessoal"
+        title="O que é o Empréstimo Pessoal?"
+        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
+        buttonPrimaryText="Simular emprestimo"
         imagePosition="left"
       />
       <Benefits
@@ -48,6 +49,9 @@ export default function PayrollLoan() {
         }
         subtitle="Um empréstimo pode ser a solução financeira que você precisa para
           melhorar sua vida."
+        imageWidth={100}
+        imageHeight={100}
+        items={BenefitsLoanConsignedItems}
       />
       <Banks />
       <HiringBenefits />

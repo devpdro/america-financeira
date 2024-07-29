@@ -1,16 +1,16 @@
 import {
   Navbar,
   Header,
-  LoanInfo,
   BlogHighlights,
   Faq,
   Footer,
   Decorative,
   Benefits,
+  Wrapper,
 } from "@/presentation/components/common";
-import { Images } from "@/presentation/assets";
-import { FaqPersonalLoanItems } from "@/data";
 import { Banks } from "@/presentation/components";
+import { Images } from "@/presentation/assets";
+import { BenefitsLoanPersonalItems, FaqPersonalLoanItems } from "@/data";
 
 export default function PersonalLoan() {
   const backgroundImageUrl = Images.HeaderInitial;
@@ -29,10 +29,15 @@ export default function PersonalLoan() {
         showParagraph="*Sujeito à analise de crédito e condições do produto"
         backgroundImage={backgroundImageUrl.src}
       />
-      <LoanInfo
+      <Wrapper
+        image={backgroundImageUrl.src}
+        imageWidth={100}
+        imageHeight={98}
+        alt="O que é o Empréstimo Pessoal?"
+        subtitle="Sobre om prestimo pessoal"
         title="O que é o Empréstimo Pessoal?"
-        subtitle="Entenda essa modalidade de crédito"
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
+        buttonPrimaryText="Simular emprestimo"
         imagePosition="left"
       />
       <Benefits
@@ -43,6 +48,9 @@ export default function PersonalLoan() {
         }
         subtitle="Um empréstimo pode ser a solução financeira que você precisa para
           melhorar sua vida."
+        imageWidth={100}
+        imageHeight={100}
+        items={BenefitsLoanPersonalItems}
       />
       <Banks />
       <Decorative

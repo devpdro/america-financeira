@@ -8,7 +8,7 @@ const Banks = () => {
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>
-        Simule com facilidade, conheça as nossas opções <br /> de bancos que
+        Simule com facilidade, conheça as nossas <br /> opções de bancos que
         trabalhamos
       </h1>
       <div className={styles["image-section"]}>

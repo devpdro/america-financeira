@@ -2,8 +2,11 @@
 @import "../../styles/utils/mixins.scss";
 
 .container {
-  margin: 5.875rem auto 7.275rem auto;
+  margin: 4.475rem auto 7.275rem auto;
   padding: 0 2.075rem;
+  @media (max-width: 880px) {
+    margin: 2.075rem auto 5.275rem auto;
+  }
   .title {
     font-size: $size-large;
     font-weight: $weight-medium;
@@ -11,10 +14,11 @@
     line-height: 2.775rem;
     @media (max-width: 880px) {
       font-size: $size-extra-medium;
-      line-height: 1.975rem;
+      line-height: 2.175rem;
     }
     @media (min-width: 880px) and (max-width: 1280px) {
       font-size: $size-extra-medium;
+      line-height: 2.075rem;
     }
   }
   .image-section {

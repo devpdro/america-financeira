@@ -9,7 +9,7 @@ import {
 } from "@/presentation/components/common";
 import { LoanCarousel } from "@/presentation/components/carousel";
 import { Images } from "@/presentation/assets";
-import { FaqLoanItems } from "@/data";
+import { BenefitsLoanItems, FaqLoanItems } from "@/data";
 
 export default function Home() {
   const backgroundImageUrl = Images.HeaderInitial;
@@ -44,6 +44,9 @@ export default function Home() {
           }
           subtitle="Um empréstimo pode ser a solução financeira que você precisa para
           melhorar sua vida."
+          imageWidth={500}
+          imageHeight={500}
+          items={BenefitsLoanItems}
         />
         <Decorative
           imageWidth={91}

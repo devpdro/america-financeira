@@ -5,7 +5,7 @@
   background-color: $light-blue;
   padding: 1.075rem 0;
   .box-container {
-    @include container-center(1380px, 5.075rem auto 5.075rem auto);
+    @include container-center(1280px, 5.075rem auto 5.075rem auto);
     padding: 0 2.075rem;
     .title {
       font-size: $size-large;
