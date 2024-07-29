@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 1.575rem auto;
   position: relative;
   .subtitle-section {
     font-size: $size-normal;
@@ -38,6 +38,9 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    @media (max-width: 624px) {
+      display: none;
+    }
     &:hover {
       background-color: $blue-color;
       color: $white-color;
@@ -57,7 +60,9 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    
+    @media (max-width: 624px) {
+      display: none;
+    }
     &:hover {
       background-color: $blue-color;
       color: $white-color;
@@ -85,10 +90,15 @@
   flex-direction: column;
   width: 280px;
   height: 350px;
+  margin: 2.075rem 0.575rem;
   padding: 3.075rem 2.075rem;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
   .title {
     font-size: $size-normal;
-    font-weight: $weight-normal;
+    font-weight: $weight-medium;
     margin-bottom: 1.075rem;
   }
   .subtitle {

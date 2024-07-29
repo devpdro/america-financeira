@@ -15,13 +15,10 @@ const HiringBenefits = () => {
             Financeira?
           </h1>
           <Button
-            typeStyle="btn1"
-            width="350px"
+            typeStyle="btn2"
+            width="300px"
             text="Quero contratar"
           ></Button>
-          <p className={styles.paragraph}>
-            *Sujeito à analise de crédito e condições do produto
-          </p>
         </div>
         <div className={styles["box-carousel"]}>
           <CarouselConsigned />

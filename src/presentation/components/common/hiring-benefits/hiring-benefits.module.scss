@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  background-color: #3A404A;
+  background-color: $gray-light-color;
   color: $white-color;
   .box-container {
     @include container-center(1380px, 0 auto);
@@ -12,16 +12,16 @@
         font-size: $size-large;
         font-weight: $weight-medium;
         line-height: 2.975rem;
-        margin-top: 1.575rem;
-        margin-bottom: 2.075rem;
+        margin: 1.075rem 0 2.075rem 0;
+        @media (max-width: 880px) {
+          font-size: $size-extra-medium;
+          margin: 1.075rem 0 2.075rem 0;
+          line-height: 2.175rem;
+        }
       }
       .subtitle {
         font-size: $size-small;
         font-weight: $weight-normal;
-      }
-      .paragraph {
-        font-size: $size-extra-small;
-        margin-top: 1.075rem;
       }
     }
   }

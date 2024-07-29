@@ -27,7 +27,6 @@ export default function PayrollLoan() {
           </>
         }
         showParagraph="*Sujeito à analise de crédito e condições do produto"
-        showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
       <Wrapper

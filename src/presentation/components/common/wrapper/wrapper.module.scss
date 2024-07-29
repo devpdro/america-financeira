@@ -8,13 +8,13 @@
   padding: 0 2.075rem;
   @media (max-width: 880px) {
     flex-direction: column;
-    margin: 4.575rem auto 3.275rem auto;
+    margin: 3.575rem auto 3.275rem auto;
     gap: 1.075rem;
   }
   .image-section {
     width: 100%;
     .img {
-      border-radius: 5px;
+      border-radius: $radius-medium;
     }
   }
   .text-section {
