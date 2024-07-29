@@ -1,6 +1,7 @@
 export { default as PartnersBenefits } from "./partners-benefits/partners-benefits";
 export { default as LoanRequirements } from "./loan-requirements/loan-requirements";
 export { default as HiringBenefits } from "./hiring-benefits/hiring-benefits";
+export { default as HeaderNotForm } from "./header/header-not-form";
 export { default as BlogHighlights } from "./blog/blog-highlights";
 export { default as Decorative } from "./decorative/decorative";
 export { default as LoanInfo } from "./loan-info/loan-info";

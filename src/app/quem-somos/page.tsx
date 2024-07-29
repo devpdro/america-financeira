@@ -1,5 +1,11 @@
+import Head from "next/head";
+
 import { Timeline, IntroductionAbout, Team } from "@/presentation/components";
-import { Footer, Header, Navbar } from "@/presentation/components/common";
+import {
+  Footer,
+  HeaderNotForm,
+  Navbar,
+} from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 
 const AboutCompany = () => {
@@ -7,8 +13,32 @@ const AboutCompany = () => {
 
   return (
     <>
+      <Head>
+        <title>
+          Conheça a América Financeira e sua Hístoria | América Financeira
+        </title>
+        <meta
+          name="description"
+          content="Conheça a América Financeira, uma empresa focada em inovação e confiança para realizar seus sonhos financeiros. Descubra nossa trajetória e conquistas ao longo dos anos."
+        />
+        <meta
+          name="keywords"
+          content="América Financeira, empresa financeira, inovação financeira, confiança financeira, trajetória, conquistas"
+        />
+        <meta
+          property="og:title"
+          content="Sobre a América Financeira - Inovação e Confiança"
+        />
+        <meta
+          property="og:description"
+          content="Conheça a América Financeira, uma empresa focada em inovação e confiança para realizar seus sonhos financeiros. Descubra nossa trajetória e conquistas ao longo dos anos."
+        />
+        <meta property="og:image" content={backgroundImageUrl.src} />
+        <meta property="og:url" content="https://www.example.com/about" />
+        <meta name="robots" content="index, follow" />
+      </Head>
       <Navbar />
-      <Header
+      <HeaderNotForm
         title="Sobre a América Financeira"
         subtitle={
           <>
@@ -16,14 +46,9 @@ const AboutCompany = () => {
             financeiros
           </>
         }
-        showParagraph="*Conheça nossa trajetória e conquistas ao longo dos anos"
+        showParagraph="Conheça nossa trajetória e conquistas ao longo dos anos"
         showLoanRequest={false}
-        showDetails={
-          <>
-            Pioneiros em soluções financeiras que se adaptam às
-            <br /> suas necessidades
-          </>
-        }
+        showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
       <IntroductionAbout />

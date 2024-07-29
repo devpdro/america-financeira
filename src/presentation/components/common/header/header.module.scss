@@ -5,8 +5,8 @@
   color: $white-color;
   height: 100vh;
   max-width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); // Black overlay with 50% opacity
-  z-index: 2; // Ensure the overlay i
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2; 
   @media (min-width: 625px) and (max-width: 994px) {
     height: 130vh;
   }
@@ -30,7 +30,7 @@
     @media (max-width: 624px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 11.575rem;
+      margin-top: 12.575rem;
     }
     .text-section {
       gap: 8px;

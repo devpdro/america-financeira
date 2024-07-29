@@ -1,7 +1,8 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
 .link {
-  color: #1c1c1cc4;
-  overflow: hidden;
-  position: relative;
+  color: $black-color;
   transition: color 0.3s ease;
 
   &::after,
@@ -12,37 +13,24 @@
     right: 0;
     width: 0;
     height: 1px;
-    background-color: #dda827;
     transition: width 0.5s ease, right 8s ease 1.5s;
   }
-
   &:hover::after {
     width: 100%;
     left: 0;
   }
-
   &:hover {
-    color: #dda827;
+    color: $blue-color;
   }
 }
-
 .routes {
-  font-family: "Archivo", sans-serif;
-  font-weight: 400;
-  max-width: 1220px;
-  background-color: #f9f7f1;
-  margin: 7.2rem auto 0 auto;
-  font-size: 1rem;
-  padding: 0 2rem;
-  transition: all 0.3s ease;
-  color: #1c1c1ca1;
-  cursor: pointer;
-  padding: 0.5rem 0rem;
+  @include container-center(1220px, 7.2rem auto);
+  @include hover-pointer;
+  font-size: $size-small;
+  padding: 0.575rem 0;
 }
-
 .content_container {
-  font-family: "Archivo", sans-serif;
-  font-weight: 500;
+
   max-width: 880px;
   display: flex;
   padding: 0 2rem;

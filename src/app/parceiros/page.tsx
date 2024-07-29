@@ -4,6 +4,7 @@ import {
   PartnersBenefits,
   Navbar,
   Benefits,
+  HeaderNotForm,
 } from "@/presentation/components/common";
 import { PartnersApresentation } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
@@ -15,7 +16,7 @@ export default function Partners() {
   return (
     <>
       <Navbar />
-      <Header
+      <HeaderNotForm
         title="Sobre a América Financeira"
         subtitle={
           <>
@@ -25,12 +26,7 @@ export default function Partners() {
         }
         showParagraph="*Conheça nossa trajetória e conquistas ao longo dos anos"
         showLoanRequest={false}
-        showDetails={
-          <>
-            Pioneiros em soluções financeiras que se adaptam às
-            <br /> suas necessidades
-          </>
-        }
+        showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
       <PartnersBenefits

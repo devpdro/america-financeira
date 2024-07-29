@@ -24,19 +24,17 @@
       padding: 0 2.575rem 0 2.075rem;
     }
     .subtitle {
-      color: $blue-strong-color;
-      font-size: $size-normal;
-      font-weight: $weight-light;
+      font-size: $size-medium;
+      font-weight: $weight-normal;
       margin-bottom: 0.375rem;
       @media (max-width: 1024px) {
         font-size: $size-small;
       }
     }
     .title {
-      color: $blue-color;
       font-size: $size-extra-medium;
-      font-weight: $weight-light;
-      line-height: 2.475rem;
+      font-weight: $weight-normal;
+      line-height: 2.375rem;
       @media (max-width: 1024px) {
         font-size: $size-medium;
         line-height: 1.775rem;
@@ -51,9 +49,9 @@
     }
     .paragraph {
       font-size: $size-normal;
-      font-weight: 300;
+      font-weight: $size-normal;
       line-height: 1.575rem;
-      margin-top: 1.875rem;
+      margin-top: 1.775rem;
     }
     @media (max-width: 1024px) {
       font-size: $size-small;

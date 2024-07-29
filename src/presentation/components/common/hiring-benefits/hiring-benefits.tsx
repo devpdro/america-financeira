@@ -9,16 +9,7 @@ const HiringBenefits = () => {
     <section className={styles.container}>
       <div className={styles["box-container"]}>
         <div className={styles["box-text"]}>
-          <h6 className={styles.subtitle}>Vantagens do Crédito Consignado</h6>
-          <h1 className={styles.title}>
-            Por que contratar o Empréstimo <br /> Consignado da América
-            Financeira?
-          </h1>
-          <Button
-            typeStyle="btn2"
-            width="300px"
-            text="Quero contratar"
-          ></Button>
+          <h1 className={styles.title}>Vantagens do Empréstimo Consignado</h1>
         </div>
         <div className={styles["box-carousel"]}>
           <CarouselConsigned />

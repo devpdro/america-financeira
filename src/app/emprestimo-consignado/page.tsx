@@ -26,28 +26,23 @@ export default function PayrollLoan() {
             seus sonhos
           </>
         }
-        showParagraph="*Sujeito à analise de crédito e condições do produto"
+        showParagraph="*Sujeito à análise de crédito e condições do produto"
         backgroundImage={backgroundImageUrl.src}
       />
       <Wrapper
         image={backgroundImageUrl.src}
         imageWidth={100}
         imageHeight={98}
-        alt="O que é o Empréstimo Pessoal?"
-        subtitle="Sobre om prestimo pessoal"
-        title="O que é o Empréstimo Pessoal?"
-        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
-        buttonPrimaryText="Simular emprestimo"
+        alt="O que é o Empréstimo Consignado?"
+        subtitle="Sobre o empréstimo consignado"
+        title="O que é o empréstimo consignado?"
+        paragraph="O empréstimo consignado é um tipo de crédito onde as parcelas são descontadas diretamente da folha de pagamento. Isso garante condições mais favoráveis, como taxas de juros mais baixas e prazos mais flexíveis. Ideal para quem busca um crédito com segurança e benefícios exclusivos."
+        buttonPrimaryText="Simular empréstimo consignado"
         imagePosition="left"
       />
       <Benefits
-        title={
-          <>
-            O crédito de qualidade <br /> que você merece
-          </>
-        }
-        subtitle="Um empréstimo pode ser a solução financeira que você precisa para
-          melhorar sua vida."
+        title={<>Benefícios do empréstimo consignado para você</>}
+        subtitle="Descubra como o empréstimo consignado pode facilitar sua vida financeira com taxas baixas e condições vantajosas."
         imageWidth={100}
         imageHeight={100}
         items={BenefitsLoanConsignedItems}

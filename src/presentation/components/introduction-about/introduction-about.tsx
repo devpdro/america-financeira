@@ -4,7 +4,7 @@ const IntroductionAbout = () => {
   return (
     <section className={styles.container}>
       <header className={styles["title-section"]}>
-        <h3 className={styles.subtitle}>*Quem Somos</h3>
+        <h3 className={styles.subtitle}>Quem Somos?</h3>
         <h1 className={styles.title}>
           Somos a América Financeira, dedicada a oferecer soluções financeiras
           inovadoras para transformar vidas e realizar sonhos. Nossa missão é

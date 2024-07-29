@@ -3,7 +3,7 @@ import { NavItemTypes } from "@/presentation/@types";
 const NavItems: NavItemTypes[] = [
   {
     label: "América Financeira",
-    link: "#",
+    link: "/",
     children: [
       {
         label: "Quem Somos",
@@ -22,7 +22,7 @@ const NavItems: NavItemTypes[] = [
   },
   {
     label: "Simule seu Crédito",
-    link: "#",
+    link: "/",
     children: [
       {
         label: "Empréstimo Pessoal",

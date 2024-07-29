@@ -55,7 +55,7 @@ export default function PersonalLoan() {
         imageHeight={98}
         alt="O que é o Empréstimo Pessoal?"
         subtitle="Sobre o empréstimo pessoal"
-        title="O que é o Empréstimo Pessoal?"
+        title="O que é o empréstimo pessoal?"
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
         buttonPrimaryText="Simular empréstimo"
         imagePosition="left"
@@ -63,10 +63,10 @@ export default function PersonalLoan() {
       <Benefits
         title={
           <>
-            O crédito de qualidade <br /> que você merece
+            Seu empréstimo pessoal <br /> ideal está aqui
           </>
         }
-        subtitle="Um empréstimo pode ser a solução financeira que você precisa para melhorar sua vida."
+        subtitle="Oferecemos as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais."
         items={BenefitsLoanPersonalItems}
       />
       <Banks />

@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import { BlogPostItems } from "@/data";
 import { Navbar, Footer } from "@/presentation/components/common";
 
-import styles from "@/presentation/components/pages/blog/blog-post.module.scss";
+import styles from "./blog-post.module.scss";
 import { StaticImageData } from "next/image";
 
 // Função para remover acentos e caracteres especiais de uma string
@@ -61,36 +61,30 @@ type BlogPostItem = {
   paragraphFour: string;
 };
 
-const BlogPost: React.FC<BlogPostItem> = () => {
-  const params = useParams(); // useParams para obter os parâmetros da URL
-  const routes = params?.routes as string | undefined;
-
-  const postTitle = BlogPostItems.find((post) => post.routes === routes);
-  const pageTitle = postTitle
-    ? postTitle.title
-    : "Blog Matte: Novidades, Dicas e Tendências em Diversas Áreas";
+const BlogPost: React.FC = () => {
+  const { slug } = useParams() as { slug?: string };
 
   const post = BlogPostItems.find(
-    (post) => removeAccents(post.routes) === removeAccents(routes)
+    (post) => removeAccents(post.routes) === removeAccents(slug || "")
   );
+
+  const pageTitle = post
+    ? post.title
+    : "Blog Matte: Novidades, Dicas e Tendências em Diversas Áreas";
 
   const sections = [
     { title: "Home", url: "/" },
     { title: "Blog", url: "/blog" },
-    { title: post?.title, url: `/blog/${routes}` },
+    { title: post?.title, url: `/blog/${slug}` },
   ];
 
   const generatePath = () => {
     return (
-      <div className={`panel`} data-color="white">
+      <div>
         {sections.map((section, index) => (
           <span key={index}>
             {index > 0 && " > "}
-            <Link
-              className={`${styles.link} panel`}
-              data-color="white"
-              href={section.url}
-            >
+            <Link className={`${styles.link} `} href={section.url}>
               <span>{section.title}</span>
             </Link>
           </span>
@@ -100,7 +94,7 @@ const BlogPost: React.FC<BlogPostItem> = () => {
   };
 
   if (!post) {
-    return <div>Post não encontrado</div>; // Adicione um retorno alternativo caso o post não seja encontrado
+    return <div>Post não encontrado</div>;
   }
 
   return (
@@ -121,11 +115,7 @@ const BlogPost: React.FC<BlogPostItem> = () => {
         />
         <title>{pageTitle}</title>
       </Helmet>
-      <div
-        style={{ backgroundColor: "#F9F7F1", color: "#1c1c1c" }}
-        className={`panel`}
-        data-color="white"
-      >
+      <div>
         <Navbar />
         <div className={styles.routes}>{generatePath()}</div>
         <div className={styles.content_container}>

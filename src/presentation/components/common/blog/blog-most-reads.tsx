@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./blog-most-reads.module.scss";
 
 const BlogMostReads = () => {
@@ -7,10 +8,12 @@ const BlogMostReads = () => {
         <div className={`${styles["card"]} ${styles["content"]}`}>
           <div className={styles["card-content"]}>
             <div className={styles["card-img"]}>
-              <img
-                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-                alt="Gamer"
-              />
+              <Link href="/blog/o-papel-fundamental-de-um-arquiteto-de-software-em-seu-projeto-de-desenvolvimento">
+                <img
+                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                  alt="Gamer"
+                />
+              </Link>
             </div>
             <div className={styles["card-label"]}>E-Sports</div>
             <div className={styles["card-title"]}>
@@ -21,10 +24,12 @@ const BlogMostReads = () => {
         <div className={`${styles["card"]} ${styles["content"]}`}>
           <div className={styles["card-content"]}>
             <div className={styles["card-img"]}>
-              <img
-                src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                alt="keyboard"
-              />
+              <Link href="/blog/google-stadia-the-future-of-gaming">
+                <img
+                  src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                  alt="keyboard"
+                />
+              </Link>
             </div>
             <div className={styles["card-label"]}>Technology</div>
             <div className={styles["card-title"]}>
@@ -35,10 +40,12 @@ const BlogMostReads = () => {
         <div className={`${styles["card"]} ${styles["content"]}`}>
           <div className={styles["card-content"]}>
             <div className={styles["card-img"]}>
-              <img
-                src="https://images.unsplash.com/photo-1519326844852-704caea5679e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2034&q=80"
-                alt="Controller"
-              />
+              <Link href="/blog/testando-title-aqui">
+                <img
+                  src="https://images.unsplash.com/photo-1519326844852-704caea5679e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2034&q=80"
+                  alt="Controller"
+                />
+              </Link>
             </div>
             <div className={styles["card-label"]}>Consoles</div>
             <div className={styles["card-title"]}>Testando title aqui</div>
