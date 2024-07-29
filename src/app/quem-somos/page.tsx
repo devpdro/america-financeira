@@ -3,7 +3,7 @@ import { Footer, Header, Navbar } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
 
 const AboutCompany = () => {
-  const backgroundImageUrl = Images.CellPhoneInsurance;
+  const backgroundImageUrl = Images.cartaoDebito;
 
   return (
     <>

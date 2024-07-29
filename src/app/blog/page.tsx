@@ -10,7 +10,7 @@ import BlogMostReads from "@/presentation/components/common/blog/blog-most-reads
 import BlogLatestPosts from "@/presentation/components/common/blog/blog-latest-posts";
 
 export default function Blog() {
-  const backgroundImageUrl = Images.payrollLoan;
+  const backgroundImageUrl = Images.cartaoDebito;
 
   return (
     <>

@@ -12,7 +12,7 @@ import { Images } from "@/presentation/assets";
 import { BenefitsLoanItems, FaqLoanItems } from "@/data";
 
 export default function Home() {
-  const backgroundImageUrl = Images.HeaderInitial;
+  const backgroundImageUrl = Images.cabecalhoInicial;
 
   return (
     <>
@@ -51,7 +51,7 @@ export default function Home() {
         <Decorative
           imageWidth={91}
           imageHeight={100}
-          image={Images.Investment.src}
+          image={Images.cartaoDebito.src}
           alt="Antecipação FGTS"
           title="Antecipação FGTS"
           subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
@@ -59,7 +59,7 @@ export default function Home() {
           imagePosition="right"
         />
         <Decorative
-          image={Images.CardCredit.src}
+          image={Images.cartaoDebito.src}
           imageWidth={91}
           imageHeight={100}
           alt="Cartão de Crédito"

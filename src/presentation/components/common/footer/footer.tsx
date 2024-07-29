@@ -14,7 +14,7 @@ const Footer = () => {
         <div className={styles["info-section"]}>
           <Image
             className={styles.img}
-            src={Images.LogoAmericaWhite}
+            src={Images.logoAmerica}
             alt="Logo América Financeira"
           />
           <h6 className={styles.subtitle}>Nos siga nas redes sociais:</h6>
@@ -36,13 +36,13 @@ const Footer = () => {
             <h6 className={styles.title}>
               Fale com a gente pelo <br /> Telefone.
             </h6>
-            <Image src={Images.QrCode} alt="QR Code para o Telefone" />
+            <Image src={Images.logoAmerica} alt="QR Code para o Telefone" />
           </div>
           <div className={styles["whatsapp-section"]}>
             <h6 className={styles.title}>
               Fale com a gente por <br /> WhatsApp.
             </h6>
-            <Image src={Images.QrCodeWhats} alt="QR Code para o WhatsApp" />
+            <Image src={Images.logoAmerica} alt="QR Code para o WhatsApp" />
           </div>
         </div>
         <div className={styles["details-section"]}>

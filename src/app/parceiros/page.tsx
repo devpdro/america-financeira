@@ -10,7 +10,7 @@ import { Images } from "@/presentation/assets";
 import { BenefitsPartnersItems } from "@/data";
 
 export default function Partners() {
-  const backgroundImageUrl = Images.payrollLoan;
+  const backgroundImageUrl = Images.cartaoDebito;
 
   return (
     <>

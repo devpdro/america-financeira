@@ -1,68 +1,37 @@
-import logoAmericaWhite from "./img/logo-white.webp";
-import logoAmericaBlue from "./img/logo-america.webp";
-
-import payrollLoan from "./img/emprestimo-consignado.jpg";
-import personalEntrepreneur from "./img/emprestimo-pessoal.webp";
-import Business from "./img/crescimento-empresa.webp";
-import Money from "./img/divida.webp";
-import Dreamer from "./img/sonho.webp";
-import BankBradesco from "./img/banco-bradesco.webp";
-import BankItau from "./img/banco-itau.webp";
-import BankSantander from "./img/banco-santander.webp";
-import BankBanrisul from "./img/banco-banrisul.webp";
-import BankBrasil from "./img/banco-bb.webp";
-import BankCaixa from "./img/banco-caixa.webp";
-import workWithUs from "./img/trabalhe-conosco.webp";
-import BankSafra from "./img/banco-safra.webp";
-import BankPan from "./img/banco-pan.webp";
-import BankC6 from "./img/banco-c6.webp";
-import America from "./img/america.jpg";
-import ColorParty from "./img/festa-das-cores.jpg";
-import HeaderInitial from "./img/header-initial.webp";
-import LogoAmericaWhite from "./img/logo-america-branco.png";
-import QrCode from "./img/qr-code.png";
-import QrCodeWhats from "./img/qr-code-whats.png";
-import CellPhoneInsurance from "./img/seguro-de-celular.webp";
-import Investment from "./img/investimentos.webp";
-import InvestmentBanks from "./img/investment-banks.jpg";
-import CardCredit from "./img/cartao-credito.webp";
-import CardDebit from "./img/card-debit.jpg";
-import AboutIlustration from "./img/about-ilustration.png";
-import LoginIlustration from "./img/login-ilustration.png";
-import NoDebt from "./img/card-debit.jpg";
+import AumentarLucro from "./treated-img/aumentar-lucro.webp";
+import bancoBanrisul from "./treated-img/banco-banrisul.webp";
+import bancoBradesco from "./treated-img/banco-bradesco.webp";
+import bancoCaixa from "./treated-img/banco-caixa.webp";
+import bancoSafra from "./treated-img/banco-safra.webp";
+import bancoPan from "./treated-img/banco-pan.webp";
+import BancoSantander from "./treated-img/banco-santander.webp";
+import bancoC6 from "./treated-img/banco-c6.webp";
+import bancoItau from "./treated-img/banco-itau.webp";
+import cabecalhoInicial from "./treated-img/cabecalho-inicial.webp";
+import carro from "./treated-img/carro.webp";
+import cartaoDebito from "./treated-img/cartao-debito.webp";
+import doisIdosos from "./treated-img/dois-idosos.webp";
+import divida from "./treated-img/divida.webp";
+import logoAmerica from "./treated-img/logo-america.webp";
+import logoWhite from "./treated-img/logo-white.webp";
 
 const Images = {
-  NoDebt,
-  QrCodeWhats,
-  LoginIlustration,
-  AboutIlustration,
-  CardDebit,
-  InvestmentBanks,
-  CellPhoneInsurance,
-  Investment,
-  CardCredit,
-  America,
-  ColorParty,
-  BankC6,
-  BankPan,
-  BankSafra,
-  workWithUs,
-  BankBradesco,
-  BankItau,
-  BankSantander,
-  BankBanrisul,
-  BankBrasil,
-  BankCaixa,
-  Dreamer,
-  Business,
-  Money,
-  logoAmericaBlue,
-  logoAmericaWhite,
-  payrollLoan,
-  personalEntrepreneur,
-  HeaderInitial,
-  LogoAmericaWhite,
-  QrCode,
+  AumentarLucro,
+  bancoBanrisul,
+  bancoBradesco,
+  bancoCaixa,
+  bancoSafra,
+  bancoPan,
+  BancoSantander,
+  bancoC6,
+  bancoItau,
+  cabecalhoInicial,
+  carro,
+  cartaoDebito,
+  doisIdosos,
+  divida,
+  logoAmerica,
+  logoWhite,
 };
 
 export default Images;

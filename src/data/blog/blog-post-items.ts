@@ -1,4 +1,4 @@
-import Imagem from "@/presentation/assets/image/img/header-initial.webp";
+import Imagem from "@/presentation/assets/image/treated-img/aumentar-lucro.webp";
 
 const BlogPostItems = [
   {

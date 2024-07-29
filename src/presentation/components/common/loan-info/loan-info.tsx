@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./loan-info.module.scss";
 
 import { Button } from "@/presentation/components/form";
-import emprestimoImg from "../../../assets/image/img/emprestimo-consignado.jpg";
+import emprestimoImg from "../../../assets/image/treated-img/aumentar-lucro.webp";
 
 type ConsinedTypes = {
   title: string;
