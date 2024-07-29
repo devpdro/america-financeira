@@ -1,0 +1,28 @@
+@import "../../../styles/base/variables.scss";
+@import "../../../styles/utils/mixins.scss";
+
+.container {
+  background-color: #3A404A;
+  color: $white-color;
+  .box-container {
+    @include container-center(1380px, 0 auto);
+    padding: 4.075rem 2.075rem;
+    .box-text {
+      .title {
+        font-size: $size-large;
+        font-weight: $weight-medium;
+        line-height: 2.975rem;
+        margin-top: 1.575rem;
+        margin-bottom: 2.075rem;
+      }
+      .subtitle {
+        font-size: $size-small;
+        font-weight: $weight-normal;
+      }
+      .paragraph {
+        font-size: $size-extra-small;
+        margin-top: 1.075rem;
+      }
+    }
+  }
+}
