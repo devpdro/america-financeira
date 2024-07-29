@@ -1,6 +1,6 @@
 import { CombinedCarouselTypes } from "@/presentation/@types";
 
-const ConsignedCarouselItems: CombinedCarouselTypes[] = [
+const ConsignedCarouselItems = [
   {
     key: 1,
     title: "Taxas de Juros Competitivas",
