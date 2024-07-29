@@ -1,5 +1,3 @@
-import { CombinedCarouselTypes } from "@/presentation/@types";
-
 const ConsignedCarouselItems = [
   {
     key: 1,
