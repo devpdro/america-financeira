@@ -37,7 +37,10 @@
       padding: 1rem;
       .icon {
         font-size: 1.475rem;
-        margin-right: 0.75rem;
+        margin-left: 0.375rem;
+        @media (min-width: 724px) {
+          display: none;
+        }
       }
     }
   }

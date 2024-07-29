@@ -84,11 +84,6 @@ const LoanRequest: React.FC = () => {
             aria-invalid={errors.nome ? "true" : "false"}
             aria-describedby="nome-error"
           />
-          {errors.nome && (
-            <p id="nome-error" className={styles.error}>
-              {errors.nome.message}
-            </p>
-          )}
 
           <input
             {...register("email", {
@@ -106,11 +101,6 @@ const LoanRequest: React.FC = () => {
             aria-invalid={errors.email ? "true" : "false"}
             aria-describedby="email-error"
           />
-          {errors.email && (
-            <p id="email-error" className={styles.error}>
-              {errors.email.message}
-            </p>
-          )}
 
           <InputMask
             {...register("whatsapp", {
@@ -130,11 +120,6 @@ const LoanRequest: React.FC = () => {
             aria-invalid={errors.whatsapp ? "true" : "false"}
             aria-describedby="whatsapp-error"
           />
-          {errors.whatsapp && (
-            <p id="whatsapp-error" className={styles.error}>
-              {errors.whatsapp.message}
-            </p>
-          )}
 
           <InputMask
             {...register("cpf", {
@@ -154,14 +139,11 @@ const LoanRequest: React.FC = () => {
             aria-invalid={errors.cpf ? "true" : "false"}
             aria-describedby="cpf-error"
           />
-          {errors.cpf && (
-            <p id="cpf-error" className={styles.error}>
-              {errors.cpf.message}
-            </p>
-          )}
 
           <select
-            className={styles["input-text"]}
+            className={`${styles["input-text"]} ${
+              errors.tipoSolicitacao ? styles["input-text-error"] : ""
+            }`}
             {...register("tipoSolicitacao", {
               required: "Tipo de solicitação é obrigatório",
             })}
@@ -184,11 +166,6 @@ const LoanRequest: React.FC = () => {
               Cartão de Crédito
             </option>
           </select>
-          {errors.tipoSolicitacao && (
-            <p id="tipoSolicitacao-error" className={styles.error}>
-              {errors.tipoSolicitacao.message}
-            </p>
-          )}
 
           <div className={styles["terms-box"]}>
             <input
@@ -208,11 +185,6 @@ const LoanRequest: React.FC = () => {
               Aceito receber comunicações da América Financeira
             </label>
           </div>
-          {errors.termos && (
-            <p id="termos-error" className={styles.error}>
-              {errors.termos.message}
-            </p>
-          )}
 
           <Button
             typeStyle="btn1"

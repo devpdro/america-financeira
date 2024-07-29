@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { NavItem } from "@/presentation/components/common";
 import { NavMobileTypes } from "@/presentation/@types";
 import { IconWithProps } from "@/presentation/utils";
@@ -42,8 +44,12 @@ const NavMobile = ({ closeSideMenu }: NavMobileTypes) => {
           className={styles["auth-buttons"]}
           aria-label="Botões de Autenticação"
         >
+          <Link href="/login" legacyBehavior>
+            <a className={styles.link} aria-label="Login">
+              <span aria-label="Entrar">Entrar</span>
+            </a>
+          </Link>
           <Icons.IoPersonOutline className={styles.icon} aria-hidden="true" />
-          <h1 aria-label="Entrar">Entrar</h1>
         </section>
       </nav>
     </div>

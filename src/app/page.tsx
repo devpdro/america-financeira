@@ -44,8 +44,8 @@ export default function Home() {
           }
           subtitle="Um empréstimo pode ser a solução financeira que você precisa para
           melhorar sua vida."
-          imageWidth={500}
-          imageHeight={500}
+          imageWidth={100}
+          imageHeight={100}
           items={BenefitsLoanItems}
         />
         <Decorative
