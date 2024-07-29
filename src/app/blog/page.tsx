@@ -23,7 +23,7 @@ export default function Blog() {
             seus sonhos
           </>
         }
-        showParagraph="*Sujeito à analise de crédito e condições do produto"
+        showParagraph="*Sujeito à analise de crédito e condições do produtoa"
         showDetails={true}
         backgroundImage={backgroundImageUrl.src}
       />
