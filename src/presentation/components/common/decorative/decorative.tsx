@@ -64,7 +64,7 @@ const Decorative: React.FC<DecorativeTypes> = ({
             <h6 className={styles.subtitle}>{subtitle}</h6>
             <div className={styles["link-section"]}>
               <Link
-                href="./antecipacao-fgts"
+                href="./emprestimo-fgts"
                 aria-label={`Saiba mais sobre ${title}`}
               >
                 <span className={styles.paragraph}>{paragraph}</span>

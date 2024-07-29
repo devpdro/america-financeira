@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 4.0275rem auto 6.275rem auto);
+  @include container-center(1280px, 4.475rem auto 6.275rem auto);
   padding: 0 2.075rem;
   @media (max-width: 800px) {
     margin: 0rem auto 4.575rem auto !important;

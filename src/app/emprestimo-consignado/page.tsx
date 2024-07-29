@@ -13,7 +13,7 @@ import { Banks } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
 
 export default function PayrollLoan() {
-  const backgroundImageUrl = Images.cartaoDebito;
+  const backgroundImageUrl = Images.cabecalhoInicial || { src: "" };
 
   return (
     <div>

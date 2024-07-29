@@ -21,7 +21,7 @@ const BlogHighlights = () => {
           <div className={styles.article}>
             <Image
               className={styles.img}
-              src={Images.CellPhoneInsurance}
+              src={Images.pessoaComCelular}
               alt="Empréstimos"
             />
             <p className={styles.subtitle}>Empréstimos</p>
@@ -40,7 +40,7 @@ const BlogHighlights = () => {
             <Image
               className={styles.img}
               loading="lazy"
-              src={Images.InvestmentBanks}
+              src={Images.pessoaSozinha}
               alt="Investimentos"
             />
             <p className={styles.subtitle}>Investimentos</p>
@@ -59,7 +59,7 @@ const BlogHighlights = () => {
             <Image
               className={styles.img}
               loading="lazy"
-              src={Images.CardDebit}
+              src={Images.cartaoDebito}
               alt="Cartão de Crédito"
             />
             <p className={styles.subtitle}>Cartão de Crédito</p>

@@ -9,7 +9,7 @@ export type BenefitsItemTypes = {
 export type BenefitsTypes = {
   title: React.ReactNode;
   subtitle: string;
-  imageWidth: number;
-  imageHeight: number;
+  imageWidth?: number;
+  imageHeight?: number;
   items: BenefitsItemTypes[];
 };

@@ -2,7 +2,7 @@
 @import "../../../styles/utils/mixins.scss";
 
 .container {
-  @include container-center(1280px, 6.575rem auto 3.075rem auto);
+  @include container-center(1280px, 6.575rem auto 5.575rem auto);
   @include display-flex(flex-start, space-between);
   padding: 0 2.075rem;
   @media (max-width: 880px) {
@@ -58,7 +58,7 @@
       .image-section {
         color: $blue-color;
         margin-right: 1.575rem;
-        width: 500px ;
+        width: 205px;
         @media (max-width: 624px) {
           width: 100%;
         }

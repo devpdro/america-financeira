@@ -5,7 +5,7 @@ const BenefitsLoanPersonalItems = [
     title: "Emergências e imprevistos",
     subtitle:
       "Tenha um recurso disponível para situações inesperadas, sem comprometer seu orçamento.",
-    image: Images.bancoPan,
+    image: Images.carro,
   },
   {
     title: "Educação e qualificação",

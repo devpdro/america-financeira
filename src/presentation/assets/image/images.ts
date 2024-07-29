@@ -14,8 +14,44 @@ import doisIdosos from "./treated-img/dois-idosos.webp";
 import divida from "./treated-img/divida.webp";
 import logoAmerica from "./treated-img/logo-america.webp";
 import logoWhite from "./treated-img/logo-white.webp";
+import cartaoCredito from "./treated-img/cartao-credito.webp";
+import casalSentado from "./treated-img/casal-sentado.webp";
+import crescimentoEmpresa from "./treated-img/crescimento-empresa.webp";
+import diversificacao from "./treated-img/diversificacao.webp";
+import pagamento from "./treated-img/pagamento.webp";
+import sonho from "./treated-img/sonho.webp";
+import emprestimoFgts from "./treated-img/emprestimo-fgts.webp";
+import suporte from "./treated-img/suporte.webp";
+import emprestimoConsignado from "./treated-img/emprestimo-consignado.webp";
+import investimentos from "./treated-img/investimentos.webp";
+import trocarCarro from "./treated-img/trocar-de-carro.webp";
+import tresPessoasSimulacao from "./treated-img/tres-pessoas-simulacao.webp";
+import qrCodeTelefone from "./treated-img/qr-code-telefone.webp";
+import qrCodeWhats from "./treated-img/qr-code-whats.webp";
+import pessoaSozinha from "./treated-img/pessoa-sozinha.webp";
+import pessoaTablet from "./treated-img/pessoa-com-tablet.webp";
+import pessoaComCelular from "./treated-img/pessoa-com-celular.webp";
+import bancoBrasil from "./treated-img/banco-brasil.webp";
 
 const Images = {
+  bancoBrasil,
+  diversificacao,
+  casalSentado,
+  crescimentoEmpresa,
+  pagamento,
+  sonho,
+  emprestimoFgts,
+  suporte,
+  emprestimoConsignado,
+  investimentos,
+  trocarCarro,
+  tresPessoasSimulacao,
+  qrCodeTelefone,
+  qrCodeWhats,
+  pessoaComCelular,
+  pessoaSozinha,
+  cartaoCredito,
+  pessoaTablet,
   AumentarLucro,
   bancoBanrisul,
   bancoBradesco,

@@ -11,7 +11,7 @@ import { Images } from "@/presentation/assets";
 import { FaqFgtsLoanItems } from "@/data";
 
 export default function FgtsAdvance() {
-  const backgroundImageUrl = Images.HeaderInitial;
+  const backgroundImageUrl = Images.AumentarLucro;
 
   return (
     <div>
