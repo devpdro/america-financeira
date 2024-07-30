@@ -6,13 +6,7 @@ import { Images } from "@/presentation/assets";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-type BlogMostReads = {
-  img: StaticImageData;
-  label: string;
-  title: string;
-};
-
-const BlogMostReads: React.FC<BlogMostReads> = () => {
+const BlogMostReads: React.FC = () => {
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Mais recentes</h1>
@@ -23,7 +17,7 @@ const BlogMostReads: React.FC<BlogMostReads> = () => {
               <div className={styles["card-img"]}>
                 <Link href="/blog/tudo-sobre-emprestimos">
                   <Image
-                  className={styles.img}
+                    className={styles.img}
                     src={Images.pessoaComCelular}
                     alt="Imagem do artigo sobre empréstimos"
                   />
