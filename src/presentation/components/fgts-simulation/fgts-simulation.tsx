@@ -23,8 +23,21 @@ const FgtsSimulation = () => {
     setMesAniversario((prevMes) => (prevMes > 1 ? prevMes - 1 : 12));
   };
 
-  const calcularValor = (saldo: number) => {
-    return saldo * 0.721274;
+  const calcularValor = (saldo: number, mesAniversario: number) => {
+    const mesAtual = new Date().getMonth() + 1; // Meses de 1 a 12
+    const diffMes = mesAniversario - mesAtual;
+
+    let fatorAjuste = 1; // Fator base
+
+    if (diffMes > 0) {
+      // Mês de aniversário é posterior ao mês atual
+      fatorAjuste = 1 + diffMes * 0.01; // Exemplo: 1% a mais por mês
+    } else if (diffMes < 0) {
+      // Mês de aniversário é anterior ao mês atual
+      fatorAjuste = 1 - Math.abs(diffMes) * 0.01; // Exemplo: 1% a menos por mês
+    }
+
+    return saldo * 0.721274 * fatorAjuste;
   };
 
   const nomeMeses = [
@@ -46,12 +59,11 @@ const FgtsSimulation = () => {
     <section className={styles.container}>
       <div className={styles["box-container"]}>
         <h1 className={styles.title}>
-          Seu dinheiro pode virar mais <br /> dinheiro
+          Descubra quanto você pode antecipar <br /> com seu FGTS
         </h1>
         <p className={styles.subtitle}>
-          O seu dinheiro com rendimento maior que a poupança, a 100% do CDI e
-          <br />
-          disponível para qualquer momento
+          Simule a antecipação do FGTS e veja o valor <br /> baseado no saldo e
+          mês de aniversário.
         </p>
         <div className={styles["form-container"]}>
           <div className={styles["form-section"]}>
@@ -91,12 +103,12 @@ const FgtsSimulation = () => {
           <div className={styles["result-section"]}>
             <h6 className={styles["title-form"]}>Você pode antecipar até</h6>
             <p className={styles["result"]}>
-              R$ {calcularValor(saldo).toFixed(2)}
+              R$ {calcularValor(saldo, mesAniversario).toFixed(2)}
             </p>
             <p className={styles.paragraph}>
-              Os valores apresentados nesta simulação são sem IOF e são
-              calculados de acordo com dados médios oferecidos pelo bancos e
-              podem mudar de acordo com o seu saldo no FGTS.
+              Os valores simulados não incluem IOF e são baseados em dados
+              médios. Eles podem variar de acordo com o saldo do FGTS e o mês de
+              aniversário. Para uma simulação exata, entre em contato conosco.
             </p>
             <Button typeStyle="btn1" text="Quero contratar" width="350px" />
           </div>

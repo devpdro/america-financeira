@@ -1,61 +1,89 @@
 import Link from "next/link";
+
 import styles from "./blog-most-reads.module.scss";
 
-const BlogMostReads = () => {
+import { Images } from "@/presentation/assets";
+import Image, { StaticImageData } from "next/image";
+import React from "react";
+
+type BlogMostReads = {
+  img: StaticImageData;
+  label: string;
+  title: string;
+};
+
+const BlogMostReads: React.FC<BlogMostReads> = () => {
   return (
-    <div className={styles["container"]}>
-      <div className={styles["cards"]}>
-        <div className={`${styles["card"]} ${styles["content"]}`}>
-          <div className={styles["card-content"]}>
+    <section className={styles.container}>
+      <h1 className={styles.title}>Mais recentes</h1>
+      <div className={styles["container-section"]}>
+        <div className={styles["cards"]}>
+          <div className={`${styles["card"]} ${styles["content"]}`}>
+            <div className={styles["card-content"]}>
+              <div className={styles["card-img"]}>
+                <Link href="/blog/tudo-sobre-emprestimos">
+                  <Image
+                  className={styles.img}
+                    src={Images.pessoaComCelular}
+                    alt="Imagem do artigo sobre empréstimos"
+                  />
+                </Link>
+              </div>
+              <div className={styles["card-label"]}>Finanças</div>
+              <div className={styles["card-title"]}>
+                Tudo o que você precisa saber sobre empréstimos
+              </div>
+            </div>
+          </div>
+          <div className={`${styles["card"]} ${styles["content"]}`}>
+            <div className={styles["card-content"]}>
+              <div className={styles["card-img"]}>
+                <Link href="/blog/simulacao-fgts-tudo-que-voce-precisa-saber">
+                  <Image
+                    src={Images.pessoaSozinha}
+                    alt="Imagem do artigo sobre simulação de FGTS"
+                  />
+                </Link>
+              </div>
+              <div className={styles["card-label"]}>Investimentos</div>
+              <div className={styles["card-title"]}>
+                Simulação de FGTS: Tudo o que você precisa saber
+              </div>
+            </div>
+          </div>
+          <div className={`${styles["card"]} ${styles["content"]}`}>
+            <div className={styles["card-content"]}>
+              <div className={styles["card-img"]}>
+                <Link href="/blog/cdb-tudo-que-voce-precisa-saber-para-investir">
+                  <Image
+                    src={Images.tresPessoasSimulacao}
+                    alt="Imagem do artigo sobre CDB"
+                  />
+                </Link>
+              </div>
+              <div className={styles["card-label"]}>Investimentos</div>
+              <div className={styles["card-title"]}>
+                CDB: Tudo que você precisa saber para investir
+              </div>
+            </div>
+          </div>
+          <div className={`${styles["card"]} ${styles["form"]}`}>
             <div className={styles["card-img"]}>
-              <Link href="/blog/o-papel-fundamental-de-um-arquiteto-de-software-em-seu-projeto-de-desenvolvimento">
-                <img
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-                  alt="Gamer"
+              <Link href="/blog/cdb-tudo-que-voce-precisa-saber-para-investir">
+                <Image
+                  src={Images.tresPessoasSimulacao}
+                  alt="Imagem do artigo sobre CDB"
                 />
               </Link>
             </div>
-            <div className={styles["card-label"]}>E-Sports</div>
+            <div className={styles["card-label"]}>Investimentos</div>
             <div className={styles["card-title"]}>
-              Fnatic raises $19 million, shakes up leadership team
+              CDB: Tudo que você precisa saber para investir
             </div>
           </div>
-        </div>
-        <div className={`${styles["card"]} ${styles["content"]}`}>
-          <div className={styles["card-content"]}>
-            <div className={styles["card-img"]}>
-              <Link href="/blog/google-stadia-the-future-of-gaming">
-                <img
-                  src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                  alt="keyboard"
-                />
-              </Link>
-            </div>
-            <div className={styles["card-label"]}>Technology</div>
-            <div className={styles["card-title"]}>
-              Google Stadia: The Future of Gaming
-            </div>
-          </div>
-        </div>
-        <div className={`${styles["card"]} ${styles["content"]}`}>
-          <div className={styles["card-content"]}>
-            <div className={styles["card-img"]}>
-              <Link href="/blog/testando-title-aqui">
-                <img
-                  src="https://images.unsplash.com/photo-1519326844852-704caea5679e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2034&q=80"
-                  alt="Controller"
-                />
-              </Link>
-            </div>
-            <div className={styles["card-label"]}>Consoles</div>
-            <div className={styles["card-title"]}>Testando title aqui</div>
-          </div>
-        </div>
-        <div className={`${styles["card"]} ${styles["form"]}`}>
-          <div className={styles["form-title"]}>Sign Up</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

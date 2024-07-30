@@ -1,44 +1,129 @@
-import Imagem from "@/presentation/assets/image/treated-img/aumentar-lucro.webp";
+import { Images } from "@/presentation/assets";
 
 const BlogPostItems = [
   {
-    id: 0,
-    routes:
-      "o-papel-fundamental-de-um-arquiteto-de-software-em-seu-projeto-de-desenvolvimento",
-    subtitle: "Tecnologia",
-    title:
-      "O papel fundamental de um Arquiteto de Software em seu projeto de desenvolvimento",
-    date: "11 de março de 2024",
-    image: Imagem,
+    id: 1,
+    routes: "tudo-sobre-emprestimos",
+    subtitle: "Finanças",
+    title: "Tudo o que você precisa saber sobre empréstimos",
+    date: "15 de março de 2024",
+    image: Images.pessoaComCelular,
     paragraphOne:
-      "Introduzir um novo projeto de desenvolvimento de software exige uma equipe especializada para garantir sua eficiência, escalabilidade e sucesso. Entre os profissionais-chave, o Arquiteto de Software desempenha um papel fundamental. Vamos explorar o que é um Arquiteto de Software e por que ele é crucial para o seu projeto.",
-    titleContentOne: "O que é um Arquiteto de Software?",
+      "Empréstimos podem ser a solução financeira para diversas situações, desde pagar dívidas até realizar grandes sonhos. Vamos explorar os diferentes tipos de empréstimos e suas principais características.",
+    titleContentOne: "Tipos de Empréstimos",
     paragraphTwo:
-      "Um Arquiteto de Software é um especialista experiente que desempenha um papel estratégico na concepção e na construção de sistemas de software complexos. Combinando habilidades técnicas avançadas com liderança e tomada de decisão, eles têm uma visão completa do projeto.",
-    titleContentTwo: "A importância do Arquiteto de Software em seu projeto:",
-    titleListOne: "Design de alta qualidade:",
+      "Existem vários tipos de empréstimos disponíveis, cada um com suas especificidades. Entre eles estão: pessoal, consignado, empresarial, entre outros.",
+    titleContentTwo: "Como escolher o empréstimo ideal",
+    titleListOne: "Analise suas necessidades:",
     listOne:
-      " O Arquiteto de Software projeta uma arquitetura robusta, considerando escalabilidade, desempenho, segurança e manutenibilidade para garantir um design de software de alta qualidade.",
-    titleListTwo: "Tomada de decisões técnicas:",
+      " Identifique o propósito do empréstimo e quanto você realmente precisa.",
+    titleListTwo: "Compare taxas de juros:",
     listTwo:
-      " Responsável por escolher tecnologias, frameworks e padrões de design adequados, suas decisões impactam diretamente na eficiência e robustez do sistema.",
-    titleListThree: "Coordenação e colaboração:",
+      " Pesquise e compare as taxas oferecidas por diferentes instituições financeiras.",
+    titleListThree: "Verifique o prazo de pagamento:",
     listThree:
-      " Atuando como ponto central de coordenação entre equipes, eles garantem comunicação eficaz e resolvem conflitos técnicos.",
-    titleListFour: "Identificação e mitigação de riscos:",
+      " Considere o prazo de pagamento que se ajusta melhor ao seu orçamento.",
+    titleListFour: "Avalie a credibilidade da instituição:",
     listFour:
-      " Com experiência, antecipam problemas técnicos e adotam abordagens preventivas para minimizar impactos negativos.",
-    titleListFive: "Otimização de recursos:",
-    listFive:
-      " Habilidosos em otimizar recursos técnicos, buscam soluções eficientes considerando custo e desempenho.",
-    titleListSix: "Mentoria e orientação técnica:",
-    listSix:
-      " Além das responsabilidades de projeto, orientam outros membros da equipe, promovendo boas práticas de desenvolvimento.",
+      " Opte por instituições financeiras confiáveis e com boa reputação no mercado.",
     titleConclusion: "Conclusão:",
     paragraphThree:
-      "O Arquiteto de Software é essencial para o sucesso do projeto, garantindo uma arquitetura bem planejada, tecnologias selecionadas adequadamente e práticas de desenvolvimento seguidas. Sua expertise contribui para a entrega de um produto de alta qualidade, coordenando equipes, identificando riscos e otimizando recursos.",
-    paragraphFour:
-      "Ao iniciar um projeto de desenvolvimento de software, é vital contar com um Arquiteto de Software em sua equipe. Sua orientação e liderança transformam a visão em realidade tecnológica, seja criando um novo produto, aprimorando um sistema existente ou enfrentando desafios complexos de software.",
+      "Escolher o empréstimo certo pode ajudar você a alcançar seus objetivos financeiros de maneira eficiente. Sempre pesquise bem e escolha a opção que melhor se adapta às suas necessidades.",
+  },
+  {
+    id: 2,
+    routes: "simulacao-fgts-tudo-que-voce-precisa-saber",
+    subtitle: "Investimentos",
+    title: "Simulação de FGTS: Tudo o que você precisa saber",
+    date: "20 de março de 2024",
+    image: Images.pessoaSozinha,
+    paragraphOne:
+      "A simulação do FGTS permite que você tenha uma ideia clara de quanto pode antecipar desse benefício. Descubra como funciona e quais são as vantagens.",
+    titleContentOne: "O que é a simulação de FGTS?",
+    paragraphTwo:
+      "A simulação de FGTS é uma ferramenta que permite calcular o valor que você pode antecipar do seu Fundo de Garantia por Tempo de Serviço.",
+    titleContentTwo: "Vantagens da antecipação do FGTS",
+    titleListOne: "Acesso rápido ao dinheiro:",
+    listOne: " Permite utilizar o saldo do FGTS antes do prazo habitual.",
+    titleListTwo: "Taxas de juros competitivas:",
+    listTwo:
+      " Geralmente possui taxas mais baixas que outros tipos de crédito.",
+    titleListThree: "Facilidade de contratação:",
+    listThree: " Processo simples e rápido de antecipação.",
+    titleConclusion: "Conclusão:",
+    paragraphThree:
+      "Antecipar o FGTS pode ser uma excelente alternativa para quem precisa de dinheiro rápido e com condições favoráveis. Faça uma simulação e veja quanto você pode antecipar.",
+  },
+  {
+    id: 3,
+    routes: "cdb-tudo-que-voce-precisa-saber-para-investir",
+    subtitle: "Investimentos",
+    title: "CDB: Tudo que você precisa saber para investir",
+    date: "25 de março de 2024",
+    image: Images.pessoaSozinha,
+    paragraphOne:
+      "Certificados de Depósito Bancário (CDB) são uma opção de investimento segura e rentável. Entenda como funcionam e como investir.",
+    titleContentOne: "O que é CDB?",
+    paragraphTwo:
+      "CDB é um título de renda fixa emitido pelos bancos para captar recursos. Em troca, o investidor recebe uma remuneração.",
+    titleContentTwo: "Vantagens de investir em CDB",
+    titleListOne: "Segurança:",
+    listOne:
+      " Protegido pelo Fundo Garantidor de Créditos (FGC) até um certo valor.",
+    titleListTwo: "Rentabilidade:",
+    listTwo: " Pode oferecer rendimentos superiores à poupança.",
+    titleListThree: "Liquidez:",
+    listThree: " Opções de CDB com liquidez diária estão disponíveis.",
+    titleConclusion: "Conclusão:",
+    paragraphThree:
+      "Investir em CDB pode ser uma excelente maneira de obter uma renda fixa segura e com boa rentabilidade. Pesquise as opções disponíveis e escolha a que melhor se adapta ao seu perfil de investidor.",
+  },
+  {
+    id: 4,
+    routes: "pagar-boleto-com-cartao-de-credito-e-possivel",
+    subtitle: "Finanças",
+    title: "Pagar boleto com cartão de crédito é possível?",
+    date: "30 de março de 2024",
+    image: Images.pessoaSozinha,
+    paragraphOne:
+      "Pagar boletos com cartão de crédito pode ser uma alternativa conveniente, especialmente em momentos de emergência. Saiba como funciona e se vale a pena.",
+    titleContentOne: "Como funciona o pagamento de boletos com cartão?",
+    paragraphTwo:
+      "O pagamento de boletos com cartão de crédito é feito através de aplicativos de bancos ou fintechs que oferecem esse serviço. É simples e prático.",
+    titleContentTwo: "Vantagens e desvantagens",
+    titleListOne: "Vantagens:",
+    listOne:
+      " Pode ajudar a organizar suas finanças em situações emergenciais.",
+    titleListTwo: "Desvantagens:",
+    listTwo:
+      " Taxas de juros podem ser altas. Avalie se realmente é necessário.",
+    titleConclusion: "Conclusão:",
+    paragraphThree:
+      "Pagar boletos com cartão de crédito pode ser uma solução em momentos de necessidade, mas é importante considerar as taxas envolvidas para não se endividar.",
+  },
+  {
+    id: 5,
+    routes: "emprestimo-consignado-tudo-que-voce-precisa-saber",
+    subtitle: "Finanças",
+    title: "Empréstimo Consignado: Tudo que você precisa saber",
+    date: "5 de abril de 2024",
+    image: Images.pessoaSozinha,
+    paragraphOne:
+      "O empréstimo consignado é uma modalidade de crédito com desconto em folha de pagamento. Descubra como funciona e suas vantagens.",
+    titleContentOne: "O que é o Empréstimo Consignado?",
+    paragraphTwo:
+      "O empréstimo consignado é oferecido a aposentados, pensionistas e servidores públicos, com pagamento descontado diretamente da folha de pagamento.",
+    titleContentTwo: "Vantagens do Empréstimo Consignado",
+    titleListOne: "Taxas de juros baixas:",
+    listOne: " Geralmente mais baixas do que outras modalidades de crédito.",
+    titleListTwo: "Facilidade de pagamento:",
+    listTwo:
+      " Pagamento descontado diretamente da folha, sem preocupação de atrasos.",
+    titleListThree: "Longo prazo de pagamento:",
+    listThree: " Permite parcelamento em prazos mais longos.",
+    titleConclusion: "Conclusão:",
+    paragraphThree:
+      "O empréstimo consignado pode ser uma excelente opção de crédito para quem busca taxas mais baixas e facilidade no pagamento. Avalie suas necessidades e considere essa alternativa.",
   },
 ];
 

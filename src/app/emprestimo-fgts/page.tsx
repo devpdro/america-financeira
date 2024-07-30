@@ -5,12 +5,13 @@ import {
   BlogHighlights,
   Faq,
   Footer,
+  Decorative,
 } from "@/presentation/components/common";
 import { Banks, FgtsSimulation } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
-import { FaqFgtsLoanItems } from "@/data";
+import { FaqPersonalLoanItems } from "@/data";
 
-export default function FgtsAdvance() {
+export default function PersonalLoan() {
   const backgroundImageUrl = Images.AumentarLucro;
 
   return (
@@ -20,11 +21,12 @@ export default function FgtsAdvance() {
         title="Empréstimo FGTS"
         subtitle={
           <>
-            Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
-            seus sonhos
+            Aproveite seu FGTS para <br />
+            transformar seus planos <br />
+            em realidade
           </>
         }
-        showParagraph="*Sujeito à analise de crédito e condições do produto"
+        showParagraph="*Sujeito à análise de crédito e condições do produto"
         showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
@@ -32,19 +34,29 @@ export default function FgtsAdvance() {
         image={backgroundImageUrl.src}
         imageWidth={100}
         imageHeight={98}
-        alt="O que é o Empréstimo Pessoal?"
-        subtitle="Sobre om prestimo pessoal"
-        title="O que é o Empréstimo Pessoal?"
-        paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
-        buttonPrimaryText="Simular emprestimo"
+        alt="Sobre o Empréstimo FGTS"
+        subtitle="Descubra o Empréstimo FGTS"
+        title="O que é o Empréstimo FGTS?"
+        paragraph="O empréstimo FGTS é uma modalidade de crédito que permite utilizar o saldo do Fundo de Garantia do Tempo de Serviço (FGTS) como garantia. É uma alternativa para quem precisa de dinheiro extra, oferecendo condições especiais e flexibilidade para o pagamento."
+        buttonPrimaryText="Simule seu FGTS"
         imagePosition="right"
       />
       <FgtsSimulation />
       <Banks />
+      <Decorative
+        image={Images.cartaoCredito.src}
+        imageWidth={91}
+        imageHeight={100}
+        alt="Imagem de Cartão de Crédito"
+        title="Cartão de Crédito"
+        subtitle="A América oferece cartões de débito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
+        paragraph="Solicitar agora"
+        imagePosition="left"
+      />
       <BlogHighlights />
       <Faq
-        items={FaqFgtsLoanItems}
-        title="Ficou com alguma dúvida sobre Empréstimo FGTS?"
+        items={FaqPersonalLoanItems}
+        title="Ficou com alguma dúvida sobre Empréstimo Pessoal?"
       />
       <Footer />
     </div>

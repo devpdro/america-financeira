@@ -100,23 +100,9 @@ const BlogPost: React.FC = () => {
   return (
     <>
       <Helmet>
-        <meta
-          name="facebook-domain-verification"
-          content="7y4vnrbfajjqs0c26hfez4fanjikm3"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="description"
-          content="Construímos soluções do início ao fim! Explore o nosso blog sobre Desenvolvimento Web, Aplicativos, Design de Experiência e Interface do Usuário, além de outras áreas."
-        />
-        <meta
-          name="keywords"
-          content="Criação de sites, Desenvolvimento de sites, Web design, Empresa de sites, Web development, Matte, Criação de websites profissionais, Marketing digital, SEO, E-commerce, Landing pages, Responsivo, Soluções web, Site personalizado, Design responsivo, Otimização de sites, Serviços web, Experiência do usuário, Tecnologia web, Design intuitivo, Performance do site, Integração de mídia social, Projeto web."
-        />
         <title>{pageTitle}</title>
       </Helmet>
-      <div>
-        <Navbar />
+      <div className={styles.container}>
         <div className={styles.routes}>{generatePath()}</div>
         <div className={styles.content_container}>
           <div className={styles.texts_box}>
@@ -162,29 +148,10 @@ const BlogPost: React.FC = () => {
                 {post.listFour}
               </li>
             )}
-            {post.titleListFive && (
-              <li>
-                <span>{post.titleListFive}</span>
-                {post.listFive}
-              </li>
-            )}
-          </ol>
-          {post.titleListSix && (
-            <h1 className={styles.title_post}>{post.listTwo}</h1>
-          )}
-          <ol className={styles.list_box}>
-            {post.titleListSix && (
-              <li>
-                <span>{post.titleListSix}</span>
-                {post.listSix}
-              </li>
-            )}
           </ol>
           <h1 className={styles.title_post}>{post.titleConclusion}</h1>
           <p className={styles.paragraph_post}>{post.paragraphThree}</p>
-          <p className={styles.paragraph_post}>{post.paragraphFour}</p>
         </div>
-        <Footer />
       </div>
     </>
   );

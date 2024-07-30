@@ -23,14 +23,17 @@
     color: $blue-color;
   }
 }
+.container {
+  @include container-center(1220px, 0 auto 7.2rem auto);
+
+}
 .routes {
-  @include container-center(1220px, 7.2rem auto);
+  @include container-center(1220px, 0 auto);
   @include hover-pointer;
   font-size: $size-small;
-  padding: 0.575rem 0;
+  padding: 7.275rem 0 0 0;
 }
 .content_container {
-
   max-width: 880px;
   display: flex;
   padding: 0 2rem;

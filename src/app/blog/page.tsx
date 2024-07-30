@@ -3,6 +3,7 @@ import {
   Faq,
   Footer,
   Header,
+  HeaderNotForm,
   Navbar,
 } from "@/presentation/components/common";
 import { Images } from "@/presentation/assets";
@@ -15,20 +16,21 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-      <Header
-        title="Empréstimo Consignadoaaa"
+      <HeaderNotForm
+        title="Blog da América Financeira"
         subtitle={
           <>
-            Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os
-            seus sonhos
+            Dicas, notícias e artigos para <br /> te ajudar a tomar as melhores{" "}
+            <br />
+            decisões financeiras
           </>
         }
-        showParagraph="*Sujeito à analise de crédito e condições do produtoa"
-        showDetails={true}
+        showParagraph="Acompanhe nossas últimas atualizações"
+        showLoanRequest={false}
+        showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
       <BlogMostReads />
-      <BlogLatestPosts />
       <Footer />
     </>
   );
