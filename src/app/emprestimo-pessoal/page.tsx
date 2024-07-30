@@ -15,7 +15,7 @@ import { Images } from "@/presentation/assets";
 import { BenefitsLoanPersonalItems, FaqPersonalLoanItems } from "@/data";
 
 export default function PersonalLoan() {
-  const backgroundImageUrl = Images.doisIdosos || { src: "" };
+  const backgroundImageUrl = Images.pessoaComputadorCabecalho;
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function PersonalLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <Wrapper
-        image={Images.pessoaSozinha.src}
+        image={Images.pessoaOlhandoCelular.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Pessoal?"

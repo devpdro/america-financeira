@@ -13,7 +13,7 @@ import { Banks } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
 
 export default function PayrollLoan() {
-  const backgroundImageUrl = Images.cabecalhoInicial || { src: "" };
+  const backgroundImageUrl = Images.emprestimoConsignadoPessoas;
 
   return (
     <div>
@@ -30,7 +30,7 @@ export default function PayrollLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <Wrapper
-        image={backgroundImageUrl.src}
+        image={Images.pessoaTablet.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Consignado?"
@@ -43,8 +43,6 @@ export default function PayrollLoan() {
       <Benefits
         title={<>Benefícios do empréstimo consignado para você</>}
         subtitle="Descubra como o empréstimo consignado pode facilitar sua vida financeira com taxas baixas e condições vantajosas."
-        imageWidth={100}
-        imageHeight={100}
         items={BenefitsLoanConsignedItems}
       />
       <Banks />

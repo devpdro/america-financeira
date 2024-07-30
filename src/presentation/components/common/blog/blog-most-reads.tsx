@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./blog-most-reads.module.scss";
 
 import { Images } from "@/presentation/assets";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 
 const BlogMostReads: React.FC = () => {

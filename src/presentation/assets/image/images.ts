@@ -27,13 +27,29 @@ import investimentos from "./treated-img/investimentos.webp";
 import trocarCarro from "./treated-img/trocar-de-carro.webp";
 import tresPessoasSimulacao from "./treated-img/tres-pessoas-simulacao.webp";
 import qrCodeTelefone from "./treated-img/qr-code-telefone.webp";
-import qrCodeWhats from "./treated-img/qr-code-whats.webp";
 import pessoaSozinha from "./treated-img/pessoa-sozinha.webp";
 import pessoaTablet from "./treated-img/pessoa-com-tablet.webp";
 import pessoaComCelular from "./treated-img/pessoa-com-celular.webp";
 import bancoBrasil from "./treated-img/banco-brasil.webp";
+import duasPessoasConversando from "./not-treated-img/duas-pessoas-conversando.jpg";
+import educacao from "./not-treated-img/educacao.png";
+import qrCodeWhats from "./not-treated-img/qr-code-whats.png";
+import emergencia from "./not-treated-img/emergencia.png";
+import pessoaComputadorCabecalho from "./not-treated-img/pessoa-computador-cabecalho.jpg";
+import pessoaOlhandoCelular from "./not-treated-img/pessoa-olhando-celular.jpeg";
+import viagens from "./not-treated-img/viagens.png";
+import moveis from "./not-treated-img/moveis.png";
+import emprestimoConsignadoPessoas from "./not-treated-img/emprestimo-consginado-duas-pessoas.jpg";
 
 const Images = {
+  emprestimoConsignadoPessoas,
+  moveis,
+  viagens,
+  pessoaOlhandoCelular,
+  duasPessoasConversando,
+  educacao,
+  emergencia,
+  pessoaComputadorCabecalho,
   bancoBrasil,
   diversificacao,
   casalSentado,

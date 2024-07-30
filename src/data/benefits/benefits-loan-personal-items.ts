@@ -11,13 +11,13 @@ const BenefitsLoanPersonalItems = [
     title: "Educação e qualificação",
     subtitle:
       "Invista no seu futuro com cursos e especializações, financiados por um crédito acessível.",
-    image: Images.bancoPan,
+    image: Images.educacao,
   },
   {
     title: "Viagens e lazer",
     subtitle:
       "Aproveite momentos especiais e faça aquela viagem dos sonhos com parcelas que cabem no seu bolso.",
-    image: Images.bancoPan,
+    image: Images.viagens,
   },
 ];
 

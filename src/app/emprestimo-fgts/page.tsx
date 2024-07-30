@@ -9,10 +9,10 @@ import {
 } from "@/presentation/components/common";
 import { Banks, FgtsSimulation } from "@/presentation/components";
 import { Images } from "@/presentation/assets";
-import { FaqPersonalLoanItems } from "@/data";
+import { FaqFgtsLoanItems } from "@/data";
 
 export default function PersonalLoan() {
-  const backgroundImageUrl = Images.AumentarLucro;
+  const backgroundImageUrl = Images.duasPessoasConversando;
 
   return (
     <div>
@@ -31,7 +31,7 @@ export default function PersonalLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <Wrapper
-        image={backgroundImageUrl.src}
+        image={Images.emprestimoFgts.src}
         imageWidth={100}
         imageHeight={98}
         alt="Sobre o Empréstimo FGTS"
@@ -44,6 +44,16 @@ export default function PersonalLoan() {
       <FgtsSimulation />
       <Banks />
       <Decorative
+        imageWidth={91}
+        imageHeight={100}
+        image={Images.investimentos.src}
+        alt="Imagem representativa de antecipação de FGTS"
+        title="Antecipação FGTS"
+        subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
+        paragraph="Antecipar FGTS"
+        imagePosition="right"
+      />
+      <Decorative
         image={Images.cartaoCredito.src}
         imageWidth={91}
         imageHeight={100}
@@ -55,8 +65,8 @@ export default function PersonalLoan() {
       />
       <BlogHighlights />
       <Faq
-        items={FaqPersonalLoanItems}
-        title="Ficou com alguma dúvida sobre Empréstimo Pessoal?"
+        items={FaqFgtsLoanItems}
+        title="Ficou com alguma dúvida sobre Empréstimo FGTS?"
       />
       <Footer />
     </div>
