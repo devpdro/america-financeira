@@ -19,24 +19,6 @@ export default function PersonalLoan() {
 
   return (
     <>
-      <Head>
-        <title>Empréstimo Pessoal: Rápido, Seguro e 100% Online</title>
-        <meta
-          name="description"
-          content="Solicite um empréstimo pessoal com condições exclusivas. Empréstimo rápido e fácil para atender suas necessidades financeiras pessoais."
-        />
-        <meta
-          name="keywords"
-          content="empréstimo pessoal, crédito pessoal, empréstimo rápido, condições exclusivas, América"
-        />
-        <meta property="og:title" content="Empréstimo Pessoal | América" />
-        <meta
-          property="og:description"
-          content="Solicite um empréstimo pessoal com condições exclusivas. Empréstimo rápido e fácil para atender suas necessidades financeiras pessoais."
-        />
-        <meta property="og:image" content={backgroundImageUrl.src} />
-        <meta property="og:type" content="website" />
-      </Head>
       <Navbar />
       <Header
         title="Empréstimo Pessoal"

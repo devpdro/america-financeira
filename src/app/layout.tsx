@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 
-import "@/presentation/styles/global.scss";
-import "@/presentation/styles/base/reset.scss";
+import { StyledJsxRegistry } from "@/lib";
 
 export const metadata: Metadata = {
   title: "Empréstimo Online - América Financeira",
   description:
     "Crédito na Sua Conta — Descubra sua melhor opção! Simule agora mesmo um empréstimo pessoal ou consignado com a América Financeira.",
 };
+
+import "@/presentation/styles/global.scss";
+import "@/presentation/styles/base/reset.scss";
 
 export default function RootLayout({
   children,
@@ -16,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body>
+        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+      </body>
     </html>
   );
 }

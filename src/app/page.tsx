@@ -1,4 +1,3 @@
-import Head from "next/head";
 import {
   Header,
   Navbar,
@@ -17,28 +16,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Empréstimo Online: América Financeira</title>
-        <meta
-          name="description"
-          content="Solicite seu crédito pessoal, consignado ou FGTS com as melhores condições e taxas. A América oferece soluções financeiras rápidas e fáceis para atender suas necessidades."
-        />
-        <meta
-          name="keywords"
-          content="crédito pessoal, empréstimo consignado, antecipação FGTS, soluções financeiras, América"
-        />
-        <meta
-          property="og:title"
-          content="Empréstimo Online: América Financeira"
-        />
-        <meta
-          property="og:description"
-          content="Solicite seu crédito pessoal, consignado ou FGTS com as melhores condições e taxas. A América oferece soluções financeiras rápidas e fáceis para atender suas necessidades."
-        />
-        <meta property="og:image" content={backgroundImageUrl.src} />
-        <meta property="og:url" content="https://www.seusite.com.br" />
-        <meta property="og:type" content="website" />
-      </Head>
       <Navbar />
       <Header
         title="Solicite seu crédito agora mesmo!"
