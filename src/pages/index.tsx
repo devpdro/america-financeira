@@ -1,3 +1,7 @@
+import Image from "next/image";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 import {
   Header,
   Navbar,
@@ -10,7 +14,6 @@ import {
 import { LoanCarousel } from "@/presentation/components/carousel";
 import { Images } from "@/presentation/assets";
 import { BenefitsLoanItems, FaqLoanItems } from "@/data";
-
 export default function Home() {
   const backgroundImageUrl = Images.cabecalhoInicial;
 
