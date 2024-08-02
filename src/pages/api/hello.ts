@@ -1,10 +1,27 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
-  name: string
-}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'POST') {
+    try {
+      const response = await fetch('https://n8n.americaintegracao.com.br/webhook/site_teste', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(req.body),
+      })
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  res.status(200).json({ name: 'John Doe' })
+      if (!response.ok) {
+        return res.status(response.status).json({ message: 'Erro ao processar a solicitação.' })
+      }
+
+      const data = await response.json()
+      return res.status(200).json(data)
+    } catch (error) {
+      return res.status(500).json({ message: 'Erro interno do servidor.' })
+    }
+  } else {
+    res.setHeader('Allow', ['POST'])
+    res.status(405).end(`Method ${req.method} Not Allowed`)
+  }
 }
