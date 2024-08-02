@@ -1,7 +1,7 @@
 # Changelog :newspaper
 
-# 0.1.0 [23/07/2023]
+# 0.1.0 [06/08/2024]
 
 ## Minor
 
-- Boilerplate inicial da app.
+- Initial boilerplate of the web application.
