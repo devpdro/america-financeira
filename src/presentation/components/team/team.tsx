@@ -1,14 +1,14 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { TeamItems } from "@/data";
+import { TeamItems } from '@/data/ui'
 
-import classNames from "classnames";
-import styles from "./team.module.scss";
+import classNames from 'classnames'
+import styles from './team.module.scss'
 
 const Team: React.FC = () => {
   return (
     <section className={styles.container}>
-      <div className={classNames(styles.row, styles["justify-content-center"])}>
+      <div className={classNames(styles.row, styles['justify-content-center'])}>
         <div className={classNames()}>
           <h3
             className={classNames(styles.subtitle)}
@@ -30,81 +30,40 @@ const Team: React.FC = () => {
           </h1>
         </div>
       </div>
-      <div
-        className={classNames(
-          styles.row,
-          styles["form-row"],
-          styles["align-items-center"]
-        )}
-      >
-        <div className={classNames(styles.col, styles["col-3"])}>
-          <div className={styles["img-square"]}>
-            <img
-              src={TeamItems[0].src}
-              alt={TeamItems[0].alt}
-              className={styles["img-cover"]}
-            />
+      <div className={classNames(styles.row, styles['form-row'], styles['align-items-center'])}>
+        <div className={classNames(styles.col, styles['col-3'])}>
+          <div className={styles['img-square']}>
+            <img src={TeamItems[0].src} alt={TeamItems[0].alt} className={styles['img-cover']} />
           </div>
         </div>
-        <div className={classNames(styles.col, styles["col-6"])}>
-          <div
-            className={classNames(
-              styles.row,
-              styles["form-row"],
-              styles["align-items-end"],
-              styles.mb2
-            )}
-          >
+        <div className={classNames(styles.col, styles['col-6'])}>
+          <div className={classNames(styles.row, styles['form-row'], styles['align-items-end'], styles.mb2)}>
             {TeamItems.slice(1, 3).map((img, index) => (
-              <div
-                key={index}
-                className={classNames(
-                  styles.col,
-                  styles[`col-${index === 0 ? 7 : 5}`]
-                )}
-              >
-                <div className={styles["img-square"]}>
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className={styles["img-cover"]}
-                  />
+              <div key={index} className={classNames(styles.col, styles[`col-${index === 0 ? 7 : 5}`])}>
+                <div className={styles['img-square']}>
+                  <img src={img.src} alt={img.alt} className={styles['img-cover']} />
                 </div>
               </div>
             ))}
           </div>
           <div className={styles.row}>
             {TeamItems.slice(3, 5).map((img, index) => (
-              <div
-                key={index}
-                className={classNames(
-                  styles.col,
-                  styles[`col-${index === 0 ? 5 : 7}`]
-                )}
-              >
-                <div className={styles["img-square"]}>
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className={styles["img-cover"]}
-                  />
+              <div key={index} className={classNames(styles.col, styles[`col-${index === 0 ? 5 : 7}`])}>
+                <div className={styles['img-square']}>
+                  <img src={img.src} alt={img.alt} className={styles['img-cover']} />
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <div className={classNames(styles.col, styles["col-3"])}>
-          <div className={styles["img-square"]}>
-            <img
-              src={TeamItems[5].src}
-              alt={TeamItems[5].alt}
-              className={styles["img-cover"]}
-            />
+        <div className={classNames(styles.col, styles['col-3'])}>
+          <div className={styles['img-square']}>
+            <img src={TeamItems[5].src} alt={TeamItems[5].alt} className={styles['img-cover']} />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

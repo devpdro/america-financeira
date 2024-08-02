@@ -1,50 +1,40 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-import { NavMobile } from "@/presentation/components/common";
-import { Images, Icons } from "@/presentation/assets";
-import { IconWithProps } from "@/utils";
-import { NavItems } from "@/data";
+import { NavMobile } from '@/presentation/components/common'
+import { Images, Icons } from '@/presentation/assets'
+import { IconWithProps } from '@/utils'
+import { NavItems } from '@/data/ui'
 
-import styles from "./navbar.module.scss";
+import styles from './navbar.module.scss'
 
 export default function Navbar() {
-  const [animationParent] = useAutoAnimate();
-  const [isSideMenuOpen, setSideMenu] = useState(false);
+  const [animationParent] = useAutoAnimate()
+  const [isSideMenuOpen, setSideMenu] = useState(false)
 
   return (
     <nav className={styles.navbar} aria-label="Navegação Principal">
-      <section
-        ref={animationParent}
-        className={styles["left-section"]}
-        aria-label="Seção de Navegação Esquerda"
-      >
+      <section ref={animationParent} className={styles['left-section']} aria-label="Seção de Navegação Esquerda">
         <Link href="/" legacyBehavior>
           <a aria-label="Logo América Financeira">
-            <Image
-              src={Images.logoAmerica}
-              alt="Logo América Financeira"
-              className={styles.logo}
-            />
+            <Image src={Images.logoAmerica} alt="Logo América Financeira" className={styles.logo} />
           </a>
         </Link>
-        {isSideMenuOpen && (
-          <NavMobile closeSideMenu={() => setSideMenu(false)} />
-        )}
-        <div className={styles["nav-items"]} aria-label="Itens de Navegação">
+        {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}
+        <div className={styles['nav-items']} aria-label="Itens de Navegação">
           {NavItems.map((item, index) => (
-            <div key={index} className={styles["nav-link"]}>
-              <Link href={item.link ?? "#"} legacyBehavior>
-                <a className={styles["link-text"]} aria-label={item.label}>
+            <div key={index} className={styles['nav-link']}>
+              <Link href={item.link ?? '#'} legacyBehavior>
+                <a className={styles['link-text']} aria-label={item.label}>
                   <span>{item.label}</span>
                   {item.children && (
                     <Icons.IoIosArrowDown
-                      className={`${styles["arrow-icon"]} ${styles["rotate-180"]}`}
+                      className={`${styles['arrow-icon']} ${styles['rotate-180']}`}
                       aria-hidden="true"
                     />
                   )}
@@ -55,16 +45,12 @@ export default function Navbar() {
                   {item.children.map((child, childIndex) => (
                     <Link key={childIndex} href={child.link} legacyBehavior>
                       <a
-                        className={styles["dropdown-link"]}
-                        target={
-                          child.link.startsWith("https://") ? "_blank" : ""
-                        }
+                        className={styles['dropdown-link']}
+                        target={child.link.startsWith('https://') ? '_blank' : ''}
                         rel="noopener noreferrer"
                         aria-label={child.label}
                       >
-                        <span className={styles["link-label"]}>
-                          {child.label}
-                        </span>
+                        <span className={styles['link-label']}>{child.label}</span>
                         {child.new && <p className={styles.new}>{child.new}</p>}
                       </a>
                     </Link>
@@ -76,10 +62,7 @@ export default function Navbar() {
         </div>
       </section>
 
-      <aside
-        className={styles["right-section"]}
-        aria-label="Seção de Navegação Direita"
-      >
+      <aside className={styles['right-section']} aria-label="Seção de Navegação Direita">
         <Icons.IoPersonOutline className={styles.icon} aria-hidden="true" />
         <Link href="/login" legacyBehavior>
           <a className={styles.link} aria-label="Login">
@@ -88,13 +71,9 @@ export default function Navbar() {
         </Link>
       </aside>
 
-      <IconWithProps
-        onClick={() => setSideMenu(true)}
-        className={styles["menu-icon"]}
-        aria-label="Abrir Menu"
-      >
+      <IconWithProps onClick={() => setSideMenu(true)} className={styles['menu-icon']} aria-label="Abrir Menu">
         <Icons.FiMenu aria-hidden="true" />
       </IconWithProps>
     </nav>
-  );
+  )
 }

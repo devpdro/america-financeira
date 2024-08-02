@@ -1,8 +1,7 @@
-@import "../../../styles/base/variables.scss";
-@import "../../../styles/utils/mixins.scss";
+@import '../../../styles/base/variables.scss';
+@import '../../../styles/utils/mixins.scss';
 
 .container {
- 
   box-shadow: $box-shadow-normal;
   border-radius: $radius-medium;
   padding: 4.075rem 2.575rem;

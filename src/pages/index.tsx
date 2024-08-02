@@ -1,21 +1,10 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Header, Navbar, Benefits, Decorative, BlogHighlights, Faq, Footer } from '@/presentation/components/common'
+import { LoanCarousel } from '@/presentation/components/carousel'
+import { BenefitsLoanItems, FaqLoanItems } from '@/data/ui'
+import { Images } from '@/presentation/assets'
 
-const inter = Inter({ subsets: ["latin"] });
-import {
-  Header,
-  Navbar,
-  Benefits,
-  Decorative,
-  BlogHighlights,
-  Faq,
-  Footer,
-} from "@/presentation/components/common";
-import { LoanCarousel } from "@/presentation/components/carousel";
-import { Images } from "@/presentation/assets";
-import { BenefitsLoanItems, FaqLoanItems } from "@/data";
 export default function Home() {
-  const backgroundImageUrl = Images.cabecalhoInicial;
+  const backgroundImageUrl = Images.cabecalhoInicial
 
   return (
     <>
@@ -71,5 +60,5 @@ export default function Home() {
       <Faq items={FaqLoanItems} title="Ficou com alguma dúvida?" />
       <Footer />
     </>
-  );
+  )
 }

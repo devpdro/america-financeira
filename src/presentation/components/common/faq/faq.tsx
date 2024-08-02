@@ -1,17 +1,15 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 
-import { Button } from "@/presentation/components/form";
-import { FaqTypes } from "@/presentation/@types";
+import { Button } from '@/presentation/components/form'
+import { FaqTypes } from '@/data/models'
 
-import styles from "./faq.module.scss";
+import styles from './faq.module.scss'
 
 const Faq: React.FC<FaqTypes> = ({ items, title }) => {
-  const [faqs, setFaqs] = useState(
-    items ? items.map((faq) => ({ ...faq, open: false })) : []
-  );
-  const [showAll, setShowAll] = useState(false);
+  const [faqs, setFaqs] = useState(items ? items.map((faq) => ({ ...faq, open: false })) : [])
+  const [showAll, setShowAll] = useState(false)
 
   const toggleFAQ = (index: number) => {
     setFaqs((prevFaqs) =>
@@ -19,47 +17,42 @@ const Faq: React.FC<FaqTypes> = ({ items, title }) => {
         ...faq,
         open: i === index ? !faq.open : faq.open,
       }))
-    );
-  };
+    )
+  }
 
   const handleShowAll = () => {
-    setShowAll(true);
-  };
+    setShowAll(true)
+  }
 
-  const visibleFaqs = showAll ? faqs : faqs.slice(0, 5);
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, 5)
 
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
       {visibleFaqs.map((faq, index) => (
         <div
-          className={`${styles["faq-section"]} ${faq.open ? styles.open : ""}`}
+          className={`${styles['faq-section']} ${faq.open ? styles.open : ''}`}
           key={index}
           onClick={() => toggleFAQ(index)}
           aria-expanded={faq.open}
           role="button"
           tabIndex={0}
         >
-          <div className={styles["faq-question"]}>{faq.question}</div>
+          <div className={styles['faq-question']}>{faq.question}</div>
           {faq.open && (
-            <div className={styles["faq-answer"]} aria-hidden={!faq.open}>
+            <div className={styles['faq-answer']} aria-hidden={!faq.open}>
               {faq.answer}
             </div>
           )}
         </div>
       ))}
       {!showAll && faqs.length > 5 && (
-        <div className={styles["btn-section"]}>
-          <Button
-            typeStyle="btn2"
-            text="Ver mais"
-            width="150px"
-            onClick={handleShowAll}
-          />
+        <div className={styles['btn-section']}>
+          <Button typeStyle="btn2" text="Ver mais" width="150px" onClick={handleShowAll} />
         </div>
       )}
     </section>
-  );
-};
+  )
+}
 
-export default Faq;
+export default Faq

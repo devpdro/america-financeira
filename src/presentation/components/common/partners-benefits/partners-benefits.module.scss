@@ -1,5 +1,5 @@
-@import "../../../styles/base/variables.scss";
-@import "../../../styles/utils/mixins.scss";
+@import '../../../styles/base/variables.scss';
+@import '../../../styles/utils/mixins.scss';
 
 .container {
   @include container-center(1280px, 4.075rem auto 10.075rem auto);

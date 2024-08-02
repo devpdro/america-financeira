@@ -1,8 +1,8 @@
-@import "../../styles/base/variables.scss";
-@import "../../styles/utils/mixins.scss";
+@import '../../styles/base/variables.scss';
+@import '../../styles/utils/mixins.scss';
 
 .counter-feature {
-  background-image: url("https://www.bootdey.com/image/280x280/48D1CC/000000");
+  background-image: url('https://www.bootdey.com/image/280x280/48D1CC/000000');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -12,7 +12,7 @@
   &:before {
     background: #020928;
     bottom: 0;
-    content: "";
+    content: '';
     height: 100%;
     left: 0;
     position: absolute;

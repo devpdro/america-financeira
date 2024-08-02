@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { Button } from "@/presentation/components/form";
-import { WrapperTypes } from "@/presentation/@types";
+import { Button } from '@/presentation/components/form'
+import { WrapperTypes } from '@/data/models'
 
-import styles from "./wrapper.module.scss";
+import styles from './wrapper.module.scss'
 
-const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
+const Wrapper: React.FC<WrapperTypes & { imagePosition: 'left' | 'right' }> = ({
   image,
   alt,
   title,
@@ -18,12 +18,9 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
 }) => {
   return (
     <section className={styles.container}>
-      {imagePosition === "left" && (
+      {imagePosition === 'left' && (
         <>
-          <div
-            className={styles["image-section"]}
-            style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
-          >
+          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>
             <Image
               className={styles.img}
               src={image}
@@ -33,7 +30,7 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
               layout="responsive"
             />
           </div>
-          <div className={styles["text-section"]}>
+          <div className={styles['text-section']}>
             <h3 className={styles.subtitle}>{subtitle}</h3>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.paragraph}>{paragraph}</p>
@@ -41,18 +38,15 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
           </div>
         </>
       )}
-      {imagePosition === "right" && (
+      {imagePosition === 'right' && (
         <>
-          <div className={styles["text-section"]}>
+          <div className={styles['text-section']}>
             <h3 className={styles.subtitle}>{subtitle}</h3>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.paragraph}>{paragraph}</p>
             <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
           </div>
-          <div
-            className={styles["image-section"]}
-            style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
-          >
+          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>
             <Image
               className={styles.img}
               src={image}
@@ -65,7 +59,7 @@ const Wrapper: React.FC<WrapperTypes & { imagePosition: "left" | "right" }> = ({
         </>
       )}
     </section>
-  );
-};
+  )
+}
 
-export default Wrapper;
+export default Wrapper

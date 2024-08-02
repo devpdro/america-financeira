@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import InputMask from "react-input-mask";
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import InputMask from 'react-input-mask'
 
-import { ModalLoan } from "@/presentation/components/common";
-import { LoanRequestTypes } from "@/presentation/@types";
-import { Button } from "@/presentation/components/form";
+import { ModalLoan } from '@/presentation/components/common'
+import { LoanRequestTypes } from '@/data/models'
+import { Button } from '@/presentation/components/form'
 
-import styles from "./loan-request.module.scss";
+import styles from './loan-request.module.scss'
 
 const LoanRequest: React.FC = () => {
-  const [modalMessage, setModalMessage] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState('')
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const {
     register,
@@ -21,41 +21,39 @@ const LoanRequest: React.FC = () => {
     formState: { errors, isSubmitting },
   } = useForm<LoanRequestTypes>({
     defaultValues: {
-      nome: "",
-      email: "",
-      whatsapp: "",
-      cpf: "",
+      nome: '',
+      email: '',
+      whatsapp: '',
+      cpf: '',
     },
-  });
+  })
 
   const onSubmit = async (data: LoanRequestTypes) => {
     try {
-      const response = await fetch("/api", {
-        method: "POST",
+      const response = await fetch('/api', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      });
+      })
 
       if (!response.ok) {
-        throw new Error(
-          "Não foi possível processar a solicitação. Por favor, tente novamente mais tarde."
-        );
+        throw new Error('Não foi possível processar a solicitação. Por favor, tente novamente mais tarde.')
       }
 
-      setModalMessage("Obrigado! Em breve entraremos em contato.");
-      reset();
+      setModalMessage('Obrigado! Em breve entraremos em contato.')
+      reset()
     } catch (error) {
-      setModalMessage("Ops! Por favor, tente novamente mais tarde.");
+      setModalMessage('Ops! Por favor, tente novamente mais tarde.')
     } finally {
-      setIsModalOpen(true);
+      setIsModalOpen(true)
     }
-  };
+  }
 
   const closeModal = () => {
-    setIsModalOpen(false);
-  };
+    setIsModalOpen(false)
+  }
 
   return (
     <div>
@@ -69,119 +67,107 @@ const LoanRequest: React.FC = () => {
             O dinheiro que você precisa, com as menores taxas.
           </legend>
           <input
-            {...register("nome", {
-              required: "Nome é obrigatório",
+            {...register('nome', {
+              required: 'Nome é obrigatório',
               minLength: {
                 value: 4,
-                message: "Nome deve ter no mínimo 4 caracteres",
+                message: 'Nome deve ter no mínimo 4 caracteres',
               },
             })}
-            className={`${styles["input-text"]} ${
-              errors.nome ? styles["input-text-error"] : ""
-            }`}
+            className={`${styles['input-text']} ${errors.nome ? styles['input-text-error'] : ''}`}
             type="text"
             placeholder="Nome"
-            aria-invalid={errors.nome ? "true" : "false"}
+            aria-invalid={errors.nome ? 'true' : 'false'}
             aria-describedby="nome-error"
           />
 
           <input
-            {...register("email", {
-              required: "E-mail é obrigatório",
+            {...register('email', {
+              required: 'E-mail é obrigatório',
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: "E-mail inválido",
+                message: 'E-mail inválido',
               },
             })}
-            className={`${styles["input-text"]} ${
-              errors.email ? styles["input-text-error"] : ""
-            }`}
+            className={`${styles['input-text']} ${errors.email ? styles['input-text-error'] : ''}`}
             type="text"
             placeholder="E-mail"
-            aria-invalid={errors.email ? "true" : "false"}
+            aria-invalid={errors.email ? 'true' : 'false'}
             aria-describedby="email-error"
           />
 
           <InputMask
-            {...register("whatsapp", {
-              required: "Whatsapp é obrigatório",
+            {...register('whatsapp', {
+              required: 'Whatsapp é obrigatório',
               pattern: {
                 value: /^\(\d{2}\) \d{5}-\d{4}$/,
-                message: "Whatsapp inválido",
+                message: 'Whatsapp inválido',
               },
             })}
             mask="(99) 99999-9999"
             maskChar=""
-            className={`${styles["input-text"]} ${
-              errors.whatsapp ? styles["input-text-error"] : ""
-            }`}
+            className={`${styles['input-text']} ${errors.whatsapp ? styles['input-text-error'] : ''}`}
             type="text"
             placeholder="Whatsapp"
-            aria-invalid={errors.whatsapp ? "true" : "false"}
+            aria-invalid={errors.whatsapp ? 'true' : 'false'}
             aria-describedby="whatsapp-error"
           />
 
           <InputMask
-            {...register("cpf", {
-              required: "CPF é obrigatório",
+            {...register('cpf', {
+              required: 'CPF é obrigatório',
               pattern: {
                 value: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
-                message: "CPF inválido",
+                message: 'CPF inválido',
               },
             })}
             mask="999.999.999-99"
             maskChar=""
-            className={`${styles["input-text"]} ${
-              errors.cpf ? styles["input-text-error"] : ""
-            }`}
+            className={`${styles['input-text']} ${errors.cpf ? styles['input-text-error'] : ''}`}
             type="text"
             placeholder="CPF"
-            aria-invalid={errors.cpf ? "true" : "false"}
+            aria-invalid={errors.cpf ? 'true' : 'false'}
             aria-describedby="cpf-error"
           />
 
           <select
-            className={`${styles["input-text"]} ${
-              errors.tipoSolicitacao ? styles["input-text-error"] : ""
-            }`}
-            {...register("tipoSolicitacao", {
-              required: "Tipo de solicitação é obrigatório",
+            className={`${styles['input-text']} ${errors.tipoSolicitacao ? styles['input-text-error'] : ''}`}
+            {...register('tipoSolicitacao', {
+              required: 'Tipo de solicitação é obrigatório',
             })}
-            aria-invalid={errors.tipoSolicitacao ? "true" : "false"}
+            aria-invalid={errors.tipoSolicitacao ? 'true' : 'false'}
             aria-describedby="tipoSolicitacao-error"
           >
             <option value="" disabled hidden>
               Qual tipo de solicitação?
             </option>
-            <option className={styles["option"]} value="credito-pessoal">
+            <option className={styles['option']} value="credito-pessoal">
               Crédito Pessoal
             </option>
-            <option className={styles["option"]} value="credito-consignado">
+            <option className={styles['option']} value="credito-consignado">
               Crédito Consignado
             </option>
-            <option className={styles["option"]} value="antecipacao-fgts">
+            <option className={styles['option']} value="antecipacao-fgts">
               Antecipação FGTS
             </option>
-            <option className={styles["option"]} value="cartao-credito">
+            <option className={styles['option']} value="cartao-credito">
               Cartão de Crédito
             </option>
           </select>
 
-          <div className={styles["terms-box"]}>
+          <div className={styles['terms-box']}>
             <input
-              className={`${styles.checkbox} ${
-                errors.termos ? styles["checkbox-error"] : ""
-              }`}
+              className={`${styles.checkbox} ${errors.termos ? styles['checkbox-error'] : ''}`}
               type="checkbox"
-              {...register("termos", {
-                required: "Você deve aceitar os termos para continuar",
+              {...register('termos', {
+                required: 'Você deve aceitar os termos para continuar',
               })}
               name="termos"
               id="termos"
-              aria-invalid={errors.termos ? "true" : "false"}
+              aria-invalid={errors.termos ? 'true' : 'false'}
               aria-describedby="termos-error"
             />
-            <label className={styles["label-checkbox"]} htmlFor="termos">
+            <label className={styles['label-checkbox']} htmlFor="termos">
               Aceito receber comunicações da América Financeira
             </label>
           </div>
@@ -189,8 +175,8 @@ const LoanRequest: React.FC = () => {
           <Button
             typeStyle="btn1"
             width="100%"
-            text={isSubmitting ? "Contratando" : "Quero contratar"}
-            aria-label={isSubmitting ? "Contratando" : "Quero contratar"}
+            text={isSubmitting ? 'Contratando' : 'Quero contratar'}
+            aria-label={isSubmitting ? 'Contratando' : 'Quero contratar'}
           />
         </fieldset>
       </form>
@@ -202,7 +188,7 @@ const LoanRequest: React.FC = () => {
         aria-label="Modal de Solicitação de Empréstimo"
       />
     </div>
-  );
-};
+  )
+}
 
-export default LoanRequest;
+export default LoanRequest

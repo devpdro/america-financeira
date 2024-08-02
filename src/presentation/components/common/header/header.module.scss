@@ -1,12 +1,12 @@
-@import "../../../styles/base/variables.scss";
-@import "../../../styles/utils/mixins.scss";
+@import '../../../styles/base/variables.scss';
+@import '../../../styles/utils/mixins.scss';
 
 .container {
   color: $white-color;
   height: 100vh;
   max-width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2; 
+  z-index: 2;
   @media (min-width: 625px) and (max-width: 994px) {
     height: 130vh;
   }

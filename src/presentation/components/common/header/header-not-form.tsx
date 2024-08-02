@@ -1,7 +1,7 @@
-import { Button, LoanRequest } from "@/presentation/components/form";
-import { HeaderTypes } from "@/presentation/@types";
+import { Button, LoanRequest } from '@/presentation/components/form'
+import { HeaderTypes } from '@/data/models'
 
-import styles from "./header.module.scss";
+import styles from './header.module.scss'
 
 const Header: React.FC<HeaderTypes> = ({
   title,
@@ -17,13 +17,13 @@ const Header: React.FC<HeaderTypes> = ({
       className={styles.container}
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: "left center",
-        backgroundSize: "cover",
+        backgroundPosition: 'left center',
+        backgroundSize: 'cover',
       }}
       aria-label="Cabeçalho"
     >
-      <div className={styles["box-section"]} aria-label="Seção de Conteúdo">
-        <div className={styles["text-section"]} aria-label="Seção de Texto">
+      <div className={styles['box-section']} aria-label="Seção de Conteúdo">
+        <div className={styles['text-section']} aria-label="Seção de Texto">
           <h6 className={styles.subtitle} aria-label="Subtítulo">
             {title}
           </h6>
@@ -32,14 +32,10 @@ const Header: React.FC<HeaderTypes> = ({
           </h1>
           {showDetails && (
             <>
-              <p className={styles["paragraph-details"]} aria-label="Detalhes">
+              <p className={styles['paragraph-details']} aria-label="Detalhes">
                 {showDetails}
               </p>
-              <Button
-                typeStyle="btn3"
-                text="Conheça mais"
-                aria-label="Conheça mais sobre os detalhes"
-              />
+              <Button typeStyle="btn3" text="Conheça mais" aria-label="Conheça mais sobre os detalhes" />
             </>
           )}
           {showParagraph && (
@@ -49,16 +45,13 @@ const Header: React.FC<HeaderTypes> = ({
           )}
         </div>
         {showLoanRequest && (
-          <div
-            className={styles["form-section"]}
-            aria-label="Seção de Formulário de Empréstimo"
-          >
+          <div className={styles['form-section']} aria-label="Seção de Formulário de Empréstimo">
             <LoanRequest />
           </div>
         )}
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

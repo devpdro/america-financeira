@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
 
-import { DecorativeTypes } from "@/presentation/@types";
-import { Icons } from "@/presentation/assets";
+import { DecorativeTypes } from '@/data/models'
+import { Icons } from '@/presentation/assets'
 
-import styles from "./decorative.module.scss";
+import styles from './decorative.module.scss'
 
 const Decorative: React.FC<DecorativeTypes> = ({
   image,
@@ -18,19 +18,19 @@ const Decorative: React.FC<DecorativeTypes> = ({
 }) => {
   return (
     <section className={styles.container}>
-      {imagePosition === "left" && (
-        <div className={styles["box-section"]}>
-          <div className={styles["text-section"]}>
+      {imagePosition === 'left' && (
+        <div className={styles['box-section']}>
+          <div className={styles['text-section']}>
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
-            <div className={styles["link-section"]}>
+            <div className={styles['link-section']}>
               <Link href="#header" aria-label={`Saiba mais sobre ${title}`}>
                 <span className={styles.paragraph}>{paragraph}</span>
               </Link>
               <Icons.FaArrowRight className={styles.icon} aria-hidden="true" />
             </div>
           </div>
-          <div className={styles["image-section"]}>
+          <div className={styles['image-section']}>
             <Image
               className={styles.img}
               width={100}
@@ -43,12 +43,9 @@ const Decorative: React.FC<DecorativeTypes> = ({
           </div>
         </div>
       )}
-      {imagePosition === "right" && (
-        <div className={styles["box-section"]}>
-          <div
-            className={styles["image-section"]}
-            style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}
-          >
+      {imagePosition === 'right' && (
+        <div className={styles['box-section']}>
+          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>
             <Image
               className={styles.img}
               width={imageWidth}
@@ -59,14 +56,11 @@ const Decorative: React.FC<DecorativeTypes> = ({
               aria-hidden="true"
             />
           </div>
-          <div className={styles["text-section"]}>
+          <div className={styles['text-section']}>
             <h1 className={styles.title}>{title}</h1>
             <h6 className={styles.subtitle}>{subtitle}</h6>
-            <div className={styles["link-section"]}>
-              <Link
-                href="./emprestimo-fgts"
-                aria-label={`Saiba mais sobre ${title}`}
-              >
+            <div className={styles['link-section']}>
+              <Link href="./emprestimo-fgts" aria-label={`Saiba mais sobre ${title}`}>
                 <span className={styles.paragraph}>{paragraph}</span>
               </Link>
               <Icons.FaArrowRight className={styles.icon} aria-hidden="true" />
@@ -75,7 +69,7 @@ const Decorative: React.FC<DecorativeTypes> = ({
         </div>
       )}
     </section>
-  );
-};
+  )
+}
 
-export default Decorative;
+export default Decorative

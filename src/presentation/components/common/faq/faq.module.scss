@@ -1,5 +1,5 @@
-@import "../../../styles/base/variables.scss";
-@import "../../../styles/utils/mixins.scss";
+@import '../../../styles/base/variables.scss';
+@import '../../../styles/utils/mixins.scss';
 
 .container {
   @include container-center(1280px, 4.475rem auto 6.275rem auto);
@@ -41,7 +41,7 @@
       padding-right: 4.075rem;
 
       &::after {
-        content: "+";
+        content: '+';
         color: $blue-color;
         font-size: 1.475rem;
         position: absolute;
@@ -55,7 +55,7 @@
     }
 
     &.open .faq-question::after {
-      content: "-";
+      content: '-';
     }
 
     .faq-answer {

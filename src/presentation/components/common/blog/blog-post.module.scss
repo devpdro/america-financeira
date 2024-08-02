@@ -1,5 +1,5 @@
-@import "../../../styles/base/variables.scss";
-@import "../../../styles/utils/mixins.scss";
+@import '../../../styles/base/variables.scss';
+@import '../../../styles/utils/mixins.scss';
 
 .link {
   color: $black-color;
@@ -7,7 +7,7 @@
 
   &::after,
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     right: 0;
@@ -25,7 +25,6 @@
 }
 .container {
   @include container-center(1220px, 0 auto 7.2rem auto);
-
 }
 .routes {
   @include container-center(1220px, 0 auto);
@@ -81,7 +80,7 @@
 }
 
 .texts_container {
-  font-family: "Archivo", sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 500;
   max-width: 1280px;
   margin: 0 auto;
@@ -118,7 +117,7 @@
 
 @media screen and (max-width: 768px) {
   .routes {
-    font-family: "Archivo", sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     max-width: 1240px;
     background-color: #f9f7f1;
@@ -188,7 +187,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   .routes {
-    font-family: "Archivo", sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     max-width: 1240px;
     background-color: #f9f7f1;
