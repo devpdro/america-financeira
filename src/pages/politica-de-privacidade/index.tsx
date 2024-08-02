@@ -1,3 +1,3 @@
-import { pagePrivacyPolicy } from '@/presentation/pages'
+import { makePrivacyPolicy } from '@/main/factories/pages'
 
-export default pagePrivacyPolicy
+export default makePrivacyPolicy
