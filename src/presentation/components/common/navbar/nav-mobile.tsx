@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { NavItem } from "@/presentation/components/common";
 import { NavMobileTypes } from "@/presentation/@types";
-import { IconWithProps } from "@/presentation/utils";
+import { IconWithProps } from "@/utils";
 import { Icons } from "@/presentation/assets";
 import { NavItems } from "@/data";
 

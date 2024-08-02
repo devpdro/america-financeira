@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
+    "@mantine/core": "^7.11.2",
+    "@mantine/hooks": "^7.11.2",
     "@types/react-helmet": "^6.1.11",
     "@types/react-modal": "^3.16.3",
     "classnames": "^2.5.1",
