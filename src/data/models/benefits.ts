@@ -1,15 +1,15 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image'
 
-export type BenefitsItemTypes = {
-  title: string;
-  subtitle: string;
-  image: StaticImageData;
-};
+export type BenefitsItemProps = {
+  title: string
+  subtitle: string
+  image: StaticImageData
+}
 
-export type BenefitsTypes = {
-  title: React.ReactNode;
-  subtitle: string;
-  imageWidth?: number;
-  imageHeight?: number;
-  items: BenefitsItemTypes[];
-};
+export type BenefitsProps = {
+  title: React.ReactNode
+  subtitle: string
+  imageWidth?: number
+  imageHeight?: number
+  items: BenefitsItemProps[]
+}

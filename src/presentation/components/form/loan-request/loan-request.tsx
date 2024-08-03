@@ -5,10 +5,18 @@ import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
 
 import { ModalLoan } from '@/presentation/components/common'
-import { LoanRequestTypes } from '@/data/models'
 import { Button } from '@/presentation/components/form'
 
 import styles from './loan-request.module.scss'
+
+export type LoanRequestProps = {
+  nome: string
+  email: string
+  whatsapp: string
+  cpf: string
+  tipoSolicitacao: string
+  termos: boolean
+}
 
 const LoanRequest: React.FC = () => {
   const [modalMessage, setModalMessage] = useState('')
@@ -19,7 +27,7 @@ const LoanRequest: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<LoanRequestTypes>({
+  } = useForm<LoanRequestProps>({
     defaultValues: {
       nome: '',
       email: '',
@@ -28,7 +36,7 @@ const LoanRequest: React.FC = () => {
     },
   })
 
-  const onSubmit = async (data: LoanRequestTypes) => {
+  const onSubmit = async (data: LoanRequestProps) => {
     try {
       const response = await fetch('/api', {
         method: 'POST',

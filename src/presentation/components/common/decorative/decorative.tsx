@@ -1,12 +1,22 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { DecorativeTypes } from '@/data/models'
 import { Icons } from '@/presentation/assets'
 
 import styles from './decorative.module.scss'
 
-const Decorative: React.FC<DecorativeTypes> = ({
+export type DecorativeProps = {
+  image: string
+  alt: string
+  title: string
+  subtitle: string
+  paragraph: string
+  imageWidth: number
+  imageHeight: number
+  imagePosition: 'left' | 'right'
+}
+
+const Decorative: React.FC<DecorativeProps> = ({
   image,
   alt,
   title,

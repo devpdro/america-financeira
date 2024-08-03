@@ -3,11 +3,11 @@
 import { useState } from 'react'
 
 import { Button } from '@/presentation/components/form'
-import { FaqTypes } from '@/data/models'
+import { FaqProps } from '@/data/models'
 
 import styles from './faq.module.scss'
 
-const Faq: React.FC<FaqTypes> = ({ items, title }) => {
+const Faq: React.FC<FaqProps> = ({ items, title }) => {
   const [faqs, setFaqs] = useState(items ? items.map((faq) => ({ ...faq, open: false })) : [])
   const [showAll, setShowAll] = useState(false)
 

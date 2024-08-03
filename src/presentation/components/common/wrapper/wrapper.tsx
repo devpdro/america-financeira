@@ -1,11 +1,22 @@
 import Image from 'next/image'
 
 import { Button } from '@/presentation/components/form'
-import { WrapperTypes } from '@/data/models'
+
+export type WrapperProps = {
+  image: string
+  alt: string
+  title: string
+  subtitle: string
+  paragraph: string
+  buttonPrimaryText: string
+  imageWidth: number
+  imageHeight: number
+  imagePosition: 'left' | 'right'
+}
 
 import styles from './wrapper.module.scss'
 
-const Wrapper: React.FC<WrapperTypes & { imagePosition: 'left' | 'right' }> = ({
+const Wrapper: React.FC<WrapperProps> = ({
   image,
   alt,
   title,

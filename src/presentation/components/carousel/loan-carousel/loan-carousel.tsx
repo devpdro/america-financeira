@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 
-import { CarouselTypes } from '@/data/models'
+import { CarouselProps } from '@/data/models'
 import { Icons } from '@/presentation/assets'
 import { LoanCarouselItems } from '@/data/ui'
 
@@ -16,7 +16,7 @@ const responsive = {
   1280: { items: 3 },
 }
 
-const CarouselLoan: React.FC<CarouselTypes> = ({ title, subtitle }) => {
+const CarouselLoan: React.FC<CarouselProps> = ({ title, subtitle }) => {
   const carouselRef = useRef<AliceCarousel>(null)
 
   const handlePrev = () => {

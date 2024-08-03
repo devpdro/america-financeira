@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import { BenefitsTypes } from '@/data/models'
+import { BenefitsProps } from '@/data/models'
 
 import styles from './benefits.module.scss'
 
-const Benefits: React.FC<BenefitsTypes> = ({ title, subtitle, imageWidth, imageHeight, items }) => {
+const Benefits: React.FC<BenefitsProps> = ({ title, subtitle, imageWidth, imageHeight, items }) => {
   return (
     <section className={styles.container} aria-labelledby="benefits-title" aria-describedby="benefits-subtitle">
       <header className={styles['text-section']}>
