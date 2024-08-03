@@ -1,11 +1,11 @@
-export type NavItemTypes = {
-  label: string;
-  link: string;
-  new?: string;
-  blank?: string;
-  children?: NavItemTypes[];
-};
+export type NavItemProps = {
+  label: string
+  link: string
+  new?: string
+  blank?: string
+  children?: NavItemProps[]
+}
 
-export type NavMobileTypes = {
-  closeSideMenu: () => void;
-};
+export type NavMobileProps = {
+  closeSideMenu: () => void
+}

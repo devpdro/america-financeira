@@ -1,9 +1,17 @@
 import { Button, LoanRequest } from '@/presentation/components/form'
-import { HeaderTypes } from '@/data/models'
 
 import styles from './header.module.scss'
 
-const Header: React.FC<HeaderTypes> = ({
+export type HeaderProps = {
+  title: string
+  subtitle: React.ReactNode
+  backgroundImage: string
+  showLoanRequest?: boolean
+  showDetails?: React.ReactNode
+  showParagraph?: string
+}
+
+const Header: React.FC<HeaderProps> = ({
   title,
   subtitle,
   backgroundImage,

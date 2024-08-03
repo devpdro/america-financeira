@@ -1,14 +1,14 @@
 import Link from 'next/link'
 
 import { NavItem } from '@/presentation/components/common'
-import { NavMobileTypes } from '@/data/models'
+import { NavMobileProps } from '@/data/models'
 import { IconWithProps } from '@/utils'
 import { Icons } from '@/presentation/assets'
 import { NavItems } from '@/data/ui'
 
 import styles from './nav-mobile.module.scss'
 
-const NavMobile = ({ closeSideMenu }: NavMobileTypes) => {
+const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
   return (
     <div className={styles['mobile-nav-container']} aria-label="Navegação Móvel">
       <nav className={styles['mobile-nav']} aria-label="Menu de Navegação Móvel">

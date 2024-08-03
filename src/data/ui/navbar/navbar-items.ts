@@ -1,6 +1,6 @@
-import { NavItemTypes } from '@/data/models'
+import { NavItemProps } from '@/data/models'
 
-const NavItems: NavItemTypes[] = [
+const NavItems: NavItemProps[] = [
   {
     label: 'América Financeira',
     link: '/',

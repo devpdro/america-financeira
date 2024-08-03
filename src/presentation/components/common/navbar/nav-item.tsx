@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-import { NavItemTypes } from '@/data/models'
+import { NavItemProps } from '@/data/models'
 import { Icons } from '@/presentation/assets'
 
 import styles from './nav-item.module.scss'
 
-const NavItem = ({ label, link, children }: NavItemTypes) => {
+const NavItem = ({ label, link, children }: NavItemProps) => {
   const [animationParent] = useAutoAnimate()
   const [isOpen, setIsOpen] = useState(false)
 
