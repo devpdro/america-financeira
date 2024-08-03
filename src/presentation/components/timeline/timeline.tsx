@@ -1,4 +1,4 @@
-import { TimelineItems } from '@/data/ui'
+import { timeline } from '@/data/ui'
 
 import styles from './timeline.module.scss'
 
@@ -6,7 +6,7 @@ const Timeline = () => {
   return (
     <section className={styles.container}>
       <div className={styles['box-container']}>
-        {TimelineItems.map((item, index) => (
+        {timeline.map((item, index) => (
           <article key={index} className={styles.timeline}>
             <div className={styles.icon}></div>
             <div className={styles['date-content']}>

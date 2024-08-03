@@ -9,7 +9,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { NavMobile } from '@/presentation/components/common'
 import { Images, Icons } from '@/presentation/assets'
 import { IconWithProps } from '@/utils'
-import { NavItems } from '@/data/ui'
+import { nav } from '@/data/ui'
 
 import styles from './navbar.module.scss'
 
@@ -27,7 +27,7 @@ export default function Navbar() {
         </Link>
         {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}
         <div className={styles['nav-items']} aria-label="Itens de Navegação">
-          {NavItems.map((item, index) => (
+          {nav.map((item, index) => (
             <div key={index} className={styles['nav-link']}>
               <Link href={item.link ?? '#'} legacyBehavior>
                 <a className={styles['link-text']} aria-label={item.label}>

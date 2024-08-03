@@ -1,4 +1,4 @@
-const TeamItems = [
+export const team = [
   {
     src: 'https://www.bootdey.com/image/768x512/D3D3D3/000000',
     alt: 'Image 1',
@@ -24,5 +24,3 @@ const TeamItems = [
     alt: 'Image 6',
   },
 ]
-
-export default TeamItems

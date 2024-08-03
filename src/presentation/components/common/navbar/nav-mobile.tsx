@@ -4,7 +4,7 @@ import { NavItem } from '@/presentation/components/common'
 import { NavMobileProps } from '@/data/models'
 import { IconWithProps } from '@/utils'
 import { Icons } from '@/presentation/assets'
-import { NavItems } from '@/data/ui'
+import { nav } from '@/data/ui'
 
 import styles from './nav-mobile.module.scss'
 
@@ -18,7 +18,7 @@ const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
           </IconWithProps>
         </section>
         <div className={styles['nav-items']} aria-label="Itens de Navegação">
-          {NavItems.map((item, key) => (
+          {nav.map((item, key) => (
             <NavItem key={key} label={item.label} new={item.new} link={item.link} aria-label={item.label}>
               {item.children}
             </NavItem>

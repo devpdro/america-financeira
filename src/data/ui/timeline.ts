@@ -1,4 +1,4 @@
-const TimelineItems = [
+export const timeline = [
   {
     duration: '1 Ano',
     year: '2012',
@@ -57,4 +57,4 @@ const TimelineItems = [
   },
 ]
 
-export default TimelineItems
+export default timeline

@@ -6,7 +6,7 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 
 import { CarouselProps } from '@/data/models'
 import { Icons } from '@/presentation/assets'
-import { LoanCarouselItems } from '@/data/ui'
+import { loanCarousel } from '@/data/ui'
 
 import styles from './loan-carousel.module.scss'
 
@@ -47,7 +47,7 @@ const CarouselLoan: React.FC<CarouselProps> = ({ title, subtitle }) => {
       <div className={styles['carousel-section']}>
         <AliceCarousel
           mouseTracking
-          items={LoanCarouselItems.map((item) => (
+          items={loanCarousel.map((item) => (
             <div key={item.key} className={styles.item} data-value={item.key}>
               <div className={styles['text-section']}>
                 <h2 className={styles.title}>{item.title}</h2>

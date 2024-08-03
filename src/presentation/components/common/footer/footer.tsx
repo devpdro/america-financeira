@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Images } from '@/presentation/assets'
 
-import { FooterItems, IconsItems } from '@/data/ui'
+import { list, icons } from '@/data/ui'
 
 import styles from './footer.module.scss'
 
@@ -15,7 +15,7 @@ const Footer = () => {
           <Image className={styles.img} src={Images.logoWhite} alt="Logo América Financeira" />
           <h6 className={styles.subtitle}>Nos siga nas redes sociais:</h6>
           <div className={styles['icons-section']}>
-            {IconsItems.map(({ icon: Icon, link }, index) => (
+            {icons.map(({ icon: Icon, link }, index) => (
               <a key={index} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Link para ${link}`}>
                 <Icon className={styles.icon} />
               </a>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles['details-section']}>
-          {FooterItems.map((section, index) => (
+          {list.map((section, index) => (
             <div className={styles['list-section']} key={index}>
               <h1 className={styles.title}>{section.title}</h1>
               <ul className={styles['list-box']}>

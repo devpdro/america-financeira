@@ -5,7 +5,7 @@ import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 
 import { CarouselProps } from '@/data/models'
-import { ConsignedCarouselItems } from '@/data/ui'
+import { payrollLoanCarousel } from '@/data/ui'
 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
@@ -44,7 +44,7 @@ const ConsignedCarousel: React.FC<CarouselProps> = ({ title, subtitle }) => {
       <div className={styles['carousel-section']}>
         <AliceCarousel
           mouseTracking
-          items={ConsignedCarouselItems.map((item) => (
+          items={payrollLoanCarousel.map((item) => (
             <div key={item.key} className={styles.item} data-value={item.key}>
               <div className={styles['text-section']}>
                 <h1 className={styles.title}>{item.title}</h1>

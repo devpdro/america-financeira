@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { StaticImageData } from 'next/image'
 import { useParams } from 'next/navigation'
 
-import { BlogPostItems } from '@/data/ui'
+import { blogArticle } from '@/data/ui'
 
 import styles from './blog-post.module.scss'
 
@@ -62,7 +62,7 @@ type BlogPostItem = {
 const BlogPost: React.FC = () => {
   const { slug } = useParams() as { slug?: string }
 
-  const post = BlogPostItems.find((post) => removeAccents(post.routes) === removeAccents(slug || ''))
+  const post = blogArticle.find((post) => removeAccents(post.routes) === removeAccents(slug || ''))
 
   const pageTitle = post ? post.title : 'Blog Matte: Novidades, Dicas e Tendências em Diversas Áreas'
 

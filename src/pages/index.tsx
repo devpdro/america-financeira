@@ -1,6 +1,6 @@
 import { Header, Navbar, Benefits, Decorative, BlogHighlights, Faq, Footer } from '@/presentation/components/common'
 import { LoanCarousel } from '@/presentation/components/carousel'
-import { BenefitsLoanItems, FaqLoanItems } from '@/data/ui'
+import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
           </>
         }
         subtitle="Um empréstimo pode ser a solução financeira que você precisa para melhorar sua vida."
-        items={BenefitsLoanItems}
+        items={benefitsLoan}
       />
       <Decorative
         imageWidth={91}
@@ -57,7 +57,7 @@ export default function Home() {
         imagePosition="left"
       />
       <BlogHighlights />
-      <Faq items={FaqLoanItems} title="Ficou com alguma dúvida?" />
+      <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
       <Footer />
     </>
   )

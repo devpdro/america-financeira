@@ -1,6 +1,6 @@
 import { Images } from '@/presentation/assets'
 
-const BlogPostItems = [
+export const blogArticle = [
   {
     id: 1,
     routes: 'tudo-sobre-emprestimos',
@@ -117,5 +117,3 @@ const BlogPostItems = [
       'O empréstimo consignado pode ser uma excelente opção de crédito para quem busca taxas mais baixas e facilidade no pagamento. Avalie suas necessidades e considere essa alternativa.',
   },
 ]
-
-export default BlogPostItems

@@ -1,6 +1,6 @@
 import { NavItemProps } from '@/data/models'
 
-const NavItems: NavItemProps[] = [
+export const nav: NavItemProps[] = [
   {
     label: 'América Financeira',
     link: '/',
@@ -47,5 +47,3 @@ const NavItems: NavItemProps[] = [
     link: '/blog',
   },
 ]
-
-export default NavItems

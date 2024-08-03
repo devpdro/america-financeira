@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
 
-import { BlogPostItems } from '@/data/ui'
+import { blogArticle } from '@/data/ui'
 import { RemoveAccents } from '@/utils'
 
 import page from './blog-recent.module.scss'
@@ -13,7 +13,7 @@ import SearchBlog from './search-blog'
 
 const useFilteredPosts = (searchQuery: string) => {
   const normalizedQuery = RemoveAccents(searchQuery)
-  return BlogPostItems.filter(
+  return blogArticle.filter(
     (post) =>
       RemoveAccents(post.title).includes(normalizedQuery) || RemoveAccents(post.subtitle).includes(normalizedQuery)
   )
@@ -27,7 +27,7 @@ interface Post {
 }
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('')
-  const themes = [...new Set(BlogPostItems.map((post) => post.subtitle))]
+  const themes = [...new Set(blogArticle.map((post) => post.subtitle))]
   const [visiblePosts, setVisiblePosts] = useState<number>(7)
   const filteredPosts = useFilteredPosts(searchQuery)
 
