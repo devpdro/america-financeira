@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  position: fixed; // Mudado de 'relative' para 'fixed'
+  top: 90px;
+  left: 0; // Garante que o componente se estenda por toda a largura da tela
+  right: 0;
+  background-color: $blue-color;
+  color: $white-color;
+  padding: 0rem 2.075rem 0 2.075rem;
+  z-index: 99999;
+  .box-section {
+    @include container-center(1280px, 0 auto);
+    @include display-flex(center, space-between);
+    .title {
+      font-size: $size-extra-small;
+      font-weight: $weight-light;
+      padding: 1.175rem 0;
+      line-height: 1.275rem;
+    }
+    .icon {
+      font-size: $size-normal;
+    }
+  }
+}

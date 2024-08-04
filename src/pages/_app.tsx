@@ -1,7 +1,14 @@
-import '@/presentation/styles/global.scss'
-
 import type { AppProps } from 'next/app'
 
+import { CookieProvider } from '@/main/providers'
+
+import '@/presentation/styles/global.scss'
+
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+
+  return (
+    <CookieProvider>
+      <Component {...pageProps} />
+    </CookieProvider>
+  )
 }

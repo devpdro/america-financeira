@@ -1,7 +1,7 @@
 import { Header, Benefits, InfoPanel, Faq } from '@/presentation/components/common'
 import { LoanCarousel } from '@/presentation/components/interactive'
 import { Navbar, Footer } from '@/presentation/components/layout'
-import { LatestPosts } from '@/presentation/components/ui'
+import { LatestPosts, LoanWarning } from '@/presentation/components/ui'
 import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
 
@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <LoanWarning />
       <Header
         title="Solicite seu crédito agora mesmo!"
         subtitle={
