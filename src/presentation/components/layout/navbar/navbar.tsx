@@ -7,8 +7,8 @@ import Link from 'next/link'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { NavMobile } from '@/presentation/components/layout'
+import { IconWithProps, getLinkAttributes } from '@/utils'
 import { Images, Icons } from '@/presentation/assets'
-import { IconWithProps } from '@/utils'
 import { nav } from '@/data/ui'
 
 import styles from './navbar.module.scss'
@@ -46,8 +46,7 @@ export default function Navbar() {
                     <Link key={childIndex} href={child.link} legacyBehavior>
                       <a
                         className={styles['dropdown-link']}
-                        target={child.link.startsWith('https://') ? '_blank' : ''}
-                        rel="noopener noreferrer"
+                        {...getLinkAttributes(child.link)}
                         aria-label={child.label}
                       >
                         <span className={styles['link-label']}>{child.label}</span>

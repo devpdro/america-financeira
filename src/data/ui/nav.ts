@@ -1,4 +1,5 @@
 import { NavItemProps } from '@/data/models'
+import PDF from '@/presentation/assets/pdf/apresentacao-parceiros.pdf'
 
 export const nav: NavItemProps[] = [
   {
@@ -14,6 +15,11 @@ export const nav: NavItemProps[] = [
         link: 'https://www.google.com/maps/search/Am%C3%A9rica+Financeira/@-22.3971915,-48.0358251,10z/data=!3m1!4b1?entry=ttu',
       },
       {
+        label: 'Apresentação Institucional',
+        link: '/apresentacao-institucional.pdf',
+        new: 'NOVO',
+      },
+      {
         label: 'Nossa Último Treinamento',
         link: 'https://www.youtube.com/watch?v=mMnM4dBdH6s',
         new: 'NOVO',
@@ -22,7 +28,7 @@ export const nav: NavItemProps[] = [
   },
   {
     label: 'Simule seu Crédito',
-    link: '/',
+    link: '/emprestimo-pessoal',
     children: [
       {
         label: 'Empréstimo Pessoal',
@@ -41,6 +47,13 @@ export const nav: NavItemProps[] = [
   {
     label: 'Seja Parceiro',
     link: '/parceiros',
+    children: [
+      {
+        label: 'Apresentação para Parceiros',
+        link: '/apresentacao-parceiros.pdf',
+        new: 'NOVO',
+      },
+    ],
   },
   {
     label: 'Blog',
