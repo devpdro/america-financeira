@@ -1,4 +1,4 @@
-import '@/presentation/styles/base/global.scss'
+import '@/presentation/styles/global.scss'
 
 import type { AppProps } from 'next/app'
 

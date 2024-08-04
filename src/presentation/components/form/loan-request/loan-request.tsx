@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
 
-import { ModalLoan } from '@/presentation/components/common'
+import { StatusModal } from '@/presentation/components/feedback'
 import { Button } from '@/presentation/components/form'
 
 import styles from './loan-request.module.scss'
@@ -38,7 +38,7 @@ const LoanRequest: React.FC = () => {
 
   const onSubmit = async (data: LoanRequestProps) => {
     try {
-      const response = await fetch('/api', {
+      const response = await fetch('/api/submit-webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -189,7 +189,7 @@ const LoanRequest: React.FC = () => {
         </fieldset>
       </form>
 
-      <ModalLoan
+      <StatusModal
         isOpen={isModalOpen}
         onClose={closeModal}
         message={modalMessage}

@@ -1,0 +1,72 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  .box-section {
+    @include display-flex;
+    background-color: $light-blue;
+    .text-section {
+      width: 100%;
+      @media (max-width: 1024px) {
+        width: 100%;
+        padding: 1.575rem 2.075rem;
+      }
+      .title {
+        font-size: $size-extra-medium;
+        font-weight: $weight-medium;
+        line-height: 2.075rem;
+        padding: 0rem 9.075rem;
+        @media (min-width: 1025px) and (max-width: 1224px) {
+          padding: 0rem 5.075rem;
+        }
+        @media (max-width: 1024px) {
+          font-size: $size-medium;
+          padding: 0;
+        }
+      }
+      .subtitle {
+        font-size: $size-small;
+        font-weight: $weight-medium;
+        line-height: 1.175rem;
+        margin: 0.675rem 0 1.075rem 0;
+        padding: 0 9.075rem;
+        @media (min-width: 1025px) and (max-width: 1224px) {
+          padding: 0rem 5.075rem;
+        }
+        @media (max-width: 1024px) {
+          font-size: $size-extra-small;
+          line-height: 1.075rem;
+          padding: 0;
+        }
+      }
+      .link-section {
+        @include display-flex(center, flex-start);
+        padding: 0 9.075rem;
+        @media (min-width: 1025px) and (max-width: 1224px) {
+          padding: 0rem 5.075rem;
+        }
+        @media (max-width: 1024px) {
+          padding: 0;
+        }
+        .icon {
+          color: $blue-strong-color;
+          font-size: $size-small;
+          margin-left: 0.675rem;
+        }
+        .paragraph {
+          @include hover-pointer;
+          color: $blue-strong-color;
+          border-bottom: 1px solid $blue-strong-color;
+          font-size: $size-small;
+          font-weight: $weight-normal;
+        }
+      }
+    }
+    .image-section {
+      width: 110%;
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+}

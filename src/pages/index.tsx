@@ -1,5 +1,7 @@
-import { Header, Navbar, Benefits, Decorative, BlogHighlights, Faq, Footer } from '@/presentation/components/common'
-import { LoanCarousel } from '@/presentation/components/carousel'
+import { Header, Benefits, InfoPanel, Faq } from '@/presentation/components/common'
+import { LoanCarousel } from '@/presentation/components/interactive'
+import { Navbar, Footer } from '@/presentation/components/layout'
+import { LatestPosts } from '@/presentation/components/ui'
 import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
 
@@ -36,7 +38,7 @@ export default function Home() {
         subtitle="Um empréstimo pode ser a solução financeira que você precisa para melhorar sua vida."
         items={benefitsLoan}
       />
-      <Decorative
+      <InfoPanel
         imageWidth={91}
         imageHeight={100}
         image={Images.investimentos.src}
@@ -46,7 +48,7 @@ export default function Home() {
         paragraph="Antecipar FGTS"
         imagePosition="right"
       />
-      <Decorative
+      <InfoPanel
         image={Images.cartaoCredito.src}
         imageWidth={91}
         imageHeight={100}
@@ -56,7 +58,7 @@ export default function Home() {
         paragraph="Solicitar agora"
         imagePosition="left"
       />
-      <BlogHighlights />
+      <LatestPosts />
       <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
       <Footer />
     </>

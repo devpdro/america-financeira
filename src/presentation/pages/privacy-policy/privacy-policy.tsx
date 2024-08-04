@@ -1,11 +1,9 @@
-import { Footer, Navbar } from '@/presentation/components/common'
-import { HeaderPolicy } from '@/presentation/components/transparency'
+import { Footer, Navbar } from '@/presentation/components/layout'
 
 export default function PrivacyPolicy() {
   return (
     <main>
       <Navbar />
-      <HeaderPolicy />
       <Footer />
     </main>
   )

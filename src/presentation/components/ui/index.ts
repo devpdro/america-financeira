@@ -1,0 +1,8 @@
+export { default as HeaderPolicy } from './header-policy/header-policy'
+export { default as InformationPolicy } from './information-policy/information-policy'
+export { default as LatestPosts } from './latest-posts/latest-posts'
+export { default as LoanBenefits } from './loan-benefits/loan-benefits'
+export { default as Newsletter } from './newsletter/newsletter'
+export { default as PartnersBenefits } from './partners-benefits/partners-benefits'
+export { default as Team } from './team/team'
+export { default as Timeline } from './timeline/timeline'

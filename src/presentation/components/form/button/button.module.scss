@@ -1,5 +1,6 @@
-@import '../../../styles/base/variables.scss';
-@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
 .btn {
   font-family: $font-default;
   font-weight: $weight-medium;
@@ -19,7 +20,6 @@
   border: 1px solid $blue-color;
   border-radius: 15px;
   background-color: $white-color;
-
   &:hover {
     background-color: $blue-color;
     color: $white-color;
@@ -35,7 +35,6 @@
   @include hover-pointer;
   color: $black-color;
   border: 1px solid $blue-color;
-
   &:hover {
     background-color: $blue-color;
     color: $white-color;

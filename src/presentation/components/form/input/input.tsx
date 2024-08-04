@@ -1,13 +1,13 @@
 import styles from './input.module.scss'
 
-export type InputTypes = {
+export type InputProps = {
   typeStyle: 'input-normal'
   placeHolder: string
   onClick?: () => void
   width?: string
 }
 
-const Input: React.FC<InputTypes> = ({ typeStyle, placeHolder, width }) => {
+const Input: React.FC<InputProps> = ({ typeStyle, placeHolder, width }) => {
   let InputClass
   switch (typeStyle) {
     case 'input-normal':

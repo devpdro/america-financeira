@@ -1,13 +1,13 @@
 import styles from './button.module.scss'
 
-export type ButtonTypes = {
+export type ButtonProps = {
   typeStyle: 'btn1' | 'btn2' | 'btn3' | 'btn4'
   text: string
   width?: string
   onClick?: () => void
 }
 
-const Button: React.FC<ButtonTypes> = ({ typeStyle, text, width, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ typeStyle, text, width, onClick }) => {
   let buttonClass
   switch (typeStyle) {
     case 'btn1':

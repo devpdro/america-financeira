@@ -1,0 +1,100 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  background-color: $light-blue;
+  padding: 1.075rem 0;
+  .box-container {
+    @include container-center(1280px, 5.075rem auto 5.075rem auto);
+    padding: 0 2.075rem;
+    @media (max-width: 880px) {
+      @include container-center(1280px, 3.075rem auto 3.075rem auto);
+    }
+    .title {
+      font-size: $size-large;
+      font-weight: $weight-medium;
+      line-height: 2.975rem;
+      margin-bottom: 1.075rem;
+      @media (max-width: 880px) {
+        font-size: $size-extra-medium;
+        line-height: 2.075rem;
+        margin-bottom: 1.075rem;
+      }
+    }
+    .subtitle {
+      font-size: $size-normal;
+      font-weight: $weight-medium;
+      line-height: 1.375rem;
+    }
+    .form-container {
+      @include display-flex(flex-start, space-between);
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+      .form-section {
+        width: 115%;
+        .balance-section {
+          margin-top: 1.075rem;
+          padding-right: 2.075rem;
+          .title-form {
+            font-size: $size-normal;
+            font-weight: $weight-medium;
+            line-height: 1.575rem;
+          }
+          .input-placeholder {
+            font-size: $size-large;
+            font-weight: $weight-medium;
+            background-color: #eff4fd;
+            @media (max-width: 880px) {
+              font-size: $size-large;
+            }
+          }
+          .btn {
+            @include hover-pointer;
+            background-color: $blue-color;
+            color: $white-color;
+            font-size: $size-medium;
+            border-radius: 50%;
+            padding: 0.425rem 1.075rem;
+            margin: 0 0.275rem;
+            @media (max-width: 880px) {
+              padding: 0.325rem 0.875rem;
+            }
+            &:hover {
+              background-color: $light-blue;
+              color: $black-color;
+            }
+          }
+        }
+      }
+      .result-section {
+        width: 80%;
+        @media (max-width: 880px) {
+          margin-top: 2.575rem;
+        }
+        .title-form {
+          font-size: $size-normal;
+          font-weight: $weight-medium;
+          line-height: 1.575rem;
+        }
+        .result {
+          border-bottom: 3px solid $blue-color;
+          font-size: $size-large;
+          font-weight: $weight-medium;
+        }
+
+        .paragraph {
+          font-size: $size-small;
+          font-weight: $weight-medium;
+          line-height: 1.275rem;
+          margin: 1.175rem 0;
+          @media (max-width: 880px) {
+            font-size: $size-small;
+            line-height: 1.275rem;
+            margin-bottom: 1.075rem;
+          }
+        }
+      }
+    }
+  }
+}
