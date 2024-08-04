@@ -1,74 +1,55 @@
 import styles from './partners-benefits.module.scss'
+import { AiOutlineDollarCircle } from 'react-icons/ai' // Ícone de dólar em círculo
+import { GiTakeMyMoney } from 'react-icons/gi' // Ícone de entregar dinheiro
 
-const PartnersApresentation = () => {
+const benefitsData = [
+  {
+    Icon: GiTakeMyMoney,
+    title: 'R$4,8 milhões',
+    subtitle: 'Líder de mercado na América Latina.',
+  },
+  {
+    Icon: AiOutlineDollarCircle,
+    title: 'R$6 bilhões',
+    subtitle: 'Líder de mercado na América Latina.',
+  },
+  {
+    Icon: GiTakeMyMoney,
+    title: '35+ emissões',
+    subtitle: 'Líder de mercado na América Latina.',
+  },
+  {
+    Icon: GiTakeMyMoney,
+    title: 'Mais de 10 de xp de atuação',
+    subtitle: 'Líder de mercado.',
+  },
+]
+
+const PartnersBenefits = () => {
   return (
-    <section className={styles['counter-feature']}>
-      <div className={styles.container}>
-        <div className={styles['row-text-center']}>
-          <div
-            className={`${styles['col-lg-3']} ${styles['col-sm-6']} ${styles['col-xs-12']} ${styles['no-padding']} ${styles['wow-fadeInUp']}`}
-            data-wow-duration="1s"
-            data-wow-delay="0.1s"
-            data-wow-offset="0"
-          >
-            <div className={styles['single-project']}>
-              <span className="ti-user"></span>
-              <h2 className={styles['counter-num']}>32652</h2>
-              <h4>Happy Customers</h4>
+    <section className={styles.container}>
+      <div className={styles['box-section']}>
+        <div className={styles['info-section']}>
+          {benefitsData.map(({ Icon, title, subtitle }, index) => (
+            <div
+              key={index}
+              className={`${styles['col-lg-3']} ${styles['col-sm-6']} ${styles['col-xs-12']} ${styles['no-padding']}`}
+            >
+              <div className={styles['numbers-section']}>
+                <Icon className={styles.icon} />
+                <h2 className={styles.title}>{title}</h2>
+                <h4 className={styles.subtitle}>{subtitle}</h4>
+              </div>
             </div>
-          </div>
-          <div
-            className={`${styles['col-lg-3']} ${styles['col-sm-6']} ${styles['col-xs-12']} ${styles['no-padding']} ${styles['wow-fadeInUp']}`}
-            data-wow-duration="1s"
-            data-wow-delay="0.2s"
-            data-wow-offset="0"
-          >
-            <div className={styles['single-project']}>
-              <span className="ti-star"></span>
-              <h2 className={styles['counter-num']}>21821</h2>
-              <h4>Project Done</h4>
-            </div>
-          </div>
-          <div
-            className={`${styles['col-lg-3']} ${styles['col-sm-6']} ${styles['col-xs-12']} ${styles['no-padding']} ${styles['wow-fadeInUp']}`}
-            data-wow-duration="1s"
-            data-wow-delay="0.3s"
-            data-wow-offset="0"
-          >
-            <div className={styles['single-project']}>
-              <span className="ti-pencil-alt"></span>
-              <h2 className={styles['counter-num']}>5660</h2>
-              <h4>In Business</h4>
-            </div>
-          </div>
-          <div
-            className={`${styles['col-lg-3']} ${styles['col-sm-6']} ${styles['col-xs-12']} ${styles['no-padding']} ${styles['wow-fadeInUp']}`}
-            data-wow-duration="1s"
-            data-wow-delay="0.4s"
-            data-wow-offset="0"
-          >
-            <div className={styles['single-project']}>
-              <span className="ti-support"></span>
-              <h2 className={styles['counter-num']}>11859</h2>
-              <h4>Support Cases</h4>
-            </div>
-          </div>
+          ))}
         </div>
         <div className={styles['video-section']}>
-          <div data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-            <div
-              className={styles['video-btn']}
-              style={{
-                backgroundImage: 'url(https://www.bootdey.com/image/500x500/FF69B4/000000)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center',
-              }}
-            >
-              <h3>Watch video for know more.</h3>
-              <a className={styles['video-play']} href="#">
-                <i className="ti-video-clapper"></i>
-              </a>
-            </div>
+          <div>
+            <iframe
+              className={styles['video']}
+              src="https://www.youtube.com/embed/mMnM4dBdH6s"
+              title="YouTube video player"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -76,4 +57,4 @@ const PartnersApresentation = () => {
   )
 }
 
-export default PartnersApresentation
+export default PartnersBenefits

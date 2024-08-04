@@ -1,143 +1,83 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
 
-.counter-feature {
-  background-image: url('https://www.bootdey.com/image/280x280/48D1CC/000000');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
+.container {
+  background: $blue-strong-color;
   position: relative;
-  margin-top: 120px;
-
-  &:before {
-    background: #020928;
-    bottom: 0;
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-  }
-
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1180px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    .row-text-center {
+  .box-section {
+    @include container-center(1180px, 9.575rem auto  14.075rem auto);
+    padding: 0 0.975rem;
+    .info-section {
       @include display-flex;
       flex-wrap: wrap;
-
       .col-lg-3 {
         flex: 0 0 20%;
         max-width: 25%;
-        padding: 0 10px;
-        margin: 0 20px;
+        padding: 0 675rem;
+        margin: 0 1.075rem;
         z-index: 99;
         @media (max-width: 992px) {
           flex: 0 0 50%;
           max-width: 50%;
         }
-
         @media (max-width: 576px) {
           flex: 0 0 100%;
           max-width: 100%;
         }
       }
-
       .col-sm-6 {
         padding: 0 10px;
-
         @media (max-width: 576px) {
           flex: 0 0 100%;
           max-width: 100%;
         }
       }
-
       .col-xs-12 {
         padding: 0 10px;
       }
-
       .no-padding {
         padding: 0;
       }
-
-      .wow-fadeInUp {
-        animation-name: fadeInUp;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-      }
     }
-
-    .single-project {
-      padding: 60px 40px;
-      background: #ffaa17;
-      margin-top: -100px;
-      border-right: 1px solid #e89505;
-
-      span {
-        font-size: 40px;
-        margin-bottom: 20px;
-        display: inline-block;
+    .numbers-section {
+      @include display-flex;
+      background: $gray-light-color;
+      border: 2px solid $blue-strong-color;
+      flex-direction: column;
+      text-align: center;
+      height: 17.875rem;
+      padding: 3.075rem 1.575rem;
+      margin-top: -5.75rem;
+      .icon {
+        background-color: $light-blue;
+        color: $blue-color;
+        font-size: 5.575rem;
+        border-radius: $radius-medium;
+        padding: 1.075rem;
+        margin-bottom: 1.075rem;
       }
-
-      h2 {
-        font-weight: 700;
-        font-size: 50px;
+      .title {
+        font-size: $size-medium;
+        font-weight: $weight-medium;
+        margin-bottom: 0.475rem;
+        line-height: 1.575rem;
       }
-
-      h4 {
-        margin-bottom: 0;
-        font-size: 16px;
+      .subtitle {
+        font-size: $size-small;
+        font-weight: $weight-light;
+        line-height: 1.375rem;
       }
-    }
-
-    .mfp-iframe-holder .mfp-content {
-      line-height: 0;
-      margin-top: 55px;
-      max-width: 900px;
-      width: 100%;
     }
     .video-section {
       @include display-flex;
-      .video-btn {
+      .video {
         @include display-flex;
-        padding: 150px 0;
-        width: 55vw;
+        border: 5px solid $gray-light-color;
         position: relative;
-        border: 15px solid #fff;
-        margin-top: 100px;
-        margin-bottom: -100px;
-        box-shadow: 0 10px 40px -10px rgba(0, 64, 128, 0.09);
-        h3 {
-          background: #ffaa17;
-          padding: 30px;
-          margin: 0 40px;
-          line-height: 40px;
-          margin-bottom: 30px;
-          text-transform: capitalize;
-          font-weight: 600;
-        }
-
-        .video-play {
-          background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
-          border: 10px solid rgba(0, 0, 0, 0.05);
-          border-radius: 100px;
-          color: #ffaa17;
-          display: block;
-          font-size: 24px;
-          height: 100px;
-          line-height: 90px;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-          width: 100px;
-        }
+        width: 55vw;
+        height: 23.175rem;
+        margin-top: 6.275rem;
+        margin-bottom: -9.375rem;
       }
     }
   }

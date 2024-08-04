@@ -56,18 +56,18 @@ export const benefitsConsignedLoan = [
 
 export const benefitsPartners = [
   {
-    title: 'Aumentar o lucro',
-    subtitle: 'Maximize seus ganhos ao oferecer soluções financeiras diversificadas aos seus clientes.',
+    title: 'Impulsione a receita',
+    subtitle: 'Acelere suas vendas e receba comissão exclusiva da Creditas.',
     image: Images.bancoPan,
   },
   {
-    title: 'Diversificação de produtos',
-    subtitle: 'Ofereça uma variedade de produtos financeiros para atender às diferentes necessidades de seus clientes.',
+    title: 'Conte com a gente',
+    subtitle: 'Cuidamos de todo o processo para que o seu cliente tenha a melhor experiência.',
     image: Images.bancoPan,
   },
   {
-    title: 'Suporte e treinamento',
-    subtitle: 'Receba apoio contínuo e treinamento especializado para maximizar o potencial de suas vendas.',
+    title: 'Portal do Parceiro',
+    subtitle: 'Acompanhe status das indicações em tempo real e confira próximos passos.',
     image: Images.bancoPan,
   },
 ]
