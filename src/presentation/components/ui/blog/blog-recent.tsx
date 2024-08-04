@@ -27,7 +27,7 @@ interface Post {
 }
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('')
-  const themes = [...new Set(blogArticle.map((post) => post.subtitle))]
+  const themes = Array.from(new Set(blogArticle.map((post) => post.subtitle)))
   const [visiblePosts, setVisiblePosts] = useState<number>(7)
   const filteredPosts = useFilteredPosts(searchQuery)
 
