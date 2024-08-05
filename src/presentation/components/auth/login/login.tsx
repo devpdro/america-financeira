@@ -34,7 +34,7 @@ const Login: React.FC = () => {
     setTimeout(() => {
       setModalMessage('Verifique suas credenciais e tente novamente.')
       setIsModalOpen(true)
-    }, 2000) 
+    }, 2000)
   }
 
   const closeModal = () => {

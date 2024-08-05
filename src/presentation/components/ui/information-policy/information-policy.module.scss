@@ -14,6 +14,10 @@
       font-size: $size-extra-medium;
       font-weight: $weight-medium;
       margin: 0.675rem 0 0.575rem 0;
+      @media (max-width: 1124px) {
+        font-size: $size-medium;
+        line-height: 1.575rem;
+      }
     }
     .list-section {
       padding-left: 2.575rem;
