@@ -29,7 +29,7 @@ export default function FgtsLoan() {
         imageWidth={100}
         imageHeight={98}
         alt="Sobre o Empréstimo FGTS"
-        subtitle="Descubra o Empréstimo FGTS"
+        subtitle="Descubr o Empréstimo FGTS"
         title="O que é o Empréstimo FGTS?"
         paragraph="O empréstimo FGTS é uma modalidade de crédito que permite utilizar o saldo do Fundo de Garantia do Tempo de Serviço (FGTS) como garantia. É uma alternativa para quem precisa de dinheiro extra, oferecendo condições especiais e flexibilidade para o pagamento."
         buttonPrimaryText="Simule seu FGTS"

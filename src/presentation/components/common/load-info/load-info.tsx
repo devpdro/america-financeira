@@ -48,8 +48,8 @@ const LoadInfo: React.FC<LoadInfoProps> = ({
             <p className={styles.paragraph}>{paragraph}</p>
             <Link
               href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!"
-              aria-label={`Saiba mais sobre ${title}`}
               target="_blank"
+              aria-label={`Saiba mais sobre ${title}`}
             >
               <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
             </Link>
@@ -62,7 +62,13 @@ const LoadInfo: React.FC<LoadInfoProps> = ({
             <h3 className={styles.subtitle}>{subtitle}</h3>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.paragraph}>{paragraph}</p>
-            <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
+            <Link
+              href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!"
+              target="_blank"
+              aria-label={`Saiba mais sobre ${title}`}
+            >
+              <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
+            </Link>
           </div>
           <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>
             <Image

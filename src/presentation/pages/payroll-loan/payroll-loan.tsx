@@ -14,7 +14,7 @@ export default function PayrollLoan() {
         title="Empréstimo Consignado"
         subtitle={
           <>
-            Dinheiro extra para <br /> alcançar seus planos e <br /> realizar os seus sonhos
+            Dinheiro extra para <br /> alcançar seus planos <br /> e realizar os seus sonhos
           </>
         }
         showParagraph="*Sujeito à análise de crédito e condições do produto"

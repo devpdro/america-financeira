@@ -1,4 +1,6 @@
+export { default as About } from './about/about'
 export { default as Blog } from './blog/blog'
+export { default as Error } from './error/error'
 export { default as FgtsLoan } from './fgts-loan/fgts-loan'
 export { default as Partners } from './partners/partners'
 export { default as PayrollLoan } from './payroll-loan/payroll-loan'

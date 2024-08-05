@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import { useState } from 'react'
 
 import { Button } from '@/presentation/components/form'
@@ -102,7 +102,12 @@ const FgtsSimulation = () => {
               Os valores simulados não incluem IOF e são baseados em dados médios. Eles podem variar de acordo com o
               saldo do FGTS e o mês de aniversário. Para uma simulação exata, entre em contato conosco.
             </p>
-            <Button typeStyle="btn1" text="Quero contratar" width="350px" />
+            <Link
+              href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!%20Quero%20antecipar%20meu%20FGTS."
+              target="_blank"
+            >
+              <Button typeStyle="btn1" text="Quero contratar" width="350px" />
+            </Link>
           </div>
         </div>
       </div>

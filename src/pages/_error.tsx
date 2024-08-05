@@ -1,7 +1,3 @@
-import React from 'react'
+import { makeError } from '@/main/factories/pages'
 
-const _error = () => {
-  return <div>errp</div>
-}
-
-export default _error
+export default makeError
