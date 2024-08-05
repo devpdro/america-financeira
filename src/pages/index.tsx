@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Header, Benefits, InfoPanel, Faq, LatestPosts } from '@/presentation/components/common'
 import { LoanCarousel } from '@/presentation/components/interactive'
 import { Navbar, Footer } from '@/presentation/components/layout'
@@ -10,6 +11,26 @@ export default function Home() {
 
   return (
     <main>
+      <Head>
+        <title>Empréstimo Online - América Financeira</title>
+        <meta
+          name="description"
+          content="Realize seus sonhos com os serviços de crédito da América Financeira. Oferecemos empréstimos rápidos, fáceis e descomplicados. Simule agora!"
+        />
+        <meta
+          name="keywords"
+          content="crédito, empréstimo, América Financeira, simulação de empréstimo, antecipação FGTS, cartão de crédito"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Empréstimo Online - América Financeira" />
+        <meta
+          property="og:description"
+          content="Realize seus sonhos com os serviços de crédito da América Financeira. Oferecemos empréstimos rápidos, fáceis e descomplicados. Simule agora!"
+        />
+        <meta property="og:image" content={backgroundImageUrl.src} />
+        <meta property="og:type" content="website" />
+      </Head>
       <Navbar />
       <LoanWarning />
       <Header

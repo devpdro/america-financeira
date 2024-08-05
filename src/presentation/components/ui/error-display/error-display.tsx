@@ -9,14 +9,13 @@ const ErrorDisplay = () => {
     <section className={styles.container}>
       <h1 className={styles.title}>Ops!</h1>
       <p className={styles.subtitle}>
-        Não conseguimos encontrar a página que você <br />  está procurando.
+        Não conseguimos encontrar a página que você <br /> está procurando.
       </p>
-      <p className={styles.subtitle}>
-        Se não sabe para onde ir, qualquer caminho serve! <br /> - Gato Cheshire, Alice no País das Maravilhas.
+      <p className={styles['subtitle-message']}>
+        Se não sabe para onde ir, qualquer caminho <br />
+        serve! - Gato Cheshire, Alice no País das Maravilhas.
       </p>
-      <Link
-        href="/"
-      >
+      <Link href="/">
         <Button width="300px" typeStyle="btn2" text="Voltar para a página principal" />
       </Link>
     </section>
