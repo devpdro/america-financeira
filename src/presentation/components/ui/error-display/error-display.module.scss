@@ -21,5 +21,9 @@
     font-weight: $weight-medium;
     line-height: 1.575rem;
     margin-bottom: 1.275rem;
+    @media (max-width: 880px) {
+      font-size: $size-small;
+      line-height: 1.375rem;
+    }
   }
 }
