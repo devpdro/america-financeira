@@ -2,7 +2,7 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  @include container-center(1080px);
+  @include container-center(1280px);
   @include display-flex(flex-start, flex-start);
   flex-direction: column;
   padding: 9.575rem 2.075rem 5.575rem;

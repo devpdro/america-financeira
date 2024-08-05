@@ -1,4 +1,6 @@
-import { Header, LatestPosts, InfoPanel, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
+import Head from 'next/head'
+
+import { Header, LatestPosts, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { benefitsConsignedLoan, faqAboutPayrollLoan } from '@/data/ui'
 import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBanks } from '@/presentation/components/common'
@@ -9,6 +11,26 @@ export default function PayrollLoan() {
 
   return (
     <main>
+      <Head>
+        <title>Empréstimo Consignado: Seguro, rápido e com taxas baixas</title>
+        <meta
+          name="description"
+          content="O empréstimo consignado é a solução ideal para quem busca crédito com segurança e taxas de juros baixas. Simule agora e veja como é fácil."
+        />
+        <meta
+          name="keywords"
+          content="empréstimo consignado, crédito consignado, América Financeira, simulação de empréstimo, taxas baixas, segurança financeira"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Empréstimo Consignado: Seguro e com Taxas Baixas" />
+        <meta
+          property="og:description"
+          content="O empréstimo consignado é a solução ideal para quem busca crédito com segurança e taxas de juros baixas. Simule agora e veja como é fácil."
+        />
+        <meta property="og:image" content={backgroundImageUrl.src} />
+        <meta property="og:type" content="website" />
+      </Head>
       <Navbar />
       <Header
         title="Empréstimo Consignado"

@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import { Header, LatestPosts, InfoPanel, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { personalLoanBenefits, faqAboutPersonalLoan } from '@/data/ui'
 import { Navbar, Footer } from '@/presentation/components/layout'
@@ -9,6 +11,26 @@ export default function PersonalLoan() {
 
   return (
     <main>
+      <Head>
+        <title>Empréstimo Pessoal: Online, ágil e seguro</title>
+        <meta
+          name="description"
+          content="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
+        />
+        <meta
+          name="keywords"
+          content="empréstimo pessoal, crédito pessoal, América Financeira, simulação de empréstimo, condições de empréstimo, benefícios financeiros"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Empréstimo Pessoal: Online, Ágil e Seguro" />
+        <meta
+          property="og:description"
+          content="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
+        />
+        <meta property="og:image" content={backgroundImageUrl.src} />
+        <meta property="og:type" content="website" />
+      </Head>
       <Navbar />
       <Header
         title="Empréstimo Pessoal"
@@ -18,7 +40,7 @@ export default function PersonalLoan() {
           </>
         }
         showDetails={false}
-        showParagraph="*Sujeito à analise de crédito e condições do produto"
+        showParagraph="*Sujeito à análise de crédito e condições do produto"
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo

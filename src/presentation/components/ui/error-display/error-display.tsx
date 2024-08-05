@@ -17,7 +17,7 @@ const ErrorDisplay = () => {
       <Link
         href="/"
       >
-        <Button width="230px" typeStyle="btn2" text="Voltar para a página principal" />
+        <Button width="300px" typeStyle="btn2" text="Voltar para a página principal" />
       </Link>
     </section>
   )
