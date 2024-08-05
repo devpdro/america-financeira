@@ -9,7 +9,7 @@ export const benefitsLoan = [
   {
     title: 'Impulsionar seu negócio',
     subtitle: 'Invista no seu capital com um crédito que te dá mais prazo e com juros mais baixos.',
-    image: Images.AumentarLucro,
+    image: Images.aumentarLucro,
   },
   {
     title: 'Realizar sonhos',
@@ -20,9 +20,9 @@ export const benefitsLoan = [
 
 export const personalLoanBenefits = [
   {
-    title: 'Emergências e imprevistos',
-    subtitle: 'Tenha um recurso disponível para situações inesperadas, sem comprometer seu orçamento.',
-    image: Images.carro,
+    title: 'Investimento em saúde',
+    subtitle: 'Cuide da sua saúde e da sua família com tratamentos médicos e dentários financiados de forma acessível.',
+    image: Images.educacao,
   },
   {
     title: 'Educação e qualificação',
