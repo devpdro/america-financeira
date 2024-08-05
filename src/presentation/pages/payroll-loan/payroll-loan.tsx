@@ -7,7 +7,7 @@ import { PartnersBanks } from '@/presentation/components/common'
 import { Images } from '@/presentation/assets'
 
 export default function PayrollLoan() {
-  const backgroundImageUrl = Images.emprestimoConsignadoPessoas
+  const backgroundImageUrl = Images.emprestimoConsignadoDuasPessoas
 
   return (
     <main>
@@ -43,7 +43,7 @@ export default function PayrollLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo
-        image={Images.pessoaTablet.src}
+        image={Images.pessoaComCelularSaude.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Consignado?"
