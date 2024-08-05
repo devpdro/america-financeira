@@ -6,24 +6,12 @@ Explore nosso código-fonte e participe do desenvolvimento contínuo das ferrame
 
 ## 📖 Sumário
 
-> [!NOTE]
-> 1.[Introdução](#1-introdução)
-
-> [!IMPORTANT]
-> 2.[Requisitos](#2-requisitos)
-
-> [!IMPORTANT]
-> 3.[Instalação](#3-instalação)
-
-> [!IMPORTANT]
-> 4.[Estrutura do Projeto](#6-arquitetura-do-projeto)
-
-> [!NOTE]
-> 5.[Testes](#11-testes)
-
-> [!NOTE]
-> 6.[Segurança](#12-segurança)
-
+1. [Introdução](#introdução)
+2. [Requisitos](#requisitos)
+3. [Instalação](#instalação)
+4. [Estrutura do Projeto](#estrutura-do-projeto)
+5. [Como me localizar no projeto?](#como-me-localizar-no-projeto)
+   
 ## 🚀 Introdução 
 
 ### 🌐 Visão Geral
@@ -32,21 +20,46 @@ A América Financeira é uma empresa dedicada a oferecer uma ampla variedade de 
 
 ### 💻 Tecnologias Utilizadas
 
-- Front-end
-    - ```Next.js:``` Framework React com renderização do lado do servidor (SSR) e geração de páginas estáticas para melhorar o SEO e a velocidade de carregamento das páginas.
-    - ```Storybook:``` Ferramenta utilizada para desenvolvimento e documentação de componentes de UI de forma isolada, facilitando a colaboração e o teste de componentes.
-    - ```SCSS:``` Pré-processador CSS escolhido por sua capacidade de tornar a estilização mais rápida, eficiente e modular.
-    - ```TypeScript:``` Utilizado para adicionar tipagem estática ao JavaScript, melhorando a robustez do código e reduzindo erros durante o desenvolvimento.
+#### Front-end
 
-- Back-end
-    - ```Node.js:``` Ambiente de execução JavaScript server-side baseado no V8, escolhido por sua eficiência e capacidade de lidar com operações assíncronas de forma escalável.
-    - ```Express:``` Framework web minimalista para Node.js, utilizado para construir APIs de forma simples e eficaz, facilitando o desenvolvimento de serviços web.
+- **Next.js**: Framework React com renderização do lado do servidor (SSR) e geração de páginas estáticas, melhorando significativamente o SEO e a velocidade de carregamento das páginas. Facilita a configuração de rotas e a otimização automática de imagens, tornando o desenvolvimento mais eficiente.
+- **SCSS**: Pré-processador CSS que torna a estilização mais rápida, eficiente e modular. Permite o uso de variáveis, mixins e aninhamento de seletores, facilitando a manutenção e a escalabilidade dos estilos.
+- **TypeScript**: Adiciona tipagem estática ao JavaScript, melhorando a robustez do código e reduzindo erros durante o desenvolvimento. Torna o processo de codificação mais seguro e previsível.
 
-- Banco de Dados
-    - ```MySQL:``` Sistema de gerenciamento de banco de dados relacional escolhido pela sua confiabilidade, ampla adoção e capacidade de suportar consultas complexas.
+#### Back-end
 
-- Testes
-    - ```Jest:``` Framework de testes de JavaScript selecionado pela sua simplicidade, eficiência e suporte robusto para testes unitários e de integração.
+- **Node.js**: Ambiente de execução JavaScript server-side baseado no V8. Lida eficientemente com operações assíncronas de forma escalável, essencial para o desempenho e a confiabilidade do back-end. Permite construir APIs rápidas e escaláveis, fundamentais para a arquitetura de microserviços.
+
+### 📦 Bibliotecas Utilizadas
+
+- **@emotion/react**: Biblioteca para estilização em aplicações React, permitindo o uso de CSS-in-JS com desempenho otimizado.
+- **@emotion/server**: Complemento do `@emotion/react` para renderização do lado do servidor (SSR) com suporte a CSS-in-JS.
+- **@emotion/styled**: Biblioteca de estilização que fornece uma API similar ao `styled-components` para criar componentes com estilos encapsulados.
+- **@formkit/auto-animate**: Biblioteca para adicionar animações automáticas a elementos DOM ao serem adicionados, removidos ou movidos.
+- **@mantine/core**: Biblioteca de componentes UI para React com suporte para temas e acessibilidade.
+- **@mantine/dates**: Conjunto de componentes de data e hora para o Mantine.
+- **@mantine/hooks**: Conjunto de hooks utilitários para React, parte da biblioteca Mantine.
+- **@mantine/next**: Ferramentas de integração entre Mantine e Next.js.
+- **@tabler/icons-react**: Conjunto de ícones em SVG para React, parte da biblioteca Tabler Icons.
+- **@tanstack/react-query**: Biblioteca para gerenciamento de estado de servidor e sincronização de dados em aplicações React.
+- **@tanstack/react-query-devtools**: Ferramentas de desenvolvimento para `react-query`, ajudando a depurar e visualizar o estado dos dados.
+- **axios**: Cliente HTTP baseado em promessas para fazer requisições HTTP.
+- **cookies-next**: Biblioteca para manipulação de cookies em aplicações Next.js.
+- **formik**: Biblioteca para gerenciamento de formulários em React.
+- **js-cookie**: Biblioteca para manipulação de cookies em JavaScript.
+- **next**: Framework React para renderização no lado do servidor e geração estática.
+- **next-cookies**: Biblioteca para manipulação de cookies em aplicações Next.js (uma alternativa ao `cookies-next`).
+- **next-images**: Plugin para importar imagens em projetos Next.js.
+- **react**: Biblioteca principal para construção de interfaces de usuário.
+- **react-alice-carousel**: Componente de carrossel para React.
+- **react-dom**: Complemento do React para manipulação do DOM.
+- **react-dropzone**: Componente para criação de áreas de drop (arrastar e soltar) de arquivos em React.
+- **react-hook-form**: Biblioteca para gerenciamento de formulários em React, focada em desempenho.
+- **react-icons**: Conjunto de ícones populares para React.
+- **react-input-mask**: Componente para criação de máscaras de entrada em campos de formulário.
+- **react-responsive-modal**: Componente para criação de modais responsivos em React.
+- **sass**: Preprocessador CSS que adiciona funcionalidades como variáveis, aninhamento e mixins.
+- **styled-components**: Biblioteca para estilização em React utilizando tagged template literals.
 
 ## 📝 Requisitos
 
@@ -79,48 +92,63 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
     ```bash
     npm run dev
     ```
-    O site estará disponível em http://localhost:3000.
+    O site estará disponível em [http://localhost:3000](http://localhost:3000).
 
     - Além disso, para preparar o site para produção e executá-lo, utilize:
-        - npm run build: Cria uma versão otimizada do site para produção.
-        - npm start: Inicia o servidor em modo de produção após a construção do site.
+        - `npm run build`: Cria uma versão otimizada do site para produção.
+        - `npm start`: Inicia o servidor em modo de produção após a construção do site.
     - Certifique-se de ajustar as configurações necessárias no arquivo de configuração do projeto antes de iniciar o servidor em modo de produção.
-   
-## 📁 Estrutura do projeto
 
-Estrutura do projeto
-./pages: É uma página que o Next.js usa para montar o sistema de roteamento
-./src/components: São todos os pedaços primordiais de interface como componentes de formulário, <Text>(para qualquer texto) e o<Box>
-<Text>: Uma das ideias por trás do texto é tematizar melhor o projeto no futuro e ele servir como um adaptador para qualquer padronização de design que possamos vir a ter.
-<Box>: É nossa abstração para criar estilos, sempre use uma caixa e nunca crie um componente estilizado diretamente no projeto .
-Ele recebe uma prop chamada e styleSheeta mesma pode receber ou uma chave com nome de propriedade do CSS com seu valor, ou ao invés do valor você pode passar um objeto com a resolução que a propriedade deve ser aplicada.
-Exemplo :
-<Box styleSheet={{ color: 'red' }} />você <Box styleSheet={{ color: { xs: 'red', md: 'blue' } }} />;
-./src/patterns: Os padrões são todos os pedaços de interface que são menos genéricos que os componentes mas são reutilizados em mais de 3 lugares do projeto e fazem parte da estrutura geral dele
-./src/screens: Toda tela representa uma tela do projeto, uma tela caso tenha componentes específicos especificamente deve ter os mesmos salvos em sua própria pasta, repetindo a estrutura anterior do projeto e evitando o reuso antes do uso de fato.
-Como me localizar no projeto?
-Todas as páginas do projeto estão específicas em./pages
-Todos os componentesque representam as páginas estão em./src/screens
-Uma vez dentro de uma página você pode navegar pelos componentes para se encontrar e fazer a alteração que deseja
+## 📁 Estrutura do Projeto
 
-## 5. Testes
-Para rodar os testes, execute o seguinte comando:
+### ./pages
+Contém todas as páginas do projeto. O Next.js usa esta pasta para montar o sistema de roteamento. Cada arquivo dentro dessa pasta representa uma rota no aplicativo.
 
-bash
-Copiar código
-npm test
-Estrutura dos Testes
-Unitários: Localizados na pasta tests/unit.
-Integração: Localizados na pasta tests/integration.
-Ferramentas de Teste
-Utilizamos Jest e Enzyme para nossos testes.
+- **api**: Contém os endpoints da API.
+- **blog**: Páginas relacionadas ao blog.
+- **emprestimo-consignado**: Páginas relacionadas ao empréstimo consignado.
+- **emprestimo-fgts**: Páginas relacionadas ao empréstimo FGTS.
+- **emprestimo-pessoal**: Páginas relacionadas ao empréstimo pessoal.
+- **login**: Página de login.
+- **parceiros**: Página de parceiros.
+- **politica-de-privacidade**: Página de política de privacidade.
+- **quem-somos**: Página sobre a empresa.
+- **termos-de-uso**: Página de termos de uso.
+- **_app.tsx**: Personaliza o comportamento global do aplicativo.
+- **_document.tsx**: Personaliza a estrutura do documento HTML.
+- **_error.tsx**: Página de erro personalizada.
+- **index.tsx**: Página inicial.
 
-## 6. Segurança
-Considerações de Segurança
-Autenticação: Utilizamos JWT para autenticação.
-Armazenamento de Senhas: As senhas são armazenadas usando bcrypt.
-Comunicação Segura: Todas as comunicações são feitas via HTTPS.
-Relatar Vulnerabilidades
-Se você encontrar uma vulnerabilidade de segurança, por favor, reporte-a imediatamente para segurança@americafinanceira.com.
+### ./src
+Pasta principal contendo todas as subpastas organizadas por funcionalidade.
 
-Esta versão do README.md inclui a estrutura básica e clara para ajudar os desenvolvedores a entenderem o projeto e contribuírem para ele de maneira eficaz.
+- **data**: Contém dados estruturados, como modelos e configurações de UI.
+  - **models**: Definições de modelos de dados usados no projeto.
+  - **ui**: Configurações específicas de UI, como ícones, logotipos, etc.
+  
+- **infra**: Infraestrutura e configurações específicas do projeto.
+
+- **main**: Lógica principal do projeto.
+
+- **presentation**: Contém todos os componentes de apresentação.
+  - **assets**: Recursos estáticos como imagens e ícones.
+  - **components**: Componentes reutilizáveis de UI.
+  - **hooks**: Hooks customizados para reutilização de lógica em componentes.
+  - **pages**: Componentes específicos das páginas.
+  - **styles**: Arquivos de estilo, como SCSS ou CSS.
+  - **utils**: Funções utilitárias que são reutilizadas em diferentes partes do projeto.
+
+- **tests**: Configurações e arquivos de teste para garantir a qualidade do código.
+  - **.editorconfig**: Configurações do editor para manter a consistência de estilo de código.
+
+### 🗺️ Como me localizar no projeto?
+- **Páginas**: Todas as páginas do projeto estão específicas na pasta `./pages`.
+- **Componentes**: Todos os componentes que representam as páginas estão na pasta `./src/presentation/pages`.
+- **Componentes Reutilizáveis**: Componentes de interface de usuário reutilizáveis estão na pasta `./src/presentation/components/common`.
+- **Estilos**: Arquivos de estilo e SCSS estão na pasta `./src/presentation/styles`.
+
+Navegue pelas pastas e arquivos do projeto para localizar o código que deseja alterar ou estudar. Cada pasta é organizada de maneira a facilitar o entendimento e a manutenção do código.
+
+---
+
+Esta versão do `README.md` inclui a estrutura básica e clara para ajudar os desenvolvedores a entenderem o projeto e contribuírem para ele de maneira eficaz.
