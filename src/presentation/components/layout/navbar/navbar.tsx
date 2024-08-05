@@ -3,19 +3,22 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-
 import { NavMobile } from '@/presentation/components/layout'
 import { IconWithProps, getLinkAttributes } from '@/utils'
 import { Images, Icons } from '@/presentation/assets'
 import { nav } from '@/data/ui'
-
 import styles from './navbar.module.scss'
 
 export default function Navbar() {
   const [animationParent] = useAutoAnimate()
   const [isSideMenuOpen, setSideMenu] = useState(false)
+
+  const handleClick = (e: any, link: string) => {
+    if (link === '#') {
+      e.preventDefault()
+    }
+  }
 
   return (
     <nav className={styles.navbar} aria-label="Navegação Principal">
@@ -30,7 +33,11 @@ export default function Navbar() {
           {nav.map((item, index) => (
             <div key={index} className={styles['nav-link']}>
               <Link href={item.link ?? '#'} legacyBehavior>
-                <a className={styles['link-text']} aria-label={item.label}>
+                <a
+                  className={styles['link-text']}
+                  aria-label={item.label}
+                  onClick={(e) => handleClick(e, item.link ?? '#')}
+                >
                   <span>{item.label}</span>
                   {item.children && (
                     <Icons.IoIosArrowDown
@@ -48,6 +55,7 @@ export default function Navbar() {
                         className={styles['dropdown-link']}
                         {...getLinkAttributes(child.link)}
                         aria-label={child.label}
+                        onClick={(e) => handleClick(e, child.link)}
                       >
                         <span className={styles['link-label']}>{child.label}</span>
                         {child.new && <p className={styles.new}>{child.new}</p>}

@@ -1,10 +1,9 @@
 import { NavItemProps } from '@/data/models'
-import PDF from '@/presentation/assets/pdf/apresentacao-parceiros.pdf'
 
 export const nav: NavItemProps[] = [
   {
     label: 'América Financeira',
-    link: '/',
+    link: '#',
     children: [
       {
         label: 'Quem Somos',
@@ -28,7 +27,7 @@ export const nav: NavItemProps[] = [
   },
   {
     label: 'Simule seu Crédito',
-    link: '/emprestimo-pessoal',
+    link: '#',
     children: [
       {
         label: 'Empréstimo Pessoal',
@@ -54,9 +53,5 @@ export const nav: NavItemProps[] = [
         new: 'NOVO',
       },
     ],
-  },
-  {
-    label: 'Blog',
-    link: '/blog',
   },
 ]

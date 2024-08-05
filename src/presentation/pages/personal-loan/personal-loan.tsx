@@ -12,7 +12,7 @@ export default function PersonalLoan() {
   return (
     <main>
       <Head>
-        <title>Empréstimo Pessoal: Online, ágil e seguro</title>
+        <title>Empréstimo Pessoal: Online, Ágil e Seguro</title>
         <meta
           name="description"
           content="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"

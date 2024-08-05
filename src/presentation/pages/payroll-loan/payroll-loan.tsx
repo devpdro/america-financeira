@@ -12,7 +12,7 @@ export default function PayrollLoan() {
   return (
     <main>
       <Head>
-        <title>Empréstimo Consignado: Seguro, rápido e com taxas baixas</title>
+        <title>Empréstimo Consignado: Seguro, Rápido e com Taxas Baixas</title>
         <meta
           name="description"
           content="O empréstimo consignado é a solução ideal para quem busca crédito com segurança e taxas de juros baixas. Simule agora e veja como é fácil."
