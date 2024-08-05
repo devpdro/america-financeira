@@ -56,12 +56,26 @@
           }
         }
       }
+      .subtitle-help {
+        font-size: $size-medium;
+        font-weight: $weight-medium;
+        margin-bottom: 1.075rem;
+        @media (min-width: 885px) and (max-width: 1224px) {
+          font-size: $size-normal;
+        }
+        @media (max-width: 884px) {
+          display: none;
+        }
+      }
       .whatsapp-section {
         background-color: $gray-light-color;
         border-radius: $radius-medium;
         width: 150px;
         padding: 0.975rem 1.075rem;
         margin-bottom: 1.775rem;
+        @media (max-width: 884px) {
+          display: none;
+        }
         .title {
           color: $black-color;
           font-size: $size-extra-small;
@@ -82,7 +96,7 @@
       }
       @media (max-width: 884px) {
         flex-direction: column;
-        margin-top: 1.775rem;
+        margin-top: 0;
         gap: 2.075rem;
       }
       .list-section {
