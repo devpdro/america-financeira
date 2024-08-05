@@ -8,7 +8,7 @@ export default function Partners() {
   const backgroundImageUrl = Images.cartaoDebito
 
   return (
-    <>
+    <main>
       <Navbar />
       <Header
         title="Sobre a América Financeira"
@@ -36,6 +36,6 @@ export default function Partners() {
       />
       <PartnersBenefits />
       <Footer />
-    </>
+    </main>
   )
 }
