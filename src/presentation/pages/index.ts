@@ -1,3 +1,5 @@
 export { default as Blog } from './blog/blog'
 export { default as Partners } from './partners/partners'
+export { default as PersonalLoan } from './personal-loan/personal-loan'
 export { default as PrivacyPolicy } from './privacy-policy/privacy-policy'
+export { default as TermsOfUse } from './terms-of-use/terms-of-use'

@@ -2,14 +2,14 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  position: fixed; // Mudado de 'relative' para 'fixed'
+  position: fixed;
   top: 90px;
-  left: 0; // Garante que o componente se estenda por toda a largura da tela
+  left: 0;
   right: 0;
   background-color: $blue-color;
   color: $white-color;
   padding: 0rem 2.075rem 0 2.075rem;
-  z-index: 99999;
+  z-index: 90;
   .box-section {
     @include container-center(1280px, 0 auto);
     @include display-flex(center, space-between);
@@ -18,9 +18,17 @@
       font-weight: $weight-light;
       padding: 1.175rem 0;
       line-height: 1.275rem;
+      padding-right: 1.575rem;
     }
     .icon {
-      font-size: $size-normal;
+      @include hover-pointer;
+      font-size: $size-medium;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @media (max-width: 724px) {
+        font-size: $size-large;
+      }
     }
   }
 }

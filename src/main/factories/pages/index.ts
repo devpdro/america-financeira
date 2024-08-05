@@ -1,3 +1,5 @@
 export * from './privacy-policy'
 export * from './blog'
 export * from './partners'
+export * from './terms-of-use'
+export * from './personal-loan'

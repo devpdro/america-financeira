@@ -132,8 +132,13 @@
       color: $gray-color;
       margin-bottom: 0.275rem;
       line-height: 1.375rem;
-
       white-space: normal;
+      .link {
+        @include hover-pointer;
+        &:hover {
+          color: $white-color;
+        }
+      }
       @media (min-width: 885px) and (max-width: 1224px) {
         font-size: $size-extra-small;
       }
@@ -149,6 +154,12 @@
       font-weight: $weight-medium;
       color: $gray-color;
       gap: 2.075rem;
+      .link {
+        @include hover-pointer;
+        &:hover {
+          color: $white-color;
+        }
+      }
       @media (min-width: 885px) and (max-width: 1224px) {
         font-size: $size-extra-small;
       }

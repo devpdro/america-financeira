@@ -1,7 +1,7 @@
-import { Header, Benefits, InfoPanel, Faq } from '@/presentation/components/common'
+import { Header, Benefits, InfoPanel, Faq, LatestPosts } from '@/presentation/components/common'
 import { LoanCarousel } from '@/presentation/components/interactive'
 import { Navbar, Footer } from '@/presentation/components/layout'
-import { LatestPosts, LoanWarning } from '@/presentation/components/ui'
+import { LoanWarning } from '@/presentation/components/ui'
 import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
 
@@ -9,7 +9,7 @@ export default function Home() {
   const backgroundImageUrl = Images.cabecalhoInicial
 
   return (
-    <>
+    <main>
       <Navbar />
       <LoanWarning />
       <Header
@@ -62,6 +62,6 @@ export default function Home() {
       <LatestPosts />
       <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
       <Footer />
-    </>
+    </main>
   )
 }

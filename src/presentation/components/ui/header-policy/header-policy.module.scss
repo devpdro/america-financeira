@@ -1,0 +1,15 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  background-color: $blue-strong-color;
+  color: $white-color;
+  padding: 8.375rem 2.075rem 3.375rem 2.075rem;
+  .box-section {
+    @include container-center(1080px);
+    .title {
+      font-size: $size-large;
+      font-weight: $weight-medium;
+    }
+  }
+}

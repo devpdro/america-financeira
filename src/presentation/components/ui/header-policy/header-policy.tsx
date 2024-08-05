@@ -1,10 +1,16 @@
-import * as S from './header-policy.module.scss'
+import styles from './header-policy.module.scss'
 
-const HeaderPolicy = () => {
+type HeaderPolicyProps = {
+  title: string
+}
+
+const HeaderPolicy: React.FC<HeaderPolicyProps> = ({ title }) => {
   return (
-    <section>
-      <h1>Política de Privacidade</h1>
-    </section>
+    <header className={styles.container}>
+      <div className={styles['box-section']}>
+        <h1 className={styles.title}>{title}</h1>
+      </div>
+    </header>
   )
 }
 

@@ -36,7 +36,8 @@ const StatusModal: React.FC<StatusModalProps> = ({ isOpen, onClose, message }) =
           </h1>
           <h3 className={styles.subtitle}>Siga a gente</h3>
           <p id="modal-description" className={styles.paragraph}>
-            Aprenda a economizar, organizar as suas finanças e fazer <br /> o seu dinheiro render mais.
+            Conheça nosso cultura, explore nossos serviços e veja como <br />
+            transformamos finanças em oportunidades todos os dias.
           </p>
           <div className={styles['icons-section']}>
             {icons.map(({ icon: Icon, link }, index) => (

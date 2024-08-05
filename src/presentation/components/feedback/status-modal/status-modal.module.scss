@@ -5,8 +5,10 @@
   background-color: $white-color;
   color: $black-color;
   border-radius: $radius-medium;
-  word-wrap: break-word;
   text-align: center;
+  @media (max-width: 880px) {
+    width: 80%;
+  }
   .modal-content {
     padding: 1.075rem 1.075rem 0rem 1.075rem;
     .title {
@@ -14,17 +16,30 @@
       font-weight: $weight-normal;
       margin-bottom: 1.075rem;
       line-height: 1.475rem;
+      @media (max-width: 880px) {
+        font-size: $size-small;
+        line-height: 1.275rem;
+      }
     }
     .subtitle {
       font-size: $size-extra-medium;
       font-weight: $weight-bold;
       margin-bottom: 0.275rem;
+      @media (max-width: 880px) {
+        font-size: $size-medium;
+        line-height: 1.575rem;
+        margin-bottom: 0.875rem;
+      }
     }
     .paragraph {
       font-size: $size-small;
       font-weight: $weight-normal;
       margin-bottom: 1.475rem;
       line-height: 1.275rem;
+      @media (max-width: 880px) {
+        font-size: $size-extra-small;
+        line-height: 1.175rem;
+      }
     }
     .icons-section {
       @include display-flex;
@@ -36,6 +51,10 @@
         font-size: $size-extra-large;
         border-radius: 50%;
         padding: 0.775rem;
+        @media (max-width: 880px) {
+          font-size: $size-medium;
+          padding: 0rem;
+        }
       }
     }
   }
