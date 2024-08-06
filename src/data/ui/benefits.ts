@@ -3,17 +3,14 @@ import { Images } from '@/presentation/assets'
 export const benefitsLoan = [
   {
     title: 'Quitar as dívidas',
-    subtitle: 'Troque as dívidas caras por uma única, mais saudável e com parcelas mais acessíveis.',
+    subtitle:
+      'Troque as dívidas caras por uma única, mais saudável e com parcelas mais acessíveis, proporcionando maior tranquilidade financeira.',
     image: Images.divida,
   },
   {
-    title: 'Impulsionar seu negócio',
-    subtitle: 'Invista no seu capital com um crédito que te dá mais prazo e com juros mais baixos.',
-    image: Images.aumentarLucro,
-  },
-  {
     title: 'Realizar sonhos',
-    subtitle: 'Tire do papel o plano de reformar a casa ou adquirir novos bens com um crédito saudável.',
+    subtitle:
+      'Tire do papel o plano de reformar a casa ou adquirir novos bens com um crédito saudável e condições que cabem no seu bolso.',
     image: Images.sonho,
   },
 ]

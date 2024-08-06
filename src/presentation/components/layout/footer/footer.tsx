@@ -21,19 +21,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
-            <h6 className={styles["subtitle-help"]}>Precisando de ajuda?</h6>
-          <div className={styles['whatsapp-section']}>
-            <h6 className={styles.title}>
-              Fale com a gente pelo <br /> Telefone.
-            </h6>
-            <Image src={Images.qrCodeTelefone} alt="QR Code para o Telefone" />
-          </div>
-          <div className={styles['whatsapp-section']}>
-            <h6 className={styles.title}>
-              Fale com a gente por <br /> WhatsApp.
-            </h6>
-            <Image src={Images.qrCodeWhats} alt="QR Code para o WhatsApp" />
-          </div>
+            
         </div>
         <div className={styles['details-section']}>
           {list.map((section, index) => (

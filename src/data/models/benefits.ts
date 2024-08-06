@@ -8,7 +8,7 @@ export type BenefitsItemProps = {
 
 export type BenefitsProps = {
   title: React.ReactNode
-  subtitle: string
+  subtitle: React.ReactNode
   imageWidth?: number
   imageHeight?: number
   items: BenefitsItemProps[]

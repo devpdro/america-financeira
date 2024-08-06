@@ -57,7 +57,11 @@ export default function Home() {
             O crédito de qualidade <br /> que você merece
           </>
         }
-        subtitle="Um empréstimo pode ser a solução financeira que você precisa para melhorar sua vida."
+        subtitle={
+          <>
+            Um empréstimo pode ser a solução financeira que você precisa <br /> para melhorar sua vida.
+          </>
+        }
         items={benefitsLoan}
       />
       <InfoPanel
