@@ -1,14 +1,12 @@
 import Head from 'next/head'
 
-import { Header, Benefits, FollowUs, Information, LoadInfo, IntroductionHeader } from '@/presentation/components/common'
+import { Benefits, FollowUs, Information, LoadInfo, IntroductionHeader } from '@/presentation/components/common'
 import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBenefits } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
 import { benefitsPartners } from '@/data/ui'
 
 export default function Partners() {
-  const backgroundImageUrl = Images.cartaoDebito
-
   return (
     <main>
       <Head>
@@ -25,7 +23,6 @@ export default function Partners() {
           property="og:description"
           content="Descubra os benefícios de se tornar um parceiro da América Financeira. Inovação e confiança para realizar seus sonhos financeiros."
         />
-        <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />

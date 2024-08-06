@@ -4,17 +4,18 @@ import { Button } from '@/presentation/components/form'
 
 import styles from './error-display.module.scss'
 
-const ErrorDisplay = () => {
+type ErrorDisplayProps = {
+  title: string
+  subtitle: React.ReactNode
+  message: React.ReactNode
+}
+
+const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ title, subtitle, message }) => {
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Ops!</h1>
-      <p className={styles.subtitle}>
-        Não conseguimos encontrar a página que você <br /> está procurando.
-      </p>
-      <p className={styles['subtitle-message']}>
-        Se não sabe para onde ir, qualquer caminho <br />
-        serve! - Gato Cheshire, Alice no País das Maravilhas.
-      </p>
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.subtitle}>{subtitle}</p>
+      <p className={styles['subtitle-message']}>{message}</p>
       <Link href="/">
         <Button width="300px" typeStyle="btn2" text="Voltar para a página principal" />
       </Link>

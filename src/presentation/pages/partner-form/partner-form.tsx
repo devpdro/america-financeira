@@ -2,25 +2,25 @@ import Head from 'next/head'
 
 import { PartnerRequest } from '@/presentation/components/form'
 
-export default function FgtsLoan() {
+export default function PartnerForm() {
   return (
     <div>
       <Head>
-        <title>Empréstimo FGTS: Antecipe o saque aniversário do FGTS</title>
+        <title>Formulário seja parceiro</title>
         <meta
           name="description"
-          content="O empréstimo FGTS permite utilizar o saldo do Fundo de Garantia como garantia, oferecendo condições especiais e flexibilidade para o pagamento. Simule agora!"
+          content="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
         />
         <meta
           name="keywords"
-          content="empréstimo FGTS, crédito FGTS, América Financeira, simulação de empréstimo, antecipação FGTS, condições especiais"
+          content="parceria, America Financeira, programa de parceria, suporte especializado, crescimento, soluções financeiras"
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Empréstimo FGTS: Flexível e com Condições Especiais" />
+        <meta property="og:title" content="Formulário seja parceiro" />
         <meta
           property="og:description"
-          content="O empréstimo FGTS permite utilizar o saldo do Fundo de Garantia como garantia, oferecendo condições especiais e flexibilidade para o pagamento. Simule agora!"
+          content="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
         />
         <meta property="og:type" content="website" />
       </Head>
