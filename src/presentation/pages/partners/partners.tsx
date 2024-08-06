@@ -37,7 +37,7 @@ export default function Partners() {
         subtitle="Sobre nossas parcerias"
         title="Parcerias de Sucesso"
         paragraph="Na America Financeira, valorizamos as parcerias estratégicas que nos permitem oferecer soluções financeiras inovadoras e eficazes. Junte-se a nós e descubra os benefícios de ser um parceiro, incluindo acesso a uma ampla rede de clientes, suporte especializado e oportunidades de crescimento conjunto."
-        buttonPrimaryText="Ser parceiro"
+        buttonPrimaryText="Seja nosso parceiro"
         imagePosition="left"
       />
       <Benefits

@@ -1,0 +1,105 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  @include display-flex;
+  flex-direction: column;
+  margin-bottom: 5.075rem;
+  .bg-blue {
+    background-color: $blue-color;
+    height: 200px;
+    width: 100vw;
+  }
+  .form {
+    @include display-flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: -7.575rem;
+    border-radius: $radius-medium;
+    background-color: $white-color;
+    width: 650px;
+    padding: 2.075rem 2.575rem;
+    .box-title {
+      @include display-flex(flex-start, flex-start);
+      gap: 2.075rem;
+      .img {
+        width: 120px;
+        height: 120px;
+        background-color: $blue-color;
+        padding: 0.575rem;
+      }
+      .text-america {
+        font-weight: 450;
+        margin-bottom: 0.275rem;
+      }
+      .title {
+        color: $black-color;
+        font-size: $size-medium;
+        font-weight: $weight-bold;
+        line-height: 1.475rem;
+        margin-bottom: 0.475rem;
+        @media (max-width: 994px) {
+          font-size: $size-normal;
+        }
+      }
+      .subtitle {
+        font-weight: 450;
+      }
+    }
+
+    .input-text {
+      color: $black-color;
+      font-size: $size-normal;
+      font-weight: $weight-medium;
+      transition: border-bottom 0.3s ease;
+      border-bottom: 1px solid $gray-color;
+      margin-top: 1.275rem;
+      padding: 7px 0;
+      width: 100%;
+      @media (max-width: 994px) {
+        font-size: $size-small;
+      }
+      &:focus {
+        border-bottom: 1px solid $black-color;
+      }
+    }
+    .terms-box {
+      @include display-flex(center, flex-start);
+      .checkbox {
+        border: 2px solid $black-color;
+        margin: 1.575rem 0 1.575rem 0;
+        width: 1.275rem;
+        height: 1.275rem;
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+        }
+        &:checked {
+          box-shadow: $box-shadow-normal;
+        }
+      }
+      .label-checkbox {
+        position: relative;
+        user-select: none;
+        color: $black-color;
+        font-weight: $weight-bold;
+        font-size: 0.875rem;
+        padding-left: 0.575rem;
+      }
+    }
+    .error {
+      color: $red-color;
+      font-weight: $weight-normal;
+      font-size: $size-extra-small;
+    }
+    .checkbox-error + .label-checkbox {
+      color: $red-color;
+    }
+    .input-text-error {
+      border-color: $red-color;
+      &:focus {
+        border-color: $red-color;
+      }
+    }
+  }
+}
