@@ -50,6 +50,9 @@
       padding: 2.075rem 1.575rem;
       margin-top: -5.75rem;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      @media (max-width: 1084px) {
+        margin-top: -1.575rem;
+      }
       .icon {
         color: $blue-color;
         font-size: 4.075rem;
@@ -80,6 +83,9 @@
         height: 24.175rem;
         margin-top: 6.275rem;
         margin-bottom: -9.375rem;
+        @media (max-width: 993px) {
+          width: 90vw;
+        }
       }
     }
   }

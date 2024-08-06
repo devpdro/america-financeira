@@ -17,8 +17,8 @@ const FollowUs: React.FC<FollowUsProps> = () => {
       <Image className={styles.img} src={Images.logoAmerica} alt="Logo América Financeira" />
       <h3 className={styles.subtitle}>Siga a gente</h3>
       <p id="modal-description" className={styles.paragraph}>
-        Conheça nosso cultura, explore nossos serviços e veja como <br />
-        transformamos finanças em oportunidades todos os dias.
+        Conheça nosso cultura, explore nossos serviços e veja <br /> como transformamos finanças em oportunidades todos
+        os dias.
       </p>
       <div className={styles['icons-section']}>
         {icons.map(({ icon: Icon, link }, index) => (

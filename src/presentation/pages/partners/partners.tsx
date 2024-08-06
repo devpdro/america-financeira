@@ -43,10 +43,10 @@ export default function Partners() {
       <Benefits
         title={
           <>
-            Por que ser um parceiro da <br /> América?
+            Por que ser um parceiro da <br /> América Financeira?
           </>
         }
-        subtitle="Um empréstimo pode ser a solução financeira que você precisa para melhorar sua vida."
+        subtitle="Descubra os benefícios exclusivos de se tornar um parceiro da America Financeira e impulsione seu negócio."
         imageWidth={100}
         imageHeight={100}
         items={benefitsPartners}
