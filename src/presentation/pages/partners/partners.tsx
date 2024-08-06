@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Header, Benefits } from '@/presentation/components/common'
+
+import { Header, Benefits, FollowUs, Information, LoadInfo, IntroductionHeader } from '@/presentation/components/common'
 import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBenefits } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
@@ -28,17 +29,16 @@ export default function Partners() {
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
-      <Header
-        title="Sobre a América Financeira"
-        subtitle={
-          <>
-            Inovação e confiança <br /> para realizar seus sonhos <br /> financeiros
-          </>
-        }
-        showParagraph="*Conheça nossa trajetória e conquistas ao longo dos anos"
-        showLoanRequest={false}
-        showDetails={false}
-        backgroundImage={backgroundImageUrl.src}
+      <IntroductionHeader
+        image={Images.pessoaComputadorCabecalho.src}
+        imageWidth={100}
+        imageHeight={98}
+        alt="Parcerias de Sucesso"
+        subtitle="Sobre nossas parcerias"
+        title="Parcerias de Sucesso"
+        paragraph="Na America Financeira, valorizamos as parcerias estratégicas que nos permitem oferecer soluções financeiras inovadoras e eficazes. Junte-se a nós e descubra os benefícios de ser um parceiro, incluindo acesso a uma ampla rede de clientes, suporte especializado e oportunidades de crescimento conjunto."
+        buttonPrimaryText="Ser parceiro"
+        imagePosition="left"
       />
       <Benefits
         title={
@@ -52,6 +52,8 @@ export default function Partners() {
         items={benefitsPartners}
       />
       <PartnersBenefits />
+      <Information />
+      <FollowUs />
       <Footer />
     </main>
   )

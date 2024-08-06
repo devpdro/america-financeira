@@ -16,7 +16,7 @@ export const nav: NavItemProps[] = [
       {
         label: 'Apresentação Institucional',
         link: '/apresentacao-institucional.pdf',
-        new: 'NOVO',
+        new: 'PDF',
       },
       {
         label: 'Nossa Último Treinamento',
@@ -50,7 +50,7 @@ export const nav: NavItemProps[] = [
       {
         label: 'Apresentação para Parceiros',
         link: '/apresentacao-parceiros.pdf',
-        new: 'NOVO',
+        new: 'PDF',
       },
     ],
   },

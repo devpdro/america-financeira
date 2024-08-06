@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  @include container-center(1280px, 0 auto);
+  padding: 0 2.075rem;
+  margin-bottom: 4.575rem;
+  text-align: center;
+  .title {
+    font-size: $size-large;
+    font-weight: $weight-medium;
+    margin-bottom: 1.075rem;
+  }
+  .paragraph {
+    @include container-center(980px, 0 auto);
+    font-size: $size-extra-small;
+    font-weight: $weight-medium;
+    line-height: 1.275rem;
+    margin-bottom: 2.075rem;
+    text-align: center;
+    @media (max-width: 880px) {
+      font-size: $size-extra-small;
+    }
+  }
+}

@@ -1,27 +1,26 @@
 import styles from './partners-benefits.module.scss'
-import { AiOutlineDollarCircle } from 'react-icons/ai' // Ícone de dólar em círculo
-import { GiTakeMyMoney } from 'react-icons/gi' // Ícone de entregar dinheiro
+import { FaMoneyBillWave, FaChartLine, FaRegCalendarAlt, FaUsers } from 'react-icons/fa' // Ícones de nota de dinheiro, gráfico de linha, calendário e grupo de pessoas
 
 const benefitsData = [
   {
-    Icon: GiTakeMyMoney,
-    title: 'R$4,8 milhões',
-    subtitle: 'Líder de mercado na América Latina.',
+    Icon: FaMoneyBillWave,
+    title: '+R$100 milhões',
+    description: 'Total Vendido',
   },
   {
-    Icon: AiOutlineDollarCircle,
+    Icon: FaChartLine,
     title: 'R$6 bilhões',
-    subtitle: 'Líder de mercado na América Latina.',
+    description: 'Volume Financeiro',
   },
   {
-    Icon: GiTakeMyMoney,
-    title: '35+ emissões',
-    subtitle: 'Líder de mercado na América Latina.',
+    Icon: FaUsers,
+    title: '10+ Parceiros',
+    description: 'Parceiros',
   },
   {
-    Icon: GiTakeMyMoney,
-    title: 'Mais de 10 de xp de atuação',
-    subtitle: 'Líder de mercado.',
+    Icon: FaRegCalendarAlt,
+    title: '12+ Anos',
+    description: 'Experiência',
   },
 ]
 
@@ -30,7 +29,7 @@ const PartnersBenefits = () => {
     <section className={styles.container}>
       <div className={styles['box-section']}>
         <div className={styles['info-section']}>
-          {benefitsData.map(({ Icon, title, subtitle }, index) => (
+          {benefitsData.map(({ Icon, title, description }, index) => (
             <div
               key={index}
               className={`${styles['col-lg-3']} ${styles['col-sm-6']} ${styles['col-xs-12']} ${styles['no-padding']}`}
@@ -38,7 +37,7 @@ const PartnersBenefits = () => {
               <div className={styles['numbers-section']}>
                 <Icon className={styles.icon} />
                 <h2 className={styles.title}>{title}</h2>
-                <h4 className={styles.subtitle}>{subtitle}</h4>
+                <p className={styles.description}>{description}</p>
               </div>
             </div>
           ))}

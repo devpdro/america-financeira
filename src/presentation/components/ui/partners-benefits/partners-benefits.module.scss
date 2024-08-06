@@ -4,8 +4,9 @@
 .container {
   background: $blue-strong-color;
   position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   .box-section {
-    @include container-center(1180px, 9.575rem auto  14.075rem auto);
+    @include container-center(1180px, 9.575rem auto 12.575rem auto);
     padding: 0 0.975rem;
     .info-section {
       @include display-flex;
@@ -42,18 +43,18 @@
     .numbers-section {
       @include display-flex;
       background: $gray-light-color;
-      border: 2px solid $blue-strong-color;
+      border-radius: $radius-medium;
       flex-direction: column;
       text-align: center;
-      height: 17.875rem;
-      padding: 3.075rem 1.575rem;
+      height: 12.875rem;
+      padding: 2.075rem 1.575rem;
       margin-top: -5.75rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       .icon {
-        background-color: $light-blue;
         color: $blue-color;
-        font-size: 5.575rem;
+        font-size: 4.075rem;
         border-radius: $radius-medium;
-        padding: 1.075rem;
+        padding: 0.275rem;
         margin-bottom: 1.075rem;
       }
       .title {
@@ -72,10 +73,11 @@
       @include display-flex;
       .video {
         @include display-flex;
-        border: 5px solid $gray-light-color;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         position: relative;
-        width: 55vw;
-        height: 23.175rem;
+        width: 50vw;
+        border-radius: 2px;
+        height: 24.175rem;
         margin-top: 6.275rem;
         margin-bottom: -9.375rem;
       }
