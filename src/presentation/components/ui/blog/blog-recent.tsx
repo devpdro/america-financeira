@@ -25,7 +25,7 @@ interface Post {
   date: string
   image: StaticImageData
 }
-const BlogPage: React.FC = () => {
+const BlogRecent: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const themes = Array.from(new Set(blogArticle.map((post) => post.subtitle)))
   const [visiblePosts, setVisiblePosts] = useState<number>(7)
@@ -35,8 +35,7 @@ const BlogPage: React.FC = () => {
   const loadMorePosts = () => setVisiblePosts((prev) => prev + 6)
 
   return (
-    <section className={`${page.container} panel`} data-color="white">
-      <SearchBlog className={page.navbar_blog} themes={themes} onSearch={handleSearch} />
+    <section className={`${page.container}`}>
       <div className={`${page.results_container}`}>
         <h1 className={page.title}>{searchQuery ? 'Resultados' : 'Mais recentes'}</h1>
         <PostsList posts={filteredPosts.slice(0, visiblePosts)} />
@@ -59,10 +58,10 @@ const PostsList: React.FC<{ posts: Post[] }> = ({ posts }) => (
 )
 
 const BlogPost: React.FC<Post> = ({ id, title, subtitle, date, image }) => (
-  <div className={`${post.container} panel`} data-color="white">
+  <div className={`${post.container} `}>
     <Link href={`/blog/${RemoveAccents(title)}`}>
       <div className={post.article}>
-        <Image loading="lazy" src={image} alt="Imagem do post" />
+        <Image className={post.img} loading="lazy" src={image} alt="Imagem do post" />
         <p className={post.subtitle}>{subtitle}</p>
         <h1 className={post.title}>
           <span>{title}</span>
@@ -73,4 +72,4 @@ const BlogPost: React.FC<Post> = ({ id, title, subtitle, date, image }) => (
   </div>
 )
 
-export default BlogPage
+export default BlogRecent

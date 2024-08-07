@@ -43,7 +43,7 @@
     .numbers-section {
       @include display-flex;
       background-color: $white-color;
-      border-radius: $radius-medium;
+      border-radius: 3px;
       flex-direction: column;
       text-align: center;
       height: 12.875rem;
@@ -79,9 +79,9 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         position: relative;
         width: 55vw;
-        border-radius: 2px;
+        border-radius: 10px;
         height: 24.175rem;
-        margin-top: 6.275rem;
+        margin-top: 5.275rem;
         margin-bottom: -9.375rem;
         @media (max-width: 993px) {
           width: 90vw;

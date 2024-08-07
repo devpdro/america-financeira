@@ -1,53 +1,55 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
 .container {
   width: 390px;
-  background-color: #f9f7f1;
 
-  .article_container {
+  .article {
     width: 100%;
     transition: all 0.3s ease;
 
-    .article {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
 
-      &:hover {
-        .img {
-          transform: scale(1.1);
-          transform: translateY(-5px);
-        }
-      }
-
+    &:hover {
       .img {
-        width: 93%;
-        height: 230px;
-        border-radius: 7px;
-        transition: all 0.3s ease;
-        object-fit: cover;
-        transition: all 0.3s ease;
+        transform: scale(1.1);
+        transform: translateY(-5px);
       }
+    }
 
-      .subtitle {
-        padding: 0.8rem 0 0.5rem 0;
-        font-size: 1.2rem;
-        color: #dda827;
-        font-weight: 400;
-      }
+    .img {
+      border-radius: $radius-medium;
+      width: 93%;
+      height: 230px;
+      border-radius: 7px;
+      transition: all 0.3s ease;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
 
-      .title {
-        font-size: 1.5rem;
-        color: #1c1c1c;
-        font-weight: 500;
-        width: 93%;
-        transition: all 0.3s ease;
-        overflow: hidden;
-        position: relative;
-      }
+    .subtitle {
+      padding: 0.8rem 0 0.5rem 0;
+      font-size: $size-normal;
+      color: $blue-color;
+      font-weight: 400;
+    }
 
-      .data {
-        font-size: 1rem;
-        padding: 1rem 0 1rem 0;
-        font-weight: 400;
-        color: #6b7280;
-      }
+    .title {
+      font-size: 1.5rem;
+      color: #1c1c1c;
+      font-weight: 500;
+      line-height: 1.875rem;
+      width: 93%;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .data {
+      font-size: 1rem;
+      padding: 0.675rem 0 1rem 0;
+      font-weight: 400;
+      color: #6b7280;
     }
   }
 }

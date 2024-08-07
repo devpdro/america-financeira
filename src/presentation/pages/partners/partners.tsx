@@ -7,6 +7,12 @@ import { Images } from '@/presentation/assets'
 import { benefitsPartners } from '@/data/ui'
 
 export default function Partners() {
+  const title = 'América Partners'
+  const paragraphs = [
+    'Seja bem-vindo ao America Partners! Aqui você encontrará informações sobre nossas parcerias estratégicas e como elas podem ajudar a impulsionar o seu negócio. Na America Financeira, valorizamos a colaboração e estamos comprometidos em oferecer suporte e soluções financeiras inovadoras aos nossos parceiros.',
+    'Junte-se a nós e descubra os benefícios exclusivos de ser um parceiro da America Financeira. Tenha acesso a recursos dedicados e suporte contínuo para crescer com segurança.',
+    'Nossos parceiros têm acesso a uma ampla rede de clientes, suporte especializado e inúmeras oportunidades de crescimento. Com mais de 12 anos de experiência, estamos aqui para ajudar você a alcançar novos patamares de sucesso. Explore nossas soluções e veja como podemos crescer juntos.',
+  ]
   return (
     <main>
       <Head>
@@ -52,7 +58,7 @@ export default function Partners() {
         items={benefitsPartners}
       />
       <PartnersBenefits />
-      <Information />
+      <Information title={title} paragraphs={paragraphs} />
       <FollowUs />
       <Footer />
     </main>

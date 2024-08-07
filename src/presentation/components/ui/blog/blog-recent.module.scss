@@ -2,8 +2,8 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  background-color: $gray-light-color;
-  padding: 0 2rem;
+  @include container-center(1280px, 5.075rem auto 0.075rem auto);
+  padding: 0 2.075rem;
 
   .results_container {
     max-width: 1280px;
@@ -12,7 +12,7 @@
     .title {
       font-weight: 500;
       margin-bottom: 2.2rem;
-      font-size: 2rem;
+      font-size: $size-large;
     }
 
     .posts_container {
@@ -28,9 +28,9 @@
       justify-content: center;
 
       .btn_load {
-        font-family: "Archivo", sans-serif;
+        font-family: 'Archivo', sans-serif;
         font-weight: 600;
-        background-color: $gray-light-color;
+
         color: $black-color;
         text-transform: uppercase;
         padding: 0.9rem 1.3rem 0.8rem 1.3rem;
@@ -56,7 +56,7 @@
 
           &::after,
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             bottom: 0;
             right: 0;

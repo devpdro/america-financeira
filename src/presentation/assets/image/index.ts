@@ -45,8 +45,10 @@ import pessoaComPapel from './pessoa-com-papel.jpeg'
 import duasPessoasOlhando from './duas-pessoas-olhando.webp'
 import ParceiroConversando from './parceiro-conversando.png'
 import PessoaParceiro from './pessoa-parceira.png'
+import empresa from './empresa.webp'
 
 const Images = {
+  empresa,
   duasPessoasOlhando,
   ParceiroConversando,
   PessoaParceiro,

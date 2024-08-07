@@ -22,21 +22,20 @@ export default function About() {
           property="og:description"
           content="Conheça a trajetória e conquistas da América Financeira ao longo dos anos. Descubra como estamos inovando e conquistando a confiança de nossos clientes."
         />
-
         <meta property="og:type" content="website" />
       </Head>
+      <Navbar />
       <IntroductionHeader
-        image={Images.pessoaComputadorCabecalho.src}
+        image={Images.empresa.src}
         imageWidth={100}
         imageHeight={98}
-        alt="Parcerias de Sucesso"
-        subtitle="Sobre nossas parcerias"
-        title="Parcerias de Sucesso"
-        paragraph="Na America Financeira, valorizamos as parcerias estratégicas que nos permitem oferecer soluções financeiras inovadoras e eficazes. Junte-se a nós e descubra os benefícios de ser um parceiro, incluindo acesso a uma ampla rede de clientes, suporte especializado e oportunidades de crescimento conjunto."
-        buttonPrimaryText="Seja nosso parceiro"
+        alt="Nossa História"
+        subtitle="Quem Somos"
+        title="Conheça Nossa História"
+        paragraph="A América Financeira é uma empresa dedicada a oferecer soluções financeiras que transformam vidas. Desde nossa fundação, temos nos comprometido com a inovação e a excelência no atendimento, conquistando a confiança de milhares de clientes ao longo dos anos. Com uma equipe de 500 colaboradores e 10 filiais espalhadas pelo país, estamos prontos para atender você onde quer que esteja."
+        buttonPrimaryText="Saiba mais"
         imagePosition="left"
       />
-      <Navbar />
       <Timeline />
       <Team />
       <Footer />

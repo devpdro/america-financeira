@@ -2,58 +2,58 @@ export const timeline = [
   {
     duration: '1 Ano',
     year: '2012',
-    title: 'América Financeira: Início das Operações',
+    title: 'Inauguração',
     description:
       'A América Financeira iniciou suas operações em 2012, oferecendo uma ampla gama de serviços financeiros para atender às necessidades de seus clientes.',
   },
   {
-    duration: '2 Ano',
+    duration: '1 Ano',
     year: '2014',
-    title: 'Expansão de Produtos',
+    title: 'Primeira filial em Itirapira',
     description:
-      'Em 2014, a América Financeira expandiu seu portfólio de produtos, introduzindo novas soluções financeiras e serviços personalizados para um público maior.',
+      'Em 2014, a América Financeira expandiu sua presença física com a inauguração da primeira filial em Itirapira, proporcionando um atendimento mais próximo e personalizado.',
   },
   {
     duration: '1 Ano',
     year: '2015',
-    title: 'Parcerias Estratégicas',
+    title: 'Primeiros Parceiros',
     description:
       'No ano de 2015, a América Financeira estabeleceu parcerias estratégicas com várias instituições financeiras, fortalecendo sua posição no mercado.',
   },
   {
-    duration: '2 Ano',
-    year: '2017',
-    title: 'Lançamento de Plataforma Online',
+    duration: '2 Anos',
+    year: '2016',
+    title: 'Implementação de Tecnologia Avançada',
     description:
-      'A América Financeira lançou sua plataforma online em 2017, permitindo que os clientes gerenciem suas finanças de forma mais conveniente e acessível.',
-  },
-  {
-    duration: '2 Ano',
-    year: '2019',
-    title: 'Rebranding e Novo Foco',
-    description:
-      'Em 2019, a empresa passou por um rebranding significativo e redefiniu seu foco para atender melhor às necessidades dos clientes e melhorar a experiência do usuário.',
-  },
-  {
-    duration: '2 Ano',
-    year: '2021',
-    title: 'Inovação em Produtos Financeiros',
-    description:
-      'A América Financeira introduziu inovações em seus produtos financeiros em 2021, com novas funcionalidades e melhorias para oferecer uma experiência de cliente excepcional.',
+      'Em 2016, a América Financeira investiu em tecnologia avançada para melhorar seus serviços e proporcionar uma experiência de cliente mais eficiente e segura.',
   },
   {
     duration: '1 Ano',
-    year: '2022',
-    title: 'Expansão Internacional',
+    year: '2017',
+    title: 'Primeiro 1 milhão',
     description:
-      'No ano de 2022, a América Financeira expandiu suas operações para mercados internacionais, ampliando seu alcance e oferecendo seus serviços a um público global.',
+      'Em 2017, a América Financeira alcançou a marca de 1 milhão de clientes atendidos, destacando seu compromisso com a excelência e a satisfação do cliente.',
   },
   {
-    duration: '2 Ano',
-    year: '2024',
-    title: 'Lançamento de Nova Plataforma de Serviços',
+    duration: '2 Anos',
+    year: '2018',
+    title: 'Expansão Regional',
     description:
-      'Em 2024, a América Financeira lançou uma nova plataforma de serviços, incorporando tecnologias avançadas e oferecendo soluções financeiras mais integradas e eficientes.',
+      'Entre 2018 e 2019, a América Financeira expandiu suas operações para diversas regiões do país, aumentando sua presença e acessibilidade para mais clientes.',
+  },
+  {
+    duration: '2 Anos',
+    year: '2020',
+    title: 'Digitalização Completa',
+    description:
+      'Em 2020, a América Financeira completou a digitalização de todos os seus serviços, oferecendo uma plataforma online completa para todos os tipos de transações financeiras.',
+  },
+  {
+    duration: '1 Ano',
+    year: '2024',
+    title: 'Lançamento do Método Hot',
+    description:
+      'Em 2024, a América Financeira lançou o Método Hot, uma nova abordagem inovadora para oferecer soluções financeiras mais integradas e eficientes.',
   },
 ]
 

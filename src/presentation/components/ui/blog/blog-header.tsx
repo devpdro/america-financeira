@@ -1,34 +1,83 @@
-import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+
+import { Button } from '@/presentation/components/form'
 
 import styles from './blog-header.module.scss'
 
-import { Images } from '@/presentation/assets'
-import Image from 'next/image'
-
-export type BlogHeader = {
-  imageWidth?: number
-  imageHeight?: number
+export type BlogHeaderProps = {
+  image: string
+  alt: string
+  title: string
+  subtitle: string
+  paragraph: string
+  buttonPrimaryText: string
+  imageWidth: number
+  imageHeight: number
+  imagePosition: 'left' | 'right'
 }
 
-const BlogHeader: React.FC<BlogHeader> = ({ imageWidth, imageHeight }) => {
+const BlogHeader: React.FC<BlogHeaderProps> = ({
+  image,
+  alt,
+  title,
+  subtitle,
+  paragraph,
+  buttonPrimaryText,
+  imageWidth,
+  imageHeight,
+  imagePosition,
+}) => {
   return (
     <section className={styles.container}>
-      <div className={styles['box-container']}>
-        <div className={styles['text-section']}>
-          <h3 className={styles.subtitle}>Tecnologia</h3>
-          <h1 className={styles.title}>Conheça os tipos de software e como cada um deles funciona</h1>
-          <p className={styles.paragraph}>25 de março de 2024</p>
-        </div>
-        <div className={styles['image-section']} style={{ width: `${100}%`, height: `${100}%` }}>
-          <Image
-            width={imageWidth}
-            height={imageHeight}
-            className={styles.img}
-            src={Images.cabecalhoInicial}
-            alt="Imagem cabeçalho blog"
-          />
-        </div>
-      </div>
+      {imagePosition === 'left' && (
+        <>
+          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${100}%` }}>
+            <Image
+              className={styles.img}
+              src={image}
+              alt={alt}
+              width={imageWidth}
+              height={imageHeight}
+              layout="responsive"
+            />
+          </div>
+          <div className={styles['text-section']}>
+            <h3 className={styles.subtitle}>{subtitle}</h3>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.paragraph}>{paragraph}</p>
+            <Link href="/formulario-seja-parceiro" target="_blank" aria-label={`Saiba mais sobre ${title}`}>
+              <Button typeStyle="btn1" text={buttonPrimaryText} width="300px" />
+            </Link>
+          </div>
+        </>
+      )}
+      {imagePosition === 'right' && (
+        <>
+          <div className={styles['text-section']}>
+            <h3 className={styles.subtitle}>{subtitle}</h3>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.paragraph}>{paragraph}</p>
+            <Link
+              href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!"
+              target="_blank"
+              aria-label={`Saiba mais sobre ${title}`}
+            >
+              <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
+            </Link>
+          </div>
+          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${40}%` }}>
+            <Image
+              className={styles.img}
+              src={image}
+              alt={alt}
+              width={imageWidth}
+              height={imageHeight}
+              layout="responsive"
+            />
+          </div>
+        </>
+      )}
     </section>
   )
 }

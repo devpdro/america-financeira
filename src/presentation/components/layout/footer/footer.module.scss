@@ -7,7 +7,7 @@
   .container-section {
     @include container-center(1380px, 0 auto);
     @include display-flex(flex-start, space-between);
-    padding: 4.075rem 2.075rem 6.075rem 2.075rem;
+    padding: 4.075rem 2.075rem 4.075rem 2.075rem;
     border-bottom: 1px solid $light-blue;
     @media (max-width: 884px) {
       flex-direction: column;

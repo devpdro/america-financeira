@@ -11,7 +11,7 @@ export const nav: NavItemProps[] = [
       },
       {
         label: 'Intranet',
-        link: '/Intranet',
+        link: '/intranet',
       },
       {
         label: 'Nossas Unidades',

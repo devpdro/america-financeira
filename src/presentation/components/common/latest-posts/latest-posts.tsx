@@ -4,6 +4,7 @@ import { Images } from '@/presentation/assets'
 import { CustomLink } from '@/utils'
 
 import styles from './latest-posts.module.scss'
+import Link from 'next/link'
 
 const LatestPosts = () => {
   return (
@@ -13,19 +14,22 @@ const LatestPosts = () => {
         Acompanhe nossas novidades <br /> e dicas!
       </h1>
       <div className={styles.news}>
-        <CustomLink isUnderConstruction={true} className={styles.link} href="" ariaLabel="Leia mais sobre Empréstimos">
+        <Link
+          className={styles.link}
+          href="como-fazer-uma-simulacao-para-emprestimo-fgts"
+          aria-label="Leia mais sobre Empréstimos"
+        >
           <div className={styles.article}>
             <Image className={styles.img} src={Images.pessoaComCelular} alt="Empréstimos" />
             <p className={styles.subtitle}>Empréstimos</p>
             <h1 className={styles.title}>Como fazer uma simulação para empréstimo FGTS</h1>
             <p className={styles.data}>11 de março de 2024</p>
           </div>
-        </CustomLink>
-        <CustomLink
+        </Link>
+        <Link
           className={styles.link}
-          href=""
-          isUnderConstruction={true}
-          ariaLabel="Leia mais sobre Investimentos"
+          href="/cdb-tudo-o-que-voce-precisa-saber-sobre-e-como-investir"
+          aria-label="Leia mais sobre Investimentos"
         >
           <div className={styles.article}>
             <Image className={styles.img} loading="lazy" src={Images.pessoaSozinha} alt="Investimentos" />
@@ -33,12 +37,11 @@ const LatestPosts = () => {
             <h1 className={styles.title}>CDB: Tudo o que você precisa saber sobre e como investir!</h1>
             <p className={styles.data}>21 de julho de 2024</p>
           </div>
-        </CustomLink>
-        <CustomLink
-          isUnderConstruction={true}
+        </Link>
+        <Link
           className={styles.link}
-          href=""
-          ariaLabel="Leia mais sobre Cartão de Crédito"
+          href="/pagar-boleto-no-cartao-de-credito-e-possivel"
+          aria-label="Leia mais sobre Cartão de Crédito"
         >
           <div className={styles.article}>
             <Image className={styles.img} loading="lazy" src={Images.cartaoDebito} alt="Cartão de Crédito" />
@@ -46,7 +49,7 @@ const LatestPosts = () => {
             <h1 className={styles.title}>Pagar boleto no cartão de crédito é possível?</h1>
             <p className={styles.data}>21 de janeiro de 2024</p>
           </div>
-        </CustomLink>
+        </Link>
       </div>
     </section>
   )
