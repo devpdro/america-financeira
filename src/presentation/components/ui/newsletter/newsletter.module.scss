@@ -1,0 +1,311 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.newsletterContainer {
+  color: $white-color;
+  padding: 0rem 2.075rem;
+  .newsletterContent {
+    background-color: $blue-strong-color;
+    border-radius: $radius-medium;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1.075rem 1.375rem;
+    .newsletterText {
+      .title {
+        font-size: $size-medium;
+        font-weight: $weight-medium;
+        line-height: 2.175rem;
+      }
+      .subtitle {
+        font-size: $size-extra-small;
+        font-weight: $weight-medium;
+        margin-bottom: 1.475rem;
+        line-height: 1.275rem;
+      }
+    }
+  }
+  .newsletterForm {
+    .form {
+      .inputGroup {
+        position: relative;
+        .input_error {
+          outline: 2px solid $red-color;
+        }
+        .input {
+          color: $black-color;
+          font-weight: $weight-medium;
+          transition: border-bottom 0.3s ease;
+          border-bottom: 1px solid $gray-color;
+          background-color: $white-color;
+          padding: 9px 10px 9px 10px;
+          margin-bottom: 1.075rem;
+          border-radius: 5px;
+          width: 100%;
+          @media (max-width: 994px) {
+            font-size: $size-small;
+          }
+          &:focus {
+            border-bottom: 1px solid $black-color;
+          }
+          &::placeholder {
+            font-size: 1.1rem;
+            color: #1c1c1cb9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 657px) {
+  .newsletterContainer {
+    margin: 5rem auto 4.5rem auto;
+
+    .newsletterContent {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 3.5rem 2rem 4rem 2rem;
+
+      .newsletterText {
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        .title {
+          font-size: 2.4rem;
+        }
+
+        .subtitle {
+          text-align: center;
+          font-size: 1.1rem;
+          width: 100%;
+        }
+      }
+
+      .newsletterForm {
+        .form {
+          padding-left: 0rem;
+
+          .label {
+            font-size: 1rem;
+          }
+
+          .searchIcon {
+            position: absolute;
+            top: 56%;
+            font-size: 1.4rem;
+            color: #1c1c1cb9;
+            left: 10px;
+            transform: translateY(-50%);
+          }
+
+          .inputGroup {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-top: 0.4rem;
+
+            .input_email {
+              margin-bottom: 1rem;
+              padding: 0.7rem 1rem 0.7rem 2.2rem;
+
+              &::placeholder {
+                font-size: 1rem;
+              }
+            }
+
+            .searchIcon {
+              position: absolute;
+              top: 23%;
+              font-size: 1.6rem;
+              color: #1c1c1cb9;
+              left: 10px;
+              transform: translateY(-50%);
+            }
+
+            .btn_submit {
+              padding: 1rem 1.1rem;
+              background-color: #ffff;
+              margin-left: 0rem;
+              border-radius: 5px;
+              font-size: 0.8rem;
+              font-weight: 500;
+              cursor: pointer;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .error {
+        font-size: 1rem !important;
+        margin-top: 0.5rem;
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 658px) and (max-width: 890px) {
+  .newsletterContainer {
+    margin: 5rem auto 4.5rem auto;
+
+    .newsletterContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 3.5rem 2rem 4rem 2rem;
+
+      .newsletterText {
+        width: 80%;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        .title {
+          font-size: 2.4rem;
+        }
+
+        .subtitle {
+          text-align: center;
+          font-size: 1.1rem;
+          width: 100%;
+        }
+      }
+
+      .newsletterForm {
+        .form {
+          padding-left: 0rem;
+
+          .label {
+            font-size: 1rem;
+          }
+
+          .searchIcon {
+            position: absolute;
+            top: 56%;
+            font-size: 1.4rem;
+            color: #1c1c1cb9;
+            left: 10px;
+            transform: translateY(-50%);
+          }
+
+          .inputGroup {
+            display: flex;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-top: 0.4rem;
+
+            .input_email {
+              padding: 0.7rem 1rem 0.7rem 2.2rem;
+
+              &::placeholder {
+                font-size: 1rem;
+              }
+            }
+
+            .searchIcon {
+              position: absolute;
+              top: 56%;
+              font-size: 1.6rem;
+              color: #1c1c1cb9;
+              left: 10px;
+              transform: translateY(-50%);
+            }
+
+            .btn_submit {
+              padding: 1rem 1.1rem;
+              background-color: #ffff;
+              margin-left: 1rem;
+              border-radius: 5px;
+              font-size: 0.8rem;
+              font-weight: 500;
+              cursor: pointer;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .error {
+        font-size: 1rem !important;
+        margin-top: 0.5rem;
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 891px) and (max-width: 1124px) {
+  .newsletterContainer {
+    margin: 6rem auto 4.5rem auto;
+
+    .newsletterContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 3rem 4rem 3rem;
+
+      .newsletterText {
+        padding-right: 1rem;
+        margin-bottom: 1rem;
+
+        .title {
+          font-size: 2.4rem;
+          padding-right: 1rem;
+        }
+
+        .subtitle {
+          font-size: 1.1rem;
+          width: 90%;
+        }
+      }
+
+      .newsletterForm {
+        .form {
+          .label {
+            font-size: 1rem;
+          }
+
+          .searchIcon {
+            position: absolute;
+            top: 56%;
+            font-size: 1.4rem;
+            color: #1c1c1cb9;
+            left: 10px;
+            transform: translateY(-50%);
+          }
+
+          .inputGroup {
+            .input_email {
+              padding: 0.7rem 1rem 0.7rem 2.2rem;
+
+              &::placeholder {
+                font-size: 1rem;
+              }
+            }
+
+            .btn_submit {
+              padding: 1rem 1.1rem;
+              background-color: #ffff;
+              margin-left: 0.5rem;
+              border-radius: 5px;
+              font-size: 0.8rem;
+              font-weight: 500;
+              cursor: pointer;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .error {
+        font-size: 1rem !important;
+        margin-top: 0.5rem;
+        color: #ff0000;
+      }
+    }
+  }
+}

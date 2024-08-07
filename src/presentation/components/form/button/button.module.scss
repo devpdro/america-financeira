@@ -44,3 +44,11 @@
     color: $white-color;
   }
 }
+
+.btn5 {
+  @include hover-pointer;
+  border-radius: 7px;
+  background-color: $white-color;
+  color: $black-color;
+  margin-top: 0.675rem;
+}
