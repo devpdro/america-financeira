@@ -58,4 +58,8 @@ export const nav: NavItemProps[] = [
       },
     ],
   },
+  {
+    label: 'Blog',
+    link: '/blog',
+  },
 ]

@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { StaticImageData } from 'next/image'
 import { useParams } from 'next/navigation'
 
-import { blogArticle } from '@/data/ui'
+import { blogArticle, icons } from '@/data/ui'
+import { Footer, Navbar } from '@/presentation/components/layout'
+import { Error } from '@/presentation/pages'
 
 import styles from '../../presentation/components/ui/blog/blog-post.module.scss'
-import { Footer, Navbar } from '@/presentation/components/layout'
 
 // Função para remover acentos e caracteres especiais de uma string
 const removeAccents = (str: any) => {
@@ -28,38 +29,6 @@ const removeAccents = (str: any) => {
     .replace(/[^a-z0-9-]/g, '')
 }
 
-type BlogPostItem = {
-  routes: string
-  title: string
-  subtitle: string
-  date: string
-  image: StaticImageData
-  paragraphOne: string
-  titleContentOne: string
-  paragraphTwo: string
-  titleContentTwo: string
-  titleListOne?: string
-  listOne?: string
-  titleListTwo?: string
-  listTwo?: string
-  titleListThree?: string
-  listThree?: string
-  titleListFour?: string
-  listFour?: string
-  titleListFive?: string
-  listFive?: string
-  titleSecond?: string
-  titleListSix?: string
-  listSix?: string
-  titleListSeven?: string
-  listSeven?: string
-  titleListEight?: string
-  listEight?: string
-  titleConclusion: string
-  paragraphThree: string
-  paragraphFour: string
-}
-
 const BlogPost: React.FC = () => {
   const params = useParams()
   const slug = params ? params.slug : ''
@@ -78,7 +47,7 @@ const BlogPost: React.FC = () => {
     return (
       <div>
         {sections.map((section, index) => (
-          <span key={index}>
+          <span className={styles.span} key={index}>
             {index > 0 && ' > '}
             <Link className={`${styles.link} `} href={section.url}>
               <span>{section.title}</span>
@@ -90,18 +59,25 @@ const BlogPost: React.FC = () => {
   }
 
   if (!post) {
-    return <div>Post não encontrado</div>
+    return <Error />
   }
 
   return (
     <>
       <Navbar />
       <div className={styles.container}>
-        <div className={styles.routes}>{generatePath()}</div>
         <div className={styles.content_container}>
           <div className={styles.texts_box}>
+            <div className={styles.routes}>{generatePath()}</div>
             <p className={styles.subtitle}>{post.subtitle}</p>
             <h1 className={styles.title}>{post.title}</h1>
+            <div className={styles['icons-section']}>
+              {icons.map(({ icon: Icon, link }, index) => (
+                <a key={index} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Link para ${link}`}>
+                  <Icon className={styles.icon} />
+                </a>
+              ))}{' '}
+            </div>
             <p className={styles.date}>{post.date}</p>
           </div>
           <div className={styles.img_box}>
@@ -109,38 +85,70 @@ const BlogPost: React.FC = () => {
           </div>
         </div>
         <div className={styles.texts_container}>
-          <p className={styles.paragraph_post}>{post.paragraphOne}</p>
-          <h1 className={styles.title_post}>{post.titleContentOne}</h1>
-          <p className={styles.paragraph_post}>{post.paragraphTwo}</p>
-          <h1 className={styles.title_post}>{post.titleContentTwo}</h1>
-          <ol className={styles.list_box}>
-            {post.titleListOne && (
-              <li>
-                <span>{post.titleListOne}</span>
-                {post.listOne}
-              </li>
-            )}
-            {post.titleListTwo && (
-              <li>
-                <span>{post.titleListTwo}</span>
-                {post.listTwo}
-              </li>
-            )}
-            {post.titleListThree && (
-              <li>
-                <span>{post.titleListThree}</span>
-                {post.listThree}
-              </li>
-            )}
-            {post.titleListFour && (
-              <li>
-                <span>{post.titleListFour}</span>
-                {post.listFour}
-              </li>
-            )}
-          </ol>
-          <h1 className={styles.title_post}>{post.titleConclusion}</h1>
-          <p className={styles.paragraph_post}>{post.paragraphThree}</p>
+          <div className={styles.content_section}>
+            <p className={styles.paragraph_post}>{post.paragraphOne}</p>
+            <h1 className={styles.title_post}>{post.titleContentOne}</h1>
+            <p className={styles.paragraph_post}>{post.paragraphTwo}</p>
+            <h1 className={styles.title_post}>{post.titleContentTwo}</h1>
+            <ol className={styles.list_box}>
+              {post.titleListOne && (
+                <li>
+                  <span>{post.titleListOne}</span>
+                  {post.listOne}
+                </li>
+              )}
+              {post.titleListTwo && (
+                <li>
+                  <span>{post.titleListTwo}</span>
+                  {post.listTwo}
+                </li>
+              )}
+              {post.titleListThree && (
+                <li>
+                  <span>{post.titleListThree}</span>
+                  {post.listThree}
+                </li>
+              )}
+              {post.titleListFour && (
+                <li>
+                  <span>{post.titleListFour}</span>
+                  {post.listFour}
+                </li>
+              )}
+              {post.titleListFive && (
+                <li>
+                  <span>{post.titleListFive}</span>
+                  {post.listFive}
+                </li>
+              )}
+              {post.titleListSix && (
+                <li>
+                  <span>{post.titleListSix}</span>
+                  {post.listSix}
+                </li>
+              )}
+              {post.titleListSeven && (
+                <li>
+                  <span>{post.titleListSeven}</span>
+                  {post.listSeven}
+                </li>
+              )}
+              {post.titleListEight && (
+                <li>
+                  <span>{post.titleListEight}</span>
+                  {post.listEight}
+                </li>
+              )}
+            </ol>
+            <h1 className={styles.title_post}>{post.titleConclusion}</h1>
+            <p className={styles.paragraph_post}>{post.paragraphThree}</p>
+            {post.paragraphFour && <p className={styles.paragraph_post}>{post.paragraphFour}</p>}
+          </div>
+          <div className={styles.newsletter_section}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sint dolore itaque temporibus! Veritatis, nam
+            perspiciatis! Nobis alias corporis vero. Suscipit unde quasi qui dolores possimus architecto inventore
+            voluptatum assumenda.
+          </div>
         </div>
       </div>
       <Footer />

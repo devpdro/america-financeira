@@ -1,10 +1,12 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
 
+.span {
+  color: $gray-color;
+}
 .link {
   color: $black-color;
   transition: color 0.3s ease;
-
   &::after,
   &::before {
     content: '';
@@ -24,94 +26,102 @@
   }
 }
 .container {
-  @include container-center(1220px, 0 auto 7.2rem auto);
+  padding: 5.575rem 0 0 2.075rem;
 }
 .routes {
-  @include container-center(1220px, 0 auto);
   @include hover-pointer;
-  font-size: $size-small;
-  padding: 7.275rem 0 0 0;
+  font-size: $size-extra-small;
+  font-weight: $weight-normal;
+  border-bottom: 1px soldi red;
+  text-decoration: underline;
 }
 .content_container {
-  max-width: 880px;
   display: flex;
   padding: 0 2rem;
   align-items: center;
-  justify-content: center;
-  margin: 4rem auto 4.5rem auto;
+  justify-content: space-between;
+  margin: 0 auto 4.075rem auto;
 
   .texts_box {
     width: 100%;
-
     .subtitle {
-      font-size: 1rem;
-
-      font-weight: 400;
+      font-size: $size-medium;
+      font-weight: $weight-medium;
+      margin-top: 0.975rem;
     }
-
     .title {
-      margin: 1rem 0 1rem 0;
+      font-size: $size-large;
+      font-weight: $weight-medium;
       padding-right: 4rem;
-      font-size: 2rem;
-
-      line-height: 2.4rem;
-      font-weight: 500;
+      line-height: 2.875rem;
+      margin: 0.475rem 0 1.375rem 0;
       width: 100%;
       transition: all 0.3s ease;
       overflow: hidden;
       position: relative;
     }
-
     .date {
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: $size-extra-small;
+      font-weight: $weight-medium;
+    }
+    .icons-section {
+      @include display-flex(flex-start, flex-start);
+      gap: 2.575rem;
+      margin: 2.175rem 0 1.975rem 0;
+      .icon {
+        background-color: $gray-light-color;
+        color: $blue-strong-color;
+        font-size: 2.275rem;
+        border-radius: 50%;
+        padding: 0.575rem;
+        @media (max-width: 880px) {
+          font-size: 2.375rem;
+          padding: 0.475rem;
+        }
+      }
     }
   }
 
   .img_box {
     width: 100%;
-
     .img {
-      border-radius: 7px;
       width: 100%;
-      height: 290px;
+      height: 500px;
     }
   }
 }
-
 .texts_container {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 500;
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 0 2rem;
-
-  .title_post {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    margin-top: 1rem;
-  }
-
-  .paragraph_post {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-  }
-
-  .list_box {
-    padding-left: 2rem;
-
-    li {
-      margin: 0.1rem 0 0.1rem 0;
+  @include display-flex;
+  .content_section {
+    width: 70%;
+    .title_post {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      margin-top: 1rem;
+    }
+    .paragraph_post {
       font-size: 1rem;
       font-weight: 400;
-      line-height: 1.4rem;
+      line-height: 1.5rem;
+    }
+    .list_box {
+      padding-left: 2rem;
+      li {
+        margin: 0.1rem 0 0.1rem 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4rem;
 
-      span {
-        font-weight: 700;
+        span {
+          font-weight: 700;
+        }
       }
     }
+  }
+  .newsletter_section {
+    width: 30%;
   }
 }
 

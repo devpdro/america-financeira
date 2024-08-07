@@ -7,6 +7,7 @@ import { useParams } from 'next/navigation'
 import { blogArticle } from '@/data/ui'
 
 import styles from './blog-post.module.scss'
+import { Error } from '@/presentation/pages'
 
 // Função para remover acentos e caracteres especiais de uma string
 const removeAccents = (str: any) => {
@@ -59,7 +60,7 @@ type BlogPostItem = {
   paragraphFour: string
 }
 
-const BlogPost: React.FC = () => {
+const BlogPostPage: React.FC = () => {
   const { slug } = useParams() as { slug?: string }
 
   const post = blogArticle.find((post) => removeAccents(post.routes) === removeAccents(slug || ''))
@@ -88,15 +89,15 @@ const BlogPost: React.FC = () => {
   }
 
   if (!post) {
-    return <div>Post não encontrado</div>
+    return <Error />
   }
 
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.routes}>{generatePath()}</div>
         <div className={styles.content_container}>
           <div className={styles.texts_box}>
+            <h1>Title</h1>
             <p className={styles.subtitle}>{post.subtitle}</p>
             <h1 className={styles.title}>{post.title}</h1>
             <p className={styles.date}>{post.date}</p>
@@ -106,42 +107,51 @@ const BlogPost: React.FC = () => {
           </div>
         </div>
         <div className={styles.texts_container}>
-          <p className={styles.paragraph_post}>{post.paragraphOne}</p>
-          <h1 className={styles.title_post}>{post.titleContentOne}</h1>
-          <p className={styles.paragraph_post}>{post.paragraphTwo}</p>
-          <h1 className={styles.title_post}>{post.titleContentTwo}</h1>
-          <ol className={styles.list_box}>
-            {post.titleListOne && (
-              <li>
-                <span>{post.titleListOne}</span>
-                {post.listOne}
-              </li>
-            )}
-            {post.titleListTwo && (
-              <li>
-                <span>{post.titleListTwo}</span>
-                {post.listTwo}
-              </li>
-            )}
-            {post.titleListThree && (
-              <li>
-                <span>{post.titleListThree}</span>
-                {post.listThree}
-              </li>
-            )}
-            {post.titleListFour && (
-              <li>
-                <span>{post.titleListFour}</span>
-                {post.listFour}
-              </li>
-            )}
-          </ol>
-          <h1 className={styles.title_post}>{post.titleConclusion}</h1>
-          <p className={styles.paragraph_post}>{post.paragraphThree}</p>
+          <div className={styles.content_section}>
+            <p className={styles.paragraph_post}>{post.paragraphOne}</p>
+            <h1 className={styles.title_post}>{post.titleContentOne}</h1>
+            <p className={styles.paragraph_post}>{post.paragraphTwo}</p>
+            <h1 className={styles.title_post}>{post.titleContentTwo}</h1>
+            <ol className={styles.list_box}>
+              {post.titleListOne && (
+                <li>
+                  <span>{post.titleListOne}</span>
+                  {post.listOne}
+                </li>
+              )}
+              {post.titleListTwo && (
+                <li>
+                  <span>{post.titleListTwo}</span>
+                  {post.listTwo}
+                </li>
+              )}
+              {post.titleListThree && (
+                <li>
+                  <span>{post.titleListThree}</span>
+                  {post.listThree}
+                </li>
+              )}
+              {post.titleListFour && (
+                <li>
+                  <span>{post.titleListFour}</span>
+                  {post.listFour}
+                </li>
+              )}
+            </ol>
+            <h1 className={styles.title_post}>{post.titleConclusion}</h1>
+            <p className={styles.paragraph_post}>{post.paragraphThree}</p>
+          </div>
+          <div>
+            <h1>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem non suscipit deserunt eaque
+              amet, ipsam sequi consequatur, sapiente, eius soluta qui ullam in id animi expedita rerum! Porro,
+              sapiente.
+            </h1>
+          </div>
         </div>
       </div>
     </>
   )
 }
 
-export default BlogPost
+export default BlogPostPage
