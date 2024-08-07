@@ -44,7 +44,7 @@ export default function PersonalLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo
-        image={Images.pessoaOlhandoCelular.src}
+        image={Images.pessoaComPapel.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Pessoal?"
@@ -60,7 +60,12 @@ export default function PersonalLoan() {
             Seu empréstimo pessoal <br /> ideal está aqui
           </>
         }
-        subtitle="Oferecemos as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais."
+        subtitle={
+          <>
+            Oferecemos as melhores condições e benefícios para atender todas suas <br /> necessidades financeiras
+            pessoais.
+          </>
+        }
         items={personalLoanBenefits}
       />
       <PartnersBanks />

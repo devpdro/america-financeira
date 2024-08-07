@@ -47,7 +47,7 @@ export default function FgtsLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo
-        image={Images.emprestimoFgts.src}
+        image={Images.duasPessoasOlhando.src}
         imageWidth={100}
         imageHeight={98}
         alt="Sobre o Empréstimo FGTS"

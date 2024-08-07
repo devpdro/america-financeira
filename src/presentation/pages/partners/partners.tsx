@@ -27,9 +27,9 @@ export default function Partners() {
       </Head>
       <Navbar />
       <IntroductionHeader
-        image={Images.pessoaComputadorCabecalho.src}
+        image={Images.PessoaParceiro.src}
         imageWidth={100}
-        imageHeight={98}
+        imageHeight={40}
         alt="Parcerias de Sucesso"
         subtitle="Sobre nossas parcerias"
         title="Parcerias de Sucesso"
@@ -43,9 +43,12 @@ export default function Partners() {
             Por que ser um parceiro da <br /> América Financeira?
           </>
         }
-        subtitle="Descubra os benefícios exclusivos de se tornar um parceiro da America Financeira e impulsione seu negócio."
-        imageWidth={100}
-        imageHeight={100}
+        subtitle={
+          <>
+            Descubra os benefícios exclusivos de se tornar um parceiro da <br /> America Financeira e impulsione seu
+            negócio.
+          </>
+        }
         items={benefitsPartners}
       />
       <PartnersBenefits />

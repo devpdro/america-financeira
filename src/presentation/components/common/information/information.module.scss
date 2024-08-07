@@ -16,13 +16,13 @@
   }
   .paragraph {
     @include container-center(980px, 0 auto);
-    font-size: $size-extra-small;
+    font-size: $size-small;
     font-weight: $weight-medium;
     line-height: 1.275rem;
     margin-bottom: 2.075rem;
     text-align: center;
     @media (max-width: 880px) {
-      font-size: $size-extra-small;
+      font-size: $size-small;
     }
   }
 }

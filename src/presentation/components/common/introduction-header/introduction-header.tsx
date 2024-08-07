@@ -66,7 +66,7 @@ const IntroductionHeader: React.FC<IntroductionHeaderProps> = ({
               <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
             </Link>
           </div>
-          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>
+          <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${40}%` }}>
             <Image
               className={styles.img}
               src={image}

@@ -13,6 +13,9 @@
   }
   .image-section {
     width: 100%;
+    @media (min-width: 881px) and (max-width: 1125px) {
+      display: none;
+    }
     .img {
       border-radius: $radius-medium;
     }

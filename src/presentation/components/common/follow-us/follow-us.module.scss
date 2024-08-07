@@ -33,12 +33,12 @@
     }
   }
   .paragraph {
-    font-size: $size-extra-small;
+    font-size: $size-small;
     font-weight: $weight-normal;
     margin-bottom: 2.475rem;
     line-height: 1.075rem;
     @media (max-width: 880px) {
-      font-size: $size-extra-small;
+      font-size: $size-small;
       line-height: 1.175rem;
       margin-bottom: 1.475rem;
     }

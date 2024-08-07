@@ -2,9 +2,9 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  background: $blue-strong-color;
+  background: $light-blue;
   position: relative;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
   .box-section {
     @include container-center(1180px, 9.575rem auto 12.575rem auto);
     padding: 0 0.975rem;
@@ -42,7 +42,7 @@
     }
     .numbers-section {
       @include display-flex;
-      background: $gray-light-color;
+      background-color: $white-color;
       border-radius: $radius-medium;
       flex-direction: column;
       text-align: center;

@@ -43,7 +43,7 @@ export default function PayrollLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo
-        image={Images.pessoaComCelularSaude.src}
+        image={Images.idosoConversandoComMulher.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Consignado?"
@@ -54,8 +54,18 @@ export default function PayrollLoan() {
         imagePosition="left"
       />
       <Benefits
-        title={<>Benefícios do empréstimo consignado para você</>}
-        subtitle="Descubra como o empréstimo consignado pode facilitar sua vida financeira com taxas baixas e condições vantajosas."
+        title={
+          <>
+            Benefícios do empréstimo
+            <br /> consignado para você
+          </>
+        }
+        subtitle={
+          <>
+            Descubra como o empréstimo consignado pode facilitar sua vida <br /> financeira com taxas baixas e condições
+            vantajosas.
+          </>
+        }
         items={benefitsConsignedLoan}
       />
       <PartnersBanks />

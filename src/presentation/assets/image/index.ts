@@ -11,16 +11,13 @@ import cabecalhoInicial from './cabecalho-inicial.webp'
 import carro from './carro.webp'
 import cartaoDebito from './cartao-debito.webp'
 import cartaoCredito from './cartao-credito.webp'
-import casalSentado from './casal-sentado.webp'
 import crescimentoEmpresa from './crescimento-empresa.webp'
 import diversificacao from './diversificacao.webp'
 import divida from './divida.webp'
-import doisIdosos from './dois-idosos.webp'
 import educacao from './educacao.webp'
 import emergencia from './emergencia.webp'
 import emprestimoConsignadoDuasPessoas from './emprestimo-consginado-duas-pessoas.webp'
 import emprestimoConsignado from './emprestimo-consignado.webp'
-import emprestimoFgts from './emprestimo-fgts.webp'
 import impulsioneReceita from './impulsione-receita.webp'
 import investimentos from './investimentos.webp'
 import logoAmerica from './logo-america.webp'
@@ -31,14 +28,10 @@ import parceiro from './parceiro.webp'
 import pessoaComCelular from './pessoa-com-celular.webp'
 import pessoaComTablet from './pessoa-com-tablet.webp'
 import pessoaComputadorCabecalho from './pessoa-computador-cabecalho.webp'
-import pessoaOlhandoCelular from './pessoa-olhando-celular.webp'
 import pessoaSozinha from './pessoa-sozinha.webp'
-import qrCodeTelefone from './qr-code-telefone.webp'
-import qrCodeWhats from './qr-code-whats.webp'
 import saude from './saude.webp'
 import sonho from './sonho.webp'
 import suporte from './suporte.webp'
-import tresPessoasSimulacao from './tres-pessoas-simulacao.webp'
 import trocarCarro from './trocar-de-carro.webp'
 import viagens from './viagens.webp'
 import bancoBrasil from './banco-brasil.webp'
@@ -46,8 +39,20 @@ import conteConosco from './conte-conosco.webp'
 import duasPessoasConversando from './duas-pessoas-conversando.webp'
 import emergencias from './emergencia.webp'
 import pessoaComCelularSaude from './pessoa-com-celular.webp'
+import casa from './casa.webp'
+import idosoConversandoComMulher from './idoso-conversando-com-mulher.webp'
+import pessoaComPapel from './pessoa-com-papel.jpeg'
+import duasPessoasOlhando from './duas-pessoas-olhando.webp'
+import ParceiroConversando from './parceiro-conversando.png'
+import PessoaParceiro from './pessoa-parceira.png'
 
 const Images = {
+  duasPessoasOlhando,
+  ParceiroConversando,
+  PessoaParceiro,
+  idosoConversandoComMulher,
+  pessoaComPapel,
+  casa,
   aumentarLucro,
   bancoBanrisul,
   bancoBradesco,
@@ -61,16 +66,13 @@ const Images = {
   carro,
   cartaoDebito,
   cartaoCredito,
-  casalSentado,
   crescimentoEmpresa,
   diversificacao,
   divida,
-  doisIdosos,
   educacao,
   emergencia,
   emprestimoConsignadoDuasPessoas,
   emprestimoConsignado,
-  emprestimoFgts,
   impulsioneReceita,
   investimentos,
   logoAmerica,
@@ -81,14 +83,10 @@ const Images = {
   pessoaComCelular,
   pessoaComTablet,
   pessoaComputadorCabecalho,
-  pessoaOlhandoCelular,
   pessoaSozinha,
-  qrCodeTelefone,
-  qrCodeWhats,
   saude,
   sonho,
   suporte,
-  tresPessoasSimulacao,
   trocarCarro,
   viagens,
   bancoBrasil,
