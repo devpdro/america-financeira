@@ -40,7 +40,7 @@ export const blogArticle: BlogPostItem[] = [
     routes: 'como-fazer-uma-simulacao-para-emprestimo-fgts',
     subtitle: 'Empréstimos',
     title: 'Como fazer uma simulação para empréstimo FGTS',
-    date: '11 de março de 2024',
+    date: 'Criado em 11 de março de 2024',
     image: Images.pessoaComCelular,
     paragraphOne:
       'Empréstimos podem ser a solução financeira para diversas situações, desde pagar dívidas até realizar grandes sonhos. Vamos explorar os diferentes tipos de empréstimos e suas principais características.',
@@ -84,7 +84,7 @@ export const blogArticle: BlogPostItem[] = [
     routes: 'cdb-tudo-o-que-voce-precisa-saber-sobre-e-como-investir',
     subtitle: 'Investimentos',
     title: 'CDB: Tudo o que você precisa saber sobre e como investir!',
-    date: '21 de julho de 2024',
+    date: 'Criado em 21 de julho de 2024',
     image: Images.pessoaSozinha,
     paragraphOne:
       'Certificados de Depósito Bancário (CDB) são uma opção de investimento segura e rentável. Entenda como funcionam e como investir.',
@@ -128,7 +128,7 @@ export const blogArticle: BlogPostItem[] = [
     routes: 'pagar-boleto-com-cartao-de-credito-e-possivel',
     subtitle: 'Cartão de Crédito',
     title: 'Pagar boleto com cartão de crédito é possível?',
-    date: '21 de janeiro de 2024',
+    date: 'Criado em 21 de janeiro de 2024',
     image: Images.cartaoDebito,
     paragraphOne:
       'Pagar boletos com cartão de crédito pode ser uma alternativa conveniente, especialmente em momentos de emergência. Saiba como funciona e se vale a pena.',
@@ -172,7 +172,7 @@ export const blogArticle: BlogPostItem[] = [
     routes: 'como-investir-no-tesouro-direto-guia-completo',
     subtitle: 'Investimentos',
     title: 'Como investir no Tesouro Direto: Guia completo',
-    date: '15 de março de 2024',
+    date: 'Criado em 15 de março de 2024',
     image: Images.pessoaSozinha,
     paragraphOne:
       'Investir no Tesouro Direto é uma das formas mais seguras e acessíveis de aplicar seu dinheiro. Vamos entender como funciona e quais são as opções disponíveis.',
@@ -214,7 +214,7 @@ export const blogArticle: BlogPostItem[] = [
     routes: 'como-economizar-no-dia-a-dia-dicas-praticas',
     subtitle: 'Economia',
     title: 'Como economizar no dia a dia: Dicas práticas',
-    date: '20 de abril de 2024',
+    date: 'Criado em 20 de abril de 2024',
     image: Images.pessoaSozinha,
     paragraphOne:
       'Economizar no dia a dia pode parecer difícil, mas com algumas mudanças de hábitos é possível guardar um bom dinheiro. Veja nossas dicas práticas.',
@@ -258,7 +258,7 @@ export const blogArticle: BlogPostItem[] = [
     routes: 'cartao-de-credito-dicas-para-usar-de-forma-saudavel',
     subtitle: 'Finanças Pessoais',
     title: 'Cartão de Crédito: Dicas para usar de forma saudável',
-    date: '15 de abril de 2024',
+    date: 'Criado em 15 de abril de 2024',
     image: Images.pessoaSozinha,
     paragraphOne:
       'O cartão de crédito pode ser um ótimo aliado nas finanças pessoais, mas é importante saber usá-lo corretamente para evitar dívidas. Confira nossas dicas.',
