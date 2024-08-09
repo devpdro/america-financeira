@@ -17,7 +17,8 @@ export default function Blog() {
   return (
     <>
       <Head>
-        <title>Blog - América Financeira</title>
+        <title>Blog da América Financeira: sua parceira em cada Passo Financeiro</title>
+
         <meta
           name="description"
           content="Explore o blog da América Financeira para artigos, dicas e novidades sobre finanças, investimentos, e muito mais. Atualizado regularmente para manter você informado."
