@@ -22,6 +22,7 @@ export default function About() {
           property="og:description"
           content="Conheça a trajetória e conquistas da América Financeira ao longo dos anos. Descubra como estamos inovando e conquistando a confiança de nossos clientes."
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/quem-somos" />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
@@ -33,7 +34,7 @@ export default function About() {
         subtitle="Quem Somos"
         title="Conheça Nossa História"
         paragraph="A América Financeira é uma empresa dedicada a oferecer soluções financeiras que transformam vidas. Desde nossa fundação, temos nos comprometido com a inovação e a excelência no atendimento, conquistando a confiança de milhares de clientes ao longo dos anos. Com uma equipe de 500 colaboradores e 10 filiais espalhadas pelo país, estamos prontos para atender você onde quer que esteja."
-        buttonPrimaryText="Saiba mais"
+        buttonPrimaryText="Seja nosso parceiro"
         imagePosition="left"
       />
       <Timeline />

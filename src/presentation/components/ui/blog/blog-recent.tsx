@@ -37,7 +37,7 @@ const BlogRecent: React.FC = () => {
   return (
     <section className={`${page.container}`}>
       <div className={`${page.results_container}`}>
-        <h1 className={page.title}>{searchQuery ? 'Resultados' : 'Mais recentes'}</h1>
+        <h1 className={page.title}>{searchQuery ? 'Resultados' : 'Últimos posts'}</h1>
         <PostsList posts={filteredPosts.slice(0, visiblePosts)} />
         {filteredPosts.length > visiblePosts && (
           <button className={page.btn_load} onClick={loadMorePosts}>

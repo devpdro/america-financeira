@@ -36,8 +36,6 @@ const BlogPost: React.FC = () => {
 
   const post = blogArticle.find((post) => removeAccents(post.routes) === removeAccents(slug || ''))
 
-  const pageTitle = post ? post.title : 'Blog Matte: Novidades, Dicas e Tendências em Diversas Áreas'
-
   const sections = [
     { title: 'Home', url: '/' },
     { title: 'Blog', url: '/blog' },

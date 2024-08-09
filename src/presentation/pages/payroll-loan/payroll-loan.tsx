@@ -28,6 +28,7 @@ export default function PayrollLoan() {
           property="og:description"
           content="O empréstimo consignado é a solução ideal para quem busca crédito com segurança e taxas de juros baixas. Simule agora e veja como é fácil."
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/emprestimo-consignado" />
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>

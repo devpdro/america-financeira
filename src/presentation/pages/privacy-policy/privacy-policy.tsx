@@ -24,6 +24,7 @@ export default function PrivacyPolicy() {
           property="og:description"
           content="Leia a Política de Privacidade da América Financeira e saiba como protegemos e utilizamos suas informações pessoais."
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/politica-de-privacidade" />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />

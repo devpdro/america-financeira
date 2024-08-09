@@ -28,6 +28,7 @@ export default function PersonalLoan() {
           property="og:description"
           content="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/emprestimo-pessoal" />
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>

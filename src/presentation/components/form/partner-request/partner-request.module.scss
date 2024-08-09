@@ -4,7 +4,7 @@
 .container {
   @include display-flex(center, space-around);
   background-color: $blue-color;
-  padding: 8.075rem 2.075rem 3.075rem 0.075rem;
+  padding: 8.075rem 2.075rem 3.075rem 2.075rem;
   @media (max-width: 1080px) {
     @include display-flex(center, center);
     padding: 8.075rem 1.075rem 3.075rem 1.075rem;

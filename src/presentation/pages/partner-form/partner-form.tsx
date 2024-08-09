@@ -23,6 +23,7 @@ export default function PartnerForm() {
           property="og:description"
           content="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/formulario-seja-parcerio" />
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />

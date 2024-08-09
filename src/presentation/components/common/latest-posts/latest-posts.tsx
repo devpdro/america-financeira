@@ -16,11 +16,11 @@ const LatestPosts = () => {
       <div className={styles.news}>
         <Link
           className={styles.link}
-          href="como-fazer-uma-simulacao-para-emprestimo-fgts"
+          href="/pagar-boleto-com-cartao-de-credito-e-possivel"
           aria-label="Leia mais sobre Empréstimos"
         >
           <div className={styles.article}>
-            <Image className={styles.img} src={Images.pessoaComCelular} alt="Empréstimos" />
+            <Image width={100} height={100} className={styles.img} src={Images.pessoaComCelular} alt="Empréstimos" />
             <p className={styles.subtitle}>Empréstimos</p>
             <h1 className={styles.title}>Como fazer uma simulação para empréstimo FGTS</h1>
             <p className={styles.data}>11 de março de 2024</p>
@@ -28,7 +28,7 @@ const LatestPosts = () => {
         </Link>
         <Link
           className={styles.link}
-          href="/cdb-tudo-o-que-voce-precisa-saber-sobre-e-como-investir"
+          href="/como-economizar-no-dia-a-dia-dicas-praticas"
           aria-label="Leia mais sobre Investimentos"
         >
           <div className={styles.article}>
@@ -40,7 +40,7 @@ const LatestPosts = () => {
         </Link>
         <Link
           className={styles.link}
-          href="/pagar-boleto-no-cartao-de-credito-e-possivel"
+          href="/como-fazer-uma-simulacao-para-emprestimo-fgts"
           aria-label="Leia mais sobre Cartão de Crédito"
         >
           <div className={styles.article}>

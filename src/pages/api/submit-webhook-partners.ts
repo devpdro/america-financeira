@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
-      const response = await fetch('https://n8n.americaintegracao.com.br/webhook/callback_site_america', {
+      const response = await fetch('https://n8n.americaintegracao.com.br/webhook/callback_partners', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

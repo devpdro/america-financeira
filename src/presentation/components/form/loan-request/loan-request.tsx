@@ -38,7 +38,7 @@ const LoanRequest: React.FC = () => {
 
   const onSubmit = async (data: LoanRequestProps) => {
     try {
-      const response = await fetch('/api/submit-webhook', {
+      const response = await fetch('/api/submit-webhook-partners', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

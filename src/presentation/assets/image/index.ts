@@ -51,8 +51,10 @@ import logoAmericaPartners from './logo-america-partners.png'
 import pessoaCelular from './pessoa-celular-blog.jpg'
 import PessoaDicas from './dicas-blog.jpg'
 import TesouroDireto from './tesouro-direto.jpg'
+import headerBlog from './header-blog.jpg'
 
 const Images = {
+  headerBlog,
   PessoaDicas,
   TesouroDireto,
   pessoaCelular,

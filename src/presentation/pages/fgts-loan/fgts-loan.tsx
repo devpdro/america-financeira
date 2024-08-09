@@ -29,6 +29,7 @@ export default function FgtsLoan() {
           property="og:description"
           content="O empréstimo FGTS permite utilizar o saldo do Fundo de Garantia como garantia, oferecendo condições especiais e flexibilidade para o pagamento. Simule agora!"
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/emprestimo-fgts" />
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>

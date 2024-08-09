@@ -4,7 +4,6 @@
 .container {
   background: $light-blue;
   position: relative;
-
   .box-section {
     @include container-center(1180px, 9.575rem auto 12.575rem auto);
     padding: 0 0.975rem;

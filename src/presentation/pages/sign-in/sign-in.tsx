@@ -18,6 +18,7 @@ export default function SignIn() {
           property="og:description"
           content="Acesse sua conta na América Financeira para gerenciar seus serviços financeiros de forma segura e prática."
         />
+        <meta property="og:url" content="https://www.americafinanceira.com.br/login" />
         <meta property="og:type" content="website" />
       </Head>
       <Login />
