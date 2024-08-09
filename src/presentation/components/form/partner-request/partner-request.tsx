@@ -70,7 +70,7 @@ const PartnerRequest: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles['bg-blue']}>a</div>
+      <Image className={styles.logo} src={Images.logoAmericaPartners} alt="Logo América Financeira" />
       <form
         onSubmit={handleSubmit(onSubmit)}
         className={styles.form}
@@ -78,7 +78,6 @@ const PartnerRequest: React.FC = () => {
       >
         <fieldset>
           <div className={styles['box-title']}>
-            <Image className={styles.img} src={Images.logoAmerica} alt="Logo América Financeira" />
             <div>
               <p className={styles['text-america']}>América Financeira</p>
               <legend className={styles.title} aria-label="Título do Formulário">

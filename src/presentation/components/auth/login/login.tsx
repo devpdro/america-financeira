@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Image from 'next/image'
@@ -43,11 +45,12 @@ const Login: React.FC = () => {
 
   return (
     <section className={styles.container}>
+      <div className={styles['bg-blue']}></div>
       <div className={styles['box-container']}>
-        <Image className={styles.logo} src={Images.logoAmerica} alt="Logo América Financeira" />
-        <p className={styles.subtitle}>
-          Pra acessar <br /> a Área dos Colaboradores, precisamos <br /> do seu e-mail e senha.
-        </p>
+        <Link href="/">
+          <Image className={styles.logo} src={Images.logoAmericaAzul} alt="Logo América Financeira" />
+        </Link>
+        <p className={styles.subtitle}>Pra acessar a Área dos Colaboradores, precisamos do seu e-mail e senha.</p>
         <form className={styles['form-section']} onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register('email', {

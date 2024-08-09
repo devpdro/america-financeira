@@ -25,7 +25,7 @@ export default function Navbar() {
       <section ref={animationParent} className={styles['left-section']} aria-label="Seção de Navegação Esquerda">
         <Link href="/" legacyBehavior>
           <a aria-label="Logo América Financeira">
-            <Image src={Images.logoWhite} alt="Logo América Financeira" className={styles.logo} />
+            <Image src={Images.logoAmericaAzul} alt="Logo América Financeira" className={styles.logo} />
           </a>
         </Link>
         {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}

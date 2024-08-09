@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import { PartnerRequest } from '@/presentation/components/form'
+import { Navbar } from '@/presentation/components/layout'
 
 export default function PartnerForm() {
   return (
@@ -24,6 +25,7 @@ export default function PartnerForm() {
         />
         <meta property="og:type" content="website" />
       </Head>
+      <Navbar />
       <PartnerRequest />
     </div>
   )

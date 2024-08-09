@@ -4,7 +4,9 @@
 .container {
   @include container-center(1280px, 5.075rem auto 0.075rem auto);
   padding: 0 2.075rem;
-
+  @media (max-width: 880px) {
+    @include container-center(1280px, 1.575rem auto 0.075rem auto);
+  }
   .results_container {
     max-width: 1280px;
     margin: 0rem auto 0 auto;

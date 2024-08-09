@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form'
 import emailjs from 'emailjs-com'
 import { StatusModal } from '@/presentation/components/feedback'
 import { Button } from '@/presentation/components/form'
-import { MdOutlineMail } from 'react-icons/md'
 import styles from './newsletter.module.scss'
 
 export type NewsLetterProps = {

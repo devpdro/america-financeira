@@ -4,7 +4,9 @@
 .newsletterContainer {
   color: $white-color;
   padding: 0rem 2.075rem;
-
+  @media (min-width: 881px) and (max-width: 1180px) {
+    padding: 0rem 1.075rem;
+  }
   @media (max-width: 880px) {
     padding: 0rem 0rem;
     margin: 2.075rem 0;

@@ -36,6 +36,9 @@
   font-size: $size-extra-small;
   font-weight: $weight-normal;
   text-decoration: underline;
+  @media (max-width: 1280px) {
+    padding-right: 3.075rem;
+  }
 }
 .content_container {
   display: flex;
@@ -114,9 +117,10 @@
   }
 }
 .texts_container {
+  @include display-flex(flex-start, flex-start);
   padding: 0 2.075rem;
   margin-bottom: 5.075rem;
-  @include display-flex(flex-start, flex-start);
+  position: relative;
   @media (max-width: 880px) {
     flex-direction: column;
     padding: 0 0.275rem;
@@ -124,6 +128,9 @@
   }
   .content_section {
     width: 70%;
+    @media (min-width: 881px) and (max-width: 1180px) {
+      width: 60%;
+    }
     @media (max-width: 880px) {
       width: 100%;
     }
@@ -153,9 +160,18 @@
     }
   }
   .newsletter_section {
+    position: -webkit-sticky;
+    padding-top: 6rem;
+    position: sticky;
+    top: 0;
     width: 30%;
+    @media (min-width: 881px) and (max-width: 1180px) {
+      width: 40%;
+    }
+
     @media (max-width: 880px) {
       width: 100%;
+      padding-top: 0rem;
     }
   }
 }

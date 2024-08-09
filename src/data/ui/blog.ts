@@ -37,94 +37,6 @@ export type BlogPostItem = {
 export const blogArticle: BlogPostItem[] = [
   {
     id: 1,
-    routes: 'como-fazer-uma-simulacao-para-emprestimo-fgts',
-    subtitle: 'Empréstimos',
-    title: 'Como fazer uma simulação para empréstimo FGTS',
-    date: 'Criado em 11 de março de 2024',
-    image: Images.pessoaComCelular,
-    paragraphOne:
-      'Empréstimos podem ser a solução financeira para diversas situações, desde pagar dívidas até realizar grandes sonhos. Vamos explorar os diferentes tipos de empréstimos e suas principais características.',
-    titleContentOne: 'Tipos de Empréstimos',
-    paragraphTwo:
-      'Existem vários tipos de empréstimos disponíveis, cada um com suas especificidades. Entre eles estão:',
-    titleContentTwo: 'Como escolher o empréstimo ideal',
-    titleListOne: 'Empréstimo pessoal:',
-    listOne:
-      ' Uma opção flexível que pode ser usada para diversos fins, como consolidar dívidas ou fazer uma grande compra. Normalmente tem taxas de juros mais altas devido à falta de garantias.',
-    titleListTwo: 'Empréstimo consignado:',
-    listTwo:
-      ' Oferecido a aposentados, pensionistas e funcionários públicos, com parcelas descontadas diretamente da folha de pagamento. As taxas de juros são geralmente mais baixas devido à garantia do pagamento.',
-    titleListThree: 'Empréstimo empresarial:',
-    listThree:
-      ' Destinado a empresas que precisam de capital para expandir ou manter operações. Pode ser utilizado para compra de equipamentos, estoque ou como capital de giro.',
-    titleListFour: 'Empréstimo com garantia:',
-    listFour:
-      ' Inclui opções como empréstimo com garantia de imóvel ou veículo, onde o bem é utilizado como garantia para obter melhores condições de juros.',
-    titleListFive: 'Empréstimo estudantil:',
-    listFive:
-      ' Projetado para ajudar estudantes a pagar pela educação superior, com condições de pagamento que começam após a conclusão do curso.',
-    titleSecond: 'Fatores a Considerar',
-    titleListSix: 'Taxas de juros:',
-    listSix:
-      ' Compare as taxas oferecidas por diferentes instituições financeiras. Uma pequena diferença pode resultar em uma economia significativa ao longo do tempo.',
-    titleListSeven: 'Prazo de pagamento:',
-    listSeven:
-      ' Prazos mais longos resultam em parcelas menores, mas aumentam o custo total do empréstimo. Escolha um prazo que se ajuste ao seu orçamento.',
-    titleListEight: 'Condições de pagamento:',
-    listEight:
-      ' Verifique se a instituição permite renegociar a dívida em caso de dificuldades financeiras e se há flexibilidade nas datas de pagamento.',
-    titleConclusion: 'Conclusão:',
-    paragraphThree:
-      'Escolher o empréstimo certo pode ajudar você a alcançar seus objetivos financeiros de maneira eficiente. Sempre pesquise bem e escolha a opção que melhor se adapta às suas necessidades. Considere todos os fatores mencionados e faça uma simulação para ter uma visão clara do seu compromisso financeiro.',
-    paragraphFour:
-      'Uma simulação de empréstimo é uma ferramenta útil para entender os custos envolvidos e as condições de pagamento. Utilize simuladores online e consulte especialistas financeiros para tomar a melhor decisão.',
-  },
-  {
-    id: 2,
-    routes: 'cdb-tudo-o-que-voce-precisa-saber-sobre-e-como-investir',
-    subtitle: 'Investimentos',
-    title: 'CDB: Tudo o que você precisa saber sobre e como investir!',
-    date: 'Criado em 21 de julho de 2024',
-    image: Images.pessoaSozinha,
-    paragraphOne:
-      'Certificados de Depósito Bancário (CDB) são uma opção de investimento segura e rentável. Entenda como funcionam e como investir.',
-    titleContentOne: 'O que é CDB?',
-    paragraphTwo:
-      'CDB é um título de renda fixa emitido pelos bancos para captar recursos. Em troca, o investidor recebe uma remuneração. Existem diferentes tipos de CDB, incluindo pré-fixados, pós-fixados e atrelados à inflação, cada um com suas próprias características.',
-    titleContentTwo: 'Vantagens de investir em CDB',
-    titleListOne: 'Segurança:',
-    listOne:
-      ' Protegido pelo Fundo Garantidor de Créditos (FGC) até um certo valor. Isso significa que, em caso de problemas com a instituição financeira, você está protegido até o limite garantido.',
-    titleListTwo: 'Rentabilidade:',
-    listTwo:
-      ' Pode oferecer rendimentos superiores à poupança. A rentabilidade pode ser pré-fixada, pós-fixada ou atrelada à inflação, proporcionando diferentes níveis de retorno conforme o perfil do investidor.',
-    titleListThree: 'Liquidez:',
-    listThree:
-      ' Opções de CDB com liquidez diária estão disponíveis. Isso permite que você resgate seu dinheiro a qualquer momento, sem perder a rentabilidade acumulada.',
-    titleListFour: 'Diversificação:',
-    listFour:
-      ' Permite diversificar seus investimentos com diferentes prazos e indexadores, ajustando o portfólio conforme suas necessidades e objetivos financeiros.',
-    titleListFive: 'Baixo risco:',
-    listFive:
-      ' Por ser garantido pelo governo, o risco é muito baixo comparado a outros investimentos. Além disso, o FGC oferece uma camada extra de proteção.',
-    titleSecond: 'Como Investir em CDB',
-    titleListSix: 'Escolha uma corretora:',
-    listSix:
-      ' Abra uma conta em uma corretora de valores que ofereça CDBs. Certifique-se de escolher uma corretora confiável e com boas avaliações.',
-    titleListSeven: 'Pesquise os títulos:',
-    listSeven:
-      ' Verifique os CDBs disponíveis e compare as taxas de retorno, prazos e outras condições. Utilize simuladores para entender o potencial de retorno.',
-    titleListEight: 'Faça a aplicação:',
-    listEight:
-      ' Selecione o CDB desejado e invista o valor disponível. Monitore seu investimento regularmente e faça ajustes conforme necessário.',
-    titleConclusion: 'Conclusão:',
-    paragraphThree:
-      'Investir em CDB pode ser uma excelente maneira de obter uma renda fixa segura e com boa rentabilidade. Pesquise as opções disponíveis e escolha a que melhor se adapta ao seu perfil de investidor.',
-    paragraphFour:
-      'Antes de investir, é importante entender as condições do CDB, como prazos, taxas e a forma de rendimento. Consulte seu banco ou corretora para obter mais informações e faça uma escolha consciente. Diversifique seus investimentos para otimizar seus retornos e reduzir riscos.',
-  },
-  {
-    id: 3,
     routes: 'pagar-boleto-com-cartao-de-credito-e-possivel',
     subtitle: 'Cartão de Crédito',
     title: 'Pagar boleto com cartão de crédito é possível?',
@@ -168,12 +80,12 @@ export const blogArticle: BlogPostItem[] = [
       'Antes de utilizar esta modalidade, verifique as condições e as taxas aplicáveis com a sua instituição financeira. Avalie se é a melhor opção para o seu caso e utilize-a com moderação para evitar surpresas na fatura.',
   },
   {
-    id: 4,
+    id: 2,
     routes: 'como-investir-no-tesouro-direto-guia-completo',
     subtitle: 'Investimentos',
     title: 'Como investir no Tesouro Direto: Guia completo',
     date: 'Criado em 15 de março de 2024',
-    image: Images.pessoaSozinha,
+    image: Images.TesouroDireto,
     paragraphOne:
       'Investir no Tesouro Direto é uma das formas mais seguras e acessíveis de aplicar seu dinheiro. Vamos entender como funciona e quais são as opções disponíveis.',
     titleContentOne: 'O que é o Tesouro Direto?',
@@ -210,7 +122,51 @@ export const blogArticle: BlogPostItem[] = [
       'Para iniciar seus investimentos, basta abrir uma conta em uma corretora de valores, transferir os recursos e selecionar os títulos do Tesouro Direto que melhor atendem às suas necessidades. Lembre-se de acompanhar regularmente seus investimentos e ajustar sua estratégia conforme necessário.',
   },
   {
-    id: 6,
+    id: 3,
+    routes: 'cdb-tudo-o-que-voce-precisa-saber-sobre-e-como-investir',
+    subtitle: 'Investimentos',
+    title: 'CDB: Tudo o que você precisa saber sobre e como investir!',
+    date: 'Criado em 21 de julho de 2024',
+    image: Images.pessoaCelular,
+    paragraphOne:
+      'Certificados de Depósito Bancário (CDB) são uma opção de investimento segura e rentável. Entenda como funcionam e como investir.',
+    titleContentOne: 'O que é CDB?',
+    paragraphTwo:
+      'CDB é um título de renda fixa emitido pelos bancos para captar recursos. Em troca, o investidor recebe uma remuneração. Existem diferentes tipos de CDB, incluindo pré-fixados, pós-fixados e atrelados à inflação, cada um com suas próprias características.',
+    titleContentTwo: 'Vantagens de investir em CDB',
+    titleListOne: 'Segurança:',
+    listOne:
+      ' Protegido pelo Fundo Garantidor de Créditos (FGC) até um certo valor. Isso significa que, em caso de problemas com a instituição financeira, você está protegido até o limite garantido.',
+    titleListTwo: 'Rentabilidade:',
+    listTwo:
+      ' Pode oferecer rendimentos superiores à poupança. A rentabilidade pode ser pré-fixada, pós-fixada ou atrelada à inflação, proporcionando diferentes níveis de retorno conforme o perfil do investidor.',
+    titleListThree: 'Liquidez:',
+    listThree:
+      ' Opções de CDB com liquidez diária estão disponíveis. Isso permite que você resgate seu dinheiro a qualquer momento, sem perder a rentabilidade acumulada.',
+    titleListFour: 'Diversificação:',
+    listFour:
+      ' Permite diversificar seus investimentos com diferentes prazos e indexadores, ajustando o portfólio conforme suas necessidades e objetivos financeiros.',
+    titleListFive: 'Baixo risco:',
+    listFive:
+      ' Por ser garantido pelo governo, o risco é muito baixo comparado a outros investimentos. Além disso, o FGC oferece uma camada extra de proteção.',
+    titleSecond: 'Como Investir em CDB',
+    titleListSix: 'Escolha uma corretora:',
+    listSix:
+      ' Abra uma conta em uma corretora de valores que ofereça CDBs. Certifique-se de escolher uma corretora confiável e com boas avaliações.',
+    titleListSeven: 'Pesquise os títulos:',
+    listSeven:
+      ' Verifique os CDBs disponíveis e compare as taxas de retorno, prazos e outras condições. Utilize simuladores para entender o potencial de retorno.',
+    titleListEight: 'Faça a aplicação:',
+    listEight:
+      ' Selecione o CDB desejado e invista o valor disponível. Monitore seu investimento regularmente e faça ajustes conforme necessário.',
+    titleConclusion: 'Conclusão:',
+    paragraphThree:
+      'Investir em CDB pode ser uma excelente maneira de obter uma renda fixa segura e com boa rentabilidade. Pesquise as opções disponíveis e escolha a que melhor se adapta ao seu perfil de investidor.',
+    paragraphFour:
+      'Antes de investir, é importante entender as condições do CDB, como prazos, taxas e a forma de rendimento. Consulte seu banco ou corretora para obter mais informações e faça uma escolha consciente. Diversifique seus investimentos para otimizar seus retornos e reduzir riscos.',
+  },
+  {
+    id: 4,
     routes: 'como-economizar-no-dia-a-dia-dicas-praticas',
     subtitle: 'Economia',
     title: 'Como economizar no dia a dia: Dicas práticas',
@@ -254,12 +210,12 @@ export const blogArticle: BlogPostItem[] = [
       'Lembre-se de monitorar seus gastos regularmente e ajustar seu planejamento conforme necessário para manter suas finanças sob controle. A economia de hoje pode significar um futuro financeiro mais estável e seguro.',
   },
   {
-    id: 7,
+    id: 5,
     routes: 'cartao-de-credito-dicas-para-usar-de-forma-saudavel',
     subtitle: 'Finanças Pessoais',
     title: 'Cartão de Crédito: Dicas para usar de forma saudável',
     date: 'Criado em 15 de abril de 2024',
-    image: Images.pessoaSozinha,
+    image: Images.PessoaDicas,
     paragraphOne:
       'O cartão de crédito pode ser um ótimo aliado nas finanças pessoais, mas é importante saber usá-lo corretamente para evitar dívidas. Confira nossas dicas.',
     titleContentOne: 'Controle seus gastos',
@@ -296,5 +252,49 @@ export const blogArticle: BlogPostItem[] = [
       'Usar o cartão de crédito de forma consciente pode trazer muitos benefícios. Siga nossas dicas e mantenha suas finanças saudáveis.',
     paragraphFour:
       'Além disso, aproveite os benefícios e recompensas oferecidos pelos cartões de crédito, mas sempre com responsabilidade e dentro do seu orçamento. Planeje suas despesas e evite dívidas desnecessárias.',
+  },
+  {
+    id: 6,
+    routes: 'como-fazer-uma-simulacao-para-emprestimo-fgts',
+    subtitle: 'Empréstimos',
+    title: 'Como fazer uma simulação para empréstimo FGTS',
+    date: 'Criado em 11 de março de 2024',
+    image: Images.pessoaComCelular,
+    paragraphOne:
+      'Empréstimos podem ser a solução financeira para diversas situações, desde pagar dívidas até realizar grandes sonhos. Vamos explorar os diferentes tipos de empréstimos e suas principais características.',
+    titleContentOne: 'Tipos de Empréstimos',
+    paragraphTwo:
+      'Existem vários tipos de empréstimos disponíveis, cada um com suas especificidades. Entre eles estão:',
+    titleContentTwo: 'Como escolher o empréstimo ideal',
+    titleListOne: 'Empréstimo pessoal:',
+    listOne:
+      ' Uma opção flexível que pode ser usada para diversos fins, como consolidar dívidas ou fazer uma grande compra. Normalmente tem taxas de juros mais altas devido à falta de garantias.',
+    titleListTwo: 'Empréstimo consignado:',
+    listTwo:
+      ' Oferecido a aposentados, pensionistas e funcionários públicos, com parcelas descontadas diretamente da folha de pagamento. As taxas de juros são geralmente mais baixas devido à garantia do pagamento.',
+    titleListThree: 'Empréstimo empresarial:',
+    listThree:
+      ' Destinado a empresas que precisam de capital para expandir ou manter operações. Pode ser utilizado para compra de equipamentos, estoque ou como capital de giro.',
+    titleListFour: 'Empréstimo com garantia:',
+    listFour:
+      ' Inclui opções como empréstimo com garantia de imóvel ou veículo, onde o bem é utilizado como garantia para obter melhores condições de juros.',
+    titleListFive: 'Empréstimo estudantil:',
+    listFive:
+      ' Projetado para ajudar estudantes a pagar pela educação superior, com condições de pagamento que começam após a conclusão do curso.',
+    titleSecond: 'Fatores a Considerar',
+    titleListSix: 'Taxas de juros:',
+    listSix:
+      ' Compare as taxas oferecidas por diferentes instituições financeiras. Uma pequena diferença pode resultar em uma economia significativa ao longo do tempo.',
+    titleListSeven: 'Prazo de pagamento:',
+    listSeven:
+      ' Prazos mais longos resultam em parcelas menores, mas aumentam o custo total do empréstimo. Escolha um prazo que se ajuste ao seu orçamento.',
+    titleListEight: 'Condições de pagamento:',
+    listEight:
+      ' Verifique se a instituição permite renegociar a dívida em caso de dificuldades financeiras e se há flexibilidade nas datas de pagamento.',
+    titleConclusion: 'Conclusão:',
+    paragraphThree:
+      'Escolher o empréstimo certo pode ajudar você a alcançar seus objetivos financeiros de maneira eficiente. Sempre pesquise bem e escolha a opção que melhor se adapta às suas necessidades. Considere todos os fatores mencionados e faça uma simulação para ter uma visão clara do seu compromisso financeiro.',
+    paragraphFour:
+      'Uma simulação de empréstimo é uma ferramenta útil para entender os custos envolvidos e as condições de pagamento. Utilize simuladores online e consulte especialistas financeiros para tomar a melhor decisão.',
   },
 ]

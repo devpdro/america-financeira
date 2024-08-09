@@ -2,19 +2,26 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  @include display-flex;
-  flex-direction: column;
-  margin-bottom: 5.075rem;
-  .bg-blue {
+  @include display-flex(center, space-around);
+  background-color: $blue-color;
+  padding: 8.075rem 2.075rem 3.075rem 0.075rem;
+  @media (max-width: 1080px) {
+    @include display-flex(center, center);
+    padding: 8.075rem 1.075rem 3.075rem 1.075rem;
+  }
+  .logo {
+    width: 400px;
+    margin-right: 2.075rem;
     background-color: $blue-color;
-    height: 200px;
-    width: 100vw;
+    @media (max-width: 1080px) {
+      display: none;
+    }
   }
   .form {
     @include display-flex;
     flex-direction: column;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin-top: -7.575rem;
+    border: 1px solid;
     border-radius: $radius-medium;
     background-color: $white-color;
     width: 650px;
@@ -28,16 +35,11 @@
     }
     .box-title {
       @include display-flex(flex-start, flex-start);
+      flex-direction: column;
       gap: 2.075rem;
       @media (max-width: 880px) {
         flex-direction: column;
         gap: 1.075rem;
-      }
-      .img {
-        width: 120px;
-        height: 120px;
-        background-color: $blue-color;
-        padding: 0.575rem;
       }
       .text-america {
         font-weight: 450;

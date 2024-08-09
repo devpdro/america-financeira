@@ -46,8 +46,18 @@ import duasPessoasOlhando from './duas-pessoas-olhando.webp'
 import ParceiroConversando from './parceiro-conversando.png'
 import PessoaParceiro from './pessoa-parceira.png'
 import empresa from './empresa.webp'
+import logoAmericaAzul from './logo-america-azul.png'
+import logoAmericaPartners from './logo-america-partners.png'
+import pessoaCelular from './pessoa-celular-blog.jpg'
+import PessoaDicas from './dicas-blog.jpg'
+import TesouroDireto from './tesouro-direto.jpg'
 
 const Images = {
+  PessoaDicas,
+  TesouroDireto,
+  pessoaCelular,
+  logoAmericaPartners,
+  logoAmericaAzul,
   empresa,
   duasPessoasOlhando,
   ParceiroConversando,

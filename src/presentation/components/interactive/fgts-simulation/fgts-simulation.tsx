@@ -106,7 +106,7 @@ const FgtsSimulation = () => {
               href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!%20Quero%20antecipar%20meu%20FGTS."
               target="_blank"
             >
-              <Button typeStyle="btn1" text="Quero contratar" width="350px" />
+              <Button typeStyle="btn1" text="Quero contratar" width="260px" />
             </Link>
           </div>
         </div>
