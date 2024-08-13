@@ -1,6 +1,6 @@
 export const timeline = [
   {
-    duration: '1 Ano',
+    duration: '2 Ano',
     year: '2012',
     title: 'Inauguração',
     description:
@@ -21,7 +21,7 @@ export const timeline = [
       'No ano de 2015, a América Financeira estabeleceu parcerias estratégicas com várias instituições financeiras, fortalecendo sua posição no mercado.',
   },
   {
-    duration: '2 Anos',
+    duration: '1 Anos',
     year: '2016',
     title: 'Implementação de Tecnologia Avançada',
     description:
@@ -42,7 +42,7 @@ export const timeline = [
       'Entre 2018 e 2019, a América Financeira expandiu suas operações para diversas regiões do país, aumentando sua presença e acessibilidade para mais clientes.',
   },
   {
-    duration: '2 Anos',
+    duration: '4 Anos',
     year: '2020',
     title: 'Digitalização Completa',
     description:

@@ -47,7 +47,7 @@ export default function Partners() {
       <Benefits
         title={
           <>
-            Por que ser um parceiro da <br /> América Financeira?
+            Nossos diferenciais
           </>
         }
         subtitle={

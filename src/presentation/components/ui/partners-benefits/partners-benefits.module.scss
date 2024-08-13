@@ -5,7 +5,7 @@
   background: $light-blue;
   position: relative;
   .box-section {
-    @include container-center(1180px, 9.575rem auto 12.575rem auto);
+    @include container-center(1380px, 9.575rem auto 12.575rem auto);
     padding: 0 0.975rem;
     .info-section {
       @include display-flex;
@@ -42,13 +42,13 @@
     .numbers-section {
       @include display-flex;
       background-color: $white-color;
-      border-radius: 3px;
+      border-radius: $radius-medium;
       flex-direction: column;
       text-align: center;
       height: 12.875rem;
       padding: 2.075rem 1.575rem;
       margin-top: -5.75rem;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
       @media (max-width: 1084px) {
         margin-top: -1.575rem;
       }

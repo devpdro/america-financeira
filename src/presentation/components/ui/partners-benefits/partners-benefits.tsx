@@ -4,23 +4,23 @@ import { FaMoneyBillWave, FaChartLine, FaRegCalendarAlt, FaUsers } from 'react-i
 const benefitsData = [
   {
     Icon: FaMoneyBillWave,
-    title: '+R$100 milhões',
-    description: 'Total Vendido',
+    title: 'R$70,7 milhões',
+    description: 'Mês por Produção',
   },
   {
     Icon: FaChartLine,
-    title: 'R$6 bilhões',
+    title: 'R$4,2 bilhões',
     description: 'Volume Financeiro',
   },
   {
     Icon: FaUsers,
-    title: '10+ Parceiros',
-    description: 'Parceiros',
+    title: '+18 Parceiros',
+    description: 'Rede de Colaboração',
   },
   {
     Icon: FaRegCalendarAlt,
-    title: '12+ Anos',
-    description: 'Experiência',
+    title: '+12 Anos',
+    description: 'História de Sucesso',
   },
 ]
 

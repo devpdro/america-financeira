@@ -33,7 +33,7 @@ export default function About() {
         alt="Nossa História"
         subtitle="Quem Somos"
         title="Conheça Nossa História"
-        paragraph="A América Financeira é uma empresa dedicada a oferecer soluções financeiras que transformam vidas. Desde nossa fundação, temos nos comprometido com a inovação e a excelência no atendimento, conquistando a confiança de milhares de clientes ao longo dos anos. Com uma equipe de 500 colaboradores e 10 filiais espalhadas pelo país, estamos prontos para atender você onde quer que esteja."
+        paragraph="A América Financeira é uma empresa dedicada a oferecer soluções financeiras que transformam vidas. Desde nossa fundação, temos nos comprometido com a inovação e a excelência no atendimento, conquistando a confiança de milhares de clientes ao longo dos anos. Com uma equipe de mais de 500 colaboradores e mais de 10 filiais espalhadas pelo país, estamos prontos para atender você onde quer que esteja."
         buttonPrimaryText="Seja nosso parceiro"
         imagePosition="left"
       />
