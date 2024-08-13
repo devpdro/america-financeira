@@ -1,26 +1,28 @@
+import { Images } from '@/presentation/assets'
+
 export const team = [
   {
-    src: 'https://www.bootdey.com/image/768x512/D3D3D3/000000',
+    src: Images.equipeUnida,
     alt: 'Image 1',
   },
   {
-    src: 'https://www.bootdey.com/image/768x512/FFB6C1/000000',
+    src: Images.equipeFotoFinal,
     alt: 'Image 2',
   },
   {
-    src: 'https://www.bootdey.com/image/768x512/87CEFA/000000',
+    src: Images.equipeOlhandoTv,
     alt: 'Image 3',
   },
   {
-    src: 'https://www.bootdey.com/image/768x512/B0C4DE/000000',
+    src: Images.allanConfraternizacao,
     alt: 'Image 4',
   },
   {
-    src: 'https://www.bootdey.com/image/768x512/20B2AA/000000',
+    src: Images.equipeTodosVermelho,
     alt: 'Image 5',
   },
   {
-    src: 'https://www.bootdey.com/image/768x512/FFA07A/000000',
+    src: Images.confraternizacaoTrofeu,
     alt: 'Image 6',
   },
 ]

@@ -7,7 +7,7 @@ import { PartnersBanks } from '@/presentation/components/common'
 import { Images } from '@/presentation/assets'
 
 export default function PersonalLoan() {
-  const backgroundImageUrl = Images.pessoaComputadorCabecalho
+  const backgroundImageUrl = Images.pessoaOlhando
 
   return (
     <main>
@@ -45,7 +45,7 @@ export default function PersonalLoan() {
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo
-        image={Images.pessoaComPapel.src}
+        image={Images.tresPessoasEmprestimo.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Pessoal?"

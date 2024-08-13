@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import { Images } from '@/presentation/assets'
-import { CustomLink } from '@/utils'
 
 import styles from './latest-posts.module.scss'
 import Link from 'next/link'
@@ -20,7 +19,7 @@ const LatestPosts = () => {
           aria-label="Leia mais sobre Empréstimos"
         >
           <div className={styles.article}>
-            <Image width={100} height={100} className={styles.img} src={Images.pessoaComCelular} alt="Empréstimos" />
+            <Image className={styles.img} src={Images.simulacaoFgts} alt="Empréstimos" />
             <p className={styles.subtitle}>Empréstimos</p>
             <h1 className={styles.title}>Como fazer uma simulação para empréstimo FGTS</h1>
             <p className={styles.data}>11 de março de 2024</p>

@@ -259,7 +259,7 @@ export const blogArticle: BlogPostItem[] = [
     subtitle: 'Empréstimos',
     title: 'Como fazer uma simulação para empréstimo FGTS',
     date: 'Criado em 11 de março de 2024',
-    image: Images.pessoaComCelular,
+    image: Images.simulacaoFgts,
     paragraphOne:
       'Empréstimos podem ser a solução financeira para diversas situações, desde pagar dívidas até realizar grandes sonhos. Vamos explorar os diferentes tipos de empréstimos e suas principais características.',
     titleContentOne: 'Tipos de Empréstimos',

@@ -5,7 +5,12 @@ import { team } from '@/data/ui'
 import classNames from 'classnames'
 import styles from './team.module.scss'
 
-const Team = () => {
+type TeamProps = {
+  imageWidth?: number
+  imageHeight?: number
+}
+
+const Team: React.FC<TeamProps> = ({ imageWidth, imageHeight }) => {
   return (
     <section className={styles.container}>
       <div className={classNames(styles.row, styles['justify-content-center'])}>
@@ -33,7 +38,13 @@ const Team = () => {
       <div className={classNames(styles.row, styles['form-row'], styles['align-items-center'])}>
         <div className={classNames(styles.col, styles['col-3'])}>
           <div className={styles['img-square']}>
-            <img src={team[0].src} alt={team[0].alt} className={styles['img-cover']} />
+            <Image
+              width={imageWidth}
+              height={imageHeight}
+              src={team[0].src}
+              alt={team[0].alt}
+              className={styles['img-cover']}
+            />
           </div>
         </div>
         <div className={classNames(styles.col, styles['col-6'])}>
@@ -41,7 +52,13 @@ const Team = () => {
             {team.slice(1, 3).map((img, index) => (
               <div key={index} className={classNames(styles.col, styles[`col-${index === 0 ? 7 : 5}`])}>
                 <div className={styles['img-square']}>
-                  <img src={img.src} alt={img.alt} className={styles['img-cover']} />
+                  <Image
+                    width={imageWidth}
+                    height={imageHeight}
+                    src={img.src}
+                    alt={img.alt}
+                    className={styles['img-cover']}
+                  />
                 </div>
               </div>
             ))}
@@ -50,7 +67,13 @@ const Team = () => {
             {team.slice(3, 5).map((img, index) => (
               <div key={index} className={classNames(styles.col, styles[`col-${index === 0 ? 5 : 7}`])}>
                 <div className={styles['img-square']}>
-                  <img src={img.src} alt={img.alt} className={styles['img-cover']} />
+                  <Image
+                    width={imageWidth}
+                    height={imageHeight}
+                    src={img.src}
+                    alt={img.alt}
+                    className={styles['img-cover']}
+                  />
                 </div>
               </div>
             ))}
@@ -58,7 +81,13 @@ const Team = () => {
         </div>
         <div className={classNames(styles.col, styles['col-3'])}>
           <div className={styles['img-square']}>
-            <img src={team[5].src} alt={team[5].alt} className={styles['img-cover']} />
+            <Image
+              width={imageWidth}
+              height={imageHeight}
+              src={team[5].src}
+              alt={team[5].alt}
+              className={styles['img-cover']}
+            />
           </div>
         </div>
       </div>
