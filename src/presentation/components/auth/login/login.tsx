@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Image from 'next/image'
@@ -32,11 +31,30 @@ const Login: React.FC = () => {
     },
   })
 
-  const onSubmit = () => {
-    setTimeout(() => {
-      setModalMessage('Verifique suas credenciais e tente novamente.')
+  const onSubmit = async (data: LoginFormProps) => {
+    try {
+      const res = await fetch('/api/auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await res.json()
+
+      if (res.ok) {
+        localStorage.setItem('token', result.token)
+        // Redirecionar para a página desejada após o login bem-sucedido
+        window.location.href = '/dashboard' // exemplo de redirecionamento
+      } else {
+        setModalMessage(result.error || 'Erro no login, tente novamente.')
+        setIsModalOpen(true)
+      }
+    } catch (error) {
+      setModalMessage('Erro ao conectar-se ao servidor.')
       setIsModalOpen(true)
-    }, 2000)
+    }
   }
 
   const closeModal = () => {
