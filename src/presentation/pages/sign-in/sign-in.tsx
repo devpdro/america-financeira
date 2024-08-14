@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import { Login } from '@/presentation/components/auth'
 
 export default function SignIn() {

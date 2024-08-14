@@ -25,7 +25,6 @@
   outline: none;
   font-family: 'Satoshi', sans-serif;
   scroll-behavior: smooth;
-  background-size: cover;
 }
 
 body {
@@ -39,9 +38,9 @@ body {
   /* IE 10+ */
   user-select: none;
 }
-img {
-  background-size: contain; 
 
+img {
+  background-size: cover;
 }
 
 a {

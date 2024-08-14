@@ -18,7 +18,6 @@ export const list: listLinkProps[] = [
     items: [
       { label: 'Quem somos', link: '/quem-somos' },
       { label: 'Seja parceiro', link: '/parceiros' },
-      { label: 'Intranet', link: '/intranet' },
       {
         label: 'Nossas Unidades',
         link: 'https://www.google.com/maps/search/Am%C3%A9rica+Financeira/@-22.3971915,-48.0358251,10z/data=!3m1!4b1?entry=ttu',

@@ -20,7 +20,7 @@ export default function TermsOfUse() {
         <meta
           property="og:description"
           content="Leia os Termos de Uso da América Financeira e entenda as condições e políticas para utilizar nossos serviços."
-        />{' '}
+        />
         <meta property="og:url" content="https://www.americafinanceira.com.br/termos-de-uso" />
         <meta property="og:type" content="website" />
       </Head>

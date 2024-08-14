@@ -3,26 +3,26 @@ import { Images } from '@/presentation/assets'
 export const team = [
   {
     src: Images.equipeUnida,
-    alt: 'Image 1',
+    alt: 'Equipe unida posando para foto',
   },
   {
     src: Images.equipeFotoFinal,
-    alt: 'Image 2',
+    alt: 'Foto final da equipe em evento de confraternização',
   },
   {
     src: Images.equipeOlhandoTv,
-    alt: 'Image 3',
+    alt: 'Equipe assistindo apresentação na TV',
   },
   {
     src: Images.allanConfraternizacao,
-    alt: 'Image 4',
+    alt: 'Allan durante a confraternização da equipe',
   },
   {
     src: Images.equipeTodosVermelho,
-    alt: 'Image 5',
+    alt: 'Equipe toda vestida de vermelho para evento especial',
   },
   {
     src: Images.confraternizacaoTrofeu,
-    alt: 'Image 6',
+    alt: 'Equipe celebrando com troféu em mãos',
   },
 ]

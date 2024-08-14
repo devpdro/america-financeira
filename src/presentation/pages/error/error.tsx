@@ -1,12 +1,9 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+
 import { Footer, Navbar } from '@/presentation/components/layout'
 import { ErrorDisplay } from '@/presentation/components/ui'
 
 export default function Error() {
-  const router = useRouter()
-  const isUnderConstruction = router.query.isUnderConstruction === 'true'
-
   return (
     <main>
       <Head>
@@ -28,34 +25,8 @@ export default function Error() {
       <Navbar />
       <ErrorDisplay
         title="Ops!"
-        subtitle={
-          <>
-            {isUnderConstruction ? (
-              <>
-                Esta página está em criação. <br /> Por favor, volte mais tarde.
-              </>
-            ) : (
-              <>
-                Não conseguimos encontrar a página que você <br /> está procurando.
-              </>
-            )}
-          </>
-        }
-        message={
-          <>
-            {isUnderConstruction ? (
-              <>
-                Se não sabe para onde ir, qualquer caminho <br />
-                serve! - Gato Cheshire, Alice no País das Maravilhas.
-              </>
-            ) : (
-              <>
-                Se não sabe para onde ir, qualquer caminho <br />
-                serve! - Gato Cheshire, Alice no País das Maravilhas.
-              </>
-            )}
-          </>
-        }
+        subtitle="Não conseguimos encontrar a página que você está procurando."
+        message="Se não sabe para onde ir, qualquer caminho serve! - Gato Cheshire, Alice no País das Maravilhas."
       />
       <Footer />
     </main>
