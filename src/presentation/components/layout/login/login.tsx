@@ -1,21 +1,21 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import { Button } from '@/presentation/components/form'
 import { Images } from '@/presentation/assets'
 
-import styles from './login.module.scss'
+import styles from './auth.module.scss'
 
 export type LoginFormProps = {
   email: string
   password: string
 }
 
-const Auth: React.FC = () => {
+const Login: React.FC = () => {
   const [modalMessage, setModalMessage] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -108,4 +108,4 @@ const Auth: React.FC = () => {
   )
 }
 
-export default Auth
+export default Login

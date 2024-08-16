@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import { HeaderPolicy, InformationPolicy } from '@/presentation/components/ui'
-import { Footer, Navbar } from '@/presentation/components/layout'
 import { termsOfUse } from '@/data/ui'
 
 export default function TermsOfUse() {
@@ -24,7 +23,6 @@ export default function TermsOfUse() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/termos-de-uso" />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <HeaderPolicy title="Termos de Uso" />
       <InformationPolicy
         title={termsOfUse.title}
@@ -34,7 +32,6 @@ export default function TermsOfUse() {
         finishedTitle={termsOfUse.finishedTitle}
         finishedParagraph={termsOfUse.finishedParagraph}
       />
-      <Footer />
     </main>
   )
 }

@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import { Images } from '@/presentation/assets'
 import { FollowUs, Information } from '@/presentation/components/common'
-import { Footer, Navbar } from '@/presentation/components/layout'
 import BlogHeader from '@/presentation/components/ui/blog/blog-header'
 import BlogPage from '@/presentation/components/ui/blog/blog-recent'
 
@@ -38,7 +37,6 @@ export default function Blog() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/blog" />
         <meta property="og:image" content="/path/to/og-image.jpg" />
       </Head>
-      <Navbar />
       <BlogHeader
         image={Images.headerBlog.src}
         imageWidth={100}
@@ -53,7 +51,6 @@ export default function Blog() {
       <BlogPage />
       <Information title={title} paragraphs={paragraphs} />
       <FollowUs />
-      <Footer />
     </>
   )
 }

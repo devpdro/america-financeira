@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import { Header, LatestPosts, InfoPanel, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { personalLoanBenefits, faqAboutPersonalLoan } from '@/data/ui'
-import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBanks } from '@/presentation/components/common'
 import { Images } from '@/presentation/assets'
 
@@ -32,7 +31,6 @@ export default function PersonalLoan() {
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <Header
         title="Empréstimo Pessoal"
         subtitle={
@@ -91,7 +89,6 @@ export default function PersonalLoan() {
       />
       <LatestPosts />
       <Faq items={faqAboutPersonalLoan} title="Ficou com alguma dúvida sobre Empréstimo Pessoal?" />
-      <Footer />
     </main>
   )
 }

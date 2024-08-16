@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   productionBrowserSourceMaps: true,
+  rewrites: async () => [{ source: '/', destination: '/presentation/pages' }],
 }
 
 module.exports = nextConfig

@@ -1,11 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { StaticImageData } from 'next/image'
 import { useParams } from 'next/navigation'
 
 import { blogArticle, icons } from '@/data/ui'
-import { Footer, Navbar } from '@/presentation/components/layout'
 import { Error } from '@/presentation/pages'
 
 import styles from '../../presentation/components/ui/blog/blog-post.module.scss'
@@ -63,7 +61,6 @@ const BlogPost: React.FC = () => {
 
   return (
     <>
-      <Navbar />
       <div className={styles.container}>
         <div className={styles.content_container}>
           <div className={styles.texts_box}>
@@ -148,7 +145,6 @@ const BlogPost: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

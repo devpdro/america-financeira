@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import { Header, LatestPosts, InfoPanel, LoadInfo, Faq } from '@/presentation/components/common'
-import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBanks } from '@/presentation/components/common'
 import { FgtsSimulation } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
@@ -33,7 +32,6 @@ export default function FgtsLoan() {
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <Header
         title="Empréstimo FGTS"
         subtitle={
@@ -81,7 +79,6 @@ export default function FgtsLoan() {
       />
       <LatestPosts />
       <Faq items={faqAboutFgtsLoan} title="Ficou com alguma dúvida sobre Empréstimo FGTS?" />
-      <Footer />
     </div>
   )
 }

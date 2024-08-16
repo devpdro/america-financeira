@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import { Header, LatestPosts, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { benefitsConsignedLoan, faqAboutPayrollLoan } from '@/data/ui'
-import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBanks } from '@/presentation/components/common'
 import { Images } from '@/presentation/assets'
 
@@ -32,7 +31,6 @@ export default function PayrollLoan() {
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <Header
         title="Empréstimo Consignado"
         subtitle={
@@ -72,7 +70,6 @@ export default function PayrollLoan() {
       <PartnersBanks />
       <LatestPosts />
       <Faq items={faqAboutPayrollLoan} title="Ficou com alguma dúvida sobre Empréstimo Consignado?" />
-      <Footer />
     </main>
   )
 }

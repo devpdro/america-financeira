@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import { Header, Benefits, InfoPanel, Faq, LatestPosts } from '@/presentation/components/common'
 import { LoanWarning, LoanCarousel } from '@/presentation/components/ui'
-import { Navbar, Footer } from '@/presentation/components/layout'
 import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
 
@@ -31,7 +30,6 @@ export default function Home() {
         <meta property="og:image" content={backgroundImageUrl.src} />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <LoanWarning />
       <Header
         title="Solicite seu crédito agora mesmo!"
@@ -86,7 +84,6 @@ export default function Home() {
       />
       <LatestPosts />
       <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
-      <Footer />
     </main>
   )
 }

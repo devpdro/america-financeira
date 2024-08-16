@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import { HeaderPolicy, InformationPolicy } from '@/presentation/components/ui'
-import { Footer, Navbar } from '@/presentation/components/layout'
 import { privacyPolicy } from '@/data/ui'
 
 export default function PrivacyPolicy() {
@@ -27,7 +26,7 @@ export default function PrivacyPolicy() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/politica-de-privacidade" />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
+
       <HeaderPolicy title="Política de Privacidade" />
       <InformationPolicy
         title={privacyPolicy.title}
@@ -37,7 +36,6 @@ export default function PrivacyPolicy() {
         finishedTitle={privacyPolicy.finishedTitle}
         finishedParagraph={privacyPolicy.finishedParagraph}
       />
-      <Footer />
     </main>
   )
 }

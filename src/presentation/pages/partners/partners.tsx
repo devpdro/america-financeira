@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import { Benefits, FollowUs, Information, LoadInfo, ArticleHeader } from '@/presentation/components/common'
-import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBenefits } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
 import { benefitsPartners } from '@/data/ui'
@@ -32,7 +31,6 @@ export default function Partners() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/parceiros" />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <ArticleHeader
         image={Images.PessoaParceiro.src}
         imageWidth={100}
@@ -57,7 +55,6 @@ export default function Partners() {
       <PartnersBenefits />
       <Information title={title} paragraphs={paragraphs} />
       <FollowUs />
-      <Footer />
     </main>
   )
 }
