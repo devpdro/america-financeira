@@ -1,1 +1,1 @@
-export * from './partner-form-refactory'
+export * from './partner-form-factory'

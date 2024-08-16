@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import { ArticleHeader } from '@/presentation/components/common'
-import { Footer, Navbar } from '@/presentation/components/layout'
 import { Timeline, Team } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
 
@@ -25,7 +24,6 @@ export default function About() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/quem-somos" />
         <meta property="og:type" content="website" />
       </Head>
-      <Navbar />
       <ArticleHeader
         image={Images.empresa.src}
         imageWidth={100}
@@ -39,7 +37,6 @@ export default function About() {
       />
       <Timeline />
       <Team />
-      <Footer />
     </main>
   )
 }

@@ -1,1 +1,1 @@
-export * from './fgts-loan'
+export * from './fgts-loan-factory'

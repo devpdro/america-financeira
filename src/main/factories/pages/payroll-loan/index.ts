@@ -1,1 +1,1 @@
-export * from './payroll-loan'
+export * from './payroll-loan-factory'
