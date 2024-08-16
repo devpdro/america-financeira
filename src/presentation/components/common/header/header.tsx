@@ -1,4 +1,4 @@
-import { Button, LoanRequest } from '@/presentation/components/form'
+import { LoanRequest } from '@/presentation/components/form'
 
 import styles from './header.module.scss'
 

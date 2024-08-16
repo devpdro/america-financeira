@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
 
-import { StatusModal } from '@/presentation/components/feedback'
+import { StatusModal } from '@/presentation/components/modal'
 import { Button } from '@/presentation/components/form'
 
 import styles from './partner-request.module.scss'

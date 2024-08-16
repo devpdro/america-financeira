@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Benefits, FollowUs, Information, LoadInfo, IntroductionHeader } from '@/presentation/components/common'
+import { Benefits, FollowUs, Information, LoadInfo, ArticleHeader } from '@/presentation/components/common'
 import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBenefits } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
@@ -33,7 +33,7 @@ export default function Partners() {
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
-      <IntroductionHeader
+      <ArticleHeader
         image={Images.PessoaParceiro.src}
         imageWidth={100}
         imageHeight={40}
@@ -45,11 +45,7 @@ export default function Partners() {
         imagePosition="left"
       />
       <Benefits
-        title={
-          <>
-            Nossos diferenciais
-          </>
-        }
+        title={<>Nossos diferenciais</>}
         subtitle={
           <>
             Descubra os benefícios exclusivos de se tornar um parceiro da <br /> America Financeira e impulsione seu

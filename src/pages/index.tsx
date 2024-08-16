@@ -1,8 +1,8 @@
 import Head from 'next/head'
+
 import { Header, Benefits, InfoPanel, Faq, LatestPosts } from '@/presentation/components/common'
-import { LoanCarousel } from '@/presentation/components/interactive'
+import { LoanWarning, LoanCarousel } from '@/presentation/components/ui'
 import { Navbar, Footer } from '@/presentation/components/layout'
-import { LoanWarning } from '@/presentation/components/ui'
 import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
 

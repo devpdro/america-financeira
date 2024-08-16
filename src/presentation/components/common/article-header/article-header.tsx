@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 import { Button } from '@/presentation/components/form'
 
-import styles from './introduction-header.module.scss'
+import styles from './article-header.module.scss'
 
-export type IntroductionHeaderProps = {
+export type ArticleHeaderProps = {
   image: string
   alt: string
   title: string
@@ -17,7 +17,7 @@ export type IntroductionHeaderProps = {
   imagePosition: 'left' | 'right'
 }
 
-const ArticleHeader: React.FC<IntroductionHeaderProps> = ({
+const ArticleHeader: React.FC<ArticleHeaderProps> = ({
   image,
   alt,
   title,

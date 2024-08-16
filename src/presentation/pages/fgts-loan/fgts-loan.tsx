@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
 import { Header, LatestPosts, InfoPanel, LoadInfo, Faq } from '@/presentation/components/common'
-import { FgtsSimulation } from '@/presentation/components/interactive'
 import { Navbar, Footer } from '@/presentation/components/layout'
 import { PartnersBanks } from '@/presentation/components/common'
+import { FgtsSimulation } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
 import { faqAboutFgtsLoan } from '@/data/ui'
 
@@ -44,7 +44,6 @@ export default function FgtsLoan() {
           </>
         }
         showParagraph="*Sujeito à análise de crédito e condições do produto"
-        showDetails={false}
         backgroundImage={backgroundImageUrl.src}
       />
       <LoadInfo

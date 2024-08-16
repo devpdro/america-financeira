@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { IntroductionHeader } from '@/presentation/components/common'
+import { ArticleHeader } from '@/presentation/components/common'
 import { Footer, Navbar } from '@/presentation/components/layout'
 import { Timeline, Team } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
@@ -26,7 +26,7 @@ export default function About() {
         <meta property="og:type" content="website" />
       </Head>
       <Navbar />
-      <IntroductionHeader
+      <ArticleHeader
         image={Images.empresa.src}
         imageWidth={100}
         imageHeight={98}

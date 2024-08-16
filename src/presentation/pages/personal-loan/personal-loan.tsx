@@ -40,7 +40,6 @@ export default function PersonalLoan() {
             Empréstimo pra você, <br /> rápido e fácil
           </>
         }
-        showDetails={false}
         showParagraph="*Sujeito à análise de crédito e condições do produto"
         backgroundImage={backgroundImageUrl.src}
       />

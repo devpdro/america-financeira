@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Login } from '@/presentation/components/auth'
+import { Auth } from '@/presentation/components/layout'
 
 export default function SignIn() {
   return (
@@ -22,7 +22,7 @@ export default function SignIn() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/login" />
         <meta property="og:type" content="website" />
       </Head>
-      <Login />
+      <Auth />
     </main>
   )
 }

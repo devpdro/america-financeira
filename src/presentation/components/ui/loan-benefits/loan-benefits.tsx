@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './loan-benefits.module.scss'
 
-import { ConsignedCarousel } from '@/presentation/components/interactive'
+import { ConsignedCarousel } from '@/presentation/components/ui'
 
 const LoanBenefits = () => {
   return (
