@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-import { Button } from '@/presentation/components/form'
 import { Images } from '@/presentation/assets'
 import { icons } from '@/data/ui'
 
@@ -13,11 +12,11 @@ export type FollowUsProps = {
 
 const FollowUs: React.FC<FollowUsProps> = () => {
   return (
-    <section className={styles.container} aria-labelledby="modal-title" aria-describedby="modal-description">
+    <section className={styles.container} aria-labelledby="modal-titulo" aria-describedby="modal-descricao">
       <Image className={styles.img} src={Images.logoAmerica} alt="Logo América Financeira" />
       <h3 className={styles.subtitle}>Siga a gente</h3>
-      <p id="modal-description" className={styles.paragraph}>
-        Conheça nosso cultura, explore nossos serviços e veja <br /> como transformamos finanças em oportunidades todos
+      <p className={styles.paragraph}>
+        Conheça nossa cultura, explore nossos serviços e veja <br /> como transformamos finanças em oportunidades todos
         os dias.
       </p>
       <div className={styles['icons-section']}>

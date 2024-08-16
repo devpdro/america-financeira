@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Images } from '@/presentation/assets'
-
 import { list, icons } from '@/data/ui'
 
 import styles from './footer.module.scss'
@@ -21,7 +20,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-            
         </div>
         <div className={styles['details-section']}>
           {list.map((section, index) => (

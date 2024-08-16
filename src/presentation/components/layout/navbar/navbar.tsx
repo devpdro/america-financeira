@@ -3,11 +3,13 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { NavMobile } from '@/presentation/components/layout'
 import { IconWithProps, getLinkAttributes } from '@/utils'
 import { Images, Icons } from '@/presentation/assets'
 import { nav } from '@/data/ui'
+
 import styles from './navbar.module.scss'
 
 export default function Navbar() {

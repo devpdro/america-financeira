@@ -27,7 +27,7 @@ const InfoPanel: React.FC<InfoPanelProps> = ({
   imagePosition,
 }) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} aria-labelledby="info-panel-titulo" aria-describedby="info-panel-subtitulo">
       {imagePosition === 'left' && (
         <div className={styles['box-section']}>
           <div className={styles['text-section']}>

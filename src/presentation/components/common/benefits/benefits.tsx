@@ -6,7 +6,7 @@ import styles from './benefits.module.scss'
 
 const Benefits: React.FC<BenefitsProps> = ({ title, subtitle, imageWidth, imageHeight, items }) => {
   return (
-    <section className={styles.container} aria-labelledby="benefits-title" aria-describedby="benefits-subtitle">
+    <section className={styles.container} aria-labelledby="beneficios-titulo" aria-describedby="beneficios-subtitulo">
       <header className={styles['text-section']}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
@@ -18,8 +18,8 @@ const Benefits: React.FC<BenefitsProps> = ({ title, subtitle, imageWidth, imageH
             className={styles.box}
             key={index}
             role="group"
-            aria-labelledby={`benefit-title-${index}`}
-            aria-describedby={`benefit-subtitle-${index}`}
+            aria-labelledby={`beneficio-titulo-${index}`}
+            aria-describedby={`beneficio-subtitulo-${index}`}
           >
             <Image
               src={item.image}
@@ -29,12 +29,8 @@ const Benefits: React.FC<BenefitsProps> = ({ title, subtitle, imageWidth, imageH
               height={imageHeight}
             />
             <div className={styles['info-section']}>
-              <h2 id={`benefit-title-${index}`} className={styles.title}>
-                {item.title}
-              </h2>
-              <p id={`benefit-subtitle-${index}`} className={styles.subtitle}>
-                {item.subtitle}
-              </p>
+              <h2 className={styles.title}>{item.title}</h2>
+              <p className={styles.subtitle}>{item.subtitle}</p>
             </div>
           </div>
         ))}

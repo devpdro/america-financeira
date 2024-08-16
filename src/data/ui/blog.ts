@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image'
+
 import { Images } from '@/presentation/assets'
 
 export type BlogPostItem = {
@@ -33,6 +34,36 @@ export type BlogPostItem = {
   paragraphThree: string
   paragraphFour: string
 }
+
+export const latestPosts = [
+  {
+    href: '/pagar-boleto-com-cartao-de-credito-e-possivel',
+    ariaLabel: 'Leia mais sobre Empréstimos',
+    imageSrc: Images.simulacaoFgts,
+    alt: 'Empréstimos',
+    subtitle: 'Empréstimos',
+    title: 'Como fazer uma simulação para empréstimo FGTS',
+    date: '11 de março de 2024',
+  },
+  {
+    href: '/como-economizar-no-dia-a-dia-dicas-praticas',
+    ariaLabel: 'Leia mais sobre Investimentos',
+    imageSrc: Images.pessoaSozinha,
+    alt: 'Investimentos',
+    subtitle: 'Investimentos',
+    title: 'CDB: Tudo o que você precisa saber sobre e como investir!',
+    date: '21 de julho de 2024',
+  },
+  {
+    href: '/como-fazer-uma-simulacao-para-emprestimo-fgts',
+    ariaLabel: 'Leia mais sobre Cartão de Crédito',
+    imageSrc: Images.cartaoDebito,
+    alt: 'Cartão de Crédito',
+    subtitle: 'Cartão de Crédito',
+    title: 'Pagar boleto no cartão de crédito é possível?',
+    date: '21 de janeiro de 2024',
+  },
+]
 
 export const blogArticle: BlogPostItem[] = [
   {

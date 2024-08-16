@@ -4,8 +4,8 @@
 .container {
   @include container-center(1280px, 5.575rem auto 6.575rem auto);
   @include display-flex;
-  gap: 2.575rem;
   padding: 0 2.075rem;
+  gap: 2.575rem;
   @media (max-width: 880px) {
     flex-direction: column;
     margin: 3.575rem auto 3.275rem auto;
@@ -23,8 +23,8 @@
   .text-section {
     width: 100%;
     .subtitle {
-      font-size: $size-normal;
       font-weight: $weight-medium;
+      font-size: $size-normal;
       margin-bottom: 0.575rem;
       margin-top: 0;
       @media (max-width: 880px) {
@@ -33,8 +33,8 @@
       }
     }
     .title {
-      font-size: $size-large;
       font-weight: $weight-medium;
+      font-size: $size-large;
       margin: 0rem 0 1.075rem 0;
       line-height: 2.675rem;
       @media (max-width: 880px) {
@@ -43,8 +43,8 @@
       }
     }
     .paragraph {
-      font-size: $size-normal;
       font-weight: $weight-light;
+      font-size: $size-normal;
       margin-bottom: 2.075rem;
       line-height: 1.475rem;
     }

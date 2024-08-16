@@ -3,9 +3,9 @@
 
 .container {
   @include container-center(1280px, 0 auto);
+  text-align: center;
   padding: 0 2.075rem;
   margin-bottom: 4.575rem;
-  text-align: center;
   .title {
     font-size: $size-large;
     font-weight: $weight-medium;
@@ -18,9 +18,9 @@
     @include container-center(980px, 0 auto);
     font-size: $size-normal;
     font-weight: $weight-medium;
+    text-align: center;
     line-height: 1.275rem;
     margin-bottom: 2.075rem;
-    text-align: center;
     @media (max-width: 880px) {
       font-size: $size-small;
     }

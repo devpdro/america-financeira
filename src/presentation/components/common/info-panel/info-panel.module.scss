@@ -8,8 +8,8 @@
     .text-section {
       width: 100%;
       @media (max-width: 1024px) {
-        width: 100%;
         padding: 1.575rem 2.075rem;
+        width: 100%;
       }
       .title {
         font-size: $size-extra-medium;
@@ -27,8 +27,8 @@
       .subtitle {
         font-size: $size-small;
         font-weight: $weight-medium;
-        line-height: 1.175rem;
         margin: 0.675rem 0 1.075rem 0;
+        line-height: 1.175rem;
         padding: 0 9.075rem;
         @media (min-width: 1025px) and (max-width: 1224px) {
           padding: 0rem 5.075rem;
@@ -56,9 +56,9 @@
         .paragraph {
           @include hover-pointer;
           color: $blue-strong-color;
-          border-bottom: 1px solid $blue-strong-color;
           font-size: $size-small;
           font-weight: $weight-normal;
+          border-bottom: 1px solid $blue-strong-color;
         }
       }
     }

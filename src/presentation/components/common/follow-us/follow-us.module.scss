@@ -3,21 +3,21 @@
 
 .container {
   @include display-flex;
-  padding: 0 2.075rem;
-  flex-direction: column;
-  background-color: $white-color;
   color: $black-color;
+  background-color: $white-color;
   border-radius: $radius-medium;
-  margin-bottom: 4.075rem;
+  flex-direction: column;
   text-align: center;
+  margin-bottom: 4.075rem;
+  padding: 0 2.075rem;
   @media (max-width: 880px) {
-    width: 100%;
     margin-bottom: 2.075rem;
+    width: 100%;
   }
   .img {
-    width: 60px;
     margin-bottom: 0.375rem;
     height: 60px;
+    width: 60px;
     @media (max-width: 880px) {
       margin-bottom: 0.875rem;
     }
@@ -45,8 +45,8 @@
   }
   .icons-section {
     @include display-flex;
-    gap: 1.575rem;
     margin: 1.075rem 0 2.475rem 0;
+    gap: 1.575rem;
     .icon {
       background-color: $gray-light-color;
       color: $blue-strong-color;

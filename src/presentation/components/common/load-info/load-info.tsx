@@ -29,7 +29,7 @@ const LoadInfo: React.FC<LoadInfoProps> = ({
   imagePosition,
 }) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} aria-labelledby="load-info-titulo" aria-describedby="load-info-descricao">
       {imagePosition === 'left' && (
         <>
           <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>

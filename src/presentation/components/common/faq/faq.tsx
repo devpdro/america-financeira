@@ -27,7 +27,7 @@ const Faq: React.FC<FaqProps> = ({ items, title }) => {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 5)
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} aria-labelledby="faq-titulo">
       <h1 className={styles.title}>{title}</h1>
       {visibleFaqs.map((faq, index) => (
         <div

@@ -7,7 +7,6 @@ export type HeaderProps = {
   subtitle: React.ReactNode
   backgroundImage: string
   showLoanRequest?: boolean
-  showDetails?: React.ReactNode
   showParagraph?: string
 }
 
@@ -17,7 +16,6 @@ const Header: React.FC<HeaderProps> = ({
   backgroundImage,
   showLoanRequest = true,
   showParagraph = false,
-  showDetails = false,
 }) => {
   return (
     <header
@@ -38,14 +36,6 @@ const Header: React.FC<HeaderProps> = ({
           <h1 className={styles.title} aria-label="Título">
             {subtitle}
           </h1>
-          {showDetails && (
-            <>
-              <p className={styles['paragraph-details']} aria-label="Detalhes">
-                {showDetails}
-              </p>
-              <Button typeStyle="btn3" text="Conheça mais" aria-label="Conheça mais sobre os detalhes" />
-            </>
-          )}
           {showParagraph && (
             <p className={styles.paragraph} aria-label="Parágrafo">
               {showParagraph}

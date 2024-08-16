@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-import { NavItemProps } from '@/data/models'
 import { Icons } from '@/presentation/assets'
+import { NavItemProps } from '@/data/models'
 
 import styles from './nav-item.module.scss'
 

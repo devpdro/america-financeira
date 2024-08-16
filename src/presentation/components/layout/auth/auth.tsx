@@ -1,15 +1,14 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Link from 'next/link'
 import Image from 'next/image'
 
-import { ErrorModal } from '@/presentation/components/feedback'
 import { Button } from '@/presentation/components/form'
 import { Images } from '@/presentation/assets'
 
-import styles from './login.module.scss'
+import styles from './auth.module.scss'
 
 export type LoginFormProps = {
   email: string
@@ -105,7 +104,6 @@ const Login: React.FC = () => {
           <Button typeStyle="btn3" text={isSubmitting ? 'Entrando...' : 'Entrar'} width="100%" />
         </form>
       </div>
-      <ErrorModal isOpen={isModalOpen} onClose={closeModal} message={modalMessage} aria-label="Modal de Login" />
     </section>
   )
 }

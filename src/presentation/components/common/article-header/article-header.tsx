@@ -17,7 +17,7 @@ export type IntroductionHeaderProps = {
   imagePosition: 'left' | 'right'
 }
 
-const IntroductionHeader: React.FC<IntroductionHeaderProps> = ({
+const ArticleHeader: React.FC<IntroductionHeaderProps> = ({
   image,
   alt,
   title,
@@ -29,7 +29,7 @@ const IntroductionHeader: React.FC<IntroductionHeaderProps> = ({
   imagePosition,
 }) => {
   return (
-    <section className={styles.container}>
+    <header className={styles.container}>
       {imagePosition === 'left' && (
         <>
           <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${100}%` }}>
@@ -78,8 +78,8 @@ const IntroductionHeader: React.FC<IntroductionHeaderProps> = ({
           </div>
         </>
       )}
-    </section>
+    </header>
   )
 }
 
-export default IntroductionHeader
+export default ArticleHeader

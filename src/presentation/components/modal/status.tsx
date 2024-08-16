@@ -2,17 +2,17 @@ import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 
 import { Button } from '@/presentation/components/form'
-import { IoClose } from 'react-icons/io5'
+import { icons } from '@/data/ui'
 
-import styles from './error-modal.module.scss'
+import styles from './status.module.scss'
 
-interface ErrorModalProps {
+interface StatusModalProps {
   isOpen: boolean
   message?: string
   onClose: () => void
 }
 
-const ErrorModal: React.FC<ErrorModalProps> = ({ isOpen, onClose, message }) => {
+const StatusModal: React.FC<StatusModalProps> = ({ isOpen, onClose, message }) => {
   return (
     <section className={styles.container} aria-labelledby="modal-title" aria-describedby="modal-description">
       <Modal
@@ -34,6 +34,18 @@ const ErrorModal: React.FC<ErrorModalProps> = ({ isOpen, onClose, message }) => 
           <h1 id="modal-title" className={styles.title}>
             {message}
           </h1>
+          <h3 className={styles.subtitle}>Siga a gente</h3>
+          <p id="modal-description" className={styles.paragraph}>
+            Conheça nosso cultura, explore nossos serviços e veja como <br />
+            transformamos finanças em oportunidades todos os dias.
+          </p>
+          <div className={styles['icons-section']}>
+            {icons.map(({ icon: Icon, link }, index) => (
+              <a key={index} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Link para ${link}`}>
+                <Icon className={styles.icon} />
+              </a>
+            ))}
+          </div>
           <Button typeStyle="btn1" text="Fechar" width="100%" onClick={onClose} aria-label="Fechar o modal" />
         </div>
       </Modal>
@@ -41,4 +53,4 @@ const ErrorModal: React.FC<ErrorModalProps> = ({ isOpen, onClose, message }) => 
   )
 }
 
-export default ErrorModal
+export default StatusModal
