@@ -1,3 +1,4 @@
+export { default as Auth } from './auth/auth'
 export { default as ErrorDisplay } from './error-display/error-display'
 export { default as HeaderPolicy } from './header-policy/header-policy'
 export { default as InformationPolicy } from './information-policy/information-policy'

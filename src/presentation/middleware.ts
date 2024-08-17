@@ -1,24 +1,24 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import jwt from 'jsonwebtoken'
+import { users } from '@/data/ui'
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY || 'your-secret-key'
+export function middleware(req: NextRequest) {
+  const { pathname, searchParams } = req.nextUrl
 
-export function middleware(request: NextRequest) {
-  const token = request.cookies.get('token')?.value
+  if (pathname.startsWith('/login')) {
+    const email = searchParams.get('email')
+    const password = searchParams.get('password')
 
-  if (!token) {
-    return NextResponse.redirect(new URL('/login', request.url))
+    const user = users.find((user) => user.email === email && user.password === password)
+
+    if (!user) {
+      return NextResponse.redirect(new URL('/login', req.url))
+    }
   }
 
-  try {
-    jwt.verify(token, SECRET_KEY)
-    return NextResponse.next()
-  } catch (error) {
-    return NextResponse.redirect(new URL('/login', request.url))
-  }
+  return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/dashboard', '/other-protected-route'], // Rotas protegidas
+  matcher: '/dashboard/:path*', // Especifique aqui as rotas protegidas
 }

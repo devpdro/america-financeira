@@ -1,38 +1,41 @@
 'use client'
 
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 
+import { StatusModal } from '@/presentation/components/modal'
 import { Button } from '@/presentation/components/form'
 import { Images } from '@/presentation/assets'
 
 import styles from './auth.module.scss'
 
-export type LoginFormProps = {
+export type AuthProps = {
   email: string
   password: string
 }
 
-const Login: React.FC = () => {
+const Auth = () => {
   const [modalMessage, setModalMessage] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const router = useRouter()
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<LoginFormProps>({
+  } = useForm<AuthProps>({
     defaultValues: {
       email: '',
       password: '',
     },
   })
 
-  const onSubmit = async (data: LoginFormProps) => {
+  const onSubmit = async (data: AuthProps) => {
     try {
-      const res = await fetch('/api/auth', {
+      const response = await fetch('/api/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,24 +43,16 @@ const Login: React.FC = () => {
         body: JSON.stringify(data),
       })
 
-      const result = await res.json()
-
-      if (res.ok) {
-        localStorage.setItem('token', result.token)
-        // Redirecionar para a página desejada após o login bem-sucedido
-        window.location.href = '/dashboard' // exemplo de redirecionamento
+      if (response.ok) {
+        router.push('/painel')
       } else {
-        setModalMessage(result.error || 'Erro no login, tente novamente.')
+        setModalMessage('Email ou senha inválidos.')
         setIsModalOpen(true)
       }
     } catch (error) {
-      setModalMessage('Erro ao conectar-se ao servidor.')
+      setModalMessage('Ocorreu um erro ao tentar fazer login.')
       setIsModalOpen(true)
     }
-  }
-
-  const closeModal = () => {
-    setIsModalOpen(false)
   }
 
   return (
@@ -102,10 +97,16 @@ const Login: React.FC = () => {
           />
           {errors.password && <span className={styles.error}>{errors.password.message}</span>}
           <Button typeStyle="btn3" text={isSubmitting ? 'Entrando...' : 'Entrar'} width="100%" />
+          <StatusModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            message={modalMessage}
+            aria-label="Modal de Solicitação de Empréstimo"
+          />
         </form>
       </div>
     </section>
   )
 }
 
-export default Login
+export default Auth

@@ -1,3 +1,3 @@
-//import { makeDashboard } from '@/main/factories/pages'
+import { makeDashboard } from '@/main/factories/pages'
 
-//export default makeDashboard
+export default makeDashboard

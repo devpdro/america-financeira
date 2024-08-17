@@ -1,30 +1,19 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { login } from '@/main/services/auth/auth'
-import cookie from 'cookie'
+import { users } from '@/data/ui'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { email, password } = req.body
-    try {
-      const token = await login(email, password)
 
-      // Define o cookie no cliente
-      res.setHeader(
-        'Set-Cookie',
-        cookie.serialize('token', token, {
-          httpOnly: true,
-          secure: process.env.NODE_ENV !== 'development',
-          maxAge: 60 * 60, // 1 hora
-          sameSite: 'strict',
-          path: '/',
-        })
-      )
+    const user = users.find((user) => user.email === email && user.password === password)
 
-      res.status(200).json({ success: true })
-    } catch (error: any) {
-      res.status(401).json({ error: error.message })
+    if (user) {
+      return res.status(200).json({ message: 'Login successful' })
     }
-  } else {
-    res.status(405).end() // Método não permitido
+
+    return res.status(401).json({ message: 'Invalid email or password' })
   }
+
+  res.setHeader('Allow', ['POST'])
+  res.status(405).end(`Method ${req.method} Not Allowed`)
 }
