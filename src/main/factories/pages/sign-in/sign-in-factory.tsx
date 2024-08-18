@@ -1,5 +1,4 @@
 import { ReactElement } from 'react'
-
 import { AuthLayout } from '@/presentation/components/layout'
 import { SignIn } from '@/presentation/pages'
 

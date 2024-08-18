@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import { ReactElement } from 'react'
 
-import { AuthLayout } from '@/presentation/components/layout'
 import { Auth } from '@/presentation/components/ui'
 
 export default function SignIn() {

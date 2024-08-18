@@ -1,7 +1,7 @@
-import { ReactElement } from 'react'
-import { AuthLayout } from '@/presentation/components/layout'
+import { useValidadeAuthToken } from '@/presentation/hooks'
 
 export default function Dashboard() {
+  useValidadeAuthToken()
   return (
     <main>
       <h1>Painel do usuário</h1>

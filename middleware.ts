@@ -12,11 +12,7 @@ export function middleware(req: NextRequest) {
   }
 
   try {
-    const decoded = jwt.verify(token, SECRET_KEY)
-
-    // Caso queira adicionar informações decodificadas ao request:
-    req.nextUrl.searchParams.set('user', JSON.stringify(decoded))
-
+    jwt.verify(token, SECRET_KEY)
     return NextResponse.next()
   } catch (err) {
     return NextResponse.redirect(new URL('/login', req.url))

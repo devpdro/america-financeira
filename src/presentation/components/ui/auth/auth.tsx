@@ -44,6 +44,8 @@ const Auth = () => {
       })
 
       if (response.ok) {
+        const { token } = await response.json()
+        localStorage.setItem('auth-token', token) // Armazenando o token no localStorage
         router.push('/painel')
       } else {
         setModalMessage('Email ou senha inválidos.')
