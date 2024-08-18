@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation' // Atualizado para 'next/navigation' com App Router
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -44,11 +44,11 @@ const Auth = () => {
       })
 
       if (response.ok) {
-        const { token } = await response.json()
-        localStorage.setItem('auth-token', token) // Armazenando o token no localStorage
+        // Após o login bem-sucedido, redirecione para o painel
         router.push('/painel')
       } else {
-        setModalMessage('Email ou senha inválidos.')
+        const result = await response.json()
+        setModalMessage(result.message || 'Email ou senha inválidos.')
         setIsModalOpen(true)
       }
     } catch (error) {
@@ -70,7 +70,7 @@ const Auth = () => {
             {...register('email', {
               required: 'E-mail é obrigatório',
               pattern: {
-                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                value: /^[^\s@]+@[^\s@]+.[^\s@]+$/,
                 message: 'E-mail inválido',
               },
             })}
