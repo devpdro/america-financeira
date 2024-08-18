@@ -28,17 +28,19 @@
 }
 
 .btn3 {
-  margin-top: 1.575rem;
+  margin-top: 1.675rem;
   @include hover-pointer;
   border: 1px solid $blue-color;
   background-color: $blue-color;
   color: $white-color;
+
 }
 
 .btn4 {
   @include hover-pointer;
   color: $black-color;
   border: 1px solid $blue-color;
+ 
   &:hover {
     background-color: $blue-color;
     color: $white-color;

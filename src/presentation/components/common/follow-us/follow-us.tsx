@@ -13,7 +13,7 @@ export type FollowUsProps = {
 const FollowUs: React.FC<FollowUsProps> = () => {
   return (
     <section className={styles.container} aria-labelledby="modal-titulo" aria-describedby="modal-descricao">
-      <Image className={styles.img} src={Images.logoAmerica} alt="Logo América Financeira" />
+      <Image className={styles.img} src={Images.logoAmericaAzul} alt="Logo América Financeira" />
       <h3 className={styles.subtitle}>Siga a gente</h3>
       <p className={styles.paragraph}>
         Conheça nossa cultura, explore nossos serviços e veja <br /> como transformamos finanças em oportunidades todos

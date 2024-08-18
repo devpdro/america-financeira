@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { NavMobile } from '@/presentation/components/layout'
+import { NavMobile } from '@/presentation/components/common'
 import { IconWithProps, getLinkAttributes } from '@/utils'
 import { Images, Icons } from '@/presentation/assets'
 import { nav } from '@/data/ui'
@@ -27,7 +27,7 @@ export default function Navbar() {
       <section ref={animationParent} className={styles['left-section']} aria-label="Seção de Navegação Esquerda">
         <Link href="/" legacyBehavior>
           <a aria-label="Logo América Financeira">
-            <Image src={Images.logoAmericaAzul} alt="Logo América Financeira" className={styles.logo} />
+            <Image src={Images.logoWhite} alt="Logo América Financeira" className={styles.logo} />
           </a>
         </Link>
         {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}

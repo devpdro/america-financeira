@@ -4,7 +4,6 @@
 .container {
   @include display-flex;
   flex-direction: column;
-
   .bg-blue {
     background-color: $blue-color;
     height: 200px;
@@ -41,7 +40,7 @@
         transition: border-bottom 0.3s ease;
         border-bottom: 1px solid $gray-color;
         margin-top: 0.875rem;
-        margin-bottom: 0.375rem;
+        margin-bottom: 0.575rem;
         padding: 7px 0;
         width: 100%;
         @media (max-width: 994px) {

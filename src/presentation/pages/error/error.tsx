@@ -23,8 +23,16 @@ export default function Error() {
       </Head>
       <ErrorDisplay
         title="Ops!"
-        subtitle="Não conseguimos encontrar a página que você está procurando."
-        message="Se não sabe para onde ir, qualquer caminho serve! - Gato Cheshire, Alice no País das Maravilhas."
+        subtitle={
+          <>
+            Não conseguimos encontrar a página <br /> que você está procurando.
+          </>
+        }
+        message={
+          <>
+            Se não sabe para onde ir, qualquer caminho <br /> serve! - Gato Cheshire, Alice no País das Maravilhas.
+          </>
+        }
       />
     </main>
   )

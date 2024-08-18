@@ -9,7 +9,6 @@ import { Error } from '@/presentation/pages'
 import styles from '../../presentation/components/ui/blog/blog-post.module.scss'
 import NewsLetter from '@/presentation/components/ui/newsletter/newsletter'
 
-// Função para remover acentos e caracteres especiais de uma string
 const removeAccents = (str: any) => {
   if (typeof str !== 'string' || str === '') {
     return ''

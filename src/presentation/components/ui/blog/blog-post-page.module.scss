@@ -3,7 +3,6 @@
 
 .container {
   width: 390px;
-
   .article {
     width: 100%;
     transition: all 0.3s ease;
@@ -94,7 +93,7 @@
 
 @media screen and (min-width: 1082px) and (max-width: 1282px) {
   .container {
-    width: 310px !important;
+    width: 340px !important;
     .article_container {
       .article {
         .img {

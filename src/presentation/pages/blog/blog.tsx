@@ -40,6 +40,8 @@ export default function Blog() {
         paragraph="No nosso blog, você encontrará artigos, notícias e dicas sobre finanças, investimentos e muito mais. Estamos comprometidos em oferecer conteúdo de qualidade para ajudar você a tomar decisões financeiras informadas e melhorar sua vida financeira."
         buttonPrimaryText="Leia mais"
         imagePosition="right"
+        linkHref="#ultimos-posts"
+        openInNewTab={false}
       />
       <BlogRecent />
       <Information title={informationBlog[0].title} paragraphs={informationBlog[0].paragraphs} />

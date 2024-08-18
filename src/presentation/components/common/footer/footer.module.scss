@@ -2,13 +2,13 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  background-color: $blue-strong-color;
+  background-color: $blue-color;
   color: $white-color;
   .container-section {
     @include container-center(1380px, 0 auto);
     @include display-flex(flex-start, space-between);
     padding: 4.075rem 2.075rem 4.075rem 2.075rem;
-    border-bottom: 1px solid $light-blue;
+    border-bottom: 1px solid $gray-color;
     @media (max-width: 884px) {
       flex-direction: column;
       padding: 3.075rem 2.075rem;
@@ -62,7 +62,7 @@
       gap: 6.775rem;
       @media (min-width: 885px) and (max-width: 1224px) {
         gap: 2.075rem !important;
-        padding: 0 0 0 1.675rem;
+        padding: 0 0 0 3.575rem;
         @include display-flex(flex-start, space-between);
       }
       @media (max-width: 884px) {

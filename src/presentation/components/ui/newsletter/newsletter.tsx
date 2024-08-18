@@ -2,9 +2,12 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+
 import emailjs from 'emailjs-com'
-import { StatusModal } from '@/presentation/components/feedback'
+
+import { StatusModal } from '@/presentation/components/modal'
 import { Button } from '@/presentation/components/form'
+
 import styles from './newsletter.module.scss'
 
 export type NewsLetterProps = {

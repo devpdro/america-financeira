@@ -5,7 +5,6 @@ import { AuthLayout } from '@/presentation/components/layout'
 import { Auth } from '@/presentation/components/ui'
 
 export default function SignIn() {
-  console.log('teste')
   return (
     <main>
       <Head>
@@ -28,9 +27,4 @@ export default function SignIn() {
       <Auth />
     </main>
   )
-}
-
-SignIn.getLayout = (page: ReactElement) => {
-  console.log('Applying AuthLayout')
-  return <AuthLayout>{page}</AuthLayout>
 }

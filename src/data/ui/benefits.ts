@@ -67,8 +67,8 @@ export const benefitsPartners = [
     image: Images.conteConosco,
   },
   {
-    title: 'Portal do Parceiro',
-    subtitle: 'Acompanhe status das indicações em tempo real e confira próximos passos.',
+    title: 'Ferramentas de ponta',
+    subtitle: 'Tenha eficiência e sucesso em suas vendas com nosso suporte especializado.',
     image: Images.parceiro,
   },
 ]

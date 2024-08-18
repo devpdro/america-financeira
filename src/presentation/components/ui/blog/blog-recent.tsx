@@ -35,7 +35,7 @@ const BlogRecent: React.FC = () => {
   const loadMorePosts = () => setVisiblePosts((prev) => prev + 6)
 
   return (
-    <section className={`${page.container}`}>
+    <section id="ultimos-posts" className={`${page.container}`}>
       <div className={`${page.results_container}`}>
         <h1 className={page.title}>{searchQuery ? 'Resultados' : 'Últimos posts'}</h1>
         <PostsList posts={filteredPosts.slice(0, visiblePosts)} />

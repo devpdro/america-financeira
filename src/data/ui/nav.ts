@@ -46,13 +46,6 @@ export const nav: NavItemProps[] = [
   {
     label: 'Seja Parceiro',
     link: '/parceiros',
-    children: [
-      {
-        label: 'Apresentação para Parceiros',
-        link: '/apresentacao-parceiros.pdf',
-        new: 'PDF',
-      },
-    ],
   },
   {
     label: 'Blog',

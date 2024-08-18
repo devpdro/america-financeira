@@ -14,7 +14,9 @@ export type BlogHeaderProps = {
   buttonPrimaryText: string
   imageWidth: number
   imageHeight: number
+  linkHref: string
   imagePosition: 'left' | 'right'
+  openInNewTab: boolean
 }
 
 const BlogHeader: React.FC<BlogHeaderProps> = ({
@@ -26,7 +28,9 @@ const BlogHeader: React.FC<BlogHeaderProps> = ({
   buttonPrimaryText,
   imageWidth,
   imageHeight,
+  linkHref,
   imagePosition,
+  openInNewTab = true,
 }) => {
   return (
     <section className={styles.container}>
@@ -58,11 +62,7 @@ const BlogHeader: React.FC<BlogHeaderProps> = ({
             <h3 className={styles.subtitle}>{subtitle}</h3>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.paragraph}>{paragraph}</p>
-            <Link
-              href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!"
-              target="_blank"
-              aria-label={`Saiba mais sobre ${title}`}
-            >
+            <Link href={linkHref} target={openInNewTab ? '_blank' : '_self'} aria-label={`Saiba mais sobre ${title}`}>
               <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
             </Link>
           </div>

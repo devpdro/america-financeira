@@ -19,7 +19,6 @@ const LoanWarning = () => {
     <aside className={styles.container}>
       <div className={styles['box-section']}>
         <h1 className={styles.title}>Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo</h1>
-
         <IoClose className={styles.icon} onClick={handleClose} />
       </div>
     </aside>

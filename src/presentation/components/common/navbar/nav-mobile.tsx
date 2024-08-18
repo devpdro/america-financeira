@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { NavItem } from '@/presentation/components/layout'
+import { NavItem } from '@/presentation/components/common'
 import { NavMobileProps } from '@/data/models'
 import { Icons } from '@/presentation/assets'
 import { IconWithProps } from '@/utils'
