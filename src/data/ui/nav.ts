@@ -14,6 +14,10 @@ export const nav: NavItemProps[] = [
         link: 'https://www.google.com/maps/search/Am%C3%A9rica+Financeira/@-22.3971915,-48.0358251,10z/data=!3m1!4b1?entry=ttu',
       },
       {
+        label: 'Intranet',
+        link: '/intranet',
+      },
+      {
         label: 'Apresentação Institucional',
         link: '/apresentacao-institucional.pdf',
         new: 'PDF',

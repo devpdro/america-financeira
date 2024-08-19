@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  @include container-center(1140px, 0 auto 5.075rem auto);
+  padding: 0 2.075rem;
+  .box-section {
+    background-color: $blue-color;
+    color: $white-color;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+    margin-top: 1.075rem;
+    padding: 0.975rem 1.075rem;
+  }
+}
