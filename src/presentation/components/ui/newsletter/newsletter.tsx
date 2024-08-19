@@ -71,12 +71,14 @@ const NewsLetter: React.FC = () => {
                 id="nome"
                 placeholder="Nome"
                 {...register('nome', {
+                  required: 'Nome é obrigatório',
                   minLength: {
                     value: 4,
                     message: 'Nome deve ter no mínimo 4 caracteres',
                   },
                 })}
               />
+              {errors.nome && <span className={styles.error}>{errors.nome.message}</span>}
               <input
                 className={`${styles.input} ${errors.email && styles.input_error}`}
                 autoComplete="new-password"
@@ -84,12 +86,14 @@ const NewsLetter: React.FC = () => {
                 id="email"
                 placeholder="E-mail"
                 {...register('email', {
+                  required: 'E-mail é obrigatório',
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/,
                     message: 'E-mail inválido',
                   },
                 })}
-              />{' '}
+              />
+              {errors.email && <span className={styles.error}>{errors.email.message}</span>}
               <Button typeStyle="btn1" width="100%" text="Inscrever" />
             </div>
           </form>
