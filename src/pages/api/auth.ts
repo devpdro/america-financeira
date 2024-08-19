@@ -12,28 +12,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const user = users.find((user) => user.email === email && user.password === password)
 
     if (user) {
-      const token = jwt.sign(
-        { id: user.id, email: user.email },
-        SECRET_KEY,
-        { expiresIn: '1d' } // Token válido por 1 dia
-      )
+      const token = jwt.sign({ id: user.id, email: user.email }, SECRET_KEY, { expiresIn: '1d' })
 
       res.setHeader(
         'Set-Cookie',
         serialize('auth-token', token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production', // Somente enviar em HTTPS no ambiente de produção
-          sameSite: 'strict', // Protege contra ataques CSRF
-          maxAge: 60 * 60 * 24, // 1 dia
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'strict',
+          maxAge: 60 * 60 * 24,
           path: '/',
         })
       )
 
-      return res.status(200).json({ message: 'Login successful' })
+      return res.status(200).json({ message: 'Login realizado com sucesso' })
     }
 
-    return res.status(401).json({ message: 'Invalid email or password' })
+    return res.status(401).json({ message: 'E-mail ou senha inválidos' })
   }
 
-  return res.status(405).json({ message: 'Method Not Allowed' })
+  return res.status(405).json({ message: 'Método não permitido' })
 }

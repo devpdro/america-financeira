@@ -5,14 +5,15 @@
   @include display-flex(center, space-around);
   background-color: $blue-color;
   padding: 2.075rem 2.075rem 2.075rem 2.075rem;
+  height: 100vh;
   @media (max-width: 1080px) {
     @include display-flex(center, center);
     padding: 2.075rem 1.075rem 2.075rem 1.075rem;
   }
   .logo {
-    width: 400px;
-    margin-right: 2.075rem;
     background-color: $blue-color;
+    width: 500px;
+    margin-right: 2.075rem;
     @media (max-width: 1080px) {
       display: none;
     }

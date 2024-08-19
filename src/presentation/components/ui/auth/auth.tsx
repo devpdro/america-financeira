@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation' // Atualizado para 'next/navigation' com App Router
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -85,10 +85,6 @@ const Auth = () => {
               minLength: {
                 value: 6,
                 message: 'Senha deve ter no mínimo 6 caracteres',
-              },
-              pattern: {
-                value: /^\d+$/,
-                message: 'Senha deve conter apenas números',
               },
             })}
             className={`${styles.input} ${errors.password ? styles['input-text-error'] : ''}`}
