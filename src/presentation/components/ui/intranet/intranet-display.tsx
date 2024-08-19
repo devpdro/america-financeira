@@ -30,12 +30,7 @@ const IntranetDisplay: React.FC = () => {
             <ul className={styles['list-section']}>
               {section.items.map((item, index) => (
                 <li className={styles.list} key={index}>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()} // Adicionando stopPropagation aqui
-                  >
+                  <a className={styles.link} href={item.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     {item.label}
                   </a>
                 </li>

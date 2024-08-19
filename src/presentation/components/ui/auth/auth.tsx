@@ -44,7 +44,6 @@ const Auth = () => {
       })
 
       if (response.ok) {
-        // Após o login bem-sucedido, redirecione para o painel
         router.push('/painel')
       } else {
         const result = await response.json()

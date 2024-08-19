@@ -28,6 +28,12 @@
       padding-left: 1.575rem;
       .list {
         padding: 0.175rem 0;
+        .link {
+          @include hover-pointer;
+          &:hover {
+            border-bottom: 1px solid $blue-color;
+          }
+        }
       }
     }
   }
