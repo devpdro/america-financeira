@@ -1,29 +1,29 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import jwt from 'jsonwebtoken'
+import { jwtVerify } from 'jose'
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY || 'your-secret-key'
+const SECRET_KEY = new TextEncoder().encode(process.env.JWT_SECRET_KEY || 'your-secret-key')
 
-export function middleware(req: NextRequest) {
-  console.log('Middleware triggered') // Verifica se o middleware está sendo chamado
+export async function middleware(req: NextRequest) {
+  console.log('Middleware triggered')
 
   const tokenCookie = req.cookies.get('auth-token')
 
   if (!tokenCookie) {
-    console.log('No token cookie found') // Loga quando o cookie não é encontrado
+    console.log('No token cookie found')
     return NextResponse.redirect(new URL('/login', req.url))
   }
 
   const token = tokenCookie.value
-  console.log('Token:', token) // Loga o token encontrado
+  console.log('Token:', token)
 
   try {
-    const decoded = jwt.verify(token, SECRET_KEY)
-    console.log('Token decoded:', decoded) // Loga o token decodificado
-    req.nextUrl.searchParams.set('user', JSON.stringify(decoded))
+    const { payload } = await jwtVerify(token, SECRET_KEY)
+    console.log('Token decoded:', payload)
+    req.nextUrl.searchParams.set('user', JSON.stringify(payload))
     return NextResponse.next()
   } catch (err) {
-    console.log('Token verification failed', err) // Loga falha na verificação do token
+    console.log('Token verification failed', err)
     return NextResponse.redirect(new URL('/login', req.url))
   }
 }
