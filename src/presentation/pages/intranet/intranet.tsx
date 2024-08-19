@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import { HeaderPolicy, IntranetDisplay } from '@/presentation/components/ui'
+import { HeaderPolicy, InformationPolicy, IntranetDisplay } from '@/presentation/components/ui'
+import { intranetPolicy } from '@/data/ui'
 
 export default function Intranet() {
   return (
@@ -27,6 +28,14 @@ export default function Intranet() {
       </Head>
       <HeaderPolicy title="Intranet" />
       <IntranetDisplay />
+      <InformationPolicy
+        title={intranetPolicy.title}
+        paragraph={intranetPolicy.paragraph}
+        introductionTitle={intranetPolicy.introductionTitle}
+        listItems={intranetPolicy.listItems}
+        finishedTitle={intranetPolicy.finishedTitle}
+        finishedParagraph={intranetPolicy.finishedParagraph}
+      />
     </div>
   )
 }

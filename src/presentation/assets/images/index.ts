@@ -34,10 +34,10 @@ import casa from './casa.webp'
 import idosoConversandoComMulher from './idoso-conversando-com-mulher.webp'
 import duasPessoasOlhando from './duas-pessoas-olhando.webp'
 import ParceiroConversando from './parceiro-conversando.webp'
-import PessoaParceiro from './pessoa-parceira.jpeg'
-import empresa from './empresa.jpg'
+import PessoaParceiro from './pessoa-parceira.webp'
+import empresa from './empresa.webp'
 import logoAmericaAzul from './logo-america-azul.webp'
-import logoAmericaPartners from './logo-america-partners.jpg'
+import logoAmericaPartners from './logo-america-partners.webp'
 import pessoaCelular from './pessoa-celular-blog.webp'
 import PessoaDicas from './dicas-blog.webp'
 import TesouroDireto from './tesouro-direto.webp'
@@ -46,23 +46,25 @@ import allanConfraternizacao from './allan-confraternizacao.webp'
 import equipeOlhandoTv from './equipe-olhando-tv.webp'
 import equipeTodosVermelho from './equipe-todos-vermelho.webp'
 import equipeUnida from './equipe-unida.webp'
-import pessoaOlhando from './pessoa-olhando.webp'
 import simulacaoFgts from './simulacao-fgts.webp'
-import tresPessoasEmprestimo from './tres-pessoas-emprestimo.jpeg'
+import tresPessoasEmprestimo from './tres-pessoas-emprestimo.webp'
 import equipeFotoFinal from './equipe-todos-amarelo.webp'
 import equipeFotoConfraternizacao from './equipe-foto-final.webp'
 import confraternizacaoTrofeu from './confraternizacao-trofeu.webp'
+import quemSomos from './quem-somos.webp'
+import pessoaOlhando from './pessoa-olhando.webp'
 
 const Images = {
   confraternizacaoTrofeu,
   equipeFotoConfraternizacao,
+  pessoaOlhando,
+  quemSomos,
   equipeFotoFinal,
   tresPessoasEmprestimo,
   allanConfraternizacao,
   equipeOlhandoTv,
   equipeTodosVermelho,
   equipeUnida,
-  pessoaOlhando,
   simulacaoFgts,
   headerBlog,
   PessoaDicas,

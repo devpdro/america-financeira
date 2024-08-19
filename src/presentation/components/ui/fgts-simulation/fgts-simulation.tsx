@@ -27,17 +27,23 @@ const FgtsSimulation = () => {
   }
 
   const calcularValor = (saldo: number, mesAniversario: number) => {
-    const mesAtual = new Date().getMonth() + 1 // Meses de 1 a 12
-    const diffMes = mesAniversario - mesAtual
+    const mesAtual = new Date().getMonth() + 1 // Meses vão de 1 a 12
+    let diffMes = mesAniversario - mesAtual
 
+    // Ajustar diferença se o mês de aniversário for no próximo ano
+    if (diffMes < 0) {
+      diffMes += 12
+    }
+
+    // Fator de ajuste
     let fatorAjuste = 1 // Fator base
 
     if (diffMes > 0) {
-      // Mês de aniversário é posterior ao mês atual
-      fatorAjuste = 1 + diffMes * 0.01 // Exemplo: 1% a mais por mês
+      // Se o mês de aniversário é posterior ao mês atual
+      fatorAjuste = Math.pow(1.01, diffMes) // Exemplo: 1% a mais por mês
     } else if (diffMes < 0) {
-      // Mês de aniversário é anterior ao mês atual
-      fatorAjuste = 1 - Math.abs(diffMes) * 0.01 // Exemplo: 1% a menos por mês
+      // Se o mês de aniversário é anterior ao mês atual (caso nunca vá ocorrer, pode remover esta parte)
+      fatorAjuste = Math.pow(1.82, Math.abs(diffMes)) // Exemplo: 8% a menos por mês
     }
 
     return saldo * 0.721274 * fatorAjuste
@@ -87,10 +93,10 @@ const FgtsSimulation = () => {
                 value={nomeMeses[mesAniversario - 1]}
                 readOnly
               />
-              <button className={styles['btn']} onClick={decrementarMes}>
+              <button className={styles['btn']} onClick={decrementarMes} aria-label="Decrementar saldo">
                 -
               </button>
-              <button className={styles['btn']} onClick={incrementarMes}>
+              <button className={styles['btn']} onClick={incrementarMes} aria-label="Incrementar saldo">
                 +
               </button>
             </div>

@@ -25,7 +25,7 @@ export default function About() {
         <meta property="og:type" content="website" />
       </Head>
       <ArticleHeader
-        image={Images.empresa.src}
+        image={Images.quemSomos.src}
         imageWidth={100}
         imageHeight={98}
         alt="Nossa História"

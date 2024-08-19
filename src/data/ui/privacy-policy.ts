@@ -101,3 +101,40 @@ export const termsOfUse = {
   finishedParagraph:
     'Estes Termos de Uso são regidos e interpretados de acordo com as leis do Brasil, sem considerar conflitos de disposições legais. Nossa falha em fazer cumprir qualquer direito ou disposição destes Termos não será considerada uma renúncia a esses direitos. Se qualquer disposição destes Termos for considerada inválida ou inexecutável por um tribunal, as demais disposições destes Termos continuarão em vigor. Estes Termos constituem o acordo completo entre nós em relação ao nosso site, e substituem quaisquer acordos anteriores que possamos ter entre nós em relação ao site.',
 }
+
+export const intranetPolicy = {
+  title: 'Intranet da América Financeira',
+  paragraph:
+    'A Intranet da América Financeira é a plataforma central para nossos colaboradores acessarem informações essenciais, recursos e ferramentas que facilitam o dia a dia de trabalho. Esta área foi projetada para ser um ponto de referência único, onde você pode encontrar desde políticas da empresa até links úteis e documentos necessários para suas atividades.',
+  introductionTitle: 'Funcionalidades da Intranet',
+  listItems: [
+    {
+      title: 'Bancos Autorizados',
+      description:
+        'Nesta seção, você encontrará a lista completa dos bancos autorizados com os quais a América Financeira possui parceria. Esses bancos oferecem uma gama de serviços financeiros que podem ser acessados através dos links fornecidos. Manter-se informado sobre esses bancos é crucial para oferecer o melhor suporte aos nossos clientes e garantir a eficácia nos serviços prestados.',
+    },
+    {
+      title: 'Links Úteis',
+      description:
+        'Os links úteis foram selecionados para otimizar sua produtividade e fornecer acesso rápido a ferramentas e plataformas frequentemente utilizadas. Estes links incluem desde sistemas de gestão interna até recursos externos que auxiliam na execução de tarefas diárias. Acesse-os sempre que precisar de suporte técnico, realizar consultas ou utilizar sistemas corporativos.',
+    },
+    {
+      title: 'Seguradoras',
+      description:
+        'A seção de seguradoras reúne informações sobre as principais seguradoras com as quais a América Financeira trabalha. Aqui você encontrará os links diretos para acessar cada seguradora, facilitando a consulta e a gestão de seguros para nossos clientes. Esta área é essencial para garantir que você tenha acesso rápido e eficiente às informações de apólices e serviços relacionados.',
+    },
+    {
+      title: 'Como Utilizar a Intranet',
+      description:
+        'A utilização da Intranet é simples e intuitiva. Basta clicar nas categorias disponíveis para expandir as opções e acessar os links e informações de que você precisa. Lembre-se de que a Intranet é atualizada regularmente, então é importante visitá-la com frequência para se manter atualizado sobre as últimas novidades e recursos disponíveis.',
+    },
+    {
+      title: 'Suporte e Contato',
+      description:
+        'Se você encontrar dificuldades ao utilizar a Intranet ou precisar de assistência adicional, nossa equipe de suporte está disponível para ajudá-lo. Utilize os canais de contato fornecidos ou entre em contato diretamente através da seção de suporte da Intranet. Estamos aqui para garantir que você tenha a melhor experiência possível com nossas ferramentas.',
+    },
+  ],
+  finishedTitle: 'Conclusão',
+  finishedParagraph:
+    'A Intranet da América Financeira é uma ferramenta vital para a eficiência e o sucesso da nossa equipe. Ela centraliza recursos importantes e facilita o acesso a informações essenciais. Explore cada seção e aproveite ao máximo as funcionalidades oferecidas. Se você tiver sugestões ou precisar de alguma funcionalidade adicional, não hesite em entrar em contato.',
+}

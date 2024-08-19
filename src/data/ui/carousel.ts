@@ -10,7 +10,7 @@ export const loanCarousel: CombinedCarouselTypes[] = [
   {
     key: 2,
     title: 'Empréstimo Consignado',
-    subtitle: 'Para beneficiários do INSS com taxas a partir de 1,90% a.m.',
+    subtitle: 'Benefícios exclusivos para aposentados e pensionistas do INSS.',
     link: '/emprestimo-consignado',
   },
   {

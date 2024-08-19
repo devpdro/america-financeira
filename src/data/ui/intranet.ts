@@ -3,24 +3,24 @@ import { IntranetItems } from '../models'
 export const intranet: IntranetItems[] = [
   {
     id: 'bancos',
-    title: 'Bancos autorizados',
+    title: 'Bancos Autorizados',
     items: [
-      { label: 'BR FLOW', url: 'https://brflow.com' },
-      { label: 'BV FINANCEIRW', url: 'https://bvfinanceira.com' },
+      { label: 'BrFlow', url: 'https://brflow.com' },
+      { label: 'BV Financeira', url: 'https://bvfinanceira.com' },
       { label: 'Banco BGN', url: 'https://bgn.com' },
-      { label: 'CELEtem', url: 'https://celetm.com' },
+      { label: 'Celtem', url: 'https://celetm.com' },
       { label: 'Banco Sabemi', url: 'https://sulfinanceira.com' },
-      { label: 'Sul financeira', url: 'https://sulfinanceira.com' },
-      { label: 'Porto Cred', url: 'https://portocred.com' },
+      { label: 'Sul Financeira', url: 'https://sulfinanceira.com' },
+      { label: 'PortoCred', url: 'https://portocred.com' },
       { label: 'Santander', url: 'https://www.parceirosantander.com.br/spa-base/landing-page' },
     ],
   },
   {
     id: 'links',
-    title: 'Links úteis',
+    title: 'Links Úteis',
     items: [
-      { label: 'Kolmeya', url: 'https://kolmeta.com' },
-      { label: 'N8N', url: 'https://n8n.io' },
+      { label: 'Kolmeta', url: 'https://kolmeta.com' },
+      { label: 'n8n', url: 'https://n8n.io' },
       { label: 'Chathot', url: 'https://app.chathot.com.br/login' },
       { label: '4net Solutions', url: 'https://4netsolutions.net.br/' },
       { label: 'Sistema Corban', url: 'https://gestao.sistemacorban.com.br/' },
@@ -33,9 +33,9 @@ export const intranet: IntranetItems[] = [
     id: 'seguradoras',
     title: 'Seguradoras',
     items: [
-      { label: 'BMG Med', url: '#' },
+      { label: 'BMG Saúde', url: '#' },
       { label: 'Cartão Odonto', url: '#' },
-      { label: 'Seguro de Carro - Redento', url: '#' },
+      { label: 'Seguro Auto - Redentor', url: '#' },
     ],
   },
 ]

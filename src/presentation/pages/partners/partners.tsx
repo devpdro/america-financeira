@@ -26,7 +26,7 @@ export default function Partners() {
         <meta property="og:type" content="website" />
       </Head>
       <ArticleHeader
-        image={Images.PessoaParceiro.src}
+        image={Images.empresa.src}
         imageWidth={100}
         imageHeight={40}
         alt="Parcerias de Sucesso"

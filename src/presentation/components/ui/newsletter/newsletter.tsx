@@ -90,7 +90,7 @@ const NewsLetter: React.FC = () => {
                   },
                 })}
               />{' '}
-              <Button typeStyle="btn5" width="100%" text="Inscrever" />
+              <Button typeStyle="btn1" width="100%" text="Inscrever" />
             </div>
           </form>
         </div>

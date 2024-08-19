@@ -2,13 +2,33 @@
 @import '../../../styles/mixins.scss';
 
 .container {
-  @include container-center(1140px, 0 auto 5.075rem auto);
+  @include container-center(1140px, 2.575rem auto 2.075rem auto);
   padding: 0 2.075rem;
   .box-section {
-    background-color: $blue-color;
-    color: $white-color;
+    background-color: $light-blue;
+    box-shadow: $box-shadow-normal;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
-    margin-top: 1.075rem;
-    padding: 0.975rem 1.075rem;
+    padding: 1.275rem;
+    margin-bottom: 1.075rem;
+    .title-section {
+      @include display-flex(center, space-between);
+      font-weight: $weight-normal;
+      .title {
+        font-weight: $weight-normal;
+        font-size: $size-normal;
+        text-transform: capitalize;
+      }
+      .icon {
+        font-size: $size-medium;
+      }
+    }
+    .list-section {
+      text-transform: capitalize;
+      list-style: disc;
+      padding-left: 1.575rem;
+      .list {
+        padding: 0.175rem 0;
+      }
+    }
   }
 }
