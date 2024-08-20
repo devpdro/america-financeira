@@ -2,8 +2,9 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { serialize } from 'cookie'
 import jwt from 'jsonwebtoken'
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY || 'your-secret-key'
 import { users } from '@/data/ui'
+
+const SECRET_KEY = process.env.JWT_SECRET_KEY || 'your-secret-key'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {

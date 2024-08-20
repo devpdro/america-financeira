@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import { ArticleHeader } from '@/presentation/components/common'
-import { Timeline, Team } from '@/presentation/components/ui'
+import { Timeline, Team, WhatsappButton } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
 
 export default function About() {
@@ -36,7 +36,8 @@ export default function About() {
         imagePosition="left"
       />
       <Timeline />
-      <Team />
+      <Team /> 
+      <WhatsappButton />
     </main>
   )
 }

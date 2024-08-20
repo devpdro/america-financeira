@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  display: flex;
+ 
+  .title {
+    font-size: $size-extra-medium;
+    font-weight: 450;
+    padding: 0.775rem 2.075rem;
+  }
+}
