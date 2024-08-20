@@ -1,1 +1,1 @@
-export * from './hot-academy-refactory'
+export * from './hot-academy-factory'
