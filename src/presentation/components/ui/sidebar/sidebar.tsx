@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 import { HiMenuAlt3 } from 'react-icons/hi'
 
-import { FaRegClipboard } from 'react-icons/fa'
-import { FaChalkboardTeacher } from 'react-icons/fa'
+import { FaGraduationCap, FaChartPie, FaRegFileAlt } from 'react-icons/fa'
+
 import { IconType } from 'react-icons'
 
 import * as S from './sidebar-styles'
@@ -18,11 +18,17 @@ export interface MenuItem {
 
 const Menu: MenuItem[] = [
   {
+    name: 'Painel',
+    link: '/painel',
+    icon: FaChartPie,
+  },
+  {
     name: 'Hot Academy',
     link: '/hot-academy',
-    icon: FaChalkboardTeacher,
+    icon: FaGraduationCap,
+    margin: true,
   },
-  { name: 'Roteiros Operacionais', link: '/roteiros-operacionais', icon: FaRegClipboard, margin: true },
+  { name: 'Roteiros Operacionais', link: '/roteiros-operacionais', icon: FaRegFileAlt },
 ]
 
 const Sidebar = () => {

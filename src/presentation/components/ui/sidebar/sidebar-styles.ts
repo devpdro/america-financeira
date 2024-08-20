@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  font-family: 'Satoshi, sans-serif';
   display: flex;
   gap: 6px;
 `
@@ -11,7 +10,7 @@ export const Sidebar = styled.div<{ open: boolean }>`
   background-color: #0e1418;
   color: #fff;
   height: 100vh;
-  padding: 0 1rem;
+  padding: 0 1.075rem;
   transition: width 0.5s ease;
 `
 
@@ -44,9 +43,11 @@ export const MenuItem = styled.li<{ margin?: boolean }>`
   align-items: center;
   justify-content: flex-start;
   transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
   border-radius: 8px;
-  padding: 0.275rem 0.375rem 0.375rem 0.475rem;
-  gap: 0.875rem;
+  padding: 0.125rem 0.375rem 0.375rem 0.375rem;
+  gap: 0.475rem;
   &:hover {
     background-color: #dcebfe;
     color: #3c91e6;
@@ -60,5 +61,6 @@ export const MenuLabel = styled.h2<{ open: boolean; index: number }>`
   overflow: hidden;
   white-space: pre;
   font-size: 0.975rem;
+  margin-top: 0.225rem;
   transition: opacity 0.5s;
 `

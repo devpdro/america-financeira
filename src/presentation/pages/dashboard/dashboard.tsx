@@ -1,3 +1,9 @@
+import { Welcome } from '@/presentation/components/ui'
+
 export default function Dashboard() {
-  return <main></main>
+  return (
+    <main>
+      <Welcome />
+    </main>
+  )
 }

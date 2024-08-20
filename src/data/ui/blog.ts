@@ -37,7 +37,7 @@ export type BlogPostItem = {
 
 export const latestPosts = [
   {
-    href: '/pagar-boleto-com-cartao-de-credito-e-possivel',
+    href: 'blog/pagar-boleto-com-cartao-de-credito-e-possivel',
     ariaLabel: 'Leia mais sobre Empréstimos',
     imageSrc: Images.simulacaoFgts,
     alt: 'Empréstimos',
@@ -46,7 +46,7 @@ export const latestPosts = [
     date: '11 de março de 2024',
   },
   {
-    href: '/como-economizar-no-dia-a-dia-dicas-praticas',
+    href: 'blog/como-economizar-no-dia-a-dia-dicas-praticas',
     ariaLabel: 'Leia mais sobre Investimentos',
     imageSrc: Images.pessoaSozinha,
     alt: 'Investimentos',
@@ -55,7 +55,7 @@ export const latestPosts = [
     date: '21 de julho de 2024',
   },
   {
-    href: '/como-fazer-uma-simulacao-para-emprestimo-fgts',
+    href: 'blog/como-fazer-uma-simulacao-para-emprestimo-fgts',
     ariaLabel: 'Leia mais sobre Cartão de Crédito',
     imageSrc: Images.cartaoDebito,
     alt: 'Cartão de Crédito',

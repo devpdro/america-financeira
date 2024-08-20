@@ -33,14 +33,13 @@
   border: 1px solid $blue-color;
   background-color: $blue-color;
   color: $white-color;
-
 }
 
 .btn4 {
   @include hover-pointer;
   color: $black-color;
   border: 1px solid $blue-color;
- 
+
   &:hover {
     background-color: $blue-color;
     color: $white-color;
@@ -49,8 +48,13 @@
 
 .btn5 {
   @include hover-pointer;
-  border-radius: 7px;
-  background-color: $white-color;
+  background-color: rgba(100, 149, 237, 0.1);
   color: $black-color;
+  border-radius: 8px;
   margin-top: 0.675rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+  &:hover {
+    background-color: #3c91e6;
+    color: $white-color;
+  }
 }

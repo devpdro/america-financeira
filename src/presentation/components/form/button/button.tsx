@@ -21,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({ typeStyle, text, width, onClick }) => {
       break
     case 'btn4':
       buttonClass = styles.btn4
+      break
     case 'btn5':
       buttonClass = styles.btn5
       break

@@ -1,7 +1,9 @@
+import OperationalScriptsDisplay from '@/presentation/components/ui/operational-scripts/operational-scripts'
+
 export default function OperationalScripts() {
   return (
     <main>
-      <h1>Roteiros operacionais</h1>
+      <OperationalScriptsDisplay />
     </main>
   )
 }
