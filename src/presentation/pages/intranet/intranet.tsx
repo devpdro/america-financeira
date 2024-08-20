@@ -33,8 +33,6 @@ export default function Intranet() {
         paragraph={intranetPolicy.paragraph}
         introductionTitle={intranetPolicy.introductionTitle}
         listItems={intranetPolicy.listItems}
-        finishedTitle={intranetPolicy.finishedTitle}
-        finishedParagraph={intranetPolicy.finishedParagraph}
       />
     </div>
   )

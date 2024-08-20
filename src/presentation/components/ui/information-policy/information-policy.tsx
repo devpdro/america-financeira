@@ -4,8 +4,8 @@ type InformationPolicyProps = {
   title: string
   paragraph: string
   introductionTitle: string
-  finishedTitle: string
-  finishedParagraph: string
+  finishedTitle?: string
+  finishedParagraph?: string
   listItems: {
     title: string
     description: string

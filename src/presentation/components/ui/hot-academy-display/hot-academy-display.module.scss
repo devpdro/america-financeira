@@ -7,9 +7,16 @@
     font-weight: $weight-medium;
     padding: 1.075rem 1.575rem;
   }
-  .subtitle {
-    font-size: $size-medium;
-    font-weight: $weight-medium;
+  .subtitle-section {
+    @include display-flex(center, flex-start);
     padding: 1.075rem 1.575rem;
+    .icon {
+      font-size: 1.475rem;
+      margin-right: 0.575rem;
+    }
+    .subtitle {
+      font-size: $size-medium;
+      font-weight: $weight-medium;
+    }
   }
 }

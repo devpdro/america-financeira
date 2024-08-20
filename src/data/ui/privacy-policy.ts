@@ -134,7 +134,4 @@ export const intranetPolicy = {
         'Se você encontrar dificuldades ao utilizar a Intranet ou precisar de assistência adicional, nossa equipe de suporte está disponível para ajudar. Utilize os canais de contato fornecidos ou entre em contato diretamente através da seção de suporte da Intranet. Estamos aqui para garantir que todos tenham a melhor experiência possível com nossas ferramentas.',
     },
   ],
-  finishedTitle: 'Conclusão',
-  finishedParagraph:
-    'A Intranet da América Financeira é uma ferramenta vital para a eficiência e o sucesso de todos que a utilizam. Ela centraliza recursos importantes e facilita o acesso a informações essenciais. Explore cada seção e aproveite ao máximo as funcionalidades oferecidas. Se tiver sugestões ou precisar de alguma funcionalidade adicional, não hesite em entrar em contato.',
 }
