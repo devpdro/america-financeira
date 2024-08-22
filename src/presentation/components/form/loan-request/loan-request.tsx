@@ -149,16 +149,16 @@ const LoanRequest: React.FC = () => {
             <option value="" disabled hidden>
               Qual tipo de solicitação?
             </option>
-            <option className={styles['option']} value="credito-pessoal">
+            <option className={styles['option']} value="Credito Pessoal">
               Crédito Pessoal
             </option>
-            <option className={styles['option']} value="credito-consignado">
+            <option className={styles['option']} value="Credito Consignado">
               Crédito Consignado
             </option>
-            <option className={styles['option']} value="antecipacao-fgts">
+            <option className={styles['option']} value="Antecipação FGTS">
               Antecipação FGTS
             </option>
-            <option className={styles['option']} value="cartao-credito">
+            <option className={styles['option']} value="Cartão de Credito">
               Cartão de Crédito
             </option>
           </select>
