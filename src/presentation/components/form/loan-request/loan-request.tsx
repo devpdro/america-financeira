@@ -38,7 +38,7 @@ const LoanRequest: React.FC = () => {
 
   const onSubmit = async (data: LoanRequestProps) => {
     try {
-      const response = await fetch('/api/submit-webhook', {
+      const response = await fetch('/api/health-check', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ const LoanRequest: React.FC = () => {
             <option className={styles['option']} value="Antecipação FGTS">
               Antecipação FGTS
             </option>
-            <option className={styles['option']} value="Cartão de Credito">
+            <option className={styles['option']} value="Cartão de Crédito">
               Cartão de Crédito
             </option>
           </select>
