@@ -36,8 +36,7 @@ export default function About() {
         imagePosition="left"
       />
       <Timeline />
-      <Team /> 
-      <WhatsappButton />
+      <Team />
     </main>
   )
 }

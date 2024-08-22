@@ -17,7 +17,7 @@ const operationalScripts = [
   { name: 'Itau', link: 'https://drive.google.com/drive/folders/17VL5cQW5HnnkeJOAiCqGz9ddyHkkQGVr' },
   { name: 'Master', link: 'https://drive.google.com/drive/folders/1f5llhbJH-gXGtCp_EJR6gTrD7DDgUA6' },
   { name: 'Mercantil', link: 'https://drive.google.com/drive/folders/1UqwMpCWOgGl0w71HK3sgmjPU7Ce7QAMd' },
-  { name: 'Ole', link: 'https://drive.google.com/drive/folders/13RC6r-eh_M6-BXjgmotTUryUUbhWuYPS' },
+  { name: 'Olé', link: 'https://drive.google.com/drive/folders/13RC6r-eh_M6-BXjgmotTUryUUbhWuYPS' },
   { name: 'Pan', link: 'https://drive.google.com/drive/folders/1EP2tELTg_qi5YG4JJztArxV-mXgua6Ks' },
   { name: 'Presenca Bank', link: 'https://drive.google.com/drive/folders/1LUbGnvMZu7S32M4IXvwjlpwjPhaJwm56' },
   { name: 'Quero+', link: 'https://drive.google.com/drive/folders/1XVet7NX4KRqWOCZmA4yKHwmxFroSnY' },

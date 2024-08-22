@@ -83,7 +83,6 @@ export default function Home() {
         imagePosition="left"
       />
       <LatestPosts />
-      <WhatsappButton />
       <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
     </main>
   )
