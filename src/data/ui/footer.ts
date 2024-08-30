@@ -1,6 +1,6 @@
-import { listLinkProps } from '@/data/models'
+import { FooterListProps } from '@/data/models'
 
-export const list: listLinkProps[] = [
+export const list: FooterListProps[] = [
   {
     title: 'Produtos',
     items: [

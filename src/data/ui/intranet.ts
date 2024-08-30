@@ -1,6 +1,6 @@
-import { IntranetItems } from '../models'
+import { IntranetProps } from '@/data/models'
 
-export const intranet: IntranetItems[] = [
+export const intranet: IntranetProps[] = [
   {
     id: 'bancos',
     title: 'Bancos Autorizados',

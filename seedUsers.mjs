@@ -1,4 +1,3 @@
-import bcrypt from 'bcrypt'
 import db from './src/lib/db.mjs'
 
 const users = [

@@ -1,10 +1,10 @@
-export interface IntranetItem {
+export interface IntranetItemsProps {
   label: string
   url: string
 }
 
-export interface IntranetItems {
+export interface IntranetProps {
   id: string
   title: string
-  items: IntranetItem[]
+  items: IntranetItemsProps[]
 }
