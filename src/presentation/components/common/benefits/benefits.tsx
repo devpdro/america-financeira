@@ -1,12 +1,46 @@
+'use client'
+
 import Image from 'next/image'
-
 import { BenefitsProps } from '@/data/models'
-
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger' // Importa o ScrollTrigger
 import styles from './benefits.module.scss'
 
+// Registra o ScrollTrigger com o GSAP
+gsap.registerPlugin(ScrollTrigger)
+
 const Benefits: React.FC<BenefitsProps> = ({ title, subtitle, imageWidth, imageHeight, items }) => {
+  const sectionRef = useRef(null) // Referência ao elemento do componente
+
+  useEffect(() => {
+    const el = sectionRef.current
+
+    // Configuração do GSAP para animação de deslizar
+    gsap.fromTo(
+      el,
+      { x: -100, opacity: 0 }, // Valores iniciais de x e opacidade
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.8, // Duração da animação
+        scrollTrigger: {
+          trigger: el,
+          start: 'top bottom', // Inicia quando o topo do elemento atinge o fundo da viewport
+          end: 'bottom top', // Termina quando o fundo do elemento atinge o topo da viewport
+          toggleActions: 'play none none none', // Controla as ações de entrada e saída
+        },
+      }
+    )
+  }, [])
+
   return (
-    <section className={styles.container} aria-labelledby="beneficios-titulo" aria-describedby="beneficios-subtitulo">
+    <section
+      ref={sectionRef}
+      className={styles.container}
+      aria-labelledby="beneficios-titulo"
+      aria-describedby="beneficios-subtitulo"
+    >
       <header className={styles['text-section']}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
