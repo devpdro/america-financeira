@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           })
         )
 
-        return res.status(200).json({ message: 'Login realizado com sucesso' })
+        return res.status(200).json({ message: 'Login realizado com sucesso', redirectTo: '/painel' })
       }
 
       return res.status(401).json({ message: 'E-mail ou senha inválidos' })

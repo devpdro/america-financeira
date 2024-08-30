@@ -1,13 +1,9 @@
 import { NextResponse, NextRequest } from 'next/server'
-import { jwtVerify } from 'jose'
-
-import { Session } from '@/data/models'
+import { verify } from 'jsonwebtoken'
 
 import { SERVER_JWT_SECRET_KEY } from './constants'
 
 export const AUTH_PAGE = '/login'
-
-const SECRET_KEY = new TextEncoder().encode(SERVER_JWT_SECRET_KEY)
 
 export const middleware = async (req: NextRequest) => {
   const { pathname } = req.nextUrl
@@ -28,7 +24,7 @@ export const middleware = async (req: NextRequest) => {
   const token = tokenCookie.value
 
   try {
-    const { payload }: { payload: Session } = await jwtVerify(token, SECRET_KEY)
+    const payload = await verify(token, SERVER_JWT_SECRET_KEY)
     req.nextUrl.searchParams.set('user', JSON.stringify(payload))
 
     return NextResponse.next()
