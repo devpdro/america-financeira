@@ -1,38 +1,24 @@
-import { NextResponse, NextRequest } from 'next/server'
-import { verify } from 'jsonwebtoken'
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import { jwtVerify } from 'jose'
 
-import { SERVER_JWT_SECRET_KEY } from './constants'
+const SECRET_KEY = new TextEncoder().encode(process.env.JWT_SECRET_KEY || 'your-secret-key')
 
-export const AUTH_PAGE = '/login'
-
-export const middleware = async (req: NextRequest) => {
-  const { pathname } = req.nextUrl
-
-  if (pathname.startsWith('/_next') || pathname.startsWith('/api/') || pathname === AUTH_PAGE) {
-    return NextResponse.next()
-  }
-
+export async function middleware(req: NextRequest) {
   const tokenCookie = req.cookies.get('auth-token')
 
   if (!tokenCookie) {
-    const url = req.nextUrl.clone()
-    url.pathname = AUTH_PAGE
-
-    return NextResponse.redirect(url)
+    return NextResponse.redirect(new URL('/login', req.url))
   }
 
   const token = tokenCookie.value
 
   try {
-    const payload = await verify(token, SERVER_JWT_SECRET_KEY)
+    const { payload } = await jwtVerify(token, SECRET_KEY)
     req.nextUrl.searchParams.set('user', JSON.stringify(payload))
-
     return NextResponse.next()
   } catch (err) {
-    const url = req.nextUrl.clone()
-    url.pathname = AUTH_PAGE
-
-    return NextResponse.redirect(url)
+    return NextResponse.redirect(new URL('/login', req.url))
   }
 }
 
