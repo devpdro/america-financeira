@@ -4,6 +4,7 @@ import { Header, Benefits, InfoPanel, Faq, LatestPosts } from '@/presentation/co
 import { LoanWarning, LoanCarousel, WhatsappButton } from '@/presentation/components/ui'
 import { benefitsLoan, faqAboutLoan } from '@/data/ui'
 import { Images } from '@/presentation/assets'
+import CeoAbout from '@/presentation/components/ui/ceo-about/ceo-about'
 
 export default function Home() {
   const backgroundImageUrl = Images.cabecalhoInicial
@@ -62,26 +63,7 @@ export default function Home() {
         }
         items={benefitsLoan}
       />
-      <InfoPanel
-        imageWidth={91}
-        imageHeight={100}
-        image={Images.investimentos.src}
-        alt="Imagem representativa de antecipação de FGTS"
-        title="Antecipação FGTS"
-        subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
-        paragraph="Antecipar FGTS"
-        imagePosition="right"
-      />
-      <InfoPanel
-        image={Images.cartaoCredito.src}
-        imageWidth={91}
-        imageHeight={100}
-        alt="Imagem de cartão de crédito"
-        title="Cartão de Crédito"
-        subtitle="A América oferece cartões de crédito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
-        paragraph="Solicitar agora"
-        imagePosition="left"
-      />
+      <CeoAbout />
       <LatestPosts />
       <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
     </main>

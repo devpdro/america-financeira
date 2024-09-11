@@ -72,10 +72,10 @@ export default function Navbar() {
       </section>
 
       <aside className={styles['right-section']} aria-label="Seção de Navegação Direita">
-        <Icons.IoPersonOutline className={styles.icon} aria-hidden="true" />
-        <Link href="/login" legacyBehavior>
-          <a className={styles.link} aria-label="Login">
-            <span>Entrar</span>
+        <Icons.BiNetworkChart className={styles.icon} aria-hidden="true" />
+        <Link href="/intranet" legacyBehavior>
+          <a className={styles.link} aria-label="Intraneet">
+            <span>Intranet</span>
           </a>
         </Link>
       </aside>

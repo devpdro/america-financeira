@@ -6,6 +6,7 @@ import { BiLogoInstagramAlt, BiLogoFacebook, BiLogoLinkedin } from 'react-icons/
 import { FiEye, FiMenu } from 'react-icons/fi'
 import { BiBullseye } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
+import { BiNetworkChart } from "react-icons/bi";
 
 const Icons = {
   AiOutlineClose,
@@ -17,7 +18,7 @@ const Icons = {
   BiLogoInstagramAlt,
   FiMenu,
   FaArrowRightLong,
-  IoPersonOutline,
+  BiNetworkChart,
   FaArrowLeft,
   FaArrowRight,
   BiLogoLinkedin,

@@ -9,6 +9,10 @@ import { nav } from '@/data/ui'
 import styles from './nav-mobile.module.scss'
 
 const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
+  const handleClick = () => {
+    closeSideMenu()
+  }
+
   return (
     <div className={styles['mobile-nav-container']} aria-label="Navegação Móvel">
       <nav className={styles['mobile-nav']} aria-label="Menu de Navegação Móvel">
@@ -19,7 +23,7 @@ const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
         </section>
         <div className={styles['nav-items']} aria-label="Itens de Navegação">
           {nav.map((item, key) => (
-            <NavItem key={key} label={item.label} new={item.new} link={item.link} aria-label={item.label}>
+            <NavItem key={key} label={item.label} new={item.new} link={item.link} onClick={handleClick}>
               {item.children}
             </NavItem>
           ))}

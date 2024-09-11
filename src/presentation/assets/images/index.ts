@@ -53,8 +53,10 @@ import equipeFotoConfraternizacao from './equipe-foto-final.webp'
 import confraternizacaoTrofeu from './confraternizacao-trofeu.webp'
 import quemSomos from './quem-somos.webp'
 import pessoaOlhando from './pessoa-olhando.webp'
+import allan from './allan.jpg'
 
 const Images = {
+  allan,
   confraternizacaoTrofeu,
   equipeFotoConfraternizacao,
   pessoaOlhando,

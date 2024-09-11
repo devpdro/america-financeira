@@ -4,6 +4,7 @@ export type NavItemProps = {
   new?: string
   blank?: string
   children?: NavItemProps[]
+  onClick?: () => void
 }
 
 export type NavMobileProps = {
