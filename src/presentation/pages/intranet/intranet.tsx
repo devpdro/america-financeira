@@ -28,12 +28,6 @@ export default function Intranet() {
       </Head>
       <HeaderPolicy title="Intranet" />
       <IntranetDisplay />
-      <InformationPolicy
-        title={intranetPolicy.title}
-        paragraph={intranetPolicy.paragraph}
-        introductionTitle={intranetPolicy.introductionTitle}
-        listItems={intranetPolicy.listItems}
-      />
     </div>
   )
 }
