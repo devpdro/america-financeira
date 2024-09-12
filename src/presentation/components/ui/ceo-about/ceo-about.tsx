@@ -2,23 +2,23 @@ import Image from 'next/image'
 import styles from './ceo-about.module.scss'
 import { Images } from '@/presentation/assets'
 
-const CeoAbout = () => {
+const CeoAbout: React.FC = () => {
   return (
     <section className={styles.container}>
       <div className={styles['box-section']}>
-        <div className={styles['title-section']}>
+        <header className={styles['title-section']}>
           <h6 className={styles.subtitle}>Vem com a América Financeira</h6>
           <h1 className={styles.title}>
             Conheça nossa <br /> liderança
           </h1>
-        </div>
-        <div className={styles['about-section']}>
+        </header>
+        <article className={styles['about-section']}>
           <div className={styles['image-section']}>
-            <Image src={Images.allan} alt="Allan CEO" className={styles.img} />
+            <Image src={Images.allan} alt="Allan Bertho, CEO da América Financeira" className={styles.img} />
           </div>
           <div className={styles['text-section']}>
-            <h1 className={styles.title}>Allan diego berto</h1>
-            <h6 className={styles.subtitle}>Ceo</h6>
+            <h1 className={styles.title}>Allan Diego Bertho</h1>
+            <h6 className={styles.subtitle}>CEO e Fundador</h6>
             <p className={styles.paragraph}>
               Allan Bertho é um empresário de São Pedro, SP, com uma trajetória marcada por resiliência e inovação.
               Nascido em uma família humilde, Allan iniciou sua carreira profissional aos 14 anos, passando por diversas
@@ -36,7 +36,7 @@ const CeoAbout = () => {
               dedicado a transformar desafios em oportunidades e a elevar o padrão de vendas no mercado financeiro.
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   )

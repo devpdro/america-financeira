@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { ArticleHeader } from '@/presentation/components/common'
 import { Timeline, Team, WhatsappButton } from '@/presentation/components/ui'
 import { Images } from '@/presentation/assets'
+import CeoAbout from '@/presentation/components/ui/ceo-about/ceo-about'
 
 export default function About() {
   return (
@@ -35,6 +36,7 @@ export default function About() {
         buttonPrimaryText="Seja nosso parceiro"
         imagePosition="left"
       />
+      <CeoAbout />
       <Timeline />
       <Team />
     </main>
