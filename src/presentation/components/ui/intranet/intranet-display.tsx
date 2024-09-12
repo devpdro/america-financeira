@@ -7,10 +7,23 @@ import styles from './intranet-display.module.scss'
 import Link from 'next/link'
 
 const IntranetDisplay: React.FC = () => {
-  const [openItems, setOpenItems] = useState<Set<number>>(new Set())
+  const [openItemsLinks, setOpenItemsLinks] = useState<Set<number>>(new Set())
+  const [openItemsBanks, setOpenItemsBanks] = useState<Set<number>>(new Set())
 
-  const toggleList = (index: number) => {
-    setOpenItems((prev) => {
+  const toggleListLinks = (index: number) => {
+    setOpenItemsLinks((prev) => {
+      const newOpenItems = new Set(prev)
+      if (newOpenItems.has(index)) {
+        newOpenItems.delete(index)
+      } else {
+        newOpenItems.add(index)
+      }
+      return newOpenItems
+    })
+  }
+
+  const toggleListBanks = (index: number) => {
+    setOpenItemsBanks((prev) => {
       const newOpenItems = new Set(prev)
       if (newOpenItems.has(index)) {
         newOpenItems.delete(index)
@@ -29,20 +42,22 @@ const IntranetDisplay: React.FC = () => {
       </h1>
       <div className={styles['box-section']}>
         {intranetLinks.map((link, index) => (
-          <div className={styles.box} key={index}>
-            <Link href={link.url}>
-              {link.imageLinks ? (
+          <div className={styles.box} key={`link-${index}`}>
+            {link.imageLinks ? (
+              <Link href={link.url || '#'} passHref>
                 <Image className={styles['imgs-links']} src={link.imageLinks} alt={link.name} />
-              ) : link.image ? (
+              </Link>
+            ) : link.image ? (
+              <Link href={link.url || '#'} passHref>
                 <Image className={styles.img} src={link.image} alt={link.name} />
-              ) : null}
-            </Link>
-            <div className={styles['title-section']} onClick={() => toggleList(index)}>
+              </Link>
+            ) : null}
+            <div className={styles['title-section']} onClick={() => toggleListLinks(index)}>
               <h1 className={styles.title}>Mais informações</h1>
-              {openItems.has(index) ? <FaChevronUp /> : <FaChevronDown />}
+              {openItemsLinks.has(index) ? <FaChevronUp /> : <FaChevronDown />}
             </div>
             <AnimatePresence>
-              {openItems.has(index) && (
+              {openItemsLinks.has(index) && (
                 <motion.ul
                   className={styles['list-section']}
                   initial={{ height: 0, opacity: 0 }}
@@ -53,7 +68,7 @@ const IntranetDisplay: React.FC = () => {
                   {link.info.map((item, i) => (
                     <motion.li
                       className={styles.list}
-                      key={i}
+                      key={`link-info-${i}`}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: i * 0.1 }}
@@ -73,16 +88,18 @@ const IntranetDisplay: React.FC = () => {
       </h1>
       <div className={styles['box-section']}>
         {intranetBanks.map((bank, index) => (
-          <div className={styles.box} key={index}>
-            <Link href={bank.url}>
-              {bank.image ? <Image className={styles.img} src={bank.image} alt={bank.name} /> : null}
-            </Link>
-            <div className={styles['title-section']} onClick={() => toggleList(index)}>
+          <div className={styles.box} key={`bank-${index}`}>
+            {bank.image ? (
+              <Link href={bank.url || '#'} passHref>
+                <Image className={styles.img} src={bank.image} alt={bank.name} />
+              </Link>
+            ) : null}
+            <div className={styles['title-section']} onClick={() => toggleListBanks(index)}>
               <h1 className={styles.title}>Mais informações</h1>
-              {openItems.has(index) ? <FaChevronUp /> : <FaChevronDown />}
+              {openItemsBanks.has(index) ? <FaChevronUp /> : <FaChevronDown />}
             </div>
             <AnimatePresence>
-              {openItems.has(index) && (
+              {openItemsBanks.has(index) && (
                 <motion.ul
                   className={styles['list-section']}
                   initial={{ height: 0, opacity: 0 }}
@@ -93,7 +110,7 @@ const IntranetDisplay: React.FC = () => {
                   {bank.info.map((item, i) => (
                     <motion.li
                       className={styles.list}
-                      key={i}
+                      key={`bank-info-${i}`}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: i * 0.1 }}

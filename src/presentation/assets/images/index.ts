@@ -65,8 +65,10 @@ import n8n from './n8n.webp'
 import Sys from './Sys.png'
 import Voip from './Voip.png'
 import webmail from './webmail.webp'
+import vanguard from './vanguard.webp'
 
 const Images = {
+  vanguard,
   webmail,
   chat,
   crefaz,
