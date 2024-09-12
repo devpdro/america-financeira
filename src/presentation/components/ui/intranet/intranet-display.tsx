@@ -2,10 +2,9 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
-
 import { intranetBanks, intranetLinks } from '@/data/ui'
-
 import styles from './intranet-display.module.scss'
+import Link from 'next/link'
 
 const IntranetDisplay: React.FC = () => {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set())
@@ -24,15 +23,20 @@ const IntranetDisplay: React.FC = () => {
 
   return (
     <section className={styles.container}>
-      {' '}
       <h6 className={styles['subtitle-container']}>Links Úteis</h6>
       <h1 className={styles['title-container']}>
         Explore nossos <br /> recursos úteis
       </h1>
       <div className={styles['box-section']}>
-        {intranetBanks.map((bank, index) => (
+        {intranetLinks.map((link, index) => (
           <div className={styles.box} key={index}>
-            <Image className={styles.img} src={bank.image} alt={bank.name} />
+            <Link href={link.url}>
+              {link.imageLinks ? (
+                <Image className={styles['imgs-links']} src={link.imageLinks} alt={link.name} />
+              ) : link.image ? (
+                <Image className={styles.img} src={link.image} alt={link.name} />
+              ) : null}
+            </Link>
             <div className={styles['title-section']} onClick={() => toggleList(index)}>
               <h1 className={styles.title}>Mais informações</h1>
               {openItems.has(index) ? <FaChevronUp /> : <FaChevronDown />}
@@ -46,7 +50,7 @@ const IntranetDisplay: React.FC = () => {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {bank.info.map((item, i) => (
+                  {link.info.map((item, i) => (
                     <motion.li
                       className={styles.list}
                       key={i}
@@ -70,7 +74,9 @@ const IntranetDisplay: React.FC = () => {
       <div className={styles['box-section']}>
         {intranetBanks.map((bank, index) => (
           <div className={styles.box} key={index}>
-            <Image className={styles.img} src={bank.image} alt={bank.name} />
+            <Link href={bank.url}>
+              {bank.image ? <Image className={styles.img} src={bank.image} alt={bank.name} /> : null}
+            </Link>
             <div className={styles['title-section']} onClick={() => toggleList(index)}>
               <h1 className={styles.title}>Mais informações</h1>
               {openItems.has(index) ? <FaChevronUp /> : <FaChevronDown />}

@@ -29,12 +29,12 @@ const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
           ))}
         </div>
         <section className={styles['auth-buttons']} aria-label="Botões de Autenticação">
-          <Link href="/login" legacyBehavior>
+          <Link href="/intranet" legacyBehavior>
             <a className={styles.link} aria-label="Login">
-              <span aria-label="Entrar">Entrar</span>
+              <span aria-label="Intranet">Intranet</span>
             </a>
           </Link>
-          <Icons.IoPersonOutline className={styles.icon} aria-hidden="true" />
+          <Icons.BiNetworkChart className={styles.icon} aria-hidden="true" />
         </section>
       </nav>
     </div>

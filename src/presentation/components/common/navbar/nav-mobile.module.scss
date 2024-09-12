@@ -15,6 +15,7 @@
   }
   .mobile-nav {
     background-color: $white-color;
+    color: $black-color;
     height: 100%;
     width: 75%;
     padding: 1.075rem;
@@ -33,8 +34,8 @@
     }
     .auth-buttons {
       @include display-flex(flex-start, none);
-      font-size: $size-small;
-      padding: 1rem;
+      font-size: $size-normal;
+      padding: 1rem 1rem;
       .icon {
         font-size: 1.475rem;
         margin-left: 0.375rem;

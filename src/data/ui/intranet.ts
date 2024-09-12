@@ -1,151 +1,188 @@
 import { Images } from '@/presentation/assets'
+import { StaticImageData } from 'next/image'
+import { IconType } from 'react-icons'
 
-export const intranetBanks = [
+interface IntranetLink {
+  name: string
+  url?: string
+  icone?: IconType
+  image?: StaticImageData
+  imageLinks?: StaticImageData
+  info: string[]
+}
+
+export const intranetLinks: IntranetLink[] = [
   {
-    name: 'Banco do Bradesco',
-    image: Images.bancoBradesco,
+    name: 'Webmail',
+    url: 'https://kolmeya.com.br/auth/login',
+    imageLinks: Images.webmail,
     info: [
-      'Ouvidoria Banco A',
-      'Atendimento disponível das 9h às 18h, de segunda a sexta, exceto feriados',
-      'SAC Banco A',
+      'Kolmeya é uma plataforma de inteligência de dados focada em melhorar a eficiência operacional.',
+      'Horário de Atendimento: 9h às 18h, de segunda a sexta-feira.',
+      'Contato: suporte@kolmeya.com.br',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoCaixa,
+    name: 'KingHost',
+    url: 'https://kinghost.com.br',
+    imageLinks: Images.kingHost,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'KingHost oferece serviços de hospedagem de sites e soluções em nuvem.',
+      'Horário de Atendimento: 24/7 (Suporte online).',
+      'Contato: suporte@kinghost.com.br',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoSantander,
+    name: 'N8n',
+    url: 'https://n8n.io',
+    imageLinks: Images.n8n,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'N8n é uma ferramenta de automação de fluxo de trabalho que permite a criação de integrações personalizadas entre diferentes serviços.',
+      'Horário de Atendimento: 24/7 (Suporte online).',
+      'Documentação completa disponível no site.',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoBrasil,
+    name: 'Sistema Corban',
+    url: 'https://gestao.sistemacorban.com.br/',
+    imageLinks: Images.chat,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Sistema Corban é uma ferramenta de gestão financeira para empresas.',
+      'Horário de Atendimento: 9h às 17h, de segunda a sexta-feira.',
+      'Contato: suporte@sistemacorban.com.br',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoBanrisul,
+    name: 'Chathot',
+    url: 'https://app.chathot.com.br/login',
+    imageLinks: Images.chat,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Chathot oferece uma plataforma para comunicação instantânea e atendimento ao cliente.',
+      'Horário de Atendimento: 8h às 20h, de segunda a sexta-feira.',
+      'Contato: suporte@chathot.com.br',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoSafra,
+    name: 'GapSys',
+    url: 'https://app.gapsys.com.br/login',
+    imageLinks: Images.gapSys,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'GapSys é um sistema de gestão de operações e processos empresariais.',
+      'Horário de Atendimento: 8h às 18h, de segunda a sexta-feira.',
+      'Contato: suporte@gapsys.com.br',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoItau,
+    name: 'HotSys',
+    url: 'https://hotsys.com.br/#/login',
+    imageLinks: Images.Sys,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'HotSys é uma solução de gerenciamento de vendas e relacionamento com o cliente.',
+      'Horário de Atendimento: 9h às 18h, de segunda a sexta-feira.',
+      'Contato: contato@hotsys.com.br',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoPan,
+    name: '4Net Solutions',
+    url: 'https://4netsolutions.net.br/',
+    imageLinks: Images.fourrnet,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      '4Net Solutions é especializada em soluções de infraestrutura de rede e segurança digital.',
+      'Horário de Atendimento: 8h às 18h, de segunda a sexta-feira.',
+      'Contato: contato@4netsolutions.net.br',
     ],
   },
 ]
 
-export const intranetLinks = [
+export const intranetBanks: IntranetLink[] = [
   {
     name: 'Banco do Bradesco',
+    url: 'https://www.bradesco.com.br',
     image: Images.bancoBradesco,
     info: [
-      'Ouvidoria Banco A',
-      'Atendimento disponível das 9h às 18h, de segunda a sexta, exceto feriados',
-      'SAC Banco A',
+      'Ouvidoria Banco do Bradesco',
+      'Atendimento disponível das 9h às 18h, de segunda a sexta, exceto feriados.',
+      'SAC Banco do Bradesco',
     ],
   },
   {
-    name: 'Banco B',
+    name: 'Banco Caixa Econômica Federal',
+    url: 'https://www.caixa.gov.br',
     image: Images.bancoCaixa,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco Caixa Econômica Federal',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Caixa Econômica Federal',
     ],
   },
   {
-    name: 'Banco B',
+    name: 'Banco Santander',
+    url: 'https://www.santander.com.br',
     image: Images.bancoSantander,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco Santander',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Santander',
     ],
   },
   {
-    name: 'Banco B',
+    name: 'Banco do Brasil',
+    url: 'https://www.bb.com.br',
     image: Images.bancoBrasil,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco do Brasil',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco do Brasil',
     ],
   },
   {
-    name: 'Banco B',
-    image: Images.bancoBanrisul,
+    name: 'Banco Mercantil do Brasil',
+    url: 'https://www.mercantil.com.br',
+    image: Images.mercantil,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco Mercantil do Brasil',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Mercantil do Brasil',
     ],
   },
   {
-    name: 'Banco B',
+    name: 'Banco Safra',
+    url: 'https://www.safra.com.br',
     image: Images.bancoSafra,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco Safra',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Safra',
     ],
   },
   {
-    name: 'Banco B',
+    name: 'Banco Itaú',
+    url: 'https://www.itau.com.br',
     image: Images.bancoItau,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco Itaú',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Itaú',
     ],
   },
   {
-    name: 'Banco B',
+    name: 'Banco Pan',
+    url: 'https://www.bancopan.com.br',
     image: Images.bancoPan,
     info: [
-      'Ouvidoria Banco B',
-      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados',
-      'SAC Banco B',
+      'Ouvidoria Banco Pan',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Pan',
+    ],
+  },
+  {
+    name: 'Banco Crefaz',
+    url: 'https://www.crefaz.com.br',
+    image: Images.crefaz,
+    info: [
+      'Ouvidoria Banco Crefaz',
+      'Atendimento disponível das 8h às 17h, de segunda a sexta, exceto feriados.',
+      'SAC Banco Crefaz',
     ],
   },
 ]

@@ -7,17 +7,17 @@
   padding: 0 2.075rem;
   .subtitle-container {
     color: $black-color;
-    font-size: $size-normal;
+    font-size: $size-small;
     font-weight: $weight-medium;
     margin-bottom: 0.125rem;
-    text-align: center;
     margin-top: 3.075rem;
+    text-align: center;
   }
   .title-container {
     color: $blue-color;
-    font-size: $size-large;
+    font-size: $size-extra-medium;
     font-weight: $weight-medium;
-    line-height: 2.475rem;
+    line-height: 1.875rem;
     margin-bottom: 1.875rem;
     text-align: center;
     @media (max-width: 880px) {
@@ -36,6 +36,20 @@
     gap: 1.575rem;
     .box {
       width: 250px;
+      .icon-section {
+        @include display-flex(center, space-between);
+        color: $blue-color;
+        .title {
+          font-size: $size-medium;
+          font-weight: $weight-medium;
+        }
+        .icon {
+          font-size: $size-large;
+        }
+      }
+      .imgs-links {
+      
+      }
       .img {
         height: 150px;
         @media (max-width: 880px) {

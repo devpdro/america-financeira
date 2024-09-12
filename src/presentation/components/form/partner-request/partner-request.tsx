@@ -43,7 +43,7 @@ const PartnerRequest: React.FC = () => {
 
   const onSubmit = async (data: PartnerRequestProps) => {
     try {
-      const response = await fetch('/api/submit-webhook', {
+      const response = await fetch('/api/submit-webhook-partners', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

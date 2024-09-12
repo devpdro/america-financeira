@@ -18,7 +18,7 @@ import emprestimoConsignado from './emprestimo-consignado.webp'
 import impulsioneReceita from './impulsione-receita.webp'
 import investimentos from './investimentos.webp'
 import logoAmerica from './logo-america.webp'
-import logoWhite from './logo-white.webp'
+import logoWhite from './logo-financeira-seguro.png'
 import moveis from './moveis.webp'
 import pagamento from './pagamento.webp'
 import parceiro from './parceiro.webp'
@@ -54,8 +54,31 @@ import confraternizacaoTrofeu from './confraternizacao-trofeu.webp'
 import quemSomos from './quem-somos.webp'
 import pessoaOlhando from './pessoa-olhando.webp'
 import allan from './allan.jpg'
+import chat from './Chat.png'
+import crefaz from './crefaz.png'
+import gapSys from './gap-sys.png'
+import kingHost from './kinghost.webp'
+import kolmeya from './kolmeya.webp'
+import fourrnet from './4net.webp'
+import mercantil from './mercantil.png'
+import n8n from './n8n.webp'
+import Sys from './Sys.png'
+import Voip from './Voip.png'
+import webmail from './webmail.webp'
 
 const Images = {
+  webmail,
+  chat,
+  crefaz,
+  gapSys,
+  kingHost,
+  kolmeya,
+  logoWhite,
+  fourrnet,
+  mercantil,
+  n8n,
+  Sys,
+  Voip,
   allan,
   confraternizacaoTrofeu,
   equipeFotoConfraternizacao,
@@ -100,7 +123,6 @@ const Images = {
   impulsioneReceita,
   investimentos,
   logoAmerica,
-  logoWhite,
   moveis,
   pagamento,
   parceiro,
