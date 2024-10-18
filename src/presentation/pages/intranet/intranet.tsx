@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import { HeaderPolicy, InformationPolicy, IntranetDisplay } from '@/presentation/components/ui'
-import { intranetPolicy } from '@/data/ui'
+import { HeaderPolicy, IntranetDisplay } from '@/presentation/components/ui'
+import BoxIntranet from '@/presentation/components/ui/box-intranet/box-intranet'
 
 export default function Intranet() {
   return (
@@ -26,8 +26,8 @@ export default function Intranet() {
         <meta property="og:url" content="https://www.americafinanceira.com.br/intranet" />
         <meta property="og:type" content="website" />
       </Head>
-      <HeaderPolicy title="Intranet" />
       <IntranetDisplay />
+      <BoxIntranet />
     </div>
   )
 }

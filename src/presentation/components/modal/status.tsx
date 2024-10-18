@@ -1,24 +1,25 @@
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
-
 import { Button } from '@/presentation/components/form'
-import { icons } from '@/data/ui'
-
 import styles from './status.module.scss'
+
+interface InfoItem {
+  text: string
+  link: string
+}
 
 interface StatusModalProps {
   isOpen: boolean
   message?: string
+  info?: InfoItem[]
   onClose: () => void
 }
 
-const StatusModal: React.FC<StatusModalProps> = ({ isOpen, onClose, message }) => {
+const StatusModal: React.FC<StatusModalProps> = ({ isOpen, onClose, message, info }) => {
   return (
     <section className={styles.container} aria-labelledby="modal-title" aria-describedby="modal-description">
       <Modal
-        classNames={{
-          modal: styles.modal,
-        }}
+        classNames={{ modal: styles.modal }}
         open={isOpen}
         onClose={onClose}
         center
@@ -34,18 +35,14 @@ const StatusModal: React.FC<StatusModalProps> = ({ isOpen, onClose, message }) =
           <h1 id="modal-title" className={styles.title}>
             {message}
           </h1>
-          <h3 className={styles.subtitle}>Siga a gente</h3>
-          <p id="modal-description" className={styles.paragraph}>
-            Conheça nosso cultura, explore nossos serviços e veja como <br />
-            transformamos finanças em oportunidades todos os dias.
-          </p>
-          <div className={styles['icons-section']}>
-            {icons.map(({ icon: Icon, link }, index) => (
-              <a key={index} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Link para ${link}`}>
-                <Icon className={styles.icon} />
-              </a>
+          {info &&
+            info.map((item, index) => (
+              <p key={index} className={styles.paragraph}>
+                <a href={item.link} className={styles.link} target="_blank" rel="noopener noreferrer">
+                  {item.text}
+                </a>
+              </p>
             ))}
-          </div>
           <Button typeStyle="btn1" text="Fechar" width="100%" onClick={onClose} aria-label="Fechar o modal" />
         </div>
       </Modal>
