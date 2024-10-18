@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { IconUser, IconRainbow, IconBuildingBank, IconShield, IconFlame, IconMap, IconMail } from '@tabler/icons-react'
+import { IconUser, IconRainbow, IconBuildingBank, IconShield, IconFlame, IconLink , IconMail } from '@tabler/icons-react'
 import S from './box-intranet.module.scss'
 import { StatusModal } from '../../modal'
 
@@ -29,12 +29,13 @@ const data = [
     info: [{ text: 'Hot Sys', link: 'https://hotsys.com.br/#/login' }],
   },
   {
-    icon: <IconMap />,
+    icon: <IconLink  />,
     title: 'Links úteis',
     info: [
       { text: 'Área do Parceiro', link: 'https://america.nodesistemas.com.br/' },
       { text: 'KingHost', link: 'https://kinghost.com.br' },
       { text: 'N8n', link: 'https://n8n.io' },
+      { text: 'Kolmeya', link: 'https://kolmeya.com.br/auth/login' },
     ],
   },
   {
