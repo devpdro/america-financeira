@@ -35,7 +35,7 @@ const data = [
       { text: 'Área do Parceiro', link: 'https://america.nodesistemas.com.br/' },
       { text: 'KingHost', link: 'https://kinghost.com.br' },
       { text: 'N8n', link: 'https://n8n.io' },
-      { text: 'Kolmeya', link: 'https://kolmeya.com.br/auth/login' },
+      { text: 'Kolmeyaa', link: 'https://kolmeya.com.br/auth/login' },
     ],
   },
   {
