@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  .title {
+    font-size: $size-extra-medium;
+    font-weight: $weight-medium;
+    padding: 1.075rem 1.575rem;
+  }
+}

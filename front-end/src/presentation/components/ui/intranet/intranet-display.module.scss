@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  background-image: url('../../../assets/images/tres-pessoas-emprestimo.webp');
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  color: $black-color;
+  padding: 8.775rem 2.075rem 3.375rem 2.075rem;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centralizando horizontalmente */
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Aumentando a opacidade */
+    z-index: 1; /* Colocando o overlay acima da imagem */
+  }
+
+  .boxSection {
+    z-index: 22;
+    .title {
+      font-size: 2rem;
+      font-weight: $weight-medium;
+      line-height: 2.975rem;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+
+      @media (max-width: 1124px) {
+        font-size: $size-extra-medium;
+        line-height: 2.075rem;
+      }
+    }
+  }
+}

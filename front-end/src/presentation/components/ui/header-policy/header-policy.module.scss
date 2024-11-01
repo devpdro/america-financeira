@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  background-color: $light-blue;
+  color: $black-color;
+  padding: 8.775rem 2.075rem 3.375rem 2.075rem;
+  .box-section {
+    @include container-center(1080px);
+    .title {
+      font-size: $size-large;
+      font-weight: $weight-medium;
+      line-height: 2.975rem;
+      @media (max-width: 1124px) {
+        font-size: $size-extra-medium;
+        line-height: 2.075rem;
+      }
+    }
+  }
+}

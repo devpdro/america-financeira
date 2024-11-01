@@ -1,0 +1,69 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.form {
+  @include display-flex;
+  flex-direction: column;
+  .title {
+    color: $black-color;
+    font-size: $size-medium;
+    font-weight: $weight-bold;
+    @media (max-width: 994px) {
+      font-size: $size-normal;
+    }
+  }
+  .input-text {
+    color: $black-color;
+    font-size: $size-normal;
+    font-weight: $weight-medium;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 1px solid $gray-color;
+    margin-top: 1.275rem;
+    padding: 7px 0;
+    width: 100%;
+    @media (max-width: 994px) {
+      font-size: $size-small;
+    }
+    &:focus {
+      border-bottom: 1px solid $black-color;
+    }
+  }
+  .terms-box {
+    @include display-flex(center, flex-start);
+    .checkbox {
+      border: 2px solid $black-color;
+      margin: 1.575rem 0 1.575rem 0;
+      width: 1.275rem;
+      height: 1.275rem;
+      border-radius: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+      &:checked {
+        box-shadow: $box-shadow-normal;
+      }
+    }
+    .label-checkbox {
+      position: relative;
+      user-select: none;
+      color: $black-color;
+      font-weight: $weight-bold;
+      font-size: 0.875rem;
+      padding-left: 0.575rem;
+    }
+  }
+  .error {
+    color: $red-color;
+    font-weight: $weight-normal;
+    font-size: $size-extra-small;
+  }
+  .checkbox-error + .label-checkbox {
+    color: $red-color;
+  }
+  .input-text-error {
+    border-color: $red-color;
+    &:focus {
+      border-color: $red-color;
+    }
+  }
+}

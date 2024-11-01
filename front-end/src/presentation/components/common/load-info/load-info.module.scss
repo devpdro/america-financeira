@@ -1,0 +1,52 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  @include container-center(1280px, 5.575rem auto 6.575rem auto);
+  @include display-flex;
+  padding: 0 2.075rem;
+  gap: 2.575rem;
+  @media (max-width: 880px) {
+    flex-direction: column;
+    margin: 3.575rem auto 3.275rem auto;
+    gap: 1.075rem;
+  }
+  .image-section {
+    width: 100%;
+    @media (min-width: 881px) and (max-width: 1125px) {
+      display: none;
+    }
+    .img {
+      border-radius: $radius-medium;
+    }
+  }
+  .text-section {
+    width: 100%;
+    .subtitle {
+      font-weight: $weight-medium;
+      font-size: $size-normal;
+      margin-bottom: 0.575rem;
+      margin-top: 0;
+      @media (max-width: 880px) {
+        font-size: $size-normal;
+        font-weight: 450;
+      }
+    }
+    .title {
+      font-weight: $weight-medium;
+      font-size: $size-large;
+      margin: 0rem 0 1.075rem 0;
+      line-height: 2.675rem;
+      @media (max-width: 880px) {
+        font-size: $size-extra-medium;
+        line-height: 2.075rem;
+      }
+    }
+    .paragraph {
+      font-weight: $weight-light;
+      font-size: $size-normal;
+      margin-bottom: 2.075rem;
+      line-height: 1.475rem;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  margin: 0 auto 1.075rem auto;
+  position: relative;
+  .subtitle-section {
+    font-size: $size-normal;
+    font-weight: $weight-normal;
+    color: $blue-color;
+    text-align: center;
+    margin-bottom: 1.075rem;
+    @media (max-width: 880px) {
+      font-size: $size-normal;
+    }
+  }
+  .title-section {
+    font-size: $size-large;
+    font-weight: $weight-medium;
+    text-align: center;
+    line-height: 2.875rem;
+    margin-bottom: 3.575rem;
+    @media (max-width: 880px) {
+      font-size: $size-extra-medium;
+      line-height: 2.275rem;
+    }
+  }
+  .custom-arrow-left {
+    @include display-flex;
+    @include hover-pointer;
+    background-color: $white-color;
+    color: $blue-color;
+    position: absolute;
+    right: 110px;
+    bottom: 100%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    @media (max-width: 624px) {
+      display: none;
+    }
+    &:hover {
+      background-color: $blue-color;
+      color: $white-color;
+      border: 2px solid $blue-color;
+    }
+  }
+  .custom-arrow-right {
+    @include display-flex;
+    @include hover-pointer;
+    background-color: $white-color;
+    color: $blue-color;
+    position: absolute;
+    right: 45px;
+    bottom: 100%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    @media (max-width: 624px) {
+      display: none;
+    }
+    &:hover {
+      background-color: $blue-color;
+      color: $white-color;
+      border: 2px solid $blue-color;
+    }
+  }
+  .carousel-section {
+    @include container-center(1480px, 0 auto);
+    @media (max-width: 880px) {
+      max-width: 340px !important;
+      margin: 0 auto;
+    }
+    @media (min-width: 880px) and (max-width: 1280px) {
+      max-width: 710px !important;
+      margin: 0 auto;
+    }
+  }
+}
+
+.item {
+  @include display-flex(flex-end, space-between);
+  background-color: #333942;
+  color: $white-color;
+  border-radius: $radius-medium;
+  flex-direction: column;
+  width: 280px;
+  height: 220px;
+  margin: 2.075rem 0.575rem;
+  padding: 2.075rem 2.075rem;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+  .title {
+    font-size: $size-normal;
+    font-weight: $weight-medium;
+    margin-bottom: 1.075rem;
+  }
+  .subtitle {
+    font-size: $size-small;
+    font-weight: $size-medium;
+    line-height: 1.175rem;
+  }
+  .icon-section {
+    text-align: right;
+    .icon {
+      font-size: $size-medium;
+    }
+  }
+}

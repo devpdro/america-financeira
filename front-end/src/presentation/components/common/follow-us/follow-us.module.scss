@@ -1,0 +1,61 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+  @include display-flex;
+  color: $black-color;
+  background-color: $white-color;
+  border-radius: $radius-medium;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 4.075rem;
+  padding: 0 2.075rem;
+  @media (max-width: 880px) {
+    margin-bottom: 2.075rem;
+    width: 100%;
+  }
+  .img {
+    margin-bottom: 0.375rem;
+    width: 160px;
+    @media (max-width: 880px) {
+      margin-bottom: 0.875rem;
+    }
+  }
+  .subtitle {
+    font-size: $size-large;
+    font-weight: $weight-medium;
+    margin-bottom: 0.875rem;
+    @media (max-width: 880px) {
+      font-size: $size-medium;
+      line-height: 1.575rem;
+      margin-bottom: 0.875rem;
+    }
+  }
+  .paragraph {
+    font-size: $size-normal;
+    font-weight: $weight-normal;
+    margin-bottom: 2.475rem;
+    line-height: 1.075rem;
+    @media (max-width: 880px) {
+      font-size: $size-small;
+      line-height: 1.175rem;
+      margin-bottom: 1.475rem;
+    }
+  }
+  .icons-section {
+    @include display-flex;
+    margin: 1.075rem 0 2.475rem 0;
+    gap: 1.575rem;
+    .icon {
+      background-color: $gray-light-color;
+      color: $blue-strong-color;
+      font-size: 3.875rem;
+      border-radius: 50%;
+      padding: 1.075rem;
+      @media (max-width: 880px) {
+        font-size: 2.375rem;
+        padding: 0.475rem;
+      }
+    }
+  }
+}
