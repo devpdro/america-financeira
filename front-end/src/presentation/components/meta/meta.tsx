@@ -4,7 +4,7 @@ type MetaProps = {
   title: string
   description: string
   keywords: string
-  image: string
+  image?: string
 }
 
 const Meta = ({ title, description, keywords, image }: MetaProps) => (

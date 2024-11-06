@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { Meta } from 'src/presentation/components'
 
 import { Header, LatestPosts, InfoPanel, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { personalLoanBenefits, faqAboutPersonalLoan } from '@/data/ui'
@@ -10,27 +10,11 @@ export default function PersonalLoan() {
 
   return (
     <main>
-      <Head>
-        <title>Empréstimo Pessoal: Online, Ágil e Seguro</title>
-        <meta
-          name="description"
-          content="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
-        />
-        <meta
-          name="keywords"
-          content="empréstimo pessoal, crédito pessoal, América Financeira, simulação de empréstimo, condições de empréstimo, benefícios financeiros"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Empréstimo Pessoal: Online, Ágil e Seguro" />
-        <meta
-          property="og:description"
-          content="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
-        />
-        <meta property="og:url" content="https://www.americafinanceira.com.br/emprestimo-pessoal" />
-        <meta property="og:image" content={backgroundImageUrl.src} />
-        <meta property="og:type" content="website" />
-      </Head>
+      <Meta
+        title="Empréstimo Pessoal: Online, Ágil e Seguro"
+        description="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
+        keywords="empréstimo pessoal, crédito pessoal, América Financeira, simulação de empréstimo, condições de empréstimo, benefícios financeiros"
+      />
       <Header
         title="Empréstimo Pessoal"
         subtitle={

@@ -21,7 +21,7 @@ export const Alert = styled.div`
     line-height: 1.275rem;
     padding-right: 1.575rem;
   }
-  
+
   icon {
     @include hover-pointer;
     font-size: $size-medium;
