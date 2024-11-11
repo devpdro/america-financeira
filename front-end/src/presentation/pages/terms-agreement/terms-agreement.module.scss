@@ -2,14 +2,14 @@
 @import '../../styles/themes/mixins.scss';
 
 .container {
-  @include container-center(1080px);
+  @include container(1080px);
   .header {
     background-color: $color-secondary;
-    padding: 8.7rem 2rem 3.3rem 2rem;
+    padding: 8.5rem 2rem 3.5rem 2rem;
     .title {
       font-size: $font-large;
       font-weight: $weight-medium;
-      line-height: 2.9rem;
+      line-height: 2.8rem;
       @media (max-width: 1124px) {
         font-size: $font-medium;
         line-height: 2rem;
