@@ -1,31 +1,86 @@
-import { timeline } from '@/data/ui'
+import S from './timeline.module.scss'
 
-import styles from './timeline.module.scss'
+const TIMELINE = [
+  {
+    duration: '2 Ano',
+    year: '2012',
+    title: 'Inauguração',
+    description:
+      'A América Financeira iniciou suas operações em 2012, oferecendo uma ampla gama de serviços financeiros para atender às necessidades de seus clientes.',
+  },
+  {
+    duration: '1 Ano',
+    year: '2014',
+    title: 'Primeira filial em Itirapira',
+    description:
+      'Em 2014, a América Financeira expandiu sua presença física com a inauguração da primeira filial em Itirapira, proporcionando um atendimento mais próximo e personalizado.',
+  },
+  {
+    duration: '1 Ano',
+    year: '2015',
+    title: 'Primeiros Parceiros',
+    description:
+      'No ano de 2015, a América Financeira estabeleceu parcerias estratégicas com várias instituições financeiras, fortalecendo sua posição no mercado.',
+  },
+  {
+    duration: '1 Anos',
+    year: '2016',
+    title: 'Implementação de Tecnologia Avançada',
+    description:
+      'Em 2016, a América Financeira investiu em tecnologia avançada para melhorar seus serviços e proporcionar uma experiência de cliente mais eficiente e segura.',
+  },
+  {
+    duration: '1 Ano',
+    year: '2017',
+    title: 'Primeiro 1 milhão',
+    description:
+      'Em 2017, a América Financeira alcançou a marca de 1 milhão de clientes atendidos, destacando seu compromisso com a excelência e a satisfação do cliente.',
+  },
+  {
+    duration: '2 Anos',
+    year: '2018',
+    title: 'Expansão Regional',
+    description:
+      'Entre 2018 e 2019, a América Financeira expandiu suas operações para diversas regiões do país, aumentando sua presença e acessibilidade para mais clientes.',
+  },
+  {
+    duration: '4 Anos',
+    year: '2020',
+    title: 'Digitalização Completa',
+    description:
+      'Em 2020, a América Financeira completou a digitalização de todos os seus serviços, oferecendo uma plataforma online completa para todos os tipos de transações financeiras.',
+  },
+  {
+    duration: '1 Ano',
+    year: '2024',
+    title: 'Lançamento do Método Hot',
+    description:
+      'Em 2024, a América Financeira lançou o Método Hot, uma nova abordagem inovadora para oferecer soluções financeiras mais integradas e eficientes.',
+  },
+]
 
-const Timeline = () => {
-  return (
-    <section className={styles.container}>
-      <div className={styles['box-container']}>
-        {timeline.map((item, index) => (
-          <article key={index} className={styles.timeline}>
-            <div className={styles.icon}></div>
-            <div className={styles['date-content']}>
-              <div className={styles['date-outer']}>
-                <span className={styles.date}>
-                  <span className={styles.month}>{item.duration}</span>
-                  <span className={styles.year}>{item.year}</span>
-                </span>
-              </div>
+const Timeline = () => (
+  <div className={S.container}>
+    <div className={S['box-container']}>
+      {TIMELINE.map(({ duration, year, title, description }, index) => (
+        <div key={index} className={S.timeline}>
+          <div className={S.icon}></div>
+          <div className={S['date-content']}>
+            <div className={S['date-outer']}>
+              <span className={S.date}>
+                <span className={S.month}>{duration}</span>
+                <span className={S.year}>{year}</span>
+              </span>
             </div>
-            <div className={styles['timeline-content']}>
-              <h5 className={styles.title}>{item.title}</h5>
-              <p className={styles.description}>{item.description}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  )
-}
+          </div>
+          <div className={S['timeline-content']}>
+            <h5 className={S.title}>{title}</h5>
+            <p className={S.description}>{description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)
 
 export default Timeline

@@ -1,98 +1,71 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-import { team } from '@/data/ui'
+import { IMAGE } from '@/presentation/assets'
 
 import classNames from 'classnames'
-import styles from './team.module.scss'
+
+import S from './team.module.scss'
+
+const TEAMPHOTOS = [
+  { src: IMAGE.equipeUnida, alt: 'Equipe unida posando para foto' },
+  { src: IMAGE.equipeFotoFinal, alt: 'Foto final da equipe em evento de confraternização' },
+  { src: IMAGE.equipeOlhandoTv, alt: 'Equipe assistindo apresentação na TV' },
+  { src: IMAGE.allanConfraternizacao, alt: 'Allan durante a confraternização da equipe' },
+  { src: IMAGE.equipeTodosVermelho, alt: 'Equipe toda vestida de vermelho para evento especial' },
+  { src: IMAGE.confraternizacaoTrofeu, alt: 'Equipe celebrando com troféu em mãos' },
+]
+
+type PhotosProps = {
+  src: StaticImageData
+  alt: string
+  width: number
+  height: number
+}
 
 type TeamProps = {
-  imageWidth?: number
-  imageHeight?: number
+  width: number
+  height: number
 }
 
-const Team: React.FC<TeamProps> = ({ imageWidth, imageHeight }) => {
-  return (
-    <section className={styles.container}>
-      <div className={classNames(styles.row, styles['justify-content-center'])}>
-        <div className={classNames()}>
-          <h3
-            className={classNames(styles.subtitle)}
-            data-toggle="animation"
-            data-animation="fadeUp"
-            data-animation-order="1"
-            data-animation-trigger="load"
-          >
-            Nossa equipe
-          </h3>
-          <h1
-            className={classNames(styles.title)}
-            data-toggle="animation"
-            data-animation="fadeUp"
-            data-animation-order="2"
-            data-animation-trigger="load"
-          >
-            Conectando histórias e transformando vidas
-          </h1>
+const Photos = ({ src, alt, width, height }: PhotosProps) => (
+  <div className={S['img-square']}>
+    <Image width={width} height={height} src={src} alt={alt} className={S['img-cover']} />
+  </div>
+)
+
+const Team = ({ width = 180, height = 180 }: TeamProps) => (
+  <div className={S.container}>
+    <div className={classNames(S.row, S['justify-content-center'])}>
+      <div>
+        <h3 className={S.subtitle}>Nossa equipe</h3>
+        <h1 className={S.title}>Conectando histórias e transformando vidas</h1>
+      </div>
+    </div>
+    <div className={classNames(S.row, S['align-items-center'])}>
+      <div className={S['col-3']}>
+        <Photos src={TEAMPHOTOS[0].src} alt={TEAMPHOTOS[0].alt} width={width} height={height} />
+      </div>
+      <div className={S['col-6']}>
+        <div className={classNames(S.row, S.mb2)}>
+          {TEAMPHOTOS.slice(1, 3).map((img, index) => (
+            <div key={index} className={S[`col-${index === 0 ? 7 : 5}`]}>
+              <Photos src={img.src} alt={img.alt} width={width} height={height} />
+            </div>
+          ))}
+        </div>
+        <div className={S.row}>
+          {TEAMPHOTOS.slice(3, 5).map((img, index) => (
+            <div key={index} className={S[`col-${index === 0 ? 5 : 7}`]}>
+              <Photos src={img.src} alt={img.alt} width={width} height={height} />
+            </div>
+          ))}
         </div>
       </div>
-      <div className={classNames(styles.row, styles['form-row'], styles['align-items-center'])}>
-        <div className={classNames(styles.col, styles['col-3'])}>
-          <div className={styles['img-square']}>
-            <Image
-              width={imageWidth}
-              height={imageHeight}
-              src={team[0].src}
-              alt={team[0].alt}
-              className={styles['img-cover']}
-            />
-          </div>
-        </div>
-        <div className={classNames(styles.col, styles['col-6'])}>
-          <div className={classNames(styles.row, styles['form-row'], styles['align-items-end'], styles.mb2)}>
-            {team.slice(1, 3).map((img, index) => (
-              <div key={index} className={classNames(styles.col, styles[`col-${index === 0 ? 7 : 5}`])}>
-                <div className={styles['img-square']}>
-                  <Image
-                    width={imageWidth}
-                    height={imageHeight}
-                    src={img.src}
-                    alt={img.alt}
-                    className={styles['img-cover']}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className={styles.row}>
-            {team.slice(3, 5).map((img, index) => (
-              <div key={index} className={classNames(styles.col, styles[`col-${index === 0 ? 5 : 7}`])}>
-                <div className={styles['img-square']}>
-                  <Image
-                    width={imageWidth}
-                    height={imageHeight}
-                    src={img.src}
-                    alt={img.alt}
-                    className={styles['img-cover']}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={classNames(styles.col, styles['col-3'])}>
-          <div className={styles['img-square']}>
-            <Image
-              width={imageWidth}
-              height={imageHeight}
-              src={team[5].src}
-              alt={team[5].alt}
-              className={styles['img-cover']}
-            />
-          </div>
-        </div>
+      <div className={S['col-3']}>
+        <Photos src={TEAMPHOTOS[5].src} alt={TEAMPHOTOS[5].alt} width={width} height={height} />
       </div>
-    </section>
-  )
-}
+    </div>
+  </div>
+)
 
 export default Team

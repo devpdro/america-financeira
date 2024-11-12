@@ -1,15 +1,14 @@
-import { Meta } from 'src/presentation/components'
+import { Meta, Banks } from 'src/presentation/components'
+import { IMAGE } from '@/presentation/assets'
 
 import { Header, LatestPosts, InfoPanel, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { personalLoanBenefits, faqAboutPersonalLoan } from '@/data/ui'
-import { PartnersBanks } from '@/presentation/components/common'
-import { Images } from '@/presentation/assets'
 
 export default function PersonalLoan() {
-  const backgroundImageUrl = Images.pessoaOlhando
+  const backgroundImageUrl = IMAGE.pessoaOlhando
 
   return (
-    <main>
+    <div>
       <Meta
         title="Empréstimo Pessoal: Online, Ágil e Seguro"
         description="Empréstimo pessoal rápido e fácil, com as melhores condições e benefícios para atender todas suas necessidades financeiras pessoais. Simule agora!"
@@ -17,16 +16,12 @@ export default function PersonalLoan() {
       />
       <Header
         title="Empréstimo Pessoal"
-        subtitle={
-          <>
-            Empréstimo pra você, <br /> rápido e fácil
-          </>
-        }
-        showParagraph="*Sujeito à análise de crédito e condições do produto"
-        backgroundImage={backgroundImageUrl.src}
+        subtitle="Empréstimo pra você,\nrápido e fácil"
+        paragraph="*Sujeito à análise de crédito e condições do produto"
+        image={backgroundImageUrl.src}
       />
       <LoadInfo
-        image={Images.tresPessoasEmprestimo.src}
+        image={IMAGE.tresPessoasEmprestimo.src}
         imageWidth={100}
         imageHeight={98}
         alt="O que é o Empréstimo Pessoal?"
@@ -50,9 +45,9 @@ export default function PersonalLoan() {
         }
         items={personalLoanBenefits}
       />
-      <PartnersBanks />
+      <Banks />
       <InfoPanel
-        image={Images.cartaoCredito.src}
+        image={IMAGE.cartaoCredito.src}
         imageWidth={91}
         imageHeight={100}
         alt="Imagem de Cartão de Crédito"
@@ -64,7 +59,7 @@ export default function PersonalLoan() {
       <InfoPanel
         imageWidth={91}
         imageHeight={100}
-        image={Images.investimentos.src}
+        image={IMAGE.investimentos.src}
         alt="Imagem representativa de antecipação de FGTS"
         title="Antecipação FGTS"
         subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
@@ -73,6 +68,6 @@ export default function PersonalLoan() {
       />
       <LatestPosts />
       <Faq items={faqAboutPersonalLoan} title="Ficou com alguma dúvida sobre Empréstimo Pessoal?" />
-    </main>
+    </div>
   )
 }

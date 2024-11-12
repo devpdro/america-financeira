@@ -1,30 +1,30 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
 
 .container {
-  padding: 0 2.075rem;
-  @include container(1080px, 2.275rem auto 4.075rem auto);
-  .subtitle {
-    font-size: $size-small;
-    font-weight: $weight-normal;
-    line-height: 1.375rem;
-  }
-  .introduction-title {
-    font-size: $size-extra-medium;
+  @include container(1080px, 2rem auto 4rem auto);
+  padding: 0 2rem;
+  .title {
+    font-size: $font-medium;
     font-weight: $weight-medium;
-    margin: 0.675rem 0 0.575rem 0;
+    margin: 0.5rem 0;
     @media (max-width: 1124px) {
-      font-size: $size-medium;
-      line-height: 1.575rem;
+      font-size: $font-default;
+      line-height: 1.5rem;
     }
   }
+  .overview {
+    font-size: $font-small;
+    font-weight: $weight-default;
+    line-height: 1.3rem;
+  }
   .list-section {
-    padding-left: 2.575rem;
+    padding-left: 2.5rem;
     .items {
-      text-indent: 0.575rem;
       list-style: disc;
-      font-weight: $weight-normal;
-      margin-bottom: 0.575rem;
+      font-weight: $weight-default;
+      margin-bottom: 0.5rem;
+      text-indent: 0.5rem;
     }
   }
 }

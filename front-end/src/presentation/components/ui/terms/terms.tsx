@@ -16,20 +16,18 @@ type TermsProps = {
 
 const Terms = ({ title, overview, introduction, items, conclusion, description }: TermsProps) => (
   <div className={S.container}>
-    <div className={S['box-section']}>
-      <h2 className={S['introduction-title']}>{title}</h2>
-      <p className={S.subtitle}>{overview}</p>
-      <h2 className={S['introduction-title']}>{introduction}</h2>
-      <ul className={S['list-section']}>
-        {items.map((item, index) => (
-          <li className={S.items} key={index}>
-            <strong>{item.title}:</strong> {item.description}
-          </li>
-        ))}
-      </ul>
-      <h2 className={S['introduction-title']}>{conclusion}</h2>
-      <p className={S.subtitle}>{description}</p>
-    </div>
+    <h1 className={S['title']}>{title}</h1>
+    <p className={S.overview}>{overview}</p>
+    <h3 className={S['title']}>{introduction}</h3>
+    <ul className={S['list-section']}>
+      {items.map((item, index) => (
+        <li className={S.items} key={index}>
+          <strong>{item.title}:</strong> {item.description}
+        </li>
+      ))}
+    </ul>
+    <h1 className={S['title']}>{conclusion}</h1>
+    <p className={S.subtitle}>{description}</p>
   </div>
 )
 

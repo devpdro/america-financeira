@@ -5,8 +5,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: $white-color;
   max-width: 100%;
+  background-position: left center;
   height: 100vh;
   z-index: 2;
+  background-size: cover;
   @media (min-width: 625px) and (max-width: 994px) {
     height: 130vh;
   }

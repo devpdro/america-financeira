@@ -2,8 +2,6 @@ import Head from 'next/head'
 
 import { Header, LatestPosts, Benefits, LoadInfo, Faq } from '@/presentation/components/common'
 import { benefitsConsignedLoan, faqAboutPayrollLoan } from '@/data/ui'
-import { PartnersBanks } from '@/presentation/components/common'
-import { Images } from '@/presentation/assets'
 
 export default function PayrollLoan() {
   const backgroundImageUrl = Images.emprestimoConsignadoDuasPessoas

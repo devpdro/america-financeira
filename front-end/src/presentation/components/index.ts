@@ -1,3 +1,5 @@
+export * from './common'
 export * from './form'
+export * from './layout'
 export { default as Meta } from './meta/meta'
-export { default as Terms } from './ui/terms/terms'
+export * from './ui'

@@ -1,20 +1,20 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
 
 .container {
-  background: $light-blue;
+  @include container(1380px, 9.5rem auto 12.5rem auto);
   position: relative;
+  background: $color-secondary;
+  padding: 0 0.9rem;
   .box-section {
-    @include container-center(1380px, 9.575rem auto 12.575rem auto);
-    padding: 0 0.975rem;
     .info-section {
       @include display-flex;
       flex-wrap: wrap;
       .col-lg-3 {
         flex: 0 0 20%;
         max-width: 25%;
-        padding: 0 675rem;
-        margin: 0 1.075rem;
+        padding: 0 6rem;
+        margin: 0 1rem;
         z-index: 99;
         @media (max-width: 992px) {
           flex: 0 0 50%;

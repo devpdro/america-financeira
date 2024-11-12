@@ -1,11 +1,11 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
 
 .container {
-  @include container-center(1280px, 5.075rem auto 7.575rem auto);
+  @include container(1280px, 5.075rem auto 7.575rem auto);
   padding: 0 2.075rem;
   @media (max-width: 1024px) {
-    @include container-center(1280px, 3.075rem auto 4.575rem auto);
+    @include container(1280px, 3.075rem auto 4.575rem auto);
   }
   .row {
     display: flex;
@@ -13,7 +13,6 @@
     margin-right: -5px;
     margin-left: -5px;
     text-align: center;
-
     &.justify-content-center {
       justify-content: center;
     }
@@ -72,8 +71,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-muted {
   }
   .img-square {
     position: relative;
