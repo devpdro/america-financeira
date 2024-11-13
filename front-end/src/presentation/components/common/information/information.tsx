@@ -15,7 +15,7 @@ const Information: React.FC<InformationProps> = ({ title, paragraphs }) => {
         </p>
       ))}
     </section>
-  )
+  ) 
 }
 
 export default Information

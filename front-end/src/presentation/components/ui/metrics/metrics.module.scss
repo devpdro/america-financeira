@@ -15,7 +15,7 @@
         max-width: 25%;
         padding: 0 6rem;
         margin: 0 1rem;
-        z-index: 99;
+        z-index: 90;
         @media (max-width: 992px) {
           flex: 0 0 50%;
           max-width: 50%;
@@ -26,14 +26,14 @@
         }
       }
       .col-sm-6 {
-        padding: 0 10px;
+        padding: 0 0.625rem;
         @media (max-width: 576px) {
           flex: 0 0 100%;
           max-width: 100%;
         }
       }
       .col-xs-12 {
-        padding: 0 10px;
+        padding: 0 0.625rem;
       }
       .no-padding {
         padding: 0;
@@ -41,29 +41,29 @@
     }
     .numbers-section {
       @include display-flex;
-      background-color: $white-color;
-      border-radius: $radius-medium;
+      box-shadow: rgba(100, 100, 111, 0.15) 0px 0.4rem 1.8rem 0px;
       flex-direction: column;
       text-align: center;
-      height: 12.875rem;
-      padding: 2.075rem 1.575rem;
+      background-color: $color-snow;
+      border-radius: $radii-default;
+      height: 12rem;
+      padding: 2rem 1.5rem;
       margin-top: -5.75rem;
-      box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
       @media (max-width: 1084px) {
         margin-top: -1.575rem;
       }
       .icon {
-        color: $blue-color;
-        font-size: 4.075rem;
-        border-radius: $radius-medium;
-        padding: 0.275rem;
-        margin-bottom: 1.075rem;
+        color: $color-primary;
+        border-radius: $radii-default;
+        font-size: 4rem;
+        padding: 0.2rem;
+        margin-bottom: 1rem;
       }
       .title {
-        font-size: $size-medium;
+        font-size: $font-default;
         font-weight: $weight-medium;
-        margin-bottom: 0.475rem;
-        line-height: 1.575rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.5rem;
       }
       .subtitle {
         font-size: $size-small;
@@ -75,13 +75,13 @@
       @include display-flex;
       .video {
         @include display-flex;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 0.3rem 0.9rem;
         position: relative;
         width: 55vw;
-        border-radius: 10px;
-        height: 27.175rem;
-        margin-top: 5.275rem;
-        margin-bottom: -9.375rem;
+        border-radius: 0.625rem;
+        height: 27rem;
+        margin-top: 5.2rem;
+        margin-bottom: -9.3rem;
         @media (max-width: 993px) {
           width: 90vw;
         }

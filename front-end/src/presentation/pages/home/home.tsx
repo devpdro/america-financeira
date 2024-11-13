@@ -9,8 +9,15 @@ import CeoAbout from '@/presentation/components/ui/ceo-about/ceo-about'
 
 import * as S from './home-styles'
 
-export default function Home() {
+const Home = () => {
   const backgroundImageUrl = Images.cabecalhoInicial
+  const [isVisible, setIsVisible] = useState(true)
+
+  const handleClose = () => {
+    setIsVisible(false)
+  }
+
+  if (!isVisible) return null
 
   return (
     <main>
@@ -21,10 +28,14 @@ export default function Home() {
         image={backgroundImageUrl.src}
       />
 
-      <S.Alert>
-        <h1>Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo</h1>
-        <ICON.IconX size={24} color="red" stroke={2} className="my-icon" />
-      </S.Alert>
+      <div className={styles.container}>
+        <div className={styles['box-section']}>
+          <h1 className={styles.title}>
+            Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo
+          </h1>
+          <IoClose className={styles.icon} onClick={handleClose} />
+        </div>
+      </div>
 
       <Header
         title="Solicite seu crédito agora mesmo!"
@@ -58,7 +69,6 @@ export default function Home() {
         items={benefitsLoan}
       />
       <CeoAbout />
-      <LatestPosts />
       <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
     </main>
   )

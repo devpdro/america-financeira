@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-import { Icons } from '@/presentation/assets'
-import { NavItemProps } from '@/data/models'
+import { ICON } from 'src/presentation/assets'
+import { NavItemProps } from 'src/data/models'
 
-import styles from './nav-item.module.scss'
+import S from './nav-item.module.scss'
 
 const NavItem = ({ label, link, children }: NavItemProps) => {
   const [animationParent] = useAutoAnimate()
@@ -17,24 +17,21 @@ const NavItem = ({ label, link, children }: NavItemProps) => {
   const handleClick = () => setIsOpen(!isOpen)
 
   return (
-    <div ref={animationParent} className={styles['single-nav-item']}>
-      <Link onClick={handleClick} href={link ?? '#'} aria-label={label} className={styles['item-link']}>
-        <p className={styles['item-label']}>
+    <div ref={animationParent} className={S['single-nav-item']}>
+      <Link onClick={handleClick} href={link ?? '#'} className={S['item-link']}>
+        <p className={S['item-label']}>
           <span>{label}</span>
           {children && (
-            <Icons.IoIosArrowDown
-              className={`${styles['arrow-icon']} ${isOpen && styles['rotate-180']}`}
-              aria-hidden="true"
-            />
+            <ICON.IoIosArrowDown className={`${S['arrow-icon']} ${isOpen && S['rotate-180']}`} aria-hidden="true" />
           )}
         </p>
       </Link>
       {isOpen && children && (
-        <div className={styles.dropdown} aria-label={`Submenu de ${label}`}>
+        <div className={S.dropdown} aria-label={`Submenu de ${label}`}>
           {children.map((item, key) => (
-            <Link key={key} href={item.link ?? '#'} className={styles['dropdown-link']} aria-label={item.label}>
-              <span className={styles['link-label']}>{item.label}</span>
-              <div>{item.new && <p className={styles.new}>{item.new}</p>}</div>
+            <Link key={key} href={item.link ?? '#'} className={S['dropdown-link']} aria-label={item.label}>
+              <span className={S['link-label']}>{item.label}</span>
+              <div>{item.new && <p className={S.new}>{item.new}</p>}</div>
             </Link>
           ))}
         </div>

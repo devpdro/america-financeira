@@ -1,18 +1,18 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { useState } from 'react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { NavMobile } from '@/presentation/components/common'
-import { IconWithProps, getLinkAttributes } from '@/utils'
-import { Images, Icons } from '@/presentation/assets'
-import { nav } from '@/data/ui'
 
-import styles from './navbar.module.scss'
+import { NavMobile } from 'src/presentation/components'
+import { IconWithProps, getLinkAttributes } from 'src/utils'
+import { IMAGE, ICON } from 'src/presentation/assets'
+import { MENU } from 'src/data/ui'
 
-export default function Navbar() {
+import S from './navbar.module.scss'
+
+const Navbar = () => {
   const [animationParent] = useAutoAnimate()
   const [isSideMenuOpen, setSideMenu] = useState(false)
 
@@ -23,44 +23,34 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={styles.navbar} aria-label="Navegação Principal">
-      <section ref={animationParent} className={styles['left-section']} aria-label="Seção de Navegação Esquerda">
+    <nav className={S.navbar}>
+      <section ref={animationParent} className={S['left-section']}>
         <Link href="/" legacyBehavior>
-          <a aria-label="Logo América Financeira">
-            <Image src={Images.logoWhite} alt="Logo América Financeira" className={styles.logo} />
+          <a>
+            <Image src={IMAGE.logoWhite} alt="Logo América Financeira" className={S.logo} />
           </a>
         </Link>
         {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}
-        <div className={styles['nav-items']} aria-label="Itens de Navegação">
-          {nav.map((item, index) => (
-            <div key={index} className={styles['nav-link']}>
+        <div className={S['nav-items']}>
+          {MENU.map((item, index) => (
+            <div key={index} className={S['nav-link']}>
               <Link href={item.link ?? '#'} legacyBehavior>
-                <a
-                  className={styles['link-text']}
-                  aria-label={item.label}
-                  onClick={(e) => handleClick(e, item.link ?? '#')}
-                >
+                <a className={S['link-text']} onClick={(e) => handleClick(e, item.link ?? '#')}>
                   <span>{item.label}</span>
-                  {item.children && (
-                    <Icons.IoIosArrowDown
-                      className={`${styles['arrow-icon']} ${styles['rotate-180']}`}
-                      aria-hidden="true"
-                    />
-                  )}
+                  {item.children && <ICON.IoIosArrowDown className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
                 </a>
               </Link>
               {item.children && (
-                <div className={styles.dropdown} aria-label="Menu Suspenso">
+                <div className={S.dropdown}>
                   {item.children.map((child, childIndex) => (
                     <Link key={childIndex} href={child.link} legacyBehavior>
                       <a
-                        className={styles['dropdown-link']}
+                        className={S['dropdown-link']}
                         {...getLinkAttributes(child.link)}
-                        aria-label={child.label}
                         onClick={(e) => handleClick(e, child.link)}
                       >
-                        <span className={styles['link-label']}>{child.label}</span>
-                        {child.new && <p className={styles.new}>{child.new}</p>}
+                        <span className={S['link-label']}>{child.label}</span>
+                        {child.new && <p className={S.new}>{child.new}</p>}
                       </a>
                     </Link>
                   ))}
@@ -71,18 +61,20 @@ export default function Navbar() {
         </div>
       </section>
 
-      <aside className={styles['right-section']} aria-label="Seção de Navegação Direita">
-        <Icons.BiNetworkChart className={styles.icon} aria-hidden="true" />
+      <aside className={S['right-section']}>
+        <ICON.BiNetworkChart className={S.icon} />
         <Link href="/intranet" legacyBehavior>
-          <a className={styles.link} aria-label="Intraneet">
+          <a className={S.link}>
             <span>Intranet</span>
           </a>
         </Link>
       </aside>
 
-      <IconWithProps onClick={() => setSideMenu(true)} className={styles['menu-icon']} aria-label="Abrir Menu">
-        <Icons.FiMenu aria-hidden="true" />
+      <IconWithProps onClick={() => setSideMenu(true)} className={S['menu-icon']}>
+        <ICON.FiMenu aria-hidden="true" />
       </IconWithProps>
     </nav>
   )
 }
+
+export default Navbar

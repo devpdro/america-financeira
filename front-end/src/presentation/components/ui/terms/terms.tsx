@@ -20,9 +20,9 @@ const Terms = ({ title, overview, introduction, items, conclusion, description }
     <p className={S.overview}>{overview}</p>
     <h3 className={S['title']}>{introduction}</h3>
     <ul className={S['list-section']}>
-      {items.map((item, index) => (
-        <li className={S.items} key={index}>
-          <strong>{item.title}:</strong> {item.description}
+      {items.map(({ title, description }, key) => (
+        <li className={S.items} key={key}>
+          <strong>{title}:</strong> {description}
         </li>
       ))}
     </ul>

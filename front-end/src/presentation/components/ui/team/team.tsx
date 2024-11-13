@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 
-import { IMAGE } from '@/presentation/assets'
+import { IMAGE } from 'src/presentation/assets'
 
 import classNames from 'classnames'
 
