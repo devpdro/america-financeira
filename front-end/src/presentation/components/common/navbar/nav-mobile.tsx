@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
-import { NavItem } from '@/presentation/components/common'
-import { NavMobileProps } from '@/data/models'
-import { Icons } from '@/presentation/assets'
-import { IconWithProps } from '@/utils'
-import { nav } from '@/data/ui'
+import { NavItem } from 'src/presentation/components/common'
+import { NavMobileProps } from 'src/data/models'
+import { ICON } from 'src/presentation/assets'
+import { IconWithProps } from 'src/utils'
+import { MENU } from 'src/data/ui'
 
-import styles from './nav-mobile.module.scss'
+import S from './nav-mobile.module.scss'
 
 const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
   const handleClick = () => {
@@ -14,27 +14,27 @@ const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
   }
 
   return (
-    <div className={styles['mobile-nav-container']} aria-label="Navegação Móvel">
-      <nav className={styles['mobile-nav']} aria-label="Menu de Navegação Móvel">
-        <section className={styles['close-section']}>
-          <IconWithProps onClick={closeSideMenu} className={styles['close-icon']} aria-label="Fechar Menu">
-            <Icons.AiOutlineClose aria-hidden="true" />
+    <div className={S['mobile-nav-container']}>
+      <nav className={S['mobile-nav']}>
+        <section className={S['close-section']}>
+          <IconWithProps onClick={closeSideMenu} className={S['close-icon']}>
+            <ICON.AiOutlineClose />
           </IconWithProps>
         </section>
-        <div className={styles['nav-items']} aria-label="Itens de Navegação">
-          {nav.map((item, key) => (
-            <NavItem key={key} label={item.label} new={item.new} link={item.link} onClick={handleClick}>
+        <div className={S['nav-items']}>
+          {MENU.map(({ item }, key) => (
+            <NavItem key={key} label={item.label} new={item.new} link={item.link} onClick={handleClick} blank="none">
               {item.children}
             </NavItem>
           ))}
         </div>
-        <section className={styles['auth-buttons']} aria-label="Botões de Autenticação">
+        <section className={S['auth-buttons']}>
           <Link href="/intranet" legacyBehavior>
-            <a className={styles.link} aria-label="Login">
-              <span aria-label="Intranet">Intranet</span>
+            <a className={S.link}>
+              <span>Intranet</span>
             </a>
           </Link>
-          <Icons.BiNetworkChart className={styles.icon} aria-hidden="true" />
+          <ICON.BiNetworkChart className={S.icon} />
         </section>
       </nav>
     </div>

@@ -1,10 +1,10 @@
-export type NavItemProps = {
+export type ItemProps = {
   label: string
   link: string
-  new?: string
-  blank?: string
-  children?: NavItemProps[]
-  onClick?: () => void
+  new: string
+  blank: string
+  children: ItemProps[]
+  onClick: () => void
 }
 
 export type NavMobileProps = {

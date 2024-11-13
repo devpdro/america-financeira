@@ -32,8 +32,8 @@ const Navbar = () => {
         </Link>
         {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}
         <div className={S['nav-items']}>
-          {MENU.map((item, index) => (
-            <div key={index} className={S['nav-link']}>
+          {MENU.map((item, key) => (
+            <div key={key} className={S['nav-link']}>
               <Link href={item.link ?? '#'} legacyBehavior>
                 <a className={S['link-text']} onClick={(e) => handleClick(e, item.link ?? '#')}>
                   <span>{item.label}</span>
@@ -42,15 +42,15 @@ const Navbar = () => {
               </Link>
               {item.children && (
                 <div className={S.dropdown}>
-                  {item.children.map((child, childIndex) => (
-                    <Link key={childIndex} href={child.link} legacyBehavior>
+                  {item.children.map((item: any, key: number) => (
+                    <Link key={key} href={item.link} legacyBehavior>
                       <a
                         className={S['dropdown-link']}
-                        {...getLinkAttributes(child.link)}
-                        onClick={(e) => handleClick(e, child.link)}
+                        {...getLinkAttributes(item.link)}
+                        onClick={(e) => handleClick(e, item.link)}
                       >
-                        <span className={S['link-label']}>{child.label}</span>
-                        {child.new && <p className={S.new}>{child.new}</p>}
+                        <span className={S['link-label']}>{item.label}</span>
+                        {item.new && <p className={S.new}>{item.new}</p>}
                       </a>
                     </Link>
                   ))}
@@ -71,7 +71,7 @@ const Navbar = () => {
       </aside>
 
       <IconWithProps onClick={() => setSideMenu(true)} className={S['menu-icon']}>
-        <ICON.FiMenu aria-hidden="true" />
+        <ICON.FiMenu />
       </IconWithProps>
     </nav>
   )

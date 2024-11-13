@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Button } from '@/presentation/components/form'
+import { Button } from 'src/presentation/components'
 
 import styles from './load-info.module.scss'
 
@@ -51,7 +51,7 @@ const LoadInfo: React.FC<LoadInfoProps> = ({
               target="_blank"
               aria-label={`Saiba mais sobre ${title}`}
             >
-              <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
+              <Button typeStyle="btn2" label={buttonPrimaryText} width="300px" />
             </Link>
           </div>
         </>
@@ -67,7 +67,7 @@ const LoadInfo: React.FC<LoadInfoProps> = ({
               target="_blank"
               aria-label={`Saiba mais sobre ${title}`}
             >
-              <Button typeStyle="btn2" text={buttonPrimaryText} width="300px" />
+              <Button typeStyle="btn2" label={buttonPrimaryText} width="300px" />
             </Link>
           </div>
           <div className={styles['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>

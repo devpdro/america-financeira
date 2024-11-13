@@ -7,15 +7,15 @@ type InformationProps = {
 
 const Information: React.FC<InformationProps> = ({ title, paragraphs }) => {
   return (
-    <section className={styles.container} aria-labelledby="informacao-titulo" aria-describedby="informacao-texto">
+    <div className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
       {paragraphs.map((paragraph, index) => (
         <p key={index} className={styles.paragraph}>
           {paragraph}
         </p>
       ))}
-    </section>
-  ) 
+    </div>
+  )
 }
 
 export default Information
