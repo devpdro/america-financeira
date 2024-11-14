@@ -1,9 +1,52 @@
-import { Meta, Spotlight, Simulation, Banks } from 'src/presentation/components'
+import { Meta, Header, Spotlight, Simulation, Banks, Panel, Faq } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 
-import { Header, LatestPosts, InfoPanel, Faq } from '@/presentation/components/common'
-import { PartnersBanks } from '@/presentation/components/common'
-import { faqAboutFgtsLoan } from '@/data/ui'
+const FAQLOAN = [
+  {
+    question: 'O que é Empréstimo FGTS?',
+    answer:
+      'É um tipo de crédito que permite a antecipação dos valores do Fundo de Garantia por Tempo de Serviço (FGTS) disponíveis nas contas ativas e inativas.',
+  },
+  {
+    question: 'Quem pode solicitar o Empréstimo FGTS?',
+    answer: 'Trabalhadores com saldo disponível nas contas do FGTS, seja em contas ativas ou inativas.',
+  },
+  {
+    question: 'Quais são os documentos necessários para solicitar o Empréstimo FGTS?',
+    answer: 'Documento de identidade com foto (RG ou CNH), CPF, comprovante de residência e extrato do FGTS.',
+  },
+  {
+    question: 'Qual o valor máximo que posso antecipar com o Empréstimo FGTS?',
+    answer: 'O valor máximo depende do saldo disponível nas contas do FGTS e das políticas da instituição financeira.',
+  },
+  {
+    question: 'Qual a taxa de juros do Empréstimo FGTS?',
+    answer:
+      'As taxas de juros variam conforme a instituição financeira, mas geralmente são mais baixas do que as de outros tipos de crédito.',
+  },
+  {
+    question: 'Como funciona o pagamento do Empréstimo FGTS?',
+    answer: 'O pagamento é feito através do saldo do FGTS disponível, descontado diretamente das contas do FGTS.',
+  },
+  {
+    question: 'É possível antecipar o saque-aniversário do FGTS com este empréstimo?',
+    answer: 'Sim, é possível antecipar o saque-aniversário do FGTS, recebendo o valor antecipadamente.',
+  },
+  {
+    question: 'O que acontece se eu sacar o FGTS antes de quitar o empréstimo?',
+    answer:
+      'Se houver saldo suficiente na conta do FGTS, o valor será descontado automaticamente; caso contrário, a dívida permanecerá até ser quitada.',
+  },
+  {
+    question: 'Posso usar o Empréstimo FGTS para qualquer finalidade?',
+    answer: 'Sim, o valor antecipado pode ser utilizado conforme a necessidade do solicitante.',
+  },
+  {
+    question: 'Quais são as vantagens do Empréstimo FGTS?',
+    answer:
+      'As principais vantagens incluem taxas de juros mais baixas, facilidade de contratação e uso do saldo do FGTS como garantia.',
+  },
+]
 
 const LoanFGTS = () => {
   const IMAGES = IMAGE.duasPessoasConversando
@@ -38,29 +81,29 @@ const LoanFGTS = () => {
       <Simulation />
       <Banks />
 
-      <InfoPanel
-        imageWidth={91}
-        imageHeight={100}
-        image={IMAGE.investimentos.src}
-        alt="Imagem representativa de antecipação de FGTS"
+      <Panel
         title="Antecipação FGTS"
         subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
         paragraph="Antecipar FGTS"
         imagePosition="right"
+        image={IMAGE.investimentos.src}
+        alt="Imagem representativa de antecipação de FGTS"
+        imageHeight={100}
+        imageWidth={91}
       />
 
-      <InfoPanel
-        image={IMAGE.cartaoCredito.src}
-        imageWidth={91}
-        imageHeight={100}
-        alt="Imagem de Cartão de Crédito"
+      <Panel
         title="Cartão de Crédito"
         subtitle="A América oferece cartões de débito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
         paragraph="Solicitar agora"
         imagePosition="left"
+        image={IMAGE.cartaoCredito.src}
+        alt="Imagem de Cartão de Crédito"
+        imageWidth={91}
+        imageHeight={100}
       />
 
-      <Faq items={faqAboutFgtsLoan} title="Ficou com alguma dúvida sobre Empréstimo FGTS?" />
+      <Faq items={FAQLOAN} title="Ficou com alguma dúvida sobre Empréstimo FGTS?" />
     </div>
   )
 }

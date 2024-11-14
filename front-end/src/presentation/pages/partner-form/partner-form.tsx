@@ -1,31 +1,18 @@
-import Head from 'next/head'
+import { Meta } from 'src/presentation/components'
 
-import { PartnerRequest } from '@/presentation/components/form'
+import { PartnerRequest } from 'src/presentation/components/form'
 
-export default function PartnerForm() {
+const PartnerForm = () => {
   return (
     <div>
-      <Head>
-        <title>Formulário seja parceiro</title>
-        <meta
-          name="description"
-          content="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
-        />
-        <meta
-          name="keywords"
-          content="parceria, America Financeira, programa de parceria, suporte especializado, crescimento, soluções financeiras"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Formulário seja parceiro" />
-        <meta
-          property="og:description"
-          content="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
-        />
-        <meta property="og:url" content="https://www.americafinanceira.com.br/formulario-seja-parcerio" />
-        <meta property="og:type" content="website" />
-      </Head>
+      <Meta
+        title="Formulário seja parceiro"
+        description="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
+        keywords="parceria, America Financeira, programa de parceria, suporte especializado, crescimento, soluções financeira"
+      />
       <PartnerRequest />
     </div>
   )
 }
+
+export default PartnerForm
