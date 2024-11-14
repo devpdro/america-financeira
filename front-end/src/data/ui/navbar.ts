@@ -1,6 +1,6 @@
-import { NavItemProps } from '@/data/models'
+import { NavbarItemProps } from 'src/data/models'
 
-export const MENU: NavItemProps[] = [
+export const MENU: NavbarItemProps[] = [
   {
     label: 'América Financeira',
     link: '#',

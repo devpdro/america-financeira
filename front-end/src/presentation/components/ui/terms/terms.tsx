@@ -1,11 +1,11 @@
 import S from './terms.module.scss'
 
-type ItemProps = {
+interface ItemProps {
   title: string
   description: string
 }
 
-type TermsProps = {
+interface TermsProps {
   title: string
   overview: string
   introduction: string

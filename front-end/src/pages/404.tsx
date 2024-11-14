@@ -1,3 +1,3 @@
-import { makeError } from '@/main/factories/pages'
+import { makeError } from 'src/main/factories/pages'
 
 export default makeError

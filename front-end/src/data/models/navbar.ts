@@ -1,12 +1,12 @@
-export type ItemProps = {
+export interface NavbarItemProps {
   label: string
   link: string
   new: string
   blank: string
-  children: ItemProps[]
+  children: NavbarItemProps[]
   onClick: () => void
 }
 
 export type NavMobileProps = {
-  closeSideMenu: () => void
+  closeMenu: () => void
 }

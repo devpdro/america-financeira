@@ -1,75 +1,100 @@
-import { Meta } from 'src/presentation/components'
-import { ICON } from 'src/presentation/assets'
+import { Meta, Header, Founder, Carousel, Warning, Benefits, Faq } from 'src/presentation/components'
+import { IMAGE } from 'src/presentation/assets'
 
-import { Header, Benefits, Faq, LatestPosts } from '@/presentation/components/common'
-import { LoanWarning, LoanCarousel } from '@/presentation/components/ui'
-import { benefitsLoan, faqAboutLoan } from '@/data/ui'
-import { Images } from '@/presentation/assets'
-import CeoAbout from '@/presentation/components/ui/ceo-about/ceo-about'
+const LOAN = [
+  {
+    title: 'Quitar as dívidas',
+    subtitle: 'Troque as dívidas caras por uma única, mais saudável e com parcelas mais acessíveis.',
+    image: IMAGE.divida,
+  },
+  {
+    title: 'Impulsionar seu negócio',
+    subtitle: 'Invista no seu capital com um crédito que te dá mais prazo e com juros mais baixos.',
+    image: IMAGE.crescimentoEmpresa,
+  },
+  {
+    title: 'Realizar sonhos',
+    subtitle: 'Tire do papel o plano de reformar a casa ou adquirir novos bens com um crédito saudável.',
+    image: IMAGE.sonho,
+  },
+]
 
-import * as S from './home-styles'
+const FAQLOAN = [
+  {
+    question: 'O que é Margem Consignável?',
+    answer:
+      'É o valor máximo do salário ou benefício líquido mensal que pode ser comprometido com parcelas de empréstimo consignado e despesas do cartão de crédito consignado. Não pode ultrapassar 40%, sendo 35% para empréstimo e 5% para o cartão.',
+  },
+  {
+    question: 'O que é Cartão de Crédito Consignado?',
+    answer:
+      'É aquele em que o valor mínimo da fatura é descontado mensalmente do contracheque ou benefício INSS, com uma margem adicional de 5%, além dos 30% padrão do Empréstimo Consignado.',
+  },
+  {
+    question: 'O que é averbação do contrato do Empréstimo Consignado?',
+    answer:
+      'É a autorização realizada pelo INSS ou órgãos conveniados para que as parcelas do empréstimo sejam consignadas ao banco.',
+  },
+  {
+    question: 'Quais são os prazos máximos para pagamento do Empréstimo Consignado?',
+    answer: 'Aposentados e Pensionistas INSS podem pagar em até 84 meses; Servidores Públicos, em até 96 meses.',
+  },
+  {
+    question: 'Quais são os documentos para pedir um Empréstimo Online?',
+    answer:
+      'Documento de identidade com foto (RG ou CNH), CPF, conta bancária (exceto conta salário), e comprovante de renda fixa (holerite, extrato bancário, imposto de renda ou pro-labore).',
+  },
+  {
+    question: 'O que é portabilidade de Crédito Consignado?',
+    answer:
+      'É a possibilidade de transferir a dívida de um empréstimo consignado de um banco para outro, buscando melhores condições, como taxas de juros menores ou prazos mais vantajosos.',
+  },
+  {
+    question: 'Posso antecipar o pagamento das parcelas do Empréstimo Consignado?',
+    answer:
+      'Sim, é possível antecipar o pagamento das parcelas. Consulte seu banco para obter informações sobre o processo e eventuais descontos por antecipação.',
+  },
+  {
+    question: 'Como funciona o processo de contratação do Empréstimo Consignado?',
+    answer:
+      'O processo inclui a solicitação do empréstimo, análise de crédito, aprovação, assinatura do contrato, e averbação pelo órgão pagador. Após a averbação, o valor é liberado na conta bancária do solicitante.',
+  },
+]
 
 const Home = () => {
-  const backgroundImageUrl = Images.cabecalhoInicial
-  const [isVisible, setIsVisible] = useState(true)
-
-  const handleClose = () => {
-    setIsVisible(false)
-  }
-
-  if (!isVisible) return null
+  const IMAGES = IMAGE.cabecalhoInicial
 
   return (
-    <main>
+    <div>
       <Meta
         title="Empréstimo Online - América Financeira"
         description="Realize seus sonhos com os serviços de crédito da América Financeira. Oferecemos empréstimos rápidos, fáceis e descomplicados. Simule agora!"
         keywords="crédito, empréstimo, América Financeira, simulação de empréstimo, antecipação FGTS, cartão de crédito"
-        image={backgroundImageUrl.src}
+        image={IMAGES.src}
       />
-
-      <div className={styles.container}>
-        <div className={styles['box-section']}>
-          <h1 className={styles.title}>
-            Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo
-          </h1>
-          <IoClose className={styles.icon} onClick={handleClose} />
-        </div>
-      </div>
 
       <Header
         title="Solicite seu crédito agora mesmo!"
-        subtitle={
-          <>
-            Realizando sonhos <br /> através do Crédito!
-          </>
-        }
-        showParagraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
-        backgroundImage={backgroundImageUrl.src}
+        subtitle="Realizando sonhos\natravés do Crédito!"
+        paragraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
+        image={IMAGES.src}
       />
-      <LoanCarousel
-        subtitle="Ofertas personalizadas"
-        title={
-          <>
-            Escolha o empréstimo <br /> que mais combina com você
-          </>
-        }
-      />
+
+      <Warning />
+      <Carousel />
+
       <Benefits
-        title={
-          <>
-            O crédito de qualidade <br /> que você merece
-          </>
-        }
-        subtitle={
-          <>
-            Um empréstimo pode ser a solução financeira que você precisa <br /> para melhorar sua vida.
-          </>
-        }
-        items={benefitsLoan}
+        title="O crédito de qualidade\nque você merece"
+        subtitle="Um empréstimo pode ser a solução financeira que você precisa\npara melhorar sua vida."
+        items={LOAN}
+        width={100}
+        height={100}
       />
-      <CeoAbout />
-      <Faq items={faqAboutLoan} title="Ficou com alguma dúvida?" />
-    </main>
+
+      <Founder />
+      <Faq items={FAQLOAN} title="Ficou com alguma dúvida?" />
+    </div>
   )
 }
+
+export default Home

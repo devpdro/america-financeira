@@ -1,8 +1,8 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
 
 .container {
-  @include container(1280px, 5.575rem auto 6.575rem auto);
+  @include container(1280px, 5.5rem auto 6.5rem auto);
   @include display-flex;
   padding: 0 2rem;
   gap: 2rem;
@@ -17,35 +17,35 @@
       display: none;
     }
     .img {
-      border-radius: $radius-medium;
+      border-radius: $radii-medium;
     }
   }
   .text-section {
     width: 100%;
     .subtitle {
       font-weight: $weight-medium;
-      font-size: $size-normal;
+      font-size: $font-default;
       margin-bottom: 0.5rem;
       @media (max-width: 880px) {
         font-size: $size-normal;
-        font-weight: 450;
+        font-weight: $weight-medium;
       }
     }
     .title {
       font-weight: $weight-medium;
       font-size: $size-large;
-      margin: 0rem 0 1.075rem 0;
-      line-height: 2.675rem;
+      margin: 0 0 1rem 0;
+      line-height: 2.6rem;
       @media (max-width: 880px) {
-        font-size: $size-extra-medium;
-        line-height: 2.075rem;
+        font-size: $font-medium;
+        line-height: 2rem;
       }
     }
     .paragraph {
-      font-weight: $weight-light;
-      font-size: $size-normal;
-      margin-bottom: 2.075rem;
-      line-height: 1.475rem;
+      font-weight: $weight-default;
+      font-size: $font-default;
+      margin-bottom: 2rem;
+      line-height: 1.4rem;
     }
   }
 }

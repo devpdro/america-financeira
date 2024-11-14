@@ -1,3 +1,3 @@
-import { makePayrollLoan } from '@/main/factories/pages'
+import { makePayrollLoan } from 'src/main/factories/pages'
 
 export default makePayrollLoan

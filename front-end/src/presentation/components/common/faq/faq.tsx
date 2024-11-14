@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Button } from '@/presentation/components/form'
 import { FaqProps } from '@/data/models'
 
-import styles from './faq.module.scss'
+import S from './faq.module.scss'
 
 const Faq: React.FC<FaqProps> = ({ items, title }) => {
   const [faqs, setFaqs] = useState(items ? items.map((faq) => ({ ...faq, open: false })) : [])
@@ -27,27 +27,22 @@ const Faq: React.FC<FaqProps> = ({ items, title }) => {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 5)
 
   return (
-    <section className={styles.container} aria-labelledby="faq-titulo">
-      <h1 className={styles.title}>{title}</h1>
+    <section className={S.container}>
+      <h1 className={S.title}>{title}</h1>
       {visibleFaqs.map((faq, index) => (
         <div
-          className={`${styles['faq-section']} ${faq.open ? styles.open : ''}`}
+          className={`${S['faq-section']} ${faq.open ? S.open : ''}`}
           key={index}
           onClick={() => toggleFAQ(index)}
-          aria-expanded={faq.open}
           role="button"
           tabIndex={0}
         >
-          <div className={styles['faq-question']}>{faq.question}</div>
-          {faq.open && (
-            <div className={styles['faq-answer']} aria-hidden={!faq.open}>
-              {faq.answer}
-            </div>
-          )}
+          <div className={S['faq-question']}>{faq.question}</div>
+          {faq.open && <div className={S['faq-answer']}>{faq.answer}</div>}
         </div>
       ))}
       {!showAll && faqs.length > 5 && (
-        <div className={styles['btn-section']}>
+        <div className={S['btn-section']}>
           <Button typeStyle="btn2" text="Ver mais" width="150px" onClick={handleShowAll} />
         </div>
       )}

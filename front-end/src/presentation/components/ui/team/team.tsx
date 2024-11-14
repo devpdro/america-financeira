@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 
 import { IMAGE } from 'src/presentation/assets'
 
@@ -33,7 +33,7 @@ const Photos = ({ src, alt, width, height }: PhotosProps) => (
   </div>
 )
 
-const Team = ({ width = 180, height = 180 }: TeamProps) => (
+const Team = ({ width, height }: TeamProps) => (
   <div className={S.container}>
     <div className={classNames(S.row, S['justify-content-center'])}>
       <div>

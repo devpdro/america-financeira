@@ -4,7 +4,7 @@ export { default as TermsAgreement } from './terms-agreement/terms-agreement'
 
 export { default as About } from './about/about'
 export { default as Blog } from './blog/blog'
-export { default as FgtsLoan } from './fgts-loan/fgts-loan'
+export { default as FgtsLoan } from './loan-fgts/loan-fgts'
 export { default as Home } from './home/home'
 export { default as Intranet } from './intranet/intranet'
 export { default as PartnerForm } from './partner-form/partner-form'

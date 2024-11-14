@@ -1,18 +1,18 @@
-@import '../../../styles/themes/light.scss';
-@import '../../../styles/themes/mixins.scss';
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
 
 .container {
   background-color: $color-secondary;
-  padding: 7rem 0rem;
+  padding: 7rem 0;
   @media (min-width: 925px) and (max-width: 1125px) {
     border-radius: 25% 0;
   }
   @media (max-width: 924px) {
     border-radius: 0% 0;
-    padding: 5rem 0rem;
+    padding: 5rem 0;
   }
   .box-container {
-    @include container-center;
+    @include container;
     position: relative;
     &:before {
       position: absolute;

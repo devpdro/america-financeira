@@ -1,3 +1,3 @@
-import { makeHome } from '@/main/factories/pages'
+import { makeHome } from 'src/main/factories/pages'
 
 export default makeHome
