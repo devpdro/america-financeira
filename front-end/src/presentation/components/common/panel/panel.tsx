@@ -11,14 +11,14 @@ type PanelProps = {
   title: string
   subtitle: string
   paragraph: string
-  imageWidth: number
-  imageHeight: number
-  imagePosition: 'left' | 'right'
+  width: number
+  height: number
+  position: 'left' | 'right'
 }
 
-const Panel = ({ image, alt, title, subtitle, paragraph, imageWidth, imageHeight, imagePosition }: PanelProps) => (
+const Panel = ({ image, alt, title, subtitle, paragraph, position, width, height }: PanelProps) => (
   <>
-    {imagePosition === 'left' && (
+    {position === 'left' && (
       <div className={S.container}>
         <div className={S['text-section']}>
           <h1 className={S.title}>{title}</h1>
@@ -38,10 +38,10 @@ const Panel = ({ image, alt, title, subtitle, paragraph, imageWidth, imageHeight
         </div>
       </div>
     )}
-    {imagePosition === 'right' && (
+    {position === 'right' && (
       <div className={S['box-section']}>
-        <div className={S['image-section']} style={{ width: `${imageWidth}%`, height: `${imageHeight}%` }}>
-          <Image className={S.img} width={imageWidth} height={imageHeight} src={image} alt={alt} layout="responsive" />
+        <div className={S['image-section']} style={{ width: `${width}%`, height: `${height}%` }}>
+          <Image className={S.img} width={width} height={height} src={image} alt={alt} layout="responsive" />
         </div>
         <div className={S['text-section']}>
           <h1 className={S.title}>{title}</h1>

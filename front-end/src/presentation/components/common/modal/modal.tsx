@@ -17,7 +17,7 @@ type ModalProps = {
   close: () => void
 }
 
-const Modal = ({ open, description, message }: ModalProps) => (
+const Modal = ({ open, close, description, message }: ModalProps) => (
   <div className={S.container}>
     <ResponsiveModal
       classNames={{ modal: S.modal }}

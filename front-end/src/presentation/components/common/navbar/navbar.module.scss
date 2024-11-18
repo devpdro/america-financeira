@@ -3,14 +3,14 @@
 
 .navbar {
   @include display-flex(center, space-between);
-  box-shadow: rgba(0, 0, 0, 0.16) 0 0.0625rem 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0.06rem 0.25rem;
   position: fixed;
   margin: 0 auto;
   color: $color-snow;
   background-color: $blue-color;
   font-weight: $weight-default;
   padding: 1.2rem 1.7rem;
-  height: 5.625rem;
+  height: 5.6rem;
   z-index: 999;
   width: 100%;
   .left-section {
@@ -65,12 +65,12 @@
                 font-weight: $weight-medium;
                 border-radius: $radii-default;
                 font-size: 0.675rem;
-                padding: 0.175rem 0.375rem;
-                margin: 0.175rem;
+                padding: 0.2rem 0.4rem;
+                margin: 0.2rem;
               }
               .link-label {
                 white-space: nowrap;
-                padding: 0 0.575rem;
+                padding: 0 0.6rem;
               }
             }
           }
@@ -100,8 +100,8 @@
       color: $color-darkHigh;
     }
     .icon {
-      font-size: 1.475rem;
-      margin-right: 0.575rem;
+      font-size: 1.5rem;
+      margin-right: 0.6rem;
     }
     @media (min-width: 1024px) {
       display: flex;

@@ -1,7 +1,7 @@
 import { Meta, Header, Founder, Carousel, Warning, Benefits, Faq } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 
-const LOAN = [
+const BENEFITS = [
   {
     title: 'Quitar as dívidas',
     subtitle: 'Troque as dívidas caras por uma única, mais saudável e com parcelas mais acessíveis.',
@@ -86,7 +86,7 @@ const Home = () => {
       <Benefits
         title="O crédito de qualidade\nque você merece"
         subtitle="Um empréstimo pode ser a solução financeira que você precisa\npara melhorar sua vida."
-        items={LOAN}
+        items={BENEFITS}
         width={100}
         height={100}
       />

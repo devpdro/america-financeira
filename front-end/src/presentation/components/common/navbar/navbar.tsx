@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-import { NavMobile } from 'src/presentation/components'
 import { IconWithProps, getLinkAttributes } from 'src/utils'
+import { NavMobile } from 'src/presentation/components'
 import { IMAGE, ICON } from 'src/presentation/assets'
 import { MENU } from 'src/data/ui'
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             <Image src={IMAGE.logoWhite} alt="Logo América Financeira" className={S.logo} />
           </a>
         </Link>
-        {isSideMenuOpen && <NavMobile closeSideMenu={() => setSideMenu(false)} />}
+        {isSideMenuOpen && <NavMobile closeMenu={() => setSideMenu(false)} />}
         <div className={S['nav-items']}>
           {MENU.map((item, key) => (
             <div key={key} className={S['nav-link']}>

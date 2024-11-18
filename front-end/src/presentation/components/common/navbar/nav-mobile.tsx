@@ -8,21 +8,21 @@ import { MENU } from 'src/data/ui'
 
 import S from './nav-mobile.module.scss'
 
-const NavMobile = ({ closeSideMenu }: NavMobileProps) => {
+const NavMobile = ({ closeMenu }: NavMobileProps) => {
   const handleClick = () => {
-    closeSideMenu()
+    closeMenu()
   }
 
   return (
     <div className={S['mobile-nav-container']}>
       <nav className={S['mobile-nav']}>
         <section className={S['close-section']}>
-          <IconWithProps onClick={closeSideMenu} className={S['close-icon']}>
+          <IconWithProps onClick={closeMenu} className={S['close-icon']}>
             <ICON.AiOutlineClose />
           </IconWithProps>
         </section>
         <div className={S['nav-items']}>
-          {MENU.map(({ item }, key) => (
+          {MENU.map((item, key) => (
             <NavItem key={key} label={item.label} new={item.new} link={item.link} onClick={handleClick} blank="none">
               {item.children}
             </NavItem>

@@ -1,13 +1,12 @@
 export { default as Error } from './error/error'
 export { default as PrivacyAgreement } from './privacy-policy/privacy-agreement'
 export { default as TermsAgreement } from './terms-agreement/terms-agreement'
-
 export { default as About } from './about/about'
-export { default as Blog } from './blog/blog'
-export { default as FgtsLoan } from './loan-fgts/loan-fgts'
+export { default as LoanFGTS } from './loan-fgts/loan-fgts'
 export { default as Home } from './home/home'
+export { default as Submission } from './submission/submission'
+export { default as LoanPersonal } from './loan-personal/loan-personal'
+export { default as LoanPayroll } from './loan-payroll/loan-payroll'
 export { default as Intranet } from './intranet/intranet'
-export { default as PartnerForm } from './partner-form/partner-form'
+
 export { default as Partners } from './partners/partners'
-export { default as PayrollLoan } from './payroll-loan/payroll-loan'
-export { default as PersonalLoan } from './personal-loan/personal-loan'

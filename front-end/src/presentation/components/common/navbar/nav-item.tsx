@@ -1,16 +1,15 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
-
+import { useState } from 'react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
+import { NavbarItemProps } from 'src/data/models'
 import { ICON } from 'src/presentation/assets'
-import { ItemProps } from 'src/data/models'
 
 import S from './nav-item.module.scss'
 
-const NavItem = ({ label, link, children }: ItemProps) => {
+const NavItem = ({ label, link, children }: NavbarItemProps) => {
   const [animationParent] = useAutoAnimate()
   const [isOpen, setIsOpen] = useState(false)
 
