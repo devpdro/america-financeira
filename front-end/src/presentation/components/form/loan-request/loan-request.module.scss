@@ -1,69 +1,66 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
 
 .form {
   @include display-flex;
   flex-direction: column;
   .title {
-    color: $black-color;
-    font-size: $size-medium;
+    color: $color-darkHigh;
+    font-size: $font-medium;
     font-weight: $weight-bold;
     @media (max-width: 994px) {
-      font-size: $size-normal;
+      font-size: $font-default;
     }
   }
   .input-text {
-    color: $black-color;
-    font-size: $size-normal;
-    font-weight: $weight-medium;
     transition: border-bottom 0.3s ease;
-    border-bottom: 1px solid $gray-color;
-    margin-top: 1.275rem;
-    padding: 7px 0;
+    border-bottom: 1px solid $color-grayMedium;
+    color: $color-darkHigh;
+    font-size: $font-default;
+    font-weight: $weight-medium;
+    margin-top: 1.2rem;
+    padding: 0.4rem 0;
     width: 100%;
     @media (max-width: 994px) {
-      font-size: $size-small;
+      font-size: $font-small;
     }
     &:focus {
-      border-bottom: 1px solid $black-color;
+      border-bottom: 0.0625rem solid $color-darkHigh;
     }
   }
   .terms-box {
     @include display-flex(center, flex-start);
     .checkbox {
-      border: 2px solid $black-color;
-      margin: 1.575rem 0 1.575rem 0;
-      width: 1.275rem;
-      height: 1.275rem;
-      border-radius: 5px;
+      border: 0.125rem solid $color-darkHigh;
+      border-radius: $radii-small;
+      margin: 1.5rem 0;
+      width: 1.2rem;
+      height: 1.2rem;
       &:hover {
         cursor: pointer;
-      }
-      &:checked {
-        box-shadow: $box-shadow-normal;
       }
     }
     .label-checkbox {
       position: relative;
       user-select: none;
-      color: $black-color;
+      color: $color-darkHigh;
       font-weight: $weight-bold;
-      font-size: 0.875rem;
-      padding-left: 0.575rem;
+      font-size: $font-small;
+      padding-left: 0.5rem;
     }
   }
   .error {
-    color: $red-color;
-    font-weight: $weight-normal;
-    font-size: $size-extra-small;
+    color: $color-error;
+    font-weight: $weight-default;
+    font-size: $font-small;
   }
   .checkbox-error + .label-checkbox {
-    color: $red-color;
+    color: $color-error;
   }
   .input-text-error {
-    border-color: $red-color;
+    border-color: $color-error;
     &:focus {
-      border-color: $red-color;
+      border-color: $color-error;
     }
   }
 }

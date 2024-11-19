@@ -1,19 +1,19 @@
-// @import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
 
 .container {
   @include display-flex(center, space-around);
-  background-color: $blue-color;
-  padding: 2.075rem 2.075rem 2.075rem 2.075rem;
+  background-color: $color-primary;
+  padding: 2rem;
   height: 100vh;
   @media (max-width: 1080px) {
     @include display-flex(center, center);
-    padding: 2.075rem 1.075rem 2.075rem 1.075rem;
+    padding: 2rem 1rem;
   }
   .logo {
-    background-color: $blue-color;
-    width: 500px;
-    margin-right: 2.075rem;
+    background-color: $color-primary;
+    width: 31.25rem;
+    margin-right: 2rem;
     @media (max-width: 1080px) {
       display: none;
     }
@@ -21,98 +21,95 @@
   .form {
     @include display-flex;
     flex-direction: column;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border: 1px solid;
-    border-radius: $radius-medium;
-    background-color: $white-color;
-    width: 650px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 0.4375rem 1.015rem 0;
+    border: 1px solid $color-primary;
+    background-color: $color-snow;
+    border-radius: $radii-default;
+    width: 40.625rem;
     padding: 2.075rem 2.575rem;
     @media (max-width: 880px) {
-      padding: 2.075rem 1.575rem !important;
+      padding: 2rem 1.5rrem;
     }
     @media (max-width: 880px) {
       width: 90%;
-      padding: 2.075rem 2.575rem;
+      padding: 2rem 2.5rem;
     }
     .box-title {
       @include display-flex(flex-start, flex-start);
       flex-direction: column;
-      gap: 2.075rem;
+      gap: 2rem;
       @media (max-width: 880px) {
         flex-direction: column;
-        gap: 1.075rem;
+        gap: 1rem;
       }
       .text-america {
-        font-weight: 450;
-        margin-bottom: 0.275rem;
+        font-weight: $weight-default;
+        margin-bottom: 0.2rem;
       }
       .title {
-        color: $black-color;
-        font-size: $size-medium;
+        color: $color-darkHigh;
+        font-size: $font-medium;
         font-weight: $weight-bold;
-        line-height: 1.475rem;
-        margin-bottom: 0.475rem;
+        line-height: 1.4rem;
+        margin-bottom: 0.4rem;
         @media (max-width: 994px) {
-          font-size: $size-normal;
+          font-size: $font-default;
         }
       }
       .subtitle {
-        font-weight: 450;
+        font-weight: $weight-default;
       }
     }
 
     .input-text {
-      color: $black-color;
-      font-size: $size-normal;
-      font-weight: $weight-medium;
+      border-bottom: 0.0625rem solid $color-grayMedium;
       transition: border-bottom 0.3s ease;
-      border-bottom: 1px solid $gray-color;
-      margin-top: 1.275rem;
-      padding: 7px 0;
+      color: $color-darkHigh;
+      font-size: $font-default;
+      font-weight: $weight-medium;
+      margin-top: 1.2rem;
+      padding: 0.4375rem 0;
       width: 100%;
       @media (max-width: 880px) {
-        font-size: $size-small;
+        font-size: $font-small;
       }
       &:focus {
-        border-bottom: 1px solid $black-color;
+        border-bottom: 10.0625remx solid $color-darkHigh;
       }
     }
     .terms-box {
       @include display-flex(center, flex-start);
       .checkbox {
-        border: 2px solid $black-color;
-        margin: 1.575rem 0 1.575rem 0;
-        width: 1.275rem;
-        height: 1.275rem;
-        border-radius: 5px;
+        border: 0.125rem solid $color-darkHigh;
+        margin: 1.5rem 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: $radii-small;
         &:hover {
           cursor: pointer;
-        }
-        &:checked {
-          box-shadow: $box-shadow-normal;
         }
       }
       .label-checkbox {
         position: relative;
         user-select: none;
-        color: $black-color;
+        color: $color-darkHigh;
         font-weight: $weight-bold;
-        font-size: 0.875rem;
-        padding-left: 0.575rem;
+        font-size: $font-small;
+        padding-left: 0.5rem;
       }
     }
     .error {
-      color: $red-color;
-      font-weight: $weight-normal;
-      font-size: $size-extra-small;
+      color: $color-error;
+      font-weight: $weight-default;
+      font-size: $font-small;
     }
     .checkbox-error + .label-checkbox {
-      color: $red-color;
+      color: $color-error;
     }
     .input-text-error {
-      border-color: $red-color;
+      border-color: $color-error;
       &:focus {
-        border-color: $red-color;
+        border-color: $color-error;
       }
     }
   }

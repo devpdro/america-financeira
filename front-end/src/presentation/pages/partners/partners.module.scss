@@ -43,7 +43,7 @@
     }
   }
   .paragraph {
-    @include container-center(980px, 0 auto);
+    @include container(980px, 0 auto);
     font-size: $font-default;
     font-weight: $weight-medium;
     line-height: 1.2rem;

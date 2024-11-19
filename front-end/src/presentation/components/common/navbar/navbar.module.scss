@@ -7,7 +7,7 @@
   position: fixed;
   margin: 0 auto;
   color: $color-snow;
-  background-color: $blue-color;
+  background-color: $color-primary;
   font-weight: $weight-default;
   padding: 1.2rem 1.7rem;
   height: 5.6rem;
@@ -45,7 +45,7 @@
             font-weight: $weight-medium;
             background-color: $color-snow;
             color: $color-darkHigh;
-            border-radius: $radius-medium;
+            border-radius: $radii-default;
             padding: 1.2rem 1rem;
             margin-top: 0.8rem;
             left: 2.5rem;

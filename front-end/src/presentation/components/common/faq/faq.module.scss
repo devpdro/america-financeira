@@ -1,64 +1,63 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss';
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
 
 .container {
-  @include container-center(1280px, 4.475rem auto 6.275rem auto);
-  padding: 0 2.075rem;
+  @include container(1280px, 4.4rem auto 6.2rem auto);
+  padding: 0 2rem;
   @media (max-width: 800px) {
-    margin: 0rem auto 4.575rem auto;
+    margin: 0 auto 4.5rem auto;
   }
   .title {
-    font-size: $size-large;
-    font-weight: $weight-medium;
     text-align: center;
-    margin-bottom: 3.075rem;
+    font-size: $font-large;
+    font-weight: $weight-medium;
+    margin-bottom: 3rem;
     @media (max-width: 800px) {
-      font-size: $size-extra-medium;
       text-align: left;
-      margin: 0.375rem 0 2.575rem 0;
-      line-height: 2.1275rem;
+      font-size: $font-medium;
+      margin: 0.4rem 0 2.5rem 0;
+      line-height: 2.1rem;
     }
     @media (min-width: 801px) and (max-width: 1024px) {
-      line-height: 2.675rem;
+      line-height: 2.6rem;
     }
   }
   .faq-section {
-    background-color: $light-blue;
-    box-shadow: $box-shadow-normal;
-    border-radius: $radius-medium;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
-    padding: 1.275rem;
-    margin-bottom: 1.075rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0.0625rem 0.25rem;
+    background-color: $color-secondary;
+    border-radius: $radii-default;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
     @media (max-width: 800px) {
-      line-height: 1.475rem;
+      line-height: 1.4rem;
     }
     .faq-question {
-      @include hover-pointer;
-      font-size: $size-normal;
-      font-weight: $weight-normal;
+      @include hover;
       position: relative;
-      margin: 0.275rem 0;
-      padding-right: 4.075rem;
+      font-size: $font-default;
+      font-weight: $weight-default;
+      margin: 0.2rem 0;
+      padding-right: 4rem;
       &::after {
-        color: $blue-color;
-        position: absolute;
         content: '+';
+        position: absolute;
         transition: all 0.2s ease;
         transform: translateY(-50%);
-        font-size: 1.475rem;
-        height: 30px;
+        color: $color-primary;
+        font-size: 1.4rem;
+        height: 1.8rem;
+        width: 1.8rem;
         top: 50%;
-        width: 30px;
-        right: 0px;
+        right: 0;
       }
     }
     &.open .faq-question::after {
       content: '-';
     }
     .faq-answer {
-      font-size: $size-normal;
       overflow: hidden;
       transition: max-height 0.4s ease, opacity 0.4s ease;
+      font-size: $font-default;
       max-height: 0;
       opacity: 0;
     }
@@ -73,7 +72,7 @@
   }
   .btn-section {
     @include display-flex;
-    margin-top: 3.075rem;
+    margin-top: 3rem;
   }
 }
 @keyframes expand {
@@ -82,13 +81,13 @@
     opacity: 0;
   }
   100% {
-    max-height: 1000px;
+    max-height: 62.5rem;
     opacity: 1;
   }
 }
 @keyframes collapse {
   0% {
-    max-height: 1000px;
+    max-height: 62.5rem;
     opacity: 1;
   }
   100% {

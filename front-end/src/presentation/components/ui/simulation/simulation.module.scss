@@ -5,10 +5,10 @@
   background-color: $color-secondary;
   padding: 1rem 0;
   .box-container {
-    @include container-center(1280px, 5rem auto 5rem auto);
+    @include container(1280px, 5rem auto 5rem auto);
     padding: 0 2rem;
     @media (max-width: 880px) {
-      @include container-center(1280px, 3em auto 3rem auto);
+      @include container(1280px, 3em auto 3rem auto);
     }
     .title {
       font-size: $font-large;
@@ -50,7 +50,7 @@
             }
           }
           .btn {
-            @include hover-pointer;
+            @include hover;
             background-color: $color-primary;
             color: $color-snow;
             font-size: $font-default;

@@ -84,12 +84,12 @@
         left: 0;
       }
       &:before {
-        background: $white-color;
-        border: 2px solid $blue-color;
+        background: $color-snow;
+        border: 0.125rem solid $color-primary;
         left: -0.2rem;
       }
       &:after {
-        border: 2px solid $color-grayLight;
+        border: 0.125rem solid $color-grayLight;
         left: 0.2rem;
       }
     }
@@ -97,7 +97,7 @@
       position: relative;
       float: left;
       width: 50%;
-      margin-top: 1.375rem;
+      margin-top: 1.4rem;
       &:before {
         position: absolute;
         margin: auto 0;
@@ -169,17 +169,17 @@
         line-height: 1.9rem;
         margin-bottom: 0.8rem;
         @media (max-width: 924px) {
-          font-size: $size-defaul;
+          font-size: $font-default;
           font-weight: $weight-medium;
           margin-bottom: 0.5rem;
         }
       }
       .description {
-        font-size: $size-normal;
+        font-size: $font-default;
         line-height: 1.4rem;
         margin-bottom: 0;
         @media (max-width: 924px) {
-          font-size: $size-small;
+          font-size: $font-default;
           font-weight: $weight-medium;
           line-height: 1.2rem;
         }

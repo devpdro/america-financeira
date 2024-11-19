@@ -57,8 +57,8 @@
     z-index: 2;
     display: none;
     &:hover {
-      background-color: $blue-color;
-      color: $white-color;
+      background-color: $color-primary;
+      color: $color-snow;
     }
     @media (max-width: 624px) {
       display: none;
@@ -66,9 +66,9 @@
   }
   .arrow-right {
     @include display-flex;
-    @include hover-pointer;
+    @include hover;
     color: $color-primary;
-    border: 1px solid $blue-color;
+    border: 0.0625rem solid $color-primary;
     display: none;
     position: absolute;
     transform: translateY(-50%);
@@ -87,12 +87,12 @@
     }
   }
   .carousel {
-    @include container-center(1024px);
+    @include container(1024px);
     .item {
       @include display-flex(flex-end, space-between);
-      @include hover-pointer;
+      @include hover;
       border: 0.0625rem solid $color-secondary;
-      border-radius: $radius-medium;
+      border-radius: $radii-default;
       width: 17.5rem;
       margin: 1.5rem 2rem 1.3rem 2rem;
       padding: 2rem 1.5rem;
@@ -118,7 +118,7 @@
         line-height: 1.1rem;
       }
       .icon-section {
-        @include hover-pointer;
+        @include hover;
         margin-top: 1.3rem;
         transition: transform 0.3s ease;
         text-align: right;

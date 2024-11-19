@@ -1,7 +1,5 @@
-export * from './benefits'
 export * from './faq'
 export * from './footer'
 export * from './icons'
 export * from './information'
-export * from './intranet'
 export * from './navbar'

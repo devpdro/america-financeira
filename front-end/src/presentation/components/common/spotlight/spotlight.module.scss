@@ -17,7 +17,7 @@
       display: none;
     }
     .img {
-      border-radius: $radii-medium;
+      border-radius: $radii-default;
     }
   }
   .text-section {
@@ -27,13 +27,13 @@
       font-size: $font-default;
       margin-bottom: 0.5rem;
       @media (max-width: 880px) {
-        font-size: $size-normal;
+        font-size: $font-default;
         font-weight: $weight-medium;
       }
     }
     .title {
       font-weight: $weight-medium;
-      font-size: $size-large;
+      font-size: $font-large;
       margin: 0 0 1rem 0;
       line-height: 2.6rem;
       @media (max-width: 880px) {

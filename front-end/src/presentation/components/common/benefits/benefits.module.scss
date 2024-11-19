@@ -2,7 +2,7 @@
 @import '../../../styles/themes/mixins.scss';
 
 .container {
-  @include container-center(1280px, 4.8rem auto 5rem auto);
+  @include container(1280px, 4.8rem auto 5rem auto);
   padding: 0 2rem;
   @media (max-width: 880px) {
     flex-direction: column;
@@ -30,7 +30,7 @@
     .subtitle {
       color: $color-grayMedium;
       font-size: $font-default;
-      font-weight: $weight-defaul;
+      font-weight: $weight-default;
       line-height: 1.4rem;
       padding-right: 4rem;
       @media (max-width: 880px) {

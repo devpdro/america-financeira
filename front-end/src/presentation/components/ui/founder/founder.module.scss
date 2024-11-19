@@ -4,7 +4,7 @@
 .container {
   background-color: $color-secondary;
   .box-section {
-    @include container-center(1080px, 0 auto);
+    @include container(1080px, 0 auto);
     padding: 4rem 2rem;
     .title-section {
       margin-bottom: 1.7rem;
