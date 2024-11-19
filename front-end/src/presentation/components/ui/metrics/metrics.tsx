@@ -1,25 +1,25 @@
-import { FaMoneyBillWave, FaChartLine, FaRegCalendarAlt, FaUsers } from 'react-icons/fa'
+import { IconX } from '@tabler/icons-react'
 
 import S from './metrics.module.scss'
 
 const METRICS = [
   {
-    Icon: FaMoneyBillWave,
+    Icon: IconX,
     title: 'R$70,7 milhões',
     description: 'Mês por Produção',
   },
   {
-    Icon: FaChartLine,
+    Icon: IconX,
     title: 'R$4,2 bilhões',
     description: 'Volume Financeiro',
   },
   {
-    Icon: FaUsers,
+    Icon: IconX,
     title: '+18 Parceiros',
     description: 'Rede de Colaboração',
   },
   {
-    Icon: FaRegCalendarAlt,
+    Icon: IconX,
     title: '+12 Anos',
     description: 'História de Sucesso',
   },

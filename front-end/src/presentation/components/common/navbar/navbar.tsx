@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { IconWithProps, getLinkAttributes } from 'src/utils'
 import { NavMobile } from 'src/presentation/components'
@@ -13,7 +12,6 @@ import { MENU } from 'src/data/ui'
 import S from './navbar.module.scss'
 
 const Navbar = () => {
-  const [animationParent] = useAutoAnimate()
   const [isSideMenuOpen, setSideMenu] = useState(false)
 
   const handleClick = (e: any, link: string) => {
@@ -24,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className={S.navbar}>
-      <section ref={animationParent} className={S['left-section']}>
+      <section className={S['left-section']}>
         <Link href="/" legacyBehavior>
           <a>
             <Image src={IMAGE.LOGO_AMERICA_LETRAS_AZUL} alt="Logo América Financeira" className={S.logo} />

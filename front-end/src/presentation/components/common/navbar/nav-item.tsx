@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { NavbarItemProps } from 'src/data/models'
 import { ICON } from 'src/presentation/assets'
@@ -10,13 +9,12 @@ import { ICON } from 'src/presentation/assets'
 import S from './nav-item.module.scss'
 
 const NavItem = ({ label, link, children }: NavbarItemProps) => {
-  const [animationParent] = useAutoAnimate()
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => setIsOpen(!isOpen)
 
   return (
-    <div ref={animationParent} className={S['single-nav-item']}>
+    <div className={S['single-nav-item']}>
       <Link onClick={handleClick} href={link ?? '#'} className={S['item-link']}>
         <p className={S['item-label']}>
           <span>{label}</span>
