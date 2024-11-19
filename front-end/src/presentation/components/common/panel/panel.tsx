@@ -30,7 +30,7 @@ const Panel = ({ image, alt, title, subtitle, paragraph, position, width, height
             >
               <span className={S.paragraph}>{paragraph}</span>
             </Link>
-            <ICON.FaArrowRight className={S.icon} />
+            <ICON.IconArrowRight className={S.icon} />
           </div>
         </div>
         <div className={S['image-section']}>
@@ -53,7 +53,7 @@ const Panel = ({ image, alt, title, subtitle, paragraph, position, width, height
             >
               <span className={S.paragraph}>{paragraph}</span>
             </Link>
-            <ICON.FaArrowRight className={S.icon} />
+            <ICON.IconArrowRight className={S.icon} />
           </div>
         </div>
       </div>

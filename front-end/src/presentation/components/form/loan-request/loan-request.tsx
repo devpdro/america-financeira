@@ -4,10 +4,9 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import InputMask from 'react-input-mask'
 
-import { StatusModal } from '@/presentation/components/modal'
-import { Button } from '@/presentation/components/form'
+import { Modal, Button } from 'src/presentation/components'
 
-import styles from './loan-request.module.scss'
+import S from './loan-request.module.scss'
 
 export type LoanRequestProps = {
   nome: string
@@ -18,7 +17,7 @@ export type LoanRequestProps = {
   termos: boolean
 }
 
-const LoanRequest: React.FC = () => {
+const LoanRequest = () => {
   const [modalMessage, setModalMessage] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -65,15 +64,9 @@ const LoanRequest: React.FC = () => {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className={styles.form}
-        aria-label="Formulário de Solicitação de Empréstimo"
-      >
+      <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
         <fieldset>
-          <legend className={styles.title} aria-label="Título do Formulário">
-            O dinheiro que você precisa, com as menores taxas.
-          </legend>
+          <legend className={S.title}>O dinheiro que você precisa, com as menores taxas.</legend>
           <input
             {...register('nome', {
               required: 'Nome é obrigatório',
@@ -82,11 +75,9 @@ const LoanRequest: React.FC = () => {
                 message: 'Nome deve ter no mínimo 4 caracteres',
               },
             })}
-            className={`${styles['input-text']} ${errors.nome ? styles['input-text-error'] : ''}`}
+            className={`${S['input-text']} ${errors.nome ? S['input-text-error'] : ''}`}
             type="text"
             placeholder="Nome"
-            aria-invalid={errors.nome ? 'true' : 'false'}
-            aria-describedby="nome-error"
           />
 
           <input
@@ -97,11 +88,9 @@ const LoanRequest: React.FC = () => {
                 message: 'E-mail inválido',
               },
             })}
-            className={`${styles['input-text']} ${errors.email ? styles['input-text-error'] : ''}`}
+            className={`${S['input-text']} ${errors.email ? S['input-text-error'] : ''}`}
             type="text"
             placeholder="E-mail"
-            aria-invalid={errors.email ? 'true' : 'false'}
-            aria-describedby="email-error"
           />
 
           <InputMask
@@ -114,11 +103,9 @@ const LoanRequest: React.FC = () => {
             })}
             mask="(99) 99999-9999"
             maskChar=""
-            className={`${styles['input-text']} ${errors.whatsapp ? styles['input-text-error'] : ''}`}
+            className={`${S['input-text']} ${errors.whatsapp ? S['input-text-error'] : ''}`}
             type="text"
             placeholder="Whatsapp"
-            aria-invalid={errors.whatsapp ? 'true' : 'false'}
-            aria-describedby="whatsapp-error"
           />
 
           <InputMask
@@ -131,70 +118,51 @@ const LoanRequest: React.FC = () => {
             })}
             mask="999.999.999-99"
             maskChar=""
-            className={`${styles['input-text']} ${errors.cpf ? styles['input-text-error'] : ''}`}
+            className={`${S['input-text']} ${errors.cpf ? S['input-text-error'] : ''}`}
             type="text"
             placeholder="CPF"
-            aria-invalid={errors.cpf ? 'true' : 'false'}
-            aria-describedby="cpf-error"
           />
 
           <select
-            className={`${styles['input-text']} ${errors.tipoSolicitacao ? styles['input-text-error'] : ''}`}
+            className={`${S['input-text']} ${errors.tipoSolicitacao ? S['input-text-error'] : ''}`}
             {...register('tipoSolicitacao', {
               required: 'Tipo de solicitação é obrigatório',
             })}
-            aria-invalid={errors.tipoSolicitacao ? 'true' : 'false'}
-            aria-describedby="tipoSolicitacao-error"
           >
             <option value="" disabled hidden>
               Qual tipo de solicitação?
             </option>
-            <option className={styles['option']} value="Credito Pessoal">
+            <option className={S['option']} value="Credito Pessoal">
               Crédito Pessoal
             </option>
-            <option className={styles['option']} value="Credito Consignado">
+            <option className={S['option']} value="Credito Consignado">
               Crédito Consignado
             </option>
-            <option className={styles['option']} value="Antecipação FGTS">
+            <option className={S['option']} value="Antecipação FGTS">
               Antecipação FGTS
             </option>
-            <option className={styles['option']} value="Cartão de Crédito">
+            <option className={S['option']} value="Cartão de Crédito">
               Cartão de Crédito
             </option>
           </select>
 
-          <div className={styles['terms-box']}>
+          <div className={S['terms-box']}>
             <input
-              className={`${styles.checkbox} ${errors.termos ? styles['checkbox-error'] : ''}`}
+              className={`${S.checkbox} ${errors.termos ? S['checkbox-error'] : ''}`}
               type="checkbox"
               {...register('termos', {
                 required: 'Você deve aceitar os termos para continuar',
               })}
               name="termos"
-              id="termos"
-              aria-invalid={errors.termos ? 'true' : 'false'}
-              aria-describedby="termos-error"
             />
-            <label className={styles['label-checkbox']} htmlFor="termos">
+            <label className={S['label-checkbox']} htmlFor="termos">
               Aceito receber comunicações da América Financeira
             </label>
           </div>
 
-          <Button
-            typeStyle="btn1"
-            width="100%"
-            text={isSubmitting ? 'Contratando' : 'Quero contratar'}
-            aria-label={isSubmitting ? 'Contratando' : 'Quero contratar'}
-          />
+          <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Contratando' : 'Quero contratar'} />
         </fieldset>
       </form>
-
-      <StatusModal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        message={modalMessage}
-        aria-label="Modal de Solicitação de Empréstimo"
-      />
     </div>
   )
 }

@@ -56,7 +56,7 @@ const Carousel = () => {
         </h1>
       </div>
       <button className={S['arrow-left']} onClick={handlePrev}>
-        <ICON.FaArrowLeft size={20} />
+        <ICON.IconArrowLeft size={20} />
       </button>
       <div className={S['carousel']}>
         <AliceCarousel
@@ -69,7 +69,7 @@ const Carousel = () => {
                   <p className={S.subtitle}>{subtitle}</p>
                 </div>
                 <div className={S['icon-section']}>
-                  <ICON.FaArrowRightLong className={S.icon} />
+                  <ICON.IconArrowRight className={S.icon} />
                 </div>
               </div>
             </Link>
@@ -82,7 +82,7 @@ const Carousel = () => {
         />
       </div>
       <button className={S['arrow-right']} onClick={handleNext}>
-        <ICON.FaArrowRight size={20} />
+        <ICON.IconArrowRight size={20} />
       </button>
     </div>
   )

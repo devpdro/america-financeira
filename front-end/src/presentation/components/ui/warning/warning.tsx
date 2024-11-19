@@ -15,7 +15,7 @@ const Warning = () => {
     <div className={S.container}>
       <div className={S['box-section']}>
         <h1 className={S.title}>Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo</h1>
-        <ICON.IoClose className={S.icon} onClick={() => setIsVisible(false)} />
+        <ICON.IconX className={S.icon} onClick={() => setIsVisible(false)} />
       </div>
     </div>
   )

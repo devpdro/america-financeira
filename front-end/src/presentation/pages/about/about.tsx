@@ -75,7 +75,7 @@ const About = () => (
       title="Conheça Nossa História"
       paragraph="A América Financeira é uma empresa dedicada a oferecer soluções financeiras que transformam vidas. Desde nossa fundação, temos nos comprometido com a inovação e a excelência no atendimento, conquistando a confiança de milhares de clientes ao longo dos anos. Com uma equipe de mais de 500 colaboradores e mais de 10 filiais espalhadas pelo país, estamos prontos para atender você onde quer que esteja."
       label="Seja nosso parceiro"
-      image={IMAGE.quemSomos.src}
+      image={IMAGE.QUEM_SOMOS.src}
       alt="Nossa História"
       height={100}
       width={100}

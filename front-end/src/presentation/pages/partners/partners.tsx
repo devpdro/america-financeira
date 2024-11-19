@@ -10,17 +10,17 @@ const BENEFITS = [
   {
     title: 'Impulsione a receita',
     subtitle: 'Acelere suas vendas e receba comissão exclusiva da Creditas.',
-    image: IMAGE.aumentarLucro,
+    image: IMAGE.AUMENTAR_LUCRO,
   },
   {
     title: 'Conte com a gente',
     subtitle: 'Cuidamos de todo o processo para que o seu cliente tenha a melhor experiência.',
-    image: IMAGE.conteConosco,
+    image: IMAGE.CONTE_CONOSCO,
   },
   {
     title: 'Ferramentas de ponta',
     subtitle: 'Tenha eficiência e sucesso em suas vendas com nosso suporte especializado.',
-    image: IMAGE.parceiro,
+    image: IMAGE.PARCEIROS,
   },
 ]
 
@@ -43,7 +43,7 @@ const Partners = () => (
       title="Parcerias de Sucesso"
       paragraph="Na America Financeira, valorizamos as parcerias estratégicas que nos permitem oferecer soluções financeiras inovadoras e eficazes. Junte-se a nós e descubra os benefícios de ser um parceiro, incluindo acesso a uma ampla rede de clientes, suporte especializado e oportunidades de crescimento conjunto."
       label="Seja parceiro"
-      image={IMAGE.empresa.src}
+      image={IMAGE.CRESCIMENTO_EMPRESA.src}
       alt="Parcerias de Sucesso"
       height={40}
       width={100}
@@ -69,7 +69,7 @@ const Partners = () => (
     </div>
 
     <div className={S.container}>
-      <Image className={S.img} src={IMAGE.logoAmericaAzul.src} alt="Logo América Financeira" />
+      <Image className={S.img} src={IMAGE.LOGO_AMERICA_LETRAS_AZUL.src} alt="Logo América Financeira" />
       <h3 className={S.subtitle}>Siga a gente</h3>
       <p className={S.paragraph}>
         Conheça nossa cultura, explore nossos serviços e veja como transformamos finanças em oportunidades todos os

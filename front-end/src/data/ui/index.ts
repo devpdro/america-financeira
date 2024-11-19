@@ -1,5 +1,2 @@
-export * from './faq'
-export * from './footer'
-export * from './icons'
-export * from './information'
 export * from './navbar'
+export * from './icons'

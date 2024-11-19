@@ -1,6 +1,11 @@
 import { ICON } from 'src/presentation/assets'
 
-export const ICONS = [
+type IconProps = {
+  icon: React.ElementType
+  link: string
+}
+
+export const ICONS: IconProps[] = [
   {
     icon: ICON.BiLogoLinkedin,
     link: 'https://www.linkedin.com/company/am%C3%A9rica-financeira/mycompany/',

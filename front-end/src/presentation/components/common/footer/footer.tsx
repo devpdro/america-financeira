@@ -40,7 +40,7 @@ const MENU: MenuProps[] = [
   },
 ]
 
-interface ItemProps {
+type ItemProps = {
   label: string
   link?: string
 }
@@ -54,7 +54,7 @@ const Footer = () => (
   <footer className={S.container}>
     <div className={S['container-section']}>
       <div className={S['info-section']}>
-        <Image className={S.img} src={IMAGE.logoWhite} alt="Logo América Financeira" />
+        <Image className={S.img} src={IMAGE.LOGO_AMERICA_FINANCEIRA_SEGURO} alt="Logo América Financeira" />
         <h6 className={S.subtitle}>Nos siga nas redes sociais:</h6>
         <div className={S['icons-section']}>
           {ICONS.map(({ icon: Icon, link }, key) => (

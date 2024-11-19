@@ -5,17 +5,17 @@ const BENEFITS = [
   {
     title: 'Investimento em saúde',
     subtitle: 'Cuide da sua saúde e da sua família com tratamentos médicos e dentários financiados de forma acessível.',
-    image: IMAGE.saude,
+    image: IMAGE.SAUDE,
   },
   {
     title: 'Melhoria da casa',
     subtitle: 'Renove sua casa, faça reformas e melhore o seu espaço de viver com um crédito de baixo custo.',
-    image: IMAGE.casa,
+    image: IMAGE.CASA_DOS_SONHOS,
   },
   {
     title: 'Renovação de bens',
     subtitle: 'Troque seu carro, móveis ou eletrônicos antigos por novos, com condições de pagamento acessíveis.',
-    image: IMAGE.moveis,
+    image: IMAGE.MOVEIS,
   },
 ]
 
@@ -69,7 +69,7 @@ const FAQLOAN = [
 ]
 
 const LoanPayroll = () => {
-  const IMAGES = IMAGE.emprestimoConsignadoDuasPessoas
+  const IMAGES = IMAGE.EMPRESTIMO_CONSIGNADO_APOSENTADOS
 
   return (
     <div>
@@ -92,7 +92,7 @@ const LoanPayroll = () => {
         paragraph="O empréstimo consignado é um tipo de crédito onde as parcelas são descontadas diretamente da folha de pagamento. Isso garante condições mais favoráveis, como taxas de juros mais baixas e prazos mais flexíveis. Ideal para quem busca um crédito com segurança e benefícios exclusivos."
         label="Simular empréstimo consignado"
         position="left"
-        image={IMAGE.idosoConversandoComMulher.src}
+        image={IMAGE.IDOSO_REALIZANDO_EMPRESTIMO.src}
         alt="O que é o Empréstimo Consignado?"
         width={100}
         height={98}

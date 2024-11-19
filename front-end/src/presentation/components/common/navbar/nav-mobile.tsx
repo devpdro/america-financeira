@@ -18,7 +18,7 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
       <nav className={S['mobile-nav']}>
         <section className={S['close-section']}>
           <IconWithProps onClick={closeMenu} className={S['close-icon']}>
-            <ICON.AiOutlineClose />
+            <ICON.IconX />
           </IconWithProps>
         </section>
         <div className={S['nav-items']}>
@@ -34,7 +34,7 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
               <span>Intranet</span>
             </a>
           </Link>
-          <ICON.BiNetworkChart className={S.icon} />
+          <ICON.IconArrowDown className={S.icon} />
         </section>
       </nav>
     </div>

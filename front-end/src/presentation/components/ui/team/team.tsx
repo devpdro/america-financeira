@@ -7,12 +7,12 @@ import classNames from 'classnames'
 import S from './team.module.scss'
 
 const TEAMPHOTOS = [
-  { src: IMAGE.equipeUnida, alt: 'Equipe unida posando para foto' },
-  { src: IMAGE.equipeFotoFinal, alt: 'Foto final da equipe em evento de confraternização' },
-  { src: IMAGE.equipeOlhandoTv, alt: 'Equipe assistindo apresentação na TV' },
-  { src: IMAGE.allanConfraternizacao, alt: 'Allan durante a confraternização da equipe' },
-  { src: IMAGE.equipeTodosVermelho, alt: 'Equipe toda vestida de vermelho para evento especial' },
-  { src: IMAGE.confraternizacaoTrofeu, alt: 'Equipe celebrando com troféu em mãos' },
+  { src: IMAGE.EQUIPE_UNIDA, alt: 'Equipe unida posando para foto' },
+  { src: IMAGE.EQUIPE_UNIDA, alt: 'Foto final da equipe em evento de confraternização' },
+  { src: IMAGE.EQUIPE_TODOS_VERMELHO, alt: 'Equipe assistindo apresentação na TV' },
+  { src: IMAGE.FOUNDER_CONFRATERNIZACAO, alt: 'Allan durante a confraternização da equipe' },
+  { src: IMAGE.EQUIPE_TODOS_VERMELHO, alt: 'Equipe toda vestida de vermelho para evento especial' },
+  { src: IMAGE.CONFRATERNIZACAO_TROFEU, alt: 'Equipe celebrando com troféu em mãos' },
 ]
 
 type PhotosProps = {

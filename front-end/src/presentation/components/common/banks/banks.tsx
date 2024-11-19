@@ -5,14 +5,14 @@ import { IMAGE } from 'src/presentation/assets'
 import S from './banks.module.scss'
 
 const BANKS = [
-  { src: IMAGE.bancoBradesco.src, alt: 'Imagem do banco Bradesco' },
-  { src: IMAGE.bancoCaixa.src, alt: 'Imagem do banco Caixa' },
-  { src: IMAGE.bancoSantander.src, alt: 'Imagem do banco Santander' },
-  { src: IMAGE.bancoBrasil.src, alt: 'Imagem do banco Brasil' },
-  { src: IMAGE.bancoBanrisul.src, alt: 'Imagem do banco Banrisul' },
-  { src: IMAGE.bancoSafra.src, alt: 'Imagem do banco Safra' },
-  { src: IMAGE.bancoItau.src, alt: 'Imagem do banco Itaú' },
-  { src: IMAGE.bancoPan.src, alt: 'Imagem do banco Pan' },
+  { src: IMAGE.BANCO_BRADESCO.src, alt: 'Imagem do banco Bradesco' },
+  { src: IMAGE.BANCO_CAIXA.src, alt: 'Imagem do banco Caixa' },
+  { src: IMAGE.BANCO_SANTANDER.src, alt: 'Imagem do banco Santander' },
+  { src: IMAGE.BANCO_BRASIL.src, alt: 'Imagem do banco Brasil' },
+  { src: IMAGE.BANCO_BANRISUL.src, alt: 'Imagem do banco Banrisul' },
+  { src: IMAGE.BANCO_SAFRA.src, alt: 'Imagem do banco Safra' },
+  { src: IMAGE.BANCO_ITAU.src, alt: 'Imagem do banco Itaú' },
+  { src: IMAGE.BANCO_PAN.src, alt: 'Imagem do banco Pan' },
 ]
 
 const Banks = () => {

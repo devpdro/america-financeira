@@ -3,7 +3,7 @@ import 'react-responsive-modal/styles.css'
 
 import { Button } from 'src/presentation/components'
 
-import S from './status.module.scss'
+import S from './modal.module.scss'
 
 type ItemProps = {
   paragraph: string

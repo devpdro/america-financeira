@@ -49,7 +49,7 @@ const FAQLOAN = [
 ]
 
 const LoanFGTS = () => {
-  const IMAGES = IMAGE.duasPessoasConversando
+  const IMAGES = IMAGE.DUAS_PESSOAS_CONVERSANDO
 
   return (
     <div>
@@ -72,7 +72,7 @@ const LoanFGTS = () => {
         paragraph="O empréstimo FGTS é uma modalidade de crédito que permite utilizar o saldo do Fundo de Garantia do Tempo de Serviço (FGTS) como garantia. É uma alternativa para quem precisa de dinheiro extra, oferecendo condições especiais e flexibilidade para o pagamento."
         label="Simule seu FGTS"
         position="right"
-        image={IMAGE.duasPessoasOlhando.src}
+        image={IMAGE.DUAS_PESSOAS_CONVERSANDO.src}
         alt="Sobre o Empréstimo FGTS"
         width={100}
         height={100}
@@ -86,7 +86,7 @@ const LoanFGTS = () => {
         subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
         paragraph="Antecipar FGTS"
         position="right"
-        image={IMAGE.investimentos.src}
+        image={IMAGE.INVESTIMENTOS.src}
         alt="Imagem representativa de antecipação de FGTS"
         height={100}
         width={91}
@@ -97,7 +97,7 @@ const LoanFGTS = () => {
         subtitle="A América oferece cartões de débito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
         paragraph="Solicitar agora"
         position="left"
-        image={IMAGE.cartaoCredito.src}
+        image={IMAGE.CARTAO_CREDITO.src}
         alt="Imagem de Cartão de Crédito"
         width={91}
         height={100}

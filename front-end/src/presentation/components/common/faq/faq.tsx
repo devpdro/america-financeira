@@ -2,12 +2,21 @@
 
 import { useState } from 'react'
 
-import { Button } from '@/presentation/components/form'
-import { FaqProps } from '@/data/models'
+import { Button } from 'src/presentation/components'
 
 import S from './faq.module.scss'
 
-const Faq: React.FC<FaqProps> = ({ items, title }) => {
+type ItemProps = {
+  question: string
+  answer: string
+}
+
+interface FaqProps {
+  title: string
+  items: ItemProps[]
+}
+
+const Faq = ({ items, title }: FaqProps) => {
   const [faqs, setFaqs] = useState(items ? items.map((faq) => ({ ...faq, open: false })) : [])
   const [showAll, setShowAll] = useState(false)
 
@@ -27,7 +36,7 @@ const Faq: React.FC<FaqProps> = ({ items, title }) => {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 5)
 
   return (
-    <section className={S.container}>
+    <div className={S.container}>
       <h1 className={S.title}>{title}</h1>
       {visibleFaqs.map((faq, index) => (
         <div
@@ -43,10 +52,10 @@ const Faq: React.FC<FaqProps> = ({ items, title }) => {
       ))}
       {!showAll && faqs.length > 5 && (
         <div className={S['btn-section']}>
-          <Button typeStyle="btn2" text="Ver mais" width="150px" onClick={handleShowAll} />
+          <Button typeStyle="btn2" label="Ver mais" width="150px" onClick={handleShowAll} />
         </div>
       )}
-    </section>
+    </div>
   )
 }
 

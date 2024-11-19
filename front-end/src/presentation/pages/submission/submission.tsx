@@ -71,7 +71,7 @@ const Submission = () => {
         description="Junte-se ao programa de parceria da America Financeira e descubra os benefícios exclusivos de ser nosso parceiro. Oferecemos suporte especializado e oportunidades de crescimento."
         keywords="parceria, America Financeira, programa de parceria, suporte especializado, crescimento, soluções financeira"
       />
-      <Image className={S.logo} src={IMAGE.logoAmericaPartners} alt="Logo América Financeira" />
+      <Image className={S.logo} src={IMAGE.LOGO_AMERICA_PARTNERS} alt="Logo América Financeira" />
       <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
         <fieldset>
           <div className={S['box-title']}>
@@ -151,8 +151,6 @@ const Submission = () => {
           <Button typeStyle="btn3" width="100%" label={isSubmitting ? 'Enviando...' : 'Enviar'} />
         </fieldset>
       </form>
-
-      <Modal open={isModalOpen} close={closeModal} message={modalMessage} />
     </div>
   )
 }

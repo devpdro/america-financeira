@@ -5,18 +5,15 @@ import { IconBrandInstagram } from '@tabler/icons-react'
 import { IconBrandLinkedin } from '@tabler/icons-react'
 import { IconBroadcast } from '@tabler/icons-react'
 import { IconBrandWhatsapp } from '@tabler/icons-react'
+import { IconArrowLeft } from '@tabler/icons-react'
+import { IconArrowRight } from '@tabler/icons-react'
+import { IconBrandYoutube } from '@tabler/icons-react'
+import { IconEye } from '@tabler/icons-react'
+import { IconMenu2 } from '@tabler/icons-react'
+import { IconTarget } from '@tabler/icons-react'
+import { IconNetwork } from '@tabler/icons-react'
 
-import { FaArrowLeft, FaArrowRight, FaYoutube } from 'react-icons/fa'
-import { IoConstructOutline } from 'react-icons/io5'
-import { FaArrowRightLong } from 'react-icons/fa6'
-import { IoIosArrowDown, IoLogoWhatsapp } from 'react-icons/io'
-import { BiLogoInstagramAlt, BiLogoFacebook, BiLogoLinkedin } from 'react-icons/bi'
-import { FiEye, FiMenu } from 'react-icons/fi'
-import { BiBullseye } from 'react-icons/bi'
-import { AiOutlineClose } from 'react-icons/ai'
-import { BiNetworkChart } from 'react-icons/bi'
-
-export const ICON = {
+const ICON = {
   IconX,
   IconMenu3,
   IconArrowDown,
@@ -24,22 +21,13 @@ export const ICON = {
   IconBrandLinkedin,
   IconBroadcast,
   IconBrandWhatsapp,
-
-  AiOutlineClose,
-  IoConstructOutline,
-  BiBullseye,
-  FiEye,
-  IoIosArrowDown,
-  BiLogoFacebook,
-  BiLogoInstagramAlt,
-  FiMenu,
-  FaArrowRightLong,
-  BiNetworkChart,
-  FaArrowLeft,
-  FaArrowRight,
-  BiLogoLinkedin,
-  FaYoutube,
-  IoLogoWhatsapp,
+  IconArrowLeft,
+  IconArrowRight,
+  IconBrandYoutube,
+  IconEye,
+  IconMenu2,
+  IconTarget,
+  IconNetwork,
 }
 
 export default ICON

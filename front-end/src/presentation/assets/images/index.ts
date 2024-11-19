@@ -1,94 +1,83 @@
-import aumentarLucro from './aumentar-lucro.webp'
-import bancoBanrisul from './banco-banrisul.webp'
-import bancoBradesco from './banco-bradesco.webp'
-import bancoCaixa from './banco-caixa.webp'
-import bancoSafra from './banco-safra.webp'
-import bancoPan from './banco-pan.webp'
-import bancoSantander from './banco-santander.webp'
-import bancoC6 from './banco-c6.webp'
-import bancoItau from './banco-itau.webp'
-import cabecalhoInicial from './cabecalho-inicial.webp'
-import cartaoCredito from './cartao-credito.webp'
-import crescimentoEmpresa from './crescimento-empresa.webp'
-import divida from './divida.webp'
-import educacao from './educacao.webp'
-import emprestimoConsignadoDuasPessoas from './emprestimo-consginado-duas-pessoas.webp'
-import impulsioneReceita from './impulsione-receita.webp'
-import investimentos from './investimentos.webp'
-import logoAmerica from './logo-america.webp'
-import logoWhite from './logo-financeira-seguro.png'
-import moveis from './moveis.webp'
-import parceiro from './parceiro.webp'
-import pessoaSozinha from './pessoa-sozinha.webp'
-import saude from './saude.webp'
-import sonho from './sonho.webp'
-import viagens from './viagens.webp'
-import bancoBrasil from './banco-brasil.webp'
-import conteConosco from './conte-conosco.webp'
-import duasPessoasConversando from './duas-pessoas-conversando.webp'
-import casa from './casa.webp'
-import idosoConversandoComMulher from './idoso-conversando-com-mulher.webp'
-import empresa from './empresa.webp'
-import logoAmericaAzul from './logo-america-azul.webp'
-import logoAmericaPartners from './logo-america-partners.png'
-import pessoaCelular from './pessoa-celular-blog.webp'
-import allanConfraternizacao from './allan-confraternizacao.webp'
-import equipeOlhandoTv from './equipe-olhando-tv.webp'
-import equipeTodosVermelho from './equipe-todos-vermelho.webp'
-import equipeUnida from './equipe-unida.webp'
-import tresPessoasEmprestimo from './tres-pessoas-emprestimo.webp'
-import equipeFotoFinal from './equipe-todos-amarelo.webp'
-import equipeFotoConfraternizacao from './equipe-foto-final.webp'
-import confraternizacaoTrofeu from './confraternizacao-trofeu.webp'
-import quemSomos from './quem-somos.webp'
-import pessoaOlhando from './pessoa-olhando.webp'
-import allan from './allan.jpg'
+import FOUNDER from './FOUNDER.webp'
+import CONFRATERNIZACAO_TROFEU from './CONFRATERNIZACAO_TROFEU.webp'
+import PESSOA_OLHANDO_PRA_VOCÊ from './PESSOA_OLHANDO_PRA_VOCÊ.webp'
+import QUEM_SOMOS from './QUEM_SOMOS.webp'
+import EQUIPE_TODOS_AMARELO from './EQUIPE_TODOS_AMARELO.webp'
+import FOUNDER_CONFRATERNIZACAO from './FOUNDER_CONFRATERNIZACAO.webp'
+import EQUIPE_TODOS_VERMELHO from './EQUIPE_TODOS_VERMELHO.webp'
+import EQUIPE_UNIDA from './EQUIPE_TODOS_AMARELO.webp'
+import LOGO_AMERICA_PARTNERS from './LOGO_AMERICA_PARCEIROS.webp'
+import IDOSO_REALIZANDO_EMPRESTIMO from './IDOSO_REALIZANDO_EMPRESTIMO.webp'
+import CASA_DOS_SONHOS from './CASA_DOS_SONHOS.webp'
+import AUMENTAR_LUCRO from './AUMENTAR_LUCRO.webp'
+import BANCO_BANRISUL from './BANCO_BANRISUL.webp'
+import BANCO_BRADESCO from './BANCO_BRADESCO.webp'
+import BANCO_CAIXA from './BANCO_CAIXA.webp'
+import BANCO_SAFRA from './BANCO_SAFRA.webp'
+import BANCO_PAN from './BANCO_PAN.webp'
+import BANCO_SANTANDER from './BANCO_SANTANDER.webp'
+import BANCO_C6 from './BANCO_C6.webp'
+import BANCO_ITAU from './BANCO_ITAU.webp'
+import EMPRESTIMO_CONSIGNADO_APOSENTADOS from './EMPRESTIMO_CONSIGNADO_APOSENTADOS.webp'
+import CARTAO_CREDITO from './CARTAO_CREDITO.webp'
+import CRESCIMENTO_EMPRESA from './CRESCIMENTO_EMPRESA.webp'
+import PAGAR_DIVIDAS from './PAGAR_DIVIDAS.webp'
+import EDUCACAO from './EDUCACAO.webp'
+import EMPRESTIMO_ADULTOS_CONVERSANDO from './EMPRESTIMO_ADULTOS_CONVERSANDO.webp'
+import IMPULSIONE_RECEITA from './IMPULSIONANDO_RECEITA.webp'
+import INVESTIMENTOS from './INVESTIMENTOS.webp'
+import LOGO_AMERICA_BRANCO_SEM_FINANCEIRA from './LOGO_AMERICA_BRANCO_SEM_FINANCEIRA.webp'
+import MOVEIS from './MOVEIS.webp'
+import PARCEIROS from './PARCEIROS.webp'
+import SAUDE from './SAUDE.webp'
+import SONHO from './SONHO.webp'
+import VIAGEM from './VIAGEM.webp'
+import BANCO_BRASIL from './BANCO_BRASIL.webp'
+import CONTE_CONOSCO from './CONTE_CONOSCO.webp'
+import DUAS_PESSOAS_CONVERSANDO from './DUAS_PESSOAS_CONVERSANDO.webp'
+import LOGO_AMERICA_FINANCEIRA_SEGURO from './LOGO_AMERICA_FINANCEIRA_SEGURO.webp'
+import LOGO_AMERICA_LETRAS_AZUL from './LOGO_AMERICA_LETRAS_AZUL.webp'
 
-const Images = {
-  allan,
-  confraternizacaoTrofeu,
-  equipeFotoConfraternizacao,
-  pessoaOlhando,
-  quemSomos,
-  equipeFotoFinal,
-  tresPessoasEmprestimo,
-  allanConfraternizacao,
-  equipeOlhandoTv,
-  equipeTodosVermelho,
-  equipeUnida,
-  pessoaCelular,
-  logoAmericaPartners,
-  logoAmericaAzul,
-  empresa,
-  idosoConversandoComMulher,
-  casa,
-  aumentarLucro,
-  bancoBanrisul,
-  bancoBradesco,
-  bancoCaixa,
-  bancoSafra,
-  bancoPan,
-  bancoSantander,
-  bancoC6,
-  bancoItau,
-  cabecalhoInicial,
-  cartaoCredito,
-  crescimentoEmpresa,
-  divida,
-  educacao,
-  emprestimoConsignadoDuasPessoas,
-  impulsioneReceita,
-  investimentos,
-  logoAmerica,
-  moveis,
-  parceiro,
-  pessoaSozinha,
-  saude,
-  sonho,
-  viagens,
-  bancoBrasil,
-  conteConosco,
-  duasPessoasConversando,
+const IMAGE = {
+  LOGO_AMERICA_LETRAS_AZUL,
+  FOUNDER,
+  CONFRATERNIZACAO_TROFEU,
+  PESSOA_OLHANDO_PRA_VOCÊ,
+  QUEM_SOMOS,
+  EQUIPE_TODOS_AMARELO,
+  FOUNDER_CONFRATERNIZACAO,
+  EQUIPE_TODOS_VERMELHO,
+  EQUIPE_UNIDA,
+  LOGO_AMERICA_PARTNERS,
+  IDOSO_REALIZANDO_EMPRESTIMO,
+  CASA_DOS_SONHOS,
+  AUMENTAR_LUCRO,
+  BANCO_BANRISUL,
+  BANCO_BRADESCO,
+  BANCO_CAIXA,
+  BANCO_SAFRA,
+  BANCO_PAN,
+  BANCO_SANTANDER,
+  LOGO_AMERICA_FINANCEIRA_SEGURO,
+  BANCO_C6,
+  BANCO_ITAU,
+  EMPRESTIMO_CONSIGNADO_APOSENTADOS,
+  CARTAO_CREDITO,
+  CRESCIMENTO_EMPRESA,
+  PAGAR_DIVIDAS,
+  EDUCACAO,
+  EMPRESTIMO_ADULTOS_CONVERSANDO,
+  IMPULSIONE_RECEITA,
+  INVESTIMENTOS,
+  LOGO_AMERICA_BRANCO_SEM_FINANCEIRA,
+  MOVEIS,
+  PARCEIROS,
+  SAUDE,
+  SONHO,
+  VIAGEM,
+  BANCO_BRASIL,
+  CONTE_CONOSCO,
+  DUAS_PESSOAS_CONVERSANDO,
 }
 
-export default Images
+export default IMAGE

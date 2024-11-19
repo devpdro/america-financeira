@@ -5,18 +5,18 @@ const BENEFITS = [
   {
     title: 'Consolidação de dívidas',
     subtitle: 'Simplifique sua vida financeira consolidando várias dívidas em uma única parcela mais baixa.',
-    image: IMAGE.pagamento,
+    image: IMAGE.FOUNDER_CONFRATERNIZACAO,
   },
 
   {
     title: 'Educação e qualificação',
     subtitle: 'Invista no seu futuro com cursos e especializações, financiados por um crédito acessível.',
-    image: IMAGE.educacao,
+    image: IMAGE.EDUCACAO,
   },
   {
     title: 'Viagens e lazer',
     subtitle: 'Aproveite momentos especiais e faça aquela viagem dos sonhos com parcelas que cabem no seu bolso.',
-    image: IMAGE.viagens,
+    image: IMAGE.VIAGEM,
   },
 ]
 
@@ -49,7 +49,7 @@ const FAQLOAN = [
 ]
 
 const LoanPersonal = () => {
-  const IMAGES = IMAGE.pessoaOlhando
+  const IMAGES = IMAGE.PESSOA_OLHANDO_PRA_VOCÊ
 
   return (
     <div>
@@ -72,7 +72,7 @@ const LoanPersonal = () => {
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
         label="Simular empréstimo"
         position="left"
-        image={IMAGE.tresPessoasEmprestimo.src}
+        image={IMAGE.DUAS_PESSOAS_CONVERSANDO.src}
         alt="O que é o Empréstimo Pessoal?"
         width={100}
         height={98}
@@ -93,7 +93,7 @@ const LoanPersonal = () => {
         subtitle="A América oferece cartões de débito de bancos parceiros, com benefícios exclusivos. Somos especialistas em conectar você às melhores opções financeiras, sem ser um banco."
         paragraph="Solicitar agora"
         position="left"
-        image={IMAGE.cartaoCredito.src}
+        image={IMAGE.CARTAO_CREDITO.src}
         alt="Imagem de Cartão de Crédito"
         width={91}
         height={100}
@@ -104,7 +104,7 @@ const LoanPersonal = () => {
         subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
         paragraph="Antecipar FGTS"
         position="right"
-        image={IMAGE.investimentos.src}
+        image={IMAGE.INVESTIMENTOS.src}
         alt="Imagem representativa de antecipação de FGTS"
         width={91}
         height={100}

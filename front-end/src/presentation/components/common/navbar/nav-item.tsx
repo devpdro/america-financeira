@@ -20,7 +20,7 @@ const NavItem = ({ label, link, children }: NavbarItemProps) => {
       <Link onClick={handleClick} href={link ?? '#'} className={S['item-link']}>
         <p className={S['item-label']}>
           <span>{label}</span>
-          {children && <ICON.IoIosArrowDown className={`${S['arrow-icon']} ${isOpen && S['rotate-180']}`} />}
+          {children && <ICON.IconArrowDown className={`${S['arrow-icon']} ${isOpen && S['rotate-180']}`} />}
         </p>
       </Link>
       {isOpen && children && (

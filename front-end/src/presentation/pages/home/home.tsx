@@ -5,17 +5,17 @@ const BENEFITS = [
   {
     title: 'Quitar as dívidas',
     subtitle: 'Troque as dívidas caras por uma única, mais saudável e com parcelas mais acessíveis.',
-    image: IMAGE.divida,
+    image: IMAGE.PAGAR_DIVIDAS,
   },
   {
     title: 'Impulsionar seu negócio',
     subtitle: 'Invista no seu capital com um crédito que te dá mais prazo e com juros mais baixos.',
-    image: IMAGE.crescimentoEmpresa,
+    image: IMAGE.CRESCIMENTO_EMPRESA,
   },
   {
     title: 'Realizar sonhos',
     subtitle: 'Tire do papel o plano de reformar a casa ou adquirir novos bens com um crédito saudável.',
-    image: IMAGE.sonho,
+    image: IMAGE.SONHO,
   },
 ]
 
@@ -62,7 +62,7 @@ const FAQLOAN = [
 ]
 
 const Home = () => {
-  const IMAGES = IMAGE.cabecalhoInicial
+  const IMAGES = IMAGE.EMPRESTIMO_CONSIGNADO_APOSENTADOS
 
   return (
     <div>
