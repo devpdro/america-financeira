@@ -1,3 +1,3 @@
-import { makePersonalLoan } from '@/main/factories/pages'
+import { makeLoanPersonal } from 'src/main/factories/pages'
 
-export default makePersonalLoan
+export default makeLoanPersonal

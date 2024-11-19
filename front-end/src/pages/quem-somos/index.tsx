@@ -1,3 +1,3 @@
-import { makeAbout } from '@/main/factories/pages'
+import { makeAbout } from 'src/main/factories/pages'
 
 export default makeAbout

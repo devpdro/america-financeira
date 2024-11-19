@@ -1,3 +1,3 @@
-import { makeFgtsLoan } from 'src/main/factories/pages'
+import { makeLoanFGTS } from 'src/main/factories/pages'
 
-export default makeFgtsLoan
+export default makeLoanFGTS

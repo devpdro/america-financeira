@@ -1,3 +1,3 @@
-import { Error } from '@/presentation/pages'
+import { Error } from 'src/presentation/pages'
 
 export const makeError = () => <Error />

@@ -1,5 +1,3 @@
-import { Partners } from '@/presentation/pages'
+import { Partners } from 'src/presentation/pages'
 
-export const makePartners = () => {
-  return <Partners />
-}
+export const makePartners = () => <Partners />

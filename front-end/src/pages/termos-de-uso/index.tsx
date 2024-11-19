@@ -1,3 +1,3 @@
-import { makeTermsOfUse } from '@/main/factories/pages'
+import { makeTermsAgreement } from 'src/main/factories/pages'
 
-export default makeTermsOfUse
+export default makeTermsAgreement

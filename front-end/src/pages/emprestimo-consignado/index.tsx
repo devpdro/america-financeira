@@ -1,3 +1,3 @@
-import { makePayrollLoan } from 'src/main/factories/pages'
+import { makeLoanPayroll } from 'src/main/factories/pages'
 
-export default makePayrollLoan
+export default makeLoanPayroll

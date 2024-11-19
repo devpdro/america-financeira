@@ -1,3 +1,3 @@
-import { makeIntranet } from '@/main/factories/pages'
+import { makeIntranet } from 'src/main/factories/pages'
 
 export default makeIntranet

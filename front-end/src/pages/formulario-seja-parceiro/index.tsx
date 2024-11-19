@@ -1,3 +1,3 @@
-import { makePartnerForm } from 'src/main/factories/pages'
+import { makeSubmission } from 'src/main/factories/pages'
 
-export default makePartnerForm
+export default makeSubmission
