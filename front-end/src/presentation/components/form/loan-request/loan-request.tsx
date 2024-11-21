@@ -163,6 +163,13 @@ const LoanRequest = () => {
           <Button typeStyle="btn1" width="100%" label={isSubmitting ? 'Contratando' : 'Quero contratar'} />
         </fieldset>
       </form>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        message={modalMessage}
+        aria-label="Modal de Solicitação de Empréstimo"
+      />
     </div>
   )
 }
