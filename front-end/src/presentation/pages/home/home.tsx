@@ -75,7 +75,7 @@ const Home = () => {
 
       <Header
         title="Solicite seu crédito agora mesmo!"
-        subtitle="Realizando sonhos\natravés do Crédito!"
+        subtitle={`Realizando sonhos \n através do Crédito!`}
         paragraph="*Aqui seu empréstimo é rápido, fácil e descomplicado"
         image={IMAGES.src}
       />
@@ -84,11 +84,9 @@ const Home = () => {
       <Carousel />
 
       <Benefits
-        title="O crédito de qualidade\nque você merece"
-        subtitle="Um empréstimo pode ser a solução financeira que você precisa\npara melhorar sua vida."
+        title={`O crédito de qualidade\nque você merece`}
+        subtitle={`Um empréstimo pode ser a solução financeira que você precisa\n para melhorar sua vida.`}
         items={BENEFITS}
-        width={100}
-        height={100}
       />
 
       <Founder />

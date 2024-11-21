@@ -36,8 +36,11 @@
       @include display-flex(flex-start, none);
       font-size: $font-default;
       padding: 1rem;
+      .link {
+        color: $color-darkHigh;
+      }
       .icon {
-        font-size: 1.4rem;
+        font-size: 2rem;
         margin-left: 0.3rem;
       }
     }

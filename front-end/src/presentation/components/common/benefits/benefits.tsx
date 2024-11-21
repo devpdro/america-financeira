@@ -13,8 +13,8 @@ type ItemProps = {
 type BenefitsProps = {
   title: string
   subtitle: string
-  width: number
-  height: number
+  width?: number
+  height?: number
   items: ItemProps[]
 }
 
@@ -26,7 +26,7 @@ const Benefits = ({ title, subtitle, width, height, items }: BenefitsProps) => (
     </div>
     <div className={S['details-section']}>
       {items.map(({ title, subtitle, image }, key) => (
-        <div style={{ width: `${width}%`, height: `${height}%` }} className={S.box} key={key} role="group">
+        <div style={{ width: `${width}%`, height: `${height}%` }} className={S.box} key={key}>
           <Image
             src={image}
             className={S['image-section']}

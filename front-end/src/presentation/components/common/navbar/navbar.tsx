@@ -25,7 +25,7 @@ const Navbar = () => {
       <section className={S['left-section']}>
         <Link href="/" legacyBehavior>
           <a>
-            <Image src={IMAGE.LOGO_AMERICA_LETRAS_AZUL} alt="Logo América Financeira" className={S.logo} />
+            <Image src={IMAGE.LOGO_AMERICA_FINANCEIRA_SEGURO} alt="Logo América Financeira" className={S.logo} />
           </a>
         </Link>
         {isSideMenuOpen && <NavMobile closeMenu={() => setSideMenu(false)} />}
@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link href={item.link ?? '#'} legacyBehavior>
                 <a className={S['link-text']} onClick={(e) => handleClick(e, item.link ?? '#')}>
                   <span>{item.label}</span>
-                  {item.children && <ICON.IconArrowRight className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
+                  {item.children && <ICON.IconCaretUp className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
                 </a>
               </Link>
               {item.children && (
@@ -60,7 +60,7 @@ const Navbar = () => {
       </section>
 
       <aside className={S['right-section']}>
-        <ICON.IconNetwork className={S.icon} />
+        <ICON.IconUser className={S.icon} />
         <Link href="/intranet" legacyBehavior>
           <a className={S.link}>
             <span>Intranet</span>
@@ -69,7 +69,7 @@ const Navbar = () => {
       </aside>
 
       <IconWithProps onClick={() => setSideMenu(true)} className={S['menu-icon']}>
-        <ICON.IconMenu2 />
+        <ICON.IconMenu3 />
       </IconWithProps>
     </nav>
   )

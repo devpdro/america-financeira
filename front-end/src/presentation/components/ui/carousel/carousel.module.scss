@@ -2,7 +2,7 @@
 @import '../../../styles/themes/mixins.scss';
 
 .container {
-  @include container(1180px, 4.4rem auto 0 auto);
+  @include container(1180px, 3.8rem auto 0 auto);
   position: relative;
   padding: 0 2rem;
   @media (max-width: 880px) {
@@ -10,7 +10,7 @@
   }
   .subtitle-section {
     text-align: center;
-    color: $color-secondary;
+    color: $color-primary;
     font-size: $font-default;
     font-weight: $weight-medium;
     margin-bottom: 0.6rem;
@@ -91,12 +91,15 @@
     .item {
       @include display-flex(flex-end, space-between);
       @include hover;
+      flex-direction: column;
       border: 0.0625rem solid $color-secondary;
+      border: 0.5vmin solid $color-secondary;
+      box-shadow: 0.4rem 0.4rem $color-primary;
+      color: $color-darkHigh;
       border-radius: $radii-default;
       width: 17.5rem;
-      margin: 1.5rem 2rem 1.3rem 2rem;
       padding: 2rem 1.5rem;
-      flex-direction: column;
+      margin: 1.5rem 2rem 1.3rem 2rem;
       &:hover {
         transform: scale(1.1);
       }
@@ -123,7 +126,7 @@
         transition: transform 0.3s ease;
         text-align: right;
         .icon {
-          color: $color-secondary;
+          color: $color-primary;
           font-size: $font-default;
         }
       }

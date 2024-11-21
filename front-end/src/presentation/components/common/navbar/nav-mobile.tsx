@@ -34,7 +34,7 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
               <span>Intranet</span>
             </a>
           </Link>
-          <ICON.IconArrowDown className={S.icon} />
+          <ICON.IconUser className={S.icon} />
         </section>
       </nav>
     </div>

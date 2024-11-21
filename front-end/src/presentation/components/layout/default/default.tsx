@@ -2,7 +2,7 @@ import { type ReactNode } from 'react'
 
 import { Navbar, Footer } from 'src/presentation/components'
 
-import { IconX } from '@tabler/icons-react'
+import { ICON } from 'src/presentation/assets'
 
 import S from './default.module.scss'
 interface DefaultLayoutProps {
@@ -20,7 +20,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => (
       rel="noopener noreferrer"
       className={S['whatsapp-button']}
     >
-      <IconX className={S.icon} />
+      <ICON.IconBrandWhatsapp className={S.icon} />
     </a>
     <Footer />
   </div>

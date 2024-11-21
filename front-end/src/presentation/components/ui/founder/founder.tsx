@@ -19,7 +19,7 @@ const Founder = () => (
         </div>
         <div className={S['text-section']}>
           <h1 className={S.title}>Allan Diego Bertho</h1>
-          <h3 className={S.subtitle}>CEO e Fundador</h3>
+          <h3 className={S.subtitle}>CEO</h3>
           <p className={S.paragraph}>
             Allan Bertho é um empresário de São Pedro, SP, com uma trajetória marcada por resiliência e inovação.
             Nascido em uma família humilde, Allan iniciou sua carreira profissional aos 14 anos, passando por diversas

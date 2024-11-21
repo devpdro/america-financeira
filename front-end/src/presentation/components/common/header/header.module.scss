@@ -38,7 +38,7 @@
       gap: 8px;
       .subtitle {
         font-weight: $weight-default;
-        font-size: $font-medium;
+        font-size: $font-default;
         margin-bottom: 1.5rem;
         @media (min-width: 625px) and (max-width: 994px) {
           font-size: $font-small;

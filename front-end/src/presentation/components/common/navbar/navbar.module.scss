@@ -17,7 +17,8 @@
     @include display-flex(center, flex-start);
     gap: 1rem;
     .logo {
-      width: 12.5rem;
+      width: 200px;
+      height: 50px;
     }
     .nav-items {
       display: none;
@@ -54,6 +55,7 @@
             .dropdown-link {
               @include display-flex(center, flex-start);
               @include hover;
+              color: $color-darkHigh;
               font-size: $font-small;
               padding: 0.4rem 0.6rem;
               &:hover {
@@ -88,10 +90,14 @@
     }
   }
   .right-section {
+    @include display-flex;
     @include hover;
     font-size: $font-small;
     border-radius: $radii-small;
     padding: 0.6rem 1.2rem;
+    .link {
+      color: inherit;
+    }
     @media (max-width: 1124px) {
       display: none;
     }
@@ -101,7 +107,7 @@
     }
     .icon {
       font-size: 1.5rem;
-      margin-right: 0.6rem;
+      margin-right: 0.5rem;
     }
     @media (min-width: 1024px) {
       display: flex;

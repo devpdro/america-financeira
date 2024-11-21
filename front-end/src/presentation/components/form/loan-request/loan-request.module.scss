@@ -8,11 +8,14 @@
     color: $color-darkHigh;
     font-size: $font-medium;
     font-weight: $weight-bold;
+    line-height: 2.2rem;
     @media (max-width: 994px) {
       font-size: $font-default;
     }
   }
   .input-text {
+    font-family: inherit;
+    outline: none;
     transition: border-bottom 0.3s ease;
     border-bottom: 1px solid $color-grayMedium;
     color: $color-darkHigh;

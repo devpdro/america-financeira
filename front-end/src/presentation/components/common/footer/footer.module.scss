@@ -16,9 +16,11 @@
     .info-section {
       .img {
         width: 16.25rem;
+        height: 70px;
         margin-bottom: 1.2rem;
         @media (max-width: 884px) {
-          width: 15.625rem;
+          width: 250px;
+          height: 70px;
         }
       }
       .paragraph {
@@ -28,7 +30,7 @@
         margin-bottom: 1.2rem;
       }
       .subtitle {
-        font-size: $font-medium;
+        font-size: $font-default;
         font-weight: $weight-medium;
         margin-bottom: 1rem;
         @media (min-width: 885px) and (max-width: 1224px) {
@@ -48,6 +50,8 @@
           font-size: $font-medium;
           border-radius: 50%;
           padding: 0.4rem;
+          width: 1.9rem;
+          height: 1.9rem;
           @media (min-width: 885px) and (max-width: 1224px) {
             font-size: $font-default;
           }
