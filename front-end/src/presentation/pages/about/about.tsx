@@ -84,14 +84,14 @@ const About = () => (
     <Founder />
 
     <div className={S.container}>
-      <div className={S['box-container']}>
+      <div className={S['box-section']}>
         {TIMELINE.map(({ duration, year, title, description }, index) => (
           <div key={index} className={S.timeline}>
             <div className={S.icon}></div>
             <div className={S['date-content']}>
               <div className={S['date-outer']}>
                 <span className={S.date}>
-                  <span className={S.month}>{duration}</span>
+                  <span className={S.duration}>{duration}</span>
                   <span className={S.year}>{year}</span>
                 </span>
               </div>

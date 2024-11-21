@@ -1,9 +1,8 @@
 import Link from 'next/link'
 
-import { NavItem } from 'src/presentation/components/common'
+import { NavItem } from 'src/presentation/components'
 import { NavMobileProps } from 'src/data/models'
 import { ICON } from 'src/presentation/assets'
-import { IconWithProps } from 'src/utils'
 import { MENU } from 'src/data/ui'
 
 import S from './nav-mobile.module.scss'
@@ -17,9 +16,7 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
     <div className={S['mobile-nav-container']}>
       <nav className={S['mobile-nav']}>
         <section className={S['close-section']}>
-          <IconWithProps onClick={closeMenu} className={S['close-icon']}>
-            <ICON.IconX />
-          </IconWithProps>
+          <ICON.IconX onClick={closeMenu} className={S['close-icon']} />
         </section>
         <div className={S['nav-items']}>
           {MENU.map((item, key) => (

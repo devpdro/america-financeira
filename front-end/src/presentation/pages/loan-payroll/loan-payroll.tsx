@@ -81,7 +81,7 @@ const LoanPayroll = () => {
 
       <Header
         title="Empréstimo Consignado"
-        subtitle="Dinheiro extra para \nalcançar seus planos \ne realizar os seus sonhos"
+        subtitle={`Dinheiro extra para \n alcançar seus planos \n e realizar os seus sonhos`}
         paragraph="*Sujeito à análise de crédito e condições do produto"
         image={IMAGES.src}
       />
@@ -99,8 +99,8 @@ const LoanPayroll = () => {
       />
 
       <Benefits
-        title="Benefícios do empréstimo\nconsignado para você"
-        subtitle="Descubra como o empréstimo consignado pode facilitar sua vida\nfinanceira com taxas baixas e condições vantajosas."
+        title={`Benefícios do empréstimo \n consignado para você`}
+        subtitle={`Descubra como o empréstimo consignado pode facilitar sua vida\nfinanceira com taxas baixas e condições vantajosas.`}
         items={BENEFITS}
         width={100}
         height={100}

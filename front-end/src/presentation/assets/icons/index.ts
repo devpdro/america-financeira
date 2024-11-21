@@ -13,6 +13,10 @@ import {
   IconBrandYoutube,
   IconBrandFacebook,
   IconArrowLeft,
+  IconCurrencyDollar,
+  IconChartLine,
+  IconUsers,
+  IconCalendarMonth,
 } from '@tabler/icons-react'
 
 const ICON = {
@@ -22,6 +26,10 @@ const ICON = {
   IconUser,
   IconPlus,
   IconMinus,
+  IconCurrencyDollar,
+  IconChartLine,
+  IconUsers,
+  IconCalendarMonth,
   IconX,
   IconMenu3,
   IconBrandInstagram,

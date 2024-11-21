@@ -88,7 +88,7 @@ const Simulation = () => {
     <div className={S.container}>
       <div className={S['box-container']}>
         <h1 className={S.title}>
-          Descubra quanto você pode antecipar <br /> com seu FGTS
+          Descubra quanto você pode antecipar <br /> com seu empréstimo FGTS
         </h1>
         <p className={S.subtitle}>
           Simule sua antecipação do FGTS e veja o valor <br /> de acordo com o saldo e mês de nascimento.

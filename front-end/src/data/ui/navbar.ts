@@ -40,6 +40,6 @@ export const MENU: NavbarItemProps[] = [
   },
   {
     label: 'Seja Parceiro',
-    link: '/parceiros',
+    link: '/seja-um-parceiro',
   },
 ]

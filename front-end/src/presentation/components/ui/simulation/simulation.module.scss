@@ -16,13 +16,13 @@
       line-height: 2.9rem;
       margin-bottom: 1rem;
       @media (max-width: 880px) {
-        font-size: $font-small;
+        font-size: $font-medium;
         line-height: 2rem;
         margin-bottom: 1rem;
       }
     }
     .subtitle {
-      font-size: $font-default;
+      font-size: $font-small;
       font-weight: $weight-medium;
       line-height: 1.3rem;
     }
@@ -42,11 +42,13 @@
             line-height: 1.5rem;
           }
           .input-placeholder {
-            background-color: $color-grayLight;
+            background-color: inherit;
             font-size: $font-large;
             font-weight: $weight-medium;
+            margin-bottom: 0.2rem;
             @media (max-width: 880px) {
               font-size: $font-large;
+              display: block;
             }
           }
           .btn {

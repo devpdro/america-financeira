@@ -61,7 +61,7 @@ const LoanFGTS = () => {
 
       <Header
         title="Empréstimo FGTS"
-        subtitle="Aproveite seu FGTS para\ntransformar seus planos\nem realidade"
+        subtitle={`Aproveite seu FGTS para \n transformar seus planos\nem realidade`}
         paragraph="*Sujeito à análise de crédito e condições do produto"
         image={IMAGES.src}
       />
@@ -75,7 +75,7 @@ const LoanFGTS = () => {
         image={IMAGE.DUAS_PESSOAS_CONVERSANDO.src}
         alt="Sobre o Empréstimo FGTS"
         width={100}
-        height={100}
+        height={98}
       />
 
       <Simulation />
@@ -88,8 +88,8 @@ const LoanFGTS = () => {
         position="right"
         image={IMAGE.INVESTIMENTOS.src}
         alt="Imagem representativa de antecipação de FGTS"
-        height={100}
-        width={91}
+        height={98}
+        width={100}
       />
 
       <Panel
@@ -99,8 +99,8 @@ const LoanFGTS = () => {
         position="left"
         image={IMAGE.CARTAO_CREDITO.src}
         alt="Imagem de Cartão de Crédito"
-        width={91}
         height={100}
+        width={100}
       />
 
       <Faq items={FAQLOAN} title="Ficou com alguma dúvida sobre Empréstimo FGTS?" />

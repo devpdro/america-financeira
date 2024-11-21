@@ -4,9 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { IconWithProps, getLinkAttributes } from 'src/utils'
 import { NavMobile } from 'src/presentation/components'
 import { IMAGE, ICON } from 'src/presentation/assets'
+import { getLinkAttributes } from 'src/utils'
 import { MENU } from 'src/data/ui'
 
 import S from './navbar.module.scss'
@@ -68,9 +68,7 @@ const Navbar = () => {
         </Link>
       </aside>
 
-      <IconWithProps onClick={() => setSideMenu(true)} className={S['menu-icon']}>
-        <ICON.IconMenu3 />
-      </IconWithProps>
+      <ICON.IconMenu3 onClick={() => setSideMenu(true)} className={S['menu-icon']} />
     </nav>
   )
 }

@@ -38,7 +38,7 @@ const Spotlight = ({ title, subtitle, paragraph, label, image, alt, width, heigh
       </>
     )}
     {position === 'right' && (
-      <section>
+      <>
         <div className={S['text-section']}>
           <h3 className={S.subtitle}>{subtitle}</h3>
           <h1 className={S.title}>{title}</h1>
@@ -53,7 +53,7 @@ const Spotlight = ({ title, subtitle, paragraph, label, image, alt, width, heigh
         <div className={S['image-section']} style={{ width: `${width}%`, height: `${height}%` }}>
           <Image className={S.img} src={image} alt={alt} width={width} height={height} layout="responsive" />
         </div>
-      </section>
+      </>
     )}
   </div>
 )

@@ -57,16 +57,20 @@
       }
     }
     .paragraph {
+      font-weight: $weight-light;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.4rem;
       @media (min-width: 881px) and (max-width: 1044px) {
         font-weight: $weight-light;
         font-size: $font-small;
         line-height: 1.3rem;
         margin-bottom: 1.5rem;
       }
-      font-weight: $weight-light;
-      font-size: $font-default;
-      margin-bottom: 2rem;
-      line-height: 1.4rem;
+      @media (max-width: 880px) {
+        font-size: $font-small;
+        line-height: 1.2rem;
+      }
     }
   }
 }

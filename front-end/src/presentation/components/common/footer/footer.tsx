@@ -32,10 +32,6 @@ const MENU: MenuProps[] = [
         label: 'Intranet',
         link: 'intranet',
       },
-      {
-        label: 'Blog',
-        link: '/blog',
-      },
     ],
   },
 ]

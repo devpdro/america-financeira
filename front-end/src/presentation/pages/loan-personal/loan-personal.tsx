@@ -5,7 +5,7 @@ const BENEFITS = [
   {
     title: 'Consolidação de dívidas',
     subtitle: 'Simplifique sua vida financeira consolidando várias dívidas em uma única parcela mais baixa.',
-    image: IMAGE.FOUNDER_CONFRATERNIZACAO,
+    image: IMAGE.PAGAR_DIVIDAS,
   },
 
   {
@@ -49,7 +49,7 @@ const FAQLOAN = [
 ]
 
 const LoanPersonal = () => {
-  const IMAGES = IMAGE.PESSOA_OLHANDO_PRA_VOCÊ
+  const IMAGES = IMAGE.EMPRESTIMO_ADULTOS_CONVERSANDO
 
   return (
     <div>
@@ -61,7 +61,7 @@ const LoanPersonal = () => {
 
       <Header
         title="Empréstimo Pessoal"
-        subtitle="Empréstimo pra você,\nrápido e fácil"
+        subtitle={`Empréstimo pra você, \n rápido e fácil`}
         paragraph="*Sujeito à análise de crédito e condições do produto"
         image={IMAGES.src}
       />
@@ -72,15 +72,15 @@ const LoanPersonal = () => {
         paragraph="O empréstimo pessoal é um tipo de crédito oferecido por instituições financeiras para indivíduos que necessitam de dinheiro para diversas finalidades pessoais, como pagar dívidas, realizar compras ou lidar com emergências."
         label="Simular empréstimo"
         position="left"
-        image={IMAGE.DUAS_PESSOAS_CONVERSANDO.src}
+        image={IMAGE.PESSOA_OLHANDO_PRA_VOCÊ.src}
         alt="O que é o Empréstimo Pessoal?"
         width={100}
         height={98}
       />
 
       <Benefits
-        title="Seu empréstimo pessoal \nideal está aqui"
-        subtitle="Oferecemos as melhores condições e benefícios para atender todas suas \nnecessidades financeiras pessoais."
+        title={`Seu empréstimo pessoal \n ideal está aqui`}
+        subtitle={`Oferecemos as melhores condições e benefícios para atender todas suas \n necessidades financeiras pessoais.`}
         items={BENEFITS}
         width={100}
         height={100}
@@ -95,7 +95,7 @@ const LoanPersonal = () => {
         position="left"
         image={IMAGE.CARTAO_CREDITO.src}
         alt="Imagem de Cartão de Crédito"
-        width={91}
+        width={100}
         height={100}
       />
 
@@ -106,7 +106,7 @@ const LoanPersonal = () => {
         position="right"
         image={IMAGE.INVESTIMENTOS.src}
         alt="Imagem representativa de antecipação de FGTS"
-        width={91}
+        width={100}
         height={100}
       />
 

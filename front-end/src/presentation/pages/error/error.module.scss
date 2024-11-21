@@ -11,8 +11,9 @@
     font-weight: $weight-medium;
     line-height: 2.9rem;
     margin-bottom: 1.4rem;
-    @media (max-width: 1124px) {
+    @media (max-width: 880px) {
       font-size: $font-small;
+      font-weight: $weight-bold;
       line-height: 2rem;
     }
   }

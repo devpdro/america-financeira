@@ -12,7 +12,6 @@ const BANKS = [
   { src: IMAGE.BANCO_BANRISUL.src, alt: 'Imagem do banco Banrisul' },
   { src: IMAGE.BANCO_SAFRA.src, alt: 'Imagem do banco Safra' },
   { src: IMAGE.BANCO_ITAU.src, alt: 'Imagem do banco Itaú' },
-  { src: IMAGE.BANCO_PAN.src, alt: 'Imagem do banco Pan' },
 ]
 
 const Banks = () => {
@@ -23,7 +22,7 @@ const Banks = () => {
       </h1>
       <div className={S['image-section']}>
         {BANKS.map((item, index) => (
-          <Image width={180} height={0} key={index} src={item.src} alt={item.alt} className={S.img} />
+          <Image width={100} height={100} key={index} src={item.src} alt={item.alt} className={S.img} />
         ))}
       </div>
     </div>

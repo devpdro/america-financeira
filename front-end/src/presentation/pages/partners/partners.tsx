@@ -20,7 +20,7 @@ const BENEFITS = [
   {
     title: 'Ferramentas de ponta',
     subtitle: 'Tenha eficiência e sucesso em suas vendas com nosso suporte especializado.',
-    image: IMAGE.PARCEIROS,
+    image: IMAGE.IMPULSIONE_RECEITA,
   },
 ]
 
@@ -43,7 +43,7 @@ const Partners = () => (
       title="Parcerias de Sucesso"
       paragraph="Na America Financeira, valorizamos as parcerias estratégicas que nos permitem oferecer soluções financeiras inovadoras e eficazes. Junte-se a nós e descubra os benefícios de ser um parceiro, incluindo acesso a uma ampla rede de clientes, suporte especializado e oportunidades de crescimento conjunto."
       label="Seja parceiro"
-      image={IMAGE.CRESCIMENTO_EMPRESA.src}
+      image={IMAGE.PARCEIROS.src}
       alt="Parcerias de Sucesso"
       height={40}
       width={100}
@@ -69,11 +69,18 @@ const Partners = () => (
     </div>
 
     <div className={S.container}>
-      <Image className={S.img} src={IMAGE.LOGO_AMERICA_LETRAS_AZUL.src} alt="Logo América Financeira" />
+      <Image
+        className={S.logo}
+        src={IMAGE.LOGO_AMERICA_LETRAS_AZUL.src}
+        alt="Logo América Financeira"
+        width={100}
+        height={100}
+        layout="responsive"
+      />
       <h3 className={S.subtitle}>Siga a gente</h3>
       <p className={S.paragraph}>
-        Conheça nossa cultura, explore nossos serviços e veja como transformamos finanças em oportunidades todos os
-        dias.
+        Conheça nossa cultura, explore nossos serviços e veja como transformamos <br /> finanças em oportunidades todos
+        os dias.
       </p>
       <div className={S['icons-section']}>
         {ICONS.map(({ icon: Icon, link }, index) => (

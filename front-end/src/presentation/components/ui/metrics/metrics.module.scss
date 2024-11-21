@@ -2,11 +2,11 @@
 @import '../../../styles/themes/mixins.scss';
 
 .container {
-  @include container(1380px, 9.5rem auto 12.5rem auto);
-  position: relative;
   background: $color-secondary;
   padding: 0 0.9rem;
   .box-section {
+    @include container(1380px, 9.5rem auto 12.5rem auto);
+    position: relative;
     .info-section {
       @include display-flex;
       flex-wrap: wrap;
@@ -46,8 +46,7 @@
       text-align: center;
       background-color: $color-snow;
       border-radius: $radii-default;
-      height: 12rem;
-      padding: 2rem 1.5rem;
+      height: 11.5rem;
       margin-top: -5.75rem;
       @media (max-width: 1084px) {
         margin-top: -1.575rem;
@@ -55,8 +54,6 @@
       .icon {
         color: $color-primary;
         border-radius: $radii-default;
-        font-size: 4rem;
-        padding: 0.2rem;
         margin-bottom: 1rem;
       }
       .title {
@@ -79,7 +76,7 @@
         position: relative;
         width: 55vw;
         border-radius: 0.625rem;
-        height: 27rem;
+        height: 25.5rem;
         margin-top: 5.2rem;
         margin-bottom: -9.3rem;
         @media (max-width: 993px) {
