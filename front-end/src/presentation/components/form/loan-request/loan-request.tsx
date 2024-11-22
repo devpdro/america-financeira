@@ -8,7 +8,7 @@ import { Modal, Button } from 'src/presentation/components'
 
 import S from './loan-request.module.scss'
 
-export type LoanRequestProps = {
+type LoanRequestProps = {
   nome: string
   email: string
   whatsapp: string
@@ -164,12 +164,10 @@ const LoanRequest = () => {
         </fieldset>
       </form>
 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        message={modalMessage}
-        aria-label="Modal de Solicitação de Empréstimo"
-      />
+      <Modal  open={isModalOpen} 
+  close={closeModal} 
+  message="Some message"
+  description={[{ paragraph: 'Example paragraph text', link: 'https://example.com' }]}  />
     </div>
   )
 }
