@@ -18,7 +18,8 @@
     "react-hook-form": "^7.53.2",
     "react-input-mask": "^2.0.4",
     "react-responsive-modal": "^6.4.2",
-    "sass": "^1.77.2"
+    "sass": "^1.77.2",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
