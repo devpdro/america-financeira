@@ -166,7 +166,7 @@ const LoanRequest = () => {
 
       <Modal  open={isModalOpen} 
   close={closeModal} 
-  message="Some sadadadadadadadaa"
+  message="Some sadadadadadadadaaaa"
   description={[{ paragraph: 'Example paragraph text', link: 'https://example.com' }]}  />
     </div>
   )
