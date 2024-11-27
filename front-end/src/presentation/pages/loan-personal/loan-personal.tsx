@@ -11,7 +11,7 @@ const BENEFITS = [
   {
     title: 'Educação e qualificação',
     subtitle: 'Invista no seu futuro com cursos e especializações, financiados por um crédito acessível.',
-    image: IMAGE.EDUCACAO,
+    image: IMAGE.AUMENTAR_LUCRO,
   },
   {
     title: 'Viagens e lazer',
