@@ -5,7 +5,7 @@ const BENEFITS = [
   {
     title: 'Investimento em saúde',
     subtitle: 'Cuide da sua saúde e da sua família com tratamentos médicos e dentários financiados de forma acessível.',
-    image: IMAGE.SAUDE,
+    image: IMAGE.CRESCIMENTO_EMPRESA,
   },
   {
     title: 'Melhoria da casa',
@@ -15,7 +15,7 @@ const BENEFITS = [
   {
     title: 'Renovação de bens',
     subtitle: 'Troque seu carro, móveis ou eletrônicos antigos por novos, com condições de pagamento acessíveis.',
-    image: IMAGE.MOVEIS,
+    image: IMAGE.CRESCIMENTO_EMPRESA,
   },
 ]
 
