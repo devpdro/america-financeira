@@ -86,7 +86,7 @@ const LoanFGTS = () => {
         subtitle="Antecipe seu FGTS com a América e tenha acesso rápido ao seu dinheiro quando precisar. Simplificamos o processo para você aproveitar seus recursos antes do prazo habitual."
         paragraph="Antecipar FGTS"
         position="right"
-        image={IMAGE.INVESTIMENTOS.src}
+        image={IMAGE.AUMENTAR_LUCRO.src}
         alt="Imagem representativa de antecipação de FGTS"
         height={98}
         width={100}
