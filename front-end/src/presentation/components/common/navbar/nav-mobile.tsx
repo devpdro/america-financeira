@@ -20,15 +20,23 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
         </section>
         <div className={S['nav-items']}>
           {MENU.map((item, key) => (
-            <NavItem key={key} label={item.label} new={item.new} link={item.link} onClick={handleClick} blank="none">
+            <NavItem
+              key={key}
+              label={item.label}
+              new={item.new}
+              link={item.link}
+              onClick={handleClick}
+              blank="none"
+              closeMenu={closeMenu}
+            >
               {item.children}
             </NavItem>
           ))}
         </div>
         <section className={S['auth-buttons']}>
           <Link href="/intranet" legacyBehavior>
-            <a className={S.link}>
-              <span>Hub de informações</span>
+            <a className={S.link} onClick={closeMenu}>
+              <span>Área de acesso</span>
             </a>
           </Link>
           <ICON.IconUser className={S.icon} />

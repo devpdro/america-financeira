@@ -5,6 +5,7 @@ export interface NavbarItemProps {
   blank?: string
   children?: NavbarItemProps[]
   onClick?: () => void
+  closeMenu?: () => void
 }
 
 export type NavMobileProps = {

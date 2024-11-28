@@ -104,7 +104,8 @@ const LoanRequest = () => {
             mask="(99) 99999-9999"
             maskChar=""
             className={`${S['input-text']} ${errors.whatsapp ? S['input-text-error'] : ''}`}
-            type="text"
+            type="tel"
+            inputMode="tel"
             placeholder="Whatsapp"
           />
 
@@ -121,6 +122,7 @@ const LoanRequest = () => {
             className={`${S['input-text']} ${errors.cpf ? S['input-text-error'] : ''}`}
             type="text"
             placeholder="CPF"
+            inputMode="numeric"
           />
 
           <select
