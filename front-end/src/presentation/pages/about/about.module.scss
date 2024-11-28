@@ -19,7 +19,7 @@
       display: block;
       margin: 0 auto;
       content: '';
-      background: $color-secondary;
+      background: $color-primary;
       right: 1.25rem;
       width: 0.125rem;
       height: 100%;
@@ -89,7 +89,7 @@
         left: -0.2rem;
       }
       &:after {
-        border: 0.125rem solid $color-grayLight;
+        border: 0.125rem solid $color-primary;
         left: 0.2rem;
       }
     }

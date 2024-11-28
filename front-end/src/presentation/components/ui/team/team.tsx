@@ -32,8 +32,8 @@ const Team = ({ width, height }: TeamProps) => (
       <div className={classNames(S.col, S['col-3'])}>
         <div className={S['img-square']}>
           <Image
-            src={TEAMPHOTOS[0].src}
-            alt={TEAMPHOTOS[0].alt}
+            src={TEAMPHOTOS[3].src}
+            alt={TEAMPHOTOS[3].alt}
             className={S['img-cover']}
             height={height}
             width={width}
@@ -63,8 +63,8 @@ const Team = ({ width, height }: TeamProps) => (
       <div className={classNames(S.col, S['col-3'])}>
         <div className={S['img-square']}>
           <Image
-            src={TEAMPHOTOS[5].src}
-            alt={TEAMPHOTOS[5].alt}
+            src={TEAMPHOTOS[1].src}
+            alt={TEAMPHOTOS[1].alt}
             className={S['img-cover']}
             layout="responsive"
             height={height}

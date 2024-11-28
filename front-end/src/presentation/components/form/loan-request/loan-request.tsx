@@ -164,10 +164,7 @@ const LoanRequest = () => {
         </fieldset>
       </form>
 
-      <Modal  open={isModalOpen} 
-  close={closeModal} 
-  message="Some sadadadadadadadaaaa"
-  description={[{ paragraph: 'Example paragraph text', link: 'https://example.com' }]}  />
+      <Modal open={isModalOpen} close={closeModal} message={modalMessage} />
     </div>
   )
 }

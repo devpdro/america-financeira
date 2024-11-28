@@ -25,16 +25,16 @@ export const MENU: NavbarItemProps[] = [
     link: '#',
     children: [
       {
-        label: 'Empréstimo Consignado',
-        link: '/emprestimo-consignado',
+        label: 'Empréstimo Pessoal',
+        link: '/emprestimo-pessoal',
       },
       {
         label: 'Empréstimo FGTS',
         link: '/emprestimo-fgts',
       },
       {
-        label: 'Empréstimo Pessoal',
-        link: '/emprestimo-pessoal',
+        label: 'Empréstimo Consignado',
+        link: '/emprestimo-consignado',
       },
     ],
   },

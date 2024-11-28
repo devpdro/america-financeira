@@ -105,7 +105,7 @@ const About = () => (
       </div>
     </div>
 
-    <Team width={180} height={180} />
+    <Team width={100} height={100} />
   </div>
 )
 
