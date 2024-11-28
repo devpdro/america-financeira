@@ -53,7 +53,9 @@ const TermsAgreement = () => (
     />
 
     <div className={S['header']}>
-      <h1 className={S.title}>Termos de uso</h1>
+      <div className={S.box}>
+        <h1 className={S.title}>Termos de uso</h1>
+      </div>
     </div>
 
     <Terms

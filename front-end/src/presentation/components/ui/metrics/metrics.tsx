@@ -10,12 +10,12 @@ const METRICS = [
   },
   {
     Icon: ICON.IconChartLine,
-    title: 'R$4,2 bilhões',
+    title: 'R$5,2 bilhões',
     description: 'Volume Financeiro',
   },
   {
     Icon: ICON.IconUsers,
-    title: '+18 Parceiros',
+    title: '+48 Parceiros',
     description: 'Rede de Colaboração',
   },
   {

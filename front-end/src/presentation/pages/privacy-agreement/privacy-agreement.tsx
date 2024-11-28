@@ -65,7 +65,7 @@ const POLICY = {
 }
 
 const PrivacyAgreement = () => (
-  <div>
+  <div className={S.container}>
     <Meta
       title="Política de privacidade"
       description="Leia a Política de Privacidade da América Financeira e saiba como protegemos e utilizamos suas informações pessoais."
@@ -73,7 +73,9 @@ const PrivacyAgreement = () => (
     />
 
     <div className={S['header']}>
-      <h1 className={S.title}>Política de Privacidade</h1>
+      <div className={S.box}>
+        <h1 className={S.title}>Política de Privacidade</h1>
+      </div>
     </div>
 
     <Terms

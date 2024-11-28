@@ -1,10 +1,10 @@
 @import '../../styles/themes/light.scss';
 @import '../../styles/themes/mixins.scss';
 
-.container {
-  @include container(1080px);
-  .header {
-    background-color: $color-secondary;
+.header {
+  background-color: $color-secondary;
+  .box {
+    @include container(1080px);
     padding: 8.5rem 2rem 3.5rem 2rem;
     .title {
       font-size: $font-large;

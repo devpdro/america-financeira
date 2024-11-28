@@ -41,7 +41,7 @@ const Submission = () => {
 
   const onSubmit = async (data: SubmissionProps) => {
     try {
-      const response = await fetch('/api/submit-webhook-partners', {
+      const response = await fetch('/api/partner', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -117,6 +117,8 @@ const Submission = () => {
             maskChar=""
             className={`${S['input-text']} ${errors.whatsapp ? S['input-text-error'] : ''}`}
             placeholder="Whatsapp"
+            type="tel"
+            inputMode="tel"
           />
           {errors.whatsapp && <span className={S.error}>{errors.whatsapp.message}</span>}
 
@@ -128,7 +130,9 @@ const Submission = () => {
             mask="999.999.999-99"
             maskChar=""
             className={`${S['input-text']} ${errors.cpf ? S['input-text-error'] : ''}`}
+            type="text"
             placeholder="CPF"
+            inputMode="numeric"
           />
           {errors.cpf && <span className={S.error}>{errors.cpf.message}</span>}
 
@@ -151,6 +155,8 @@ const Submission = () => {
           <Button typeStyle="btn3" width="100%" label={isSubmitting ? 'Enviando...' : 'Enviar'} />
         </fieldset>
       </form>
+
+      <Modal open={isModalOpen} close={closeModal} message={modalMessage} />
     </div>
   )
 }

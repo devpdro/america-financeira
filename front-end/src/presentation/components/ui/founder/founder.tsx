@@ -15,7 +15,9 @@ const Founder = () => (
       </div>
       <div className={S['about-section']}>
         <div className={S['image-section']}>
-          <Image src={IMAGE.FOUNDER} alt="Allan Bertho, CEO da América Financeira" className={S.img} />
+          <a href="https://www.instagram.com/allanbertho/" target="_blank" rel="noopener noreferrer">
+            <Image src={IMAGE.FOUNDER} alt="Allan Bertho, CEO da América Financeira" className={S.img} />
+          </a>
         </div>
         <div className={S['text-section']}>
           <h1 className={S.title}>Allan Diego Bertho</h1>

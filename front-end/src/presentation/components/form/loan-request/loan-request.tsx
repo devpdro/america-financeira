@@ -37,7 +37,7 @@ const LoanRequest = () => {
 
   const onSubmit = async (data: LoanRequestProps) => {
     try {
-      const response = await fetch('/api/submit-webhook', {
+      const response = await fetch('/api/loan', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
