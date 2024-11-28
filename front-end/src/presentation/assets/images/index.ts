@@ -29,7 +29,7 @@ import IMPULSIONE_RECEITA from './IMPULSIONANDO_RECEITA.webp'
 // import MOVEIS from './MOVEIS.webp'
 import PARCEIROS from './PARCEIROS.webp'
 // import SAUDE from './SAUDE.webp'
-// import SONHO from './SONHO.webp'
+import SONHOS from './SONHOS.webp'
 import VIAGEM from './VIAGEM.webp'
 import BANCO_BRASIL from './BANCO_BRASIL.webp'
 import CONTE_CONOSCO from './CONTE_CONOSCO.webp'
@@ -38,6 +38,7 @@ import LOGO_AMERICA_FINANCEIRA_SEGURO from './LOGO_AMERICA_FINANCEIRA_SEGURO.web
 import LOGO_AMERICA_LETRAS_AZUL from './LOGO_AMERICA_LETRAS_AZUL.webp'
 
 const IMAGE = {
+  SONHOS,
   LOGO_AMERICA_LETRAS_AZUL,
   FOUNDER,
   CONFRATERNIZACAO_TROFEU,

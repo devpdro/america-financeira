@@ -15,7 +15,7 @@ const BENEFITS = [
   {
     title: 'Realizar sonhos',
     subtitle: 'Tire do papel o plano de reformar a casa ou adquirir novos bens com um crédito saudável.',
-    image: IMAGE.CRESCIMENTO_EMPRESA,
+    image: IMAGE.SONHOS,
   },
 ]
 
