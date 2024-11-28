@@ -1,1 +1,95 @@
-// 
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.links-container {
+  @include container(1280px);
+  @include display-flex;
+  padding: 7.5rem 2rem 1.5rem 2rem;
+  .links-box {
+    @include display-flex;
+    cursor: pointer;
+    text-align: center;
+    flex-direction: column;
+    color: $color-snow;
+    background-color: $color-primary;
+    border-radius: $radii-default;
+    margin: 2.2rem 0.5rem 3rem 0.5rem;
+    padding: 1.25rem;
+    width: 9.6rem;
+    .icon {
+      margin-bottom: 0.2rem;
+      font-size: 1.5rem;
+    }
+    .title {
+      font-weight: $weight-default;
+      line-height: 1.3rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.card-container {
+  @include display-flex;
+  margin-bottom: 5.5rem;
+  .card-section {
+    position: relative;
+    text-align: center;
+    background: $color-snow;
+    border-radius: $radii-default;
+    color: $color-snow;
+    box-shadow: 0.25rem 0.775rem 1.075rem $color-secondary;
+    padding: 6rem 0;
+    width: 50rem;
+    .logo {
+      width: 200px !important;
+      height: 50px;
+      margin-bottom: 0.4rem;
+      @media (max-width: 880px) {
+        margin-bottom: 0.8rem;
+        width: 150px !important;
+        height: 50px;
+      }
+    }
+    .title {
+      position: relative;
+      font-size: $font-medium;
+      font-weight: $weight-medium;
+      color: $color-darkHigh;
+      margin-bottom: 0.7rem;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: $weight-medium;
+      color: $color-darkHigh;
+      margin-bottom: 1.5rem;
+      line-height: 1.4rem;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      gap: 1.4rem;
+      a {
+        color: $color-primary;
+        transition: transform 0.3s, color 0.3s;
+        &:hover {
+          transform: scale(1.2);
+          color: $color-secondary;
+        }
+      }
+      svg {
+        filter: drop-shadow(0 0 0.3rem $color-primary);
+      }
+    }
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}

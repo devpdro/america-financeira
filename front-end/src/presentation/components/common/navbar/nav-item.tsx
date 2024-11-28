@@ -18,7 +18,7 @@ const NavItem = ({ label, link, children }: NavbarItemProps) => {
       <Link onClick={handleClick} href={link ?? '#'} className={S['item-link']}>
         <p className={S['item-label']}>
           <span>{label}</span>
-          {children && <ICON.IconCaretUp className={`${S['arrow-icon']} ${isOpen && S['rotate-180']}`} />}
+          {children && <ICON.IoIosArrowUp className={`${S['arrow-icon']} ${isOpen && S['rotate-180']}`} />}
         </p>
       </Link>
       {isOpen && children && (

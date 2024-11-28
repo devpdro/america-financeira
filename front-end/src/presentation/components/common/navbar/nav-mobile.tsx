@@ -28,7 +28,7 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
         <section className={S['auth-buttons']}>
           <Link href="/intranet" legacyBehavior>
             <a className={S.link}>
-              <span>Intranet</span>
+              <span>Hub de informações</span>
             </a>
           </Link>
           <ICON.IconUser className={S.icon} />

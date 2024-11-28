@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link href={item.link ?? '#'} legacyBehavior>
                 <a className={S['link-text']} onClick={(e) => handleClick(e, item.link ?? '#')}>
                   <span>{item.label}</span>
-                  {item.children && <ICON.IconCaretUp className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
+                  {item.children && <ICON.IoIosArrowDown className={`${S['arrow-icon']} ${S['rotate-180']}`} />}
                 </a>
               </Link>
               {item.children && (
@@ -63,7 +63,7 @@ const Navbar = () => {
         <ICON.IconUser className={S.icon} />
         <Link href="/intranet" legacyBehavior>
           <a className={S.link}>
-            <span>Intranet</span>
+            <span>Área de Acesso</span>
           </a>
         </Link>
       </aside>

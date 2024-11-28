@@ -1,6 +1,5 @@
 import {
   IconX,
-  IconCaretUp,
   IconUser,
   IconBrandWhatsapp,
   IconArrowRight,
@@ -9,7 +8,6 @@ import {
   IconBrandInstagram,
   IconPlus,
   IconMinus,
-  IconCaretDown,
   IconBrandYoutube,
   IconBrandFacebook,
   IconArrowLeft,
@@ -18,12 +16,13 @@ import {
   IconUsers,
   IconCalendarMonth,
 } from '@tabler/icons-react'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
 const ICON = {
   IconBrandFacebook,
-  IconCaretUp,
-  IconCaretDown,
   IconUser,
+  IoIosArrowDown,
+  IoIosArrowUp,
   IconPlus,
   IconMinus,
   IconCurrencyDollar,
