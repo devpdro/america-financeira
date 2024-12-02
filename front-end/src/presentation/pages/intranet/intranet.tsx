@@ -17,6 +17,27 @@ const ITEMS = [
     info: [{ text: 'Gap Sys', link: 'https://app.gapsys.com.br/login' }],
   },
   {
+    icon: <IconFlame />,
+    title: 'Hot Sys',
+    info: [{ text: 'Hot Sys', link: 'https://hotsys.com.br/#/login' }],
+  },
+  {
+    icon: <IconMail />,
+    title: 'Webmail',
+    info: [{ text: 'Webmail', link: 'https://webmail.americafinanceira.com.br/' }],
+  },
+  {
+    icon: <IconLink />,
+    title: 'Links úteis',
+    info: [
+      { text: 'Área do Parceiro', link: 'https://america.nodesistemas.com.br/' },
+      { text: 'KingHost', link: 'https://kinghost.com.br' },
+      { text: 'N8n', link: 'https://n8n.io' },
+      { text: 'Kolmeya', link: 'https://kolmeya.com.br/auth/login' },
+      { text: 'Vanguard', link: 'https://www.sistemavanguard.com.br/vanguard/' },
+    ],
+  },
+  {
     icon: <IconBuildingBank />,
     title: 'Bancos',
     info: [
@@ -68,26 +89,6 @@ const ITEMS = [
       { text: 'Via Certa', link: 'https://sistema.acertapromotora.com.br' },
     ],
   },
-  {
-    icon: <IconFlame />,
-    title: 'Hot Sys',
-    info: [{ text: 'Hot Sys', link: 'https://hotsys.com.br/#/login' }],
-  },
-  {
-    icon: <IconLink />,
-    title: 'Links úteis',
-    info: [
-      { text: 'Área do Parceiro', link: 'https://america.nodesistemas.com.br/' },
-      { text: 'KingHost', link: 'https://kinghost.com.br' },
-      { text: 'N8n', link: 'https://n8n.io' },
-      { text: 'Kolmeyaa', link: 'https://kolmeya.com.br/auth/login' },
-    ],
-  },
-  {
-    icon: <IconMail />,
-    title: 'Webmail',
-    info: [{ text: 'Webmail', link: 'https://webmail.americafinanceira.com.br/' }],
-  },
 ]
 
 const Intranet = () => {
@@ -95,6 +96,12 @@ const Intranet = () => {
 
   const handleMouseEnter = (index: number) => setHoveredIndex(index)
   const handleMouseLeave = () => setHoveredIndex(null)
+ 
+  const handleBoxClick = (info: { text: string; link: string }) => {
+    if (info) {
+      window.open(info.link, '_blank')
+    }
+  }
 
   return (
     <>
@@ -111,11 +118,12 @@ const Intranet = () => {
             className={S['links-box']}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
+            onClick={() => item.info.length === 1 && handleBoxClick(item.info[0])} // Se houver apenas um link, abre diretamente
           >
             <span className={S.icon}>{item.icon}</span>
             <h3 className={S.title}>{item.title}</h3>
 
-            {hoveredIndex === index && (
+            {hoveredIndex === index && item.info.length > 1 && (
               <div className={S['links-dropdown']}>
                 {item.info.map((link, idx) => (
                   <a key={idx} href={link.link} target="_blank" rel="noopener noreferrer" className={S['link-item']}>
@@ -140,7 +148,7 @@ const Intranet = () => {
           />
           <div className={S.title}>Siga a gente</div>
           <p className={S.subtitle}>
-            Conheça nossa cultura, explore nossos serviços e veja como transformamos <br /> finanças em oportunidades
+            Conheça nossa cultura, explore nossos serviços e veja como <br /> transformamos finanças em oportunidades
             todos os dias.
           </p>
           <div className={S.icons}>
