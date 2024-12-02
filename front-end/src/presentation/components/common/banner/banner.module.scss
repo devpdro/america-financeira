@@ -12,14 +12,15 @@
   }
   .image-section {
     width: 115%;
-    @media (max-width: 880px) {
-      width: 120%;
-    }
+
     @media (min-width: 881px) and (max-width: 1044px) {
       display: none;
     }
     .img {
       border-radius: 0.0625rem;
+      @media (max-width: 880px) {
+        width: 100vw !important;
+      }
     }
   }
   .text-section {

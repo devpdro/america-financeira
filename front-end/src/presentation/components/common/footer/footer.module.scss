@@ -87,7 +87,7 @@
           .list {
             @include hover;
             white-space: wrap;
-            color: $color-grayMedium;
+            color: $color-grayMedium !important;
             font-size: $font-default;
             font-weight: $weight-medium;
             margin-bottom: 0.4rem;

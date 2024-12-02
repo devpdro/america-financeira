@@ -60,13 +60,11 @@
     margin: 1rem 0 2rem 0;
     gap: 2rem;
     .icon {
-      background-color: $color-grayLight;
       color: $color-primary;
       font-size: 3.8rem;
       border-radius: 50%;
       @media (max-width: 880px) {
-        font-size: 2.4rem;
-        padding: 0.2rem;
+        font-size: 2.8rem;
       }
     }
   }

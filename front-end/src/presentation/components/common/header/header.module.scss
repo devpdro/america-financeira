@@ -13,7 +13,7 @@
     height: 130vh;
   }
   @media (max-width: 624px) {
-    height: 140vh;
+    height: 145vh;
   }
   .box-section {
     @include display-flex(center, space-between);
@@ -32,7 +32,7 @@
     @media (max-width: 624px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 12.5rem;
+      margin-top: 11rem;
     }
     .text-section {
       gap: 8px;
