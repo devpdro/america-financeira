@@ -65,7 +65,7 @@ const Footer = () => (
           <div className={S['list-section']} key={key}>
             <h1 className={S.title}>{section.title}</h1>
             <ul className={S['list-box']}>
-              {section.items.map(({ link, label }, indkeyex) => (
+              {section.items.map(({ link, label }) => (
                 <li key={key} className={S.list}>
                   {link ? (
                     <Link legacyBehavior href={link}>

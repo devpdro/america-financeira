@@ -26,7 +26,7 @@ const Panel = ({ image, alt, title, subtitle, paragraph, position, width, height
             <h6 className={S.subtitle}>{subtitle}</h6>
             <div className={S['link-section']}>
               <Link
-                href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!%20Estou%20interessado%20no%20cart%C3%A3o%20de%20cr%C3%A9dito."
+                href="https://api.whatsapp.com/send?phone=5519988285625&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!%20Estou%20interessado%20no%20cart%C3%A3o%20de%20cr%C3%A9dito."
                 target="_blank"
               >
                 <span className={S.paragraph}>{paragraph}</span>
@@ -51,7 +51,7 @@ const Panel = ({ image, alt, title, subtitle, paragraph, position, width, height
             <h6 className={S.subtitle}>{subtitle}</h6>
             <div className={S['link-section']}>
               <Link
-                href="https://api.whatsapp.com/send?phone=5519999594454&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!%20Quero%20antecipar%20meu%20FGTS."
+                href="https://api.whatsapp.com/send?phone=5519988285625&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!%20Quero%20antecipar%20meu%20FGTS."
                 target="_blank"
               >
                 <span className={S.paragraph}>{paragraph}</span>

@@ -114,7 +114,7 @@ const Simulation = () => {
               do FGTS e mês de nascimento. Para uma simulação exata, entre em contato.
             </p>
             <Link
-              href="https://api.whatsapp.com/send?phone=5519999594454&text=Olá!%20Vim%20do%20site%20da%20América%20Financeira!%20Quero%20antecipar%20meu%20FGTS."
+              href="https://api.whatsapp.com/send?phone=5519988285625&text=Olá!%20Vim%20do%20site%20da%20América%20Financeira!%20Quero%20antecipar%20meu%20FGTS."
               target="_blank"
             >
               <Button typeStyle="btn1" label="Quero solicitar" width="260px" />
