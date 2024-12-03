@@ -34,7 +34,7 @@ const NavMobile = ({ closeMenu }: NavMobileProps) => {
           ))}
         </div>
         <section className={S['auth-buttons']}>
-          <Link href="/intranet" legacyBehavior>
+          <Link href="/area-de-acesso" legacyBehavior>
             <a className={S.link} onClick={closeMenu}>
               <span>Área de acesso</span>
             </a>

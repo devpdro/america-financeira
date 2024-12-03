@@ -15,10 +15,12 @@ import {
   IconChartLine,
   IconUsers,
   IconCalendarMonth,
+  IconMapPin,
 } from '@tabler/icons-react'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
 const ICON = {
+  IconMapPin,
   IconBrandFacebook,
   IconUser,
   IoIosArrowDown,

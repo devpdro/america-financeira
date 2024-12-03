@@ -92,7 +92,6 @@
       @include display-flex(flex-end, space-between);
       @include hover;
       flex-direction: column;
-      border: 0.0625rem solid $color-secondary;
       border: 0.5vmin solid $color-secondary;
       box-shadow: 0.4rem 0.4rem $color-primary;
       color: $color-darkHigh;

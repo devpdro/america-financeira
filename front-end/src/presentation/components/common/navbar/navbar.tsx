@@ -61,7 +61,7 @@ const Navbar = () => {
 
       <aside className={S['right-section']}>
         <ICON.IconUser className={S.icon} />
-        <Link href="/intranet" legacyBehavior>
+        <Link href="/area-de-acesso" legacyBehavior>
           <a className={S.link}>
             <span>Área de Acesso</span>
           </a>

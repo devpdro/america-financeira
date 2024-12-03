@@ -27,3 +27,14 @@ export const ICONS: IconProps[] = [
     link: 'https://api.whatsapp.com/send?phone=5519988285625&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
   },
 ]
+
+export const ICONS_LOCATIONS: IconProps[] = [
+  {
+    icon: ICON.IconBrandWhatsapp,
+    link: 'https://api.whatsapp.com/send?phone=5519988285625&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
+  },
+  {
+    icon: ICON.IconMapPin,
+    link: 'https://api.whatsapp.com/send?phone=5519988285625&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
+  },
+]
