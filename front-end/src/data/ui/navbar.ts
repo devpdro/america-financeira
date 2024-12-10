@@ -42,4 +42,8 @@ export const MENU: NavbarItemProps[] = [
     label: 'Seja Parceiro',
     link: '/seja-um-parceiro',
   },
+  {
+    label: 'Carreira',
+    link: '/trabalhe-conosco',
+  },
 ]

@@ -1,4 +1,5 @@
 export * from './about'
+export * from './careers'
 export * from './error'
 export * from './home'
 export * from './intranet'
