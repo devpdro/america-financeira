@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 import { LoanRequest } from 'src/presentation/components/form'
 
 import S from './header.module.scss'
@@ -6,7 +8,7 @@ type HeaderProps = {
   title: string
   subtitle: string
   paragraph: string
-  image: string
+  image: string | StaticImageData
 }
 
 const Header = ({ title, subtitle, image, paragraph }: HeaderProps) => (

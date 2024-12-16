@@ -1,3 +1,4 @@
+export { default as Candidate } from './candidate/candidate'
 export { default as Carousel } from './carousel/carousel'
 export { default as Founder } from './founder/founder'
 export { default as Metrics } from './metrics/metrics'

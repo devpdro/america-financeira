@@ -1,98 +1,207 @@
 @import '../../styles/themes/light.scss';
 @import '../../styles/themes/mixins.scss';
 
-.form {
-  @include display-flex;
-  flex-direction: column;
-  box-shadow: rgba(100, 100, 111, 0.2) 0 0.4375rem 1.015rem 0;
-  border: 1px solid $color-primary;
-  background-color: $color-snow;
-  border-radius: $radii-default;
-  width: 40.625rem;
-  padding: 2.075rem 2.575rem;
-  @media (max-width: 880px) {
-    padding: 2rem 1.5rrem;
-  }
-  @media (max-width: 880px) {
-    width: 90%;
-    padding: 2rem 2.5rem;
-  }
-  .box-title {
-    @include display-flex(flex-start, flex-start);
-    flex-direction: column;
-    gap: 2rem;
-    @media (max-width: 880px) {
-      flex-direction: column;
-      gap: 1rem;
+.about-container {
+  background-color: $color-secondary;
+  .about-section {
+    @include container(1280px, 4.5rem auto 3.5rem auto);
+    @include display-flex;
+    padding: 4rem 2rem;
+    .image-section {
+      width: 100%;
+      padding-right: 4rem;
+      .img {
+        border-radius: $radii-large;
+      }
     }
-    .text-america {
-      font-weight: $weight-default;
-      margin-bottom: 0.2rem;
-    }
-    .title {
-      color: $color-darkHigh;
-      font-size: $font-medium;
-      font-weight: $weight-bold;
-      line-height: 1.9rem;
-      margin-bottom: 0.4rem;
-      @media (max-width: 994px) {
+    .text-section {
+      width: 100%;
+      .subtitle {
+        font-weight: $weight-medium;
         font-size: $font-default;
+        margin-bottom: 0.5rem;
+        @media (max-width: 880px) {
+          font-size: $font-default;
+          font-weight: $weight-medium;
+        }
+      }
+      .title {
+        font-weight: $weight-medium;
+        font-size: $font-large;
+        margin: 0 0 1rem 0;
+        line-height: 2.9rem;
+        @media (max-width: 880px) {
+          font-size: $font-medium;
+          line-height: 2rem;
+        }
+      }
+      .paragraph {
+        font-weight: $weight-default;
+        font-size: $font-small;
+        margin-bottom: 2rem;
+        line-height: 1.3rem;
+      }
+      .text-team {
+        @include display-flex(flex-start, flex-start);
+        color: $color-darkHigh;
+        .text {
+          border-bottom: 1px solid $color-darkHigh;
+          margin-right: 0.3rem;
+        }
+        .icon {
+          font-size: 1rem;
+        }
       }
     }
-    .subtitle {
-      font-weight: $weight-default;
-    }
   }
+}
 
-  .input-text {
-    border-bottom: 0.0625rem solid $color-grayMedium;
-    transition: border-bottom 0.3s ease;
-    color: $color-darkHigh;
-    font-size: $font-default;
-    font-weight: $weight-medium;
-    margin-top: 1.2rem;
-    padding: 0.4375rem 0;
-    width: 100%;
-    @media (max-width: 880px) {
-      font-size: $font-small;
-    }
-    &:focus {
-      border-bottom: 10.0625remx solid $color-darkHigh;
-    }
-  }
-  .terms-box {
-    @include display-flex(center, flex-start);
-    .checkbox {
-      border: 0.125rem solid $color-darkHigh;
-      margin: 1.5rem 0;
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: $radii-small;
-      &:hover {
-        cursor: pointer;
+.benefits-container {
+  background-color: $color-secondary;
+  .benefits-section {
+    @include container(1280px, 4.5rem auto 3.5rem auto);
+    padding: 2.5rem 2rem 4rem 2rem;
+    .text-section {
+      text-align: center;
+      .subtitle {
+        font-weight: $weight-medium;
+        font-size: $font-default;
+        margin-bottom: 0.3rem;
+        @media (max-width: 880px) {
+          font-size: $font-default;
+          font-weight: $weight-medium;
+        }
+      }
+      .title {
+        font-weight: $weight-bold;
+        font-size: 2.4rem;
+        margin: 0 0 0rem 0;
+        line-height: 2.5rem;
+        @media (max-width: 880px) {
+          font-size: $font-medium;
+          line-height: 2rem;
+        }
       }
     }
-    .label-checkbox {
-      position: relative;
-      user-select: none;
-      color: $color-darkHigh;
-      font-weight: $weight-bold;
-      font-size: $font-small;
-      padding-left: 0.5rem;
+
+    .benefits-box {
+      @include display-flex;
+      gap: 2rem;
+      .box {
+        margin-top: 3rem;
+        padding: 0.75rem 1.25rem;
+        background-color: $color-snow;
+        border-radius: $radii-small;
+        width: 250px;
+        height: 200px;
+        .title {
+          font-size: $font-small;
+          line-height: 1.2rem;
+        }
+        .description {
+          font-weight: $weight-default;
+          font-size: $font-small;
+        }
+      }
     }
   }
-  .error {
-    color: $color-error;
-    font-weight: $weight-default;
-    font-size: $font-small;
-  }
-  .checkbox-error + .label-checkbox {
-    color: $color-error;
-  }
-  .input-text-error {
-    border-color: $color-error;
-    &:focus {
+}
+.form-container {
+  @include container(1280px, 4.5rem auto 3.5rem auto);
+  @include display-flex(flex-start, center);
+  .form {
+    @include display-flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 0.4375rem 1.015rem 0;
+    border: 1px solid $color-primary;
+    background-color: $color-snow;
+    border-radius: $radii-default;
+    width: 40.625rem;
+    padding: 2.075rem 2.575rem;
+    @media (max-width: 880px) {
+      padding: 2rem 1.5rrem;
+    }
+    @media (max-width: 880px) {
+      width: 90%;
+      padding: 2rem 2.5rem;
+    }
+    .box-title {
+      @include display-flex(flex-start, flex-start);
+      flex-direction: column;
+      gap: 2rem;
+      @media (max-width: 880px) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .text-america {
+        font-weight: $weight-default;
+        margin-bottom: 0.2rem;
+      }
+      .title {
+        color: $color-darkHigh;
+        font-size: $font-medium;
+        font-weight: $weight-bold;
+        line-height: 1.9rem;
+        margin-bottom: 0.4rem;
+        @media (max-width: 994px) {
+          font-size: $font-default;
+        }
+      }
+      .subtitle {
+        font-weight: $weight-default;
+      }
+    }
+
+    .input-text {
+      border-bottom: 0.0625rem solid $color-grayMedium;
+      transition: border-bottom 0.3s ease;
+      color: $color-darkHigh;
+      font-size: $font-default;
+      font-weight: $weight-medium;
+      margin-top: 1.2rem;
+      padding: 0.4375rem 0;
+      width: 100%;
+      @media (max-width: 880px) {
+        font-size: $font-small;
+      }
+      &:focus {
+        border-bottom: 10.0625remx solid $color-darkHigh;
+      }
+    }
+    .terms-box {
+      @include display-flex(center, flex-start);
+      .checkbox {
+        border: 0.125rem solid $color-darkHigh;
+        margin: 1.5rem 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: $radii-small;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .label-checkbox {
+        position: relative;
+        user-select: none;
+        color: $color-darkHigh;
+        font-weight: $weight-bold;
+        font-size: $font-small;
+        padding-left: 0.5rem;
+      }
+    }
+    .error {
+      color: $color-error;
+      font-weight: $weight-default;
+      font-size: $font-small;
+    }
+    .checkbox-error + .label-checkbox {
+      color: $color-error;
+    }
+    .input-text-error {
       border-color: $color-error;
+      &:focus {
+        border-color: $color-error;
+      }
     }
   }
 }
