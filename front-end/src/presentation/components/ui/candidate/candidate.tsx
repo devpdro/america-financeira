@@ -32,8 +32,8 @@ const Candidate = ({ position }: CandidateProps) => {
               height={98}
               layout="responsive"
               className={S.img}
-              src={IMAGE.DUAS_PESSOAS_CONVERSANDO}
-              alt=""
+              src={IMAGE.EQUIPE_TODA}
+              alt="Equipe interagindo"
             />
           </div>
         </>
@@ -46,8 +46,8 @@ const Candidate = ({ position }: CandidateProps) => {
               height={98}
               layout="responsive"
               className={S.img}
-              src={IMAGE.DUAS_PESSOAS_CONVERSANDO}
-              alt=""
+              src={IMAGE.EQUIPE_TODOS_VERMELHO}
+              alt="Equipe conversando"
             />
           </div>
           <div className={S['text-section']}>

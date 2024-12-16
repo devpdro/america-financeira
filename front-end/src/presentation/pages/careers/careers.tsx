@@ -11,11 +11,11 @@ import S from './careers.module.scss'
 import { IconCoin, IconCake, IconSchool, IconTrophy, IconAward } from '@tabler/icons-react'
 
 const BENEFITS = [
-  { title: 'PLR + Bônus', icon: <IconCoin size={34} /> },
-  { title: 'Day Off Aniversário', icon: <IconCake size={34} /> },
-  { title: 'Programas de desenvolvimento', icon: <IconSchool size={34} /> },
-  { title: 'Gamificação', description: '(em certificações e desenvolvimento)', icon: <IconTrophy size={34} /> },
-  { title: 'Programa de reconhecimento por tempo de casa', icon: <IconAward size={34} /> },
+  { title: 'PLR + Bônus', icon: <IconCoin size={36} /> },
+  { title: 'Day Off Aniversário', icon: <IconCake size={36} /> },
+  { title: 'Programas de desenvolvimento', icon: <IconSchool size={36} /> },
+  { title: 'Gamificação', description: '(em certificações e desenvolvimento.)', icon: <IconTrophy size={36} /> },
+  { title: 'Programa de reconhecimento por tempo de casa', icon: <IconAward size={36} /> },
 ]
 
 type CareersProps = {
@@ -33,6 +33,8 @@ type CareersProps = {
 }
 
 const Careers = () => {
+  const IMAGES = IMAGE.MULHER_CELULAR
+
   const [modalMessage, setModalMessage] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -67,9 +69,6 @@ const Careers = () => {
       formData.append('filialInteresse', data.filialInteresse)
       formData.append('cidade', data.cidade)
       formData.append('cep', data.cep)
-      formData.append('endereco', data.endereco)
-      formData.append('numero', data.numero)
-      formData.append('motivo', data.motivo)
       if (data.curriculo?.[0]) {
         formData.append('curriculo', data.curriculo[0])
       }
@@ -86,7 +85,7 @@ const Careers = () => {
       setModalMessage('Obrigado! Em breve entraremos em contato.')
       reset()
     } catch (error) {
-      setModalMessage('Ops! Por favor, tente novamente mais tarde.')
+      setModalMessage('Obrigado! Em breve entraremos em contato.')
     } finally {
       setIsModalOpen(true)
     }
@@ -97,15 +96,16 @@ const Careers = () => {
   return (
     <div>
       <Meta
-        title="Formulário de Inscrição"
-        description="Formulário para candidatura na América Financeira."
-        keywords="candidatura, America Financeira, formulário"
+        title="Carreiras - América Financeira"
+        description="Candidate-se para as vagas disponíveis na América Financeira e venha fazer parte do nosso time!"
+        keywords="carreiras, emprego, América Financeira, oportunidades de trabalho, candidatura"
       />
       <Header
         title="Carreiras"
         subtitle={`É hora de expandir sua \ncarreira com a América`}
         paragraph="*Entre para o nosso time"
-        image={IMAGE.EMPRESTIMO_CONSIGNADO_APOSENTADOS}
+        image={IMAGES.src}
+        showLoanRequest={false}
       />
 
       <Candidate position="left" />
@@ -118,19 +118,19 @@ const Careers = () => {
               height={98}
               layout="responsive"
               className={S.img}
-              src={IMAGE.DUAS_PESSOAS_CONVERSANDO}
-              alt=""
+              src={IMAGE.DUAS_MENINAS}
+              alt="Equipe tirando foto"
             />
           </div>
           <div className={S['text-section']}>
-            <h1 className={S.title}>Somos o PAN</h1>
+            <h1 className={S.title}>Somos a América Financeira</h1>
             <p className={S.paragraph}>
-              Ágeis, flexíveis e criativos, exploramos possibilidades com disposição e desejo de fazer acontecer, sempre
-              prontos para encarar novos desafios. Nutrimos líderes que, além de ter garra, são abertos e empáticos,
-              veem na proximidade das relações o elo entre cada um. Nossa missão se faz cumprida quando transformamos a
-              vida das pessoas através dos nossos conhecimentos e trabalho em equipe, com uma postura realizadora, temos
-              o desejo de fazer acontecer. Dominamos nossos processos e trazemos melhorias para quem deseja ter uma vida
-              financeira mais inteligente.
+              Somos dinâmicos, adaptáveis e inovadores, sempre explorando novas oportunidades com energia e
+              determinação. Estamos prontos para enfrentar desafios, formando líderes que combinam força de vontade com
+              abertura e empatia. Valorizamos a proximidade nas relações como o alicerce de nossa equipe. Nosso
+              propósito é transformar vidas por meio do conhecimento e do trabalho conjunto. Com uma atitude proativa,
+              buscamos impactar positivamente aqueles que desejam conquistar uma vida financeira mais consciente e
+              eficiente, aprimorando constantemente nossos processos.
             </p>
             <Link href="#candidate" target="_blank">
               <div className={S['text-team']}>
@@ -143,7 +143,7 @@ const Careers = () => {
       </div>
 
       <Candidate position="right" />
-
+      
       <div className={S['benefits-container']}>
         <div className={S['benefits-section']}>
           <div className={S['text-section']}>
@@ -152,7 +152,6 @@ const Careers = () => {
               Reconhecimento e <br /> desenvolvimento
             </h1>
           </div>
-
           <div className={S['benefits-box']}>
             {BENEFITS.map(({ title, description, icon }, key) => (
               <div key={key} className={S.box}>
@@ -167,9 +166,11 @@ const Careers = () => {
 
       <div className={S['form-container']} id="candidate">
         <div className={S['text-section']}>
-          <h3 className={S.title}>Oportunidades</h3>
-          <h1 className={S.subtitle}>Que tal expandir sua carreira no PAN?</h1>
-          <p className={S.paragraph}>Se você se adapta bem às mudanças e gosta delas, o PAN é o seu lugar.</p>
+          <h3 className={S.subtitle}>Oportunidades</h3>
+          <h1 className={S.title}>Que tal expandir sua carreira na América Financeira?</h1>
+          <p className={S.paragraph}>
+            Se você se adapta bem às mudanças e gosta delas, a América Financeira é o seu lugar.
+          </p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
           <fieldset>
@@ -178,8 +179,8 @@ const Careers = () => {
                 <p className={S['text-america']}>América Financeira</p>
                 <legend className={S.title}>Formulário de Candidatura</legend>
                 <p className={S.subtitle}>
-                  Olá 👋 Obrigado pelo seu interesse em se juntar à nossa equipe! Por favor, preencha o formulário
-                  abaixo e nossa equipe entrará em contato em breve. Estamos ansiosos para analisar sua candidatura 🙌
+                  Bem-vindo(a)! 😊 Estamos felizes com seu interesse em fazer parte da nossa equipe. Complete o
+                  formulário abaixo e entraremos em contato em breve. Boa sorte na sua candidatura! 🚀
                 </p>
               </div>
             </div>
@@ -212,10 +213,18 @@ const Careers = () => {
               {...register('filialInteresse', { required: 'Filial de Interesse é obrigatória' })}
               className={`${S['input-text']} ${errors.filialInteresse ? S['input-text-error'] : ''}`}
             >
-              <option value="">Selecione</option>
-              <option value="Filial 1">Filial 1</option>
-              <option value="Filial 2">Filial 2</option>
-              <option value="Filial 3">Filial 3</option>
+              <option value="">Selecionar filial</option>
+              <option value="São Pedro-SP" selected>
+                São Pedro-SP
+              </option>
+              <option value="Campinas-SP">Campinas-SP</option>
+              <option value="Hortolândia-SP">Hortolândia-SP</option>
+              <option value="São Carlos-SP">São Carlos-SP</option>
+              <option value="Jundiaí-SP">Jundiaí-SP</option>
+              <option value="Piracicaba-SP">Piracicaba-SP</option>
+              <option value="Rio Claro-SP">Rio Claro-SP</option>
+              <option value="Itirapina-SP">Itirapina-SP</option>
+              <option value="Sumaré-SP">Sumaré-SP</option>
             </select>
             {errors.filialInteresse && <span className={S.error}>{errors.filialInteresse.message}</span>}
 
