@@ -23,14 +23,14 @@ const MENU: MenuProps[] = [
     title: 'Outras informações',
     items: [
       { label: 'Quem somos', link: '/quem-somos' },
-      { label: 'Seja parceiro', link: '/parceiros' },
+      { label: 'Seja parceiro', link: '/seja-um-parceiro' },
       {
         label: 'Nossas Unidades',
-        link: 'https://www.google.com/maps/search/Am%C3%A9rica+Financeira/@-22.3971915,-48.0358251,10z/data=!3m1!4b1?entry=ttu',
+        link: '/nossas-unidades',
       },
       {
         label: 'Intranet',
-        link: 'intranet',
+        link: '/area-de-acesso',
       },
     ],
   },

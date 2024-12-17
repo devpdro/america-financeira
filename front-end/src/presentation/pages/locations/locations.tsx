@@ -10,7 +10,7 @@ const LOCATIONS = [
     ramal: 'Matriz',
     whatsapp:
       'https://api.whatsapp.com/send?phone=5519988285625&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
-    maps: 'https://goo.gl/maps/XXXXXX',
+    maps: 'https://www.google.com.br/maps/place/Am%C3%A9rica+Financeira/@-22.5513548,-47.9075013,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipN0EPaCwmbpZrPulyU81pc93vnQDG7ipU414Jjq!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN0EPaCwmbpZrPulyU81pc93vnQDG7ipU414Jjq%3Dw86-h114-k-no!7i4284!8i5712!4m7!3m6!1s0x94c7b009f24b078b:0x6330be2ce5101a46!8m2!3d-22.5513526!4d-47.9076079!10e5!16s%2Fg%2F11bv6ps7ty?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D',
   },
   {
     name: 'Campinas-SP',
