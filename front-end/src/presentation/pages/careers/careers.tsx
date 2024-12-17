@@ -167,9 +167,9 @@ const Careers = () => {
       <div className={S['form-container']} id="candidate">
         <div className={S['text-section']}>
           <h3 className={S.subtitle}>Oportunidades</h3>
-          <h1 className={S.title}>Que tal expandir sua carreira na América Financeira?</h1>
+          <h1 className={S.title}>Que tal expandir sua carreira na <br /> América Financeira?</h1>
           <p className={S.paragraph}>
-            Se você se adapta bem às mudanças e gosta delas, a América Financeira é o seu lugar.
+            Se você se adapta bem às mudanças e gosta delas, a América Financeira <br /> é o seu lugar.
           </p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
