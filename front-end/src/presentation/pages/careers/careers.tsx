@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-import { Meta, Button, Modal, Header, Candidate } from 'src/presentation/components'
+import { Meta, Button, Modal, HeaderMobile, Candidate } from 'src/presentation/components'
 import { ICON, IMAGE } from 'src/presentation/assets'
 
 import S from './careers.module.scss'
@@ -96,7 +96,7 @@ const Careers = () => {
         description="Candidate-se para as vagas disponíveis na América Financeira e venha fazer parte do nosso time!"
         keywords="carreiras, emprego, América Financeira, oportunidades de trabalho, candidatura"
       />
-      <Header
+      <HeaderMobile
         title="Carreiras"
         subtitle={`É hora de expandir sua \ncarreira com a América`}
         paragraph="*Entre para o nosso time"

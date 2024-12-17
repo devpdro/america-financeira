@@ -14,7 +14,10 @@ const Warning = () => {
   return (
     <div className={S.container}>
       <div className={S['box-section']}>
-        <h1 className={S.title}>Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo</h1>
+        <h1 className={S.title}>
+          Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo. Em caso de dúvidas, ligue para
+          o 0800 000 0120.
+        </h1>
         <ICON.IconX className={S.icon} onClick={() => setIsVisible(false)} />
       </div>
     </div>

@@ -10,10 +10,10 @@
   height: 100vh;
   z-index: 2;
   @media (min-width: 625px) and (max-width: 994px) {
-    height: 130vh;
+    height: 90vh;
   }
   @media (max-width: 624px) {
-    height: 145vh;
+    height: 90vh;
   }
   .box-section {
     @include display-flex(center, space-between);
@@ -27,12 +27,10 @@
     @media (min-width: 625px) and (max-width: 994px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 9.8rem;
     }
     @media (max-width: 624px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-      margin-top: 11rem;
     }
     .text-section {
       gap: 8px;

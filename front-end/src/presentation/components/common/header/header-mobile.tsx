@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image'
 
 import { LoanRequest } from 'src/presentation/components/form'
 
-import S from './header.module.scss'
+import S from './header-mobile.module.scss'
 
 type HeaderMobileProps = {
   title: string

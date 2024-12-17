@@ -10,10 +10,10 @@
   height: 100vh;
   z-index: 2;
   @media (min-width: 625px) and (max-width: 994px) {
-    height: 90vh;
+    height: 130vh;
   }
   @media (max-width: 624px) {
-    height: 90vh;
+    height: 145vh;
   }
   .box-section {
     @include display-flex(center, space-between);
