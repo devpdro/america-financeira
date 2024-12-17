@@ -1,14 +1,12 @@
-import Image from 'next/image'
-import { useState } from 'react'
+import { Button, Meta } from 'src/presentation/components'
 
-import { Meta } from 'src/presentation/components'
-
-import { IconRainbow, IconBuildingBank, IconFlame, IconLink, IconMail } from '@tabler/icons-react'
-
-import { IMAGE } from 'src/presentation/assets'
-import { ICONS } from 'src/data/ui'
+import { IconRainbow, IconBuildingBank, IconFlame, IconLink, IconMail, IconCurrencyDollar } from '@tabler/icons-react'
 
 import S from './intranet.module.scss'
+import Image from 'next/image'
+import { IMAGE } from 'src/presentation/assets'
+import { useState } from 'react'
+import Link from 'next/link'
 
 const ITEMS = [
   {
@@ -89,19 +87,17 @@ const ITEMS = [
       { text: 'Via Certa', link: 'https://sistema.acertapromotora.com.br' },
     ],
   },
+  {
+    icon: <IconCurrencyDollar />,
+    title: 'Segurados',
+    info: [{ text: 'BMG MED', link: 'https://www.bmgconsig.com.br/Index.do?method=prepare&logout=true' }],
+  },
 ]
 
 const Intranet = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-
-  const handleMouseEnter = (index: number) => setHoveredIndex(index)
-  const handleMouseLeave = () => setHoveredIndex(null)
- 
-  const handleBoxClick = (info: { text: string; link: string }) => {
-    if (info) {
-      window.open(info.link, '_blank')
-    }
-  }
+  const [showBanks, setShowBanks] = useState(false)
+  const [showLinks, setShowLinks] = useState(false)
+  const [showInsureds, setShowInsureds] = useState(false)
 
   return (
     <>
@@ -111,52 +107,90 @@ const Intranet = () => {
         keywords="Intranet, America Financeira, recursos internos, suporte especializado, equipe, parceiros"
       />
 
-      <div className={S['links-container']}>
-        {ITEMS.map((item, index) => (
-          <div
-            key={index}
-            className={S['links-box']}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => item.info.length === 1 && handleBoxClick(item.info[0])} // Se houver apenas um link, abre diretamente
-          >
-            <span className={S.icon}>{item.icon}</span>
-            <h3 className={S.title}>{item.title}</h3>
+      <div className={S['header']}>
+        <div className={S['box']}>
+          <Image className={S.img} src={IMAGE.AREA_DE_ACESSO} alt="Área de acesso" />
+          <h1 className={S['title']}>Intranet</h1>
+        </div>
 
-            {hoveredIndex === index && item.info.length > 1 && (
-              <div className={S['links-dropdown']}>
-                {item.info.map((link, idx) => (
-                  <a key={idx} href={link.link} target="_blank" rel="noopener noreferrer" className={S['link-item']}>
-                    {link.text}
-                  </a>
+        <div className={S['icons-section']}>
+          <div className={S['icons-box']}>
+            <Image className={S.img} src={IMAGE.COMPUTADOR} alt="Computador" />
+            <h1 className={S['title-icon']}>Gap Sys</h1>
+            <Link href="https://app.gapsys.com.br/login" target="_blank">
+              <Button typeStyle="btn2" label="Entrar" width="150px" />
+            </Link>
+          </div>
+          <div className={S['icons-box']}>
+            <Image className={S.img} src={IMAGE.ASSISTENCIA_SOCIAL} alt="Área do parceiro " />
+            <h1 className={S['title-icon']}>Área do Parceiro</h1>
+            <Link href="https://america.nodesistemas.com.br/" target="_blank">
+              <Button typeStyle="btn2" label="Entrar" width="150px" />
+            </Link>
+          </div>
+          <div className={S['icons-box']}>
+            <Image className={S.img} src={IMAGE.EMAIL} alt="Email" />
+            <h1 className={S['title-icon']}>Webmail</h1>
+            <Link href="https://webmail.americafinanceira.com.br/" target="_blank">
+              <Button typeStyle="btn2" label="Entrar" width="150px" />
+            </Link>
+          </div>
+        </div>
+
+        <div className={S['links-section']}>
+          <div className={S['links-box']}>
+            <Image className={S.img} src={IMAGE.BANK} alt="Bancos" />
+            <h1 className={S['title-icon']}>Bancos autorizados</h1>
+            <h4 onClick={() => setShowBanks(!showBanks)} className={S['clickable']}>
+              {showBanks ? 'Ver menos' : 'Ver mais'}
+            </h4>
+            {showBanks && (
+              <ul>
+                {ITEMS.find((item) => item.title === 'Bancos')?.info.map((bank) => (
+                  <li key={bank.text}>
+                    <a href={bank.link} target="_blank" rel="noopener noreferrer">
+                      {bank.text}
+                    </a>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
           </div>
-        ))}
-      </div>
-
-      <div className={S['card-container']}>
-        <div className={S['card-section']}>
-          <Image
-            className={S.logo}
-            src={IMAGE.LOGO_AMERICA_LETRAS_AZUL.src}
-            alt="Logo América Financeira"
-            width={100}
-            height={100}
-            layout="responsive"
-          />
-          <div className={S.title}>Siga a gente</div>
-          <p className={S.subtitle}>
-            Conheça nossa cultura, explore nossos serviços e veja como <br /> transformamos finanças em oportunidades
-            todos os dias.
-          </p>
-          <div className={S.icons}>
-            {ICONS.map(({ icon: Icon, link }, index) => (
-              <a key={index} href={link} target="_blank" rel="noopener noreferrer">
-                <Icon className={S.icon} />
-              </a>
-            ))}
+          <div className={S['links-box']}>
+            <Image className={S.img} src={IMAGE.PESQUISA} alt="Pesquisar" />
+            <h1 className={S['title-icon']}>Links Úteis</h1>
+            <h4 onClick={() => setShowLinks(!showLinks)} className={S['clickable']}>
+              {showLinks ? 'Ver menos' : 'Ver mais'}
+            </h4>
+            {showLinks && (
+              <ul>
+                {ITEMS.find((item) => item.title === 'Links úteis')?.info.map((link) => (
+                  <li key={link.text}>
+                    <a href={link.link} target="_blank" rel="noopener noreferrer">
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          <div className={S['links-box']}>
+            <Image className={S.img} src={IMAGE.SEGURADORAS} alt="Seguradoras" />
+            <h1 className={S['title-icon']}>Seguradoras</h1>
+            <h4 onClick={() => setShowInsureds(!showInsureds)} className={S['clickable']}>
+              {showInsureds ? 'Ver menos' : 'Ver mais'}
+            </h4>
+            {showInsureds && (
+              <ul>
+                {ITEMS.find((item) => item.title === 'Segurados')?.info.map((link) => (
+                  <li key={link.text}>
+                    <a href={link.link} target="_blank" rel="noopener noreferrer">
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>

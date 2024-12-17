@@ -14,7 +14,7 @@ const LOCATIONS = [
   },
   {
     name: 'Campinas-SP',
-    ramal: '4012',
+    ramal: '1407',
     whatsapp:
       'https://api.whatsapp.com/send?phone=5519999744679&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
     maps: 'https://www.google.com/maps/place/R.+Bernardino+de+Campos,+471+-+Centro,+Campinas+-+SP,+13010-150/@-22.9053988,-47.0675227,17z/data=!3m1!4b1!4m5!3m4!1s0x94c8c8b0db4e8b11:0xacf82ad84bc13544!8m2!3d-22.9054038!4d-47.065334?shorturl=1',
@@ -56,14 +56,14 @@ const LOCATIONS = [
   },
   {
     name: 'Itirapina-SP',
-    ramal: '',
+    ramal: '2201',
     whatsapp:
       'https://api.whatsapp.com/send?phone=5519982591097&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
     maps: 'https://www.google.com/maps/place/R.+Quatro,+768+-+Centro,+Rio+Claro+-+SP,+13500-030/@-22.4128926,-47.5619534,17z/data=!3m1!4b1!4m5!3m4!1s0x94c7da5a574cfa39:0x59f2f787c699a9a7!8m2!3d-22.4128976!4d-47.5597647?shorturl=1',
   },
   {
     name: 'Sumaré-SP',
-    ramal: '',
+    ramal: '2163',
     whatsapp:
       'https://api.whatsapp.com/send?phone=5519982591097&text=Ol%C3%A1!%20Vim%20do%20site%20da%20Am%C3%A9rica%20Financeira!',
     maps: 'https://www.google.com/maps/place/R.+Quatro,+768+-+Centro,+Rio+Claro+-+SP,+13500-030/@-22.4128926,-47.5619534,17z/data=!3m1!4b1!4m5!3m4!1s0x94c7da5a574cfa39:0x59f2f787c699a9a7!8m2!3d-22.4128976!4d-47.5597647?shorturl=1',

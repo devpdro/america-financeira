@@ -1,133 +1,96 @@
 @import '../../styles/themes/light.scss';
 @import '../../styles/themes/mixins.scss';
 
-.links-container {
-  @include container(1280px);
-  @include display-flex;
-  padding: 7.5rem 2rem 0 2rem;
-  @media (max-width: 780px) {
-    flex-direction: column;
-    padding: 7.5rem 2rem 0 2rem;
-  }
-  .links-box {
-    @include display-flex;
+.header {
+  .box {
     position: relative;
-    cursor: pointer;
-    flex-direction: column;
-    color: $color-darkHigh;
-    background-color: $color-secondary;
-    border-radius: $radii-default;
-    margin: 2.2rem 0.5rem 3rem 0.5rem;
-    padding: 1.25rem;
-    box-shadow: 2px 2px 3px $color-primary;
-    border: 1px solid $color-primary;
-    width: 9.6rem;
-    @media (max-width: 780px) {
-      margin: 1rem 0.5rem 0.5rem 0.5rem;
+    .img {
       width: 100%;
-    }
-    &:hover {
-      transition: all 0.3s ease;
-      background-color: $color-primary;
-      color: $color-snow;
-    }
-    .icon {
-      margin-bottom: 0.2rem;
-      font-size: 1.5rem;
+      height: 325px;
+      display: block;
+      margin-bottom: 0.7rem;
+      object-fit: cover;
     }
     .title {
-      font-weight: $weight-default;
-      line-height: 1.3rem;
-      font-size: 1rem;
-    }
-    .links-dropdown {
-      display: flex;
-      text-align: left;
       position: absolute;
-      flex-direction: column;
-      background-color: $color-snow;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      top: 4.4rem;
-      width: 190px;
-      left: 0;
-      border-radius: $radii-small;
-      padding: 0.5rem 1rem;
-      z-index: 10;
+      top: 50%;
+      left: 20%;
+      text-transform: uppercase;
+      color: $color-snow;
+      letter-spacing: 0.1px;
+      font-size: $font-large;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      @media (max-width: 55rem) {
+        font-size: $font-medium;
+      }
+    }
+  }
+}
+
+.icons-section {
+  @include container(1080px);
+  @include display-flex(center, space-around);
+  padding: 0 2rem;
+  margin-top: 2.5rem;
+  gap: 2.5rem;
+  @media (max-width: 55rem) {
+    flex-direction: column;
+  }
+  .icons-box {
+    text-align: center;
+    .img {
+      width: auto;
+      height: 170px;
+    }
+    .title-icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.links-section {
+  @include container(1180px);
+  @include display-flex(flex-start, space-around);
+  padding: 0 2rem;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  @media (max-width: 55rem) {
+    @include display-flex(center, space-around);
+    flex-direction: column;
+  }
+  .links-box {
+    text-align: center;
+    @media (max-width: 55rem) {
+      margin-bottom: 3rem;
+    }
+    .img {
+      width: auto;
+      height: 80px;
+    }
+    .title-icon {
+      font-size: 1.6rem;
       margin-top: 0.5rem;
-      .link-item {
-        color: $color-darkHigh;
-        margin: 0.075rem 0;
-        &:hover {
+      margin-bottom: 0.25rem;
+    }
+    .clickable {
+      text-transform: uppercase;
+      font-weight: $weight-light;
+      cursor: pointer;
+    }
+    ul {
+      margin-top: 0.5rem;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+      border-radius: $radii-default;
+      padding: 1rem 2rem;
+      li {
+        a {
           color: $color-primary;
+          font-size: $font-default;
           border-bottom: 1px solid $color-primary;
         }
       }
     }
-  }
-}
-
-.card-container {
-  @include display-flex;
-  margin-bottom: 3.5rem;
-  .card-section {
-    position: relative;
-    text-align: center;
-    background: $color-snow;
-    border-radius: $radii-default;
-    color: $color-snow;
-    padding: 4rem 0 5rem 0;
-    width: 50rem;
-    .logo {
-      width: 200px !important;
-      height: 50px;
-      margin-bottom: 0.4rem;
-      @media (max-width: 880px) {
-        margin-bottom: 0.8rem;
-        width: 150px !important;
-        height: 50px;
-      }
-    }
-    .title {
-      position: relative;
-      font-size: $font-medium;
-      font-weight: $weight-medium;
-      color: $color-darkHigh;
-      margin-bottom: 0.7rem;
-    }
-    .subtitle {
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: $weight-medium;
-      color: $color-darkHigh;
-      margin-bottom: 1.5rem;
-      line-height: 1.4rem;
-      padding: 0 2rem;
-    }
-    .icons {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      gap: 1.4rem;
-      a {
-        color: $color-primary;
-        transition: transform 0.3s, color 0.3s;
-        &:hover {
-          transform: scale(1.2);
-          color: $color-primary;
-        }
-        .icon {
-          font-size: 1.8rem;
-        }
-      }
-    }
-  }
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(150px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(150px) rotate(-360deg);
   }
 }

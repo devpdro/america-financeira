@@ -46,15 +46,11 @@ const Careers = () => {
   } = useForm<CareersProps>({
     defaultValues: {
       nome: '',
-      email: '',
       telefone: '',
       dataNascimento: '',
       filialInteresse: '',
       cidade: '',
       cep: '',
-      endereco: '',
-      numero: '',
-      motivo: '',
       curriculo: undefined,
     },
   })
@@ -63,7 +59,6 @@ const Careers = () => {
     try {
       const formData = new FormData()
       formData.append('nome', data.nome)
-      formData.append('email', data.email)
       formData.append('telefone', data.telefone)
       formData.append('dataNascimento', data.dataNascimento)
       formData.append('filialInteresse', data.filialInteresse)
@@ -85,6 +80,7 @@ const Careers = () => {
       setModalMessage('Obrigado! Em breve entraremos em contato.')
       reset()
     } catch (error) {
+      reset()
       setModalMessage('Obrigado! Em breve entraremos em contato.')
     } finally {
       setIsModalOpen(true)
@@ -143,7 +139,7 @@ const Careers = () => {
       </div>
 
       <Candidate position="right" />
-      
+
       <div className={S['benefits-container']}>
         <div className={S['benefits-section']}>
           <div className={S['text-section']}>
@@ -167,10 +163,18 @@ const Careers = () => {
       <div className={S['form-container']} id="candidate">
         <div className={S['text-section']}>
           <h3 className={S.subtitle}>Oportunidades</h3>
-          <h1 className={S.title}>Que tal expandir sua carreira na <br /> América Financeira?</h1>
+          <h1 className={S.title}>
+            Que tal expandir sua carreira na <br /> América Financeira?
+          </h1>
           <p className={S.paragraph}>
             Se você se adapta bem às mudanças e gosta delas, a América Financeira <br /> é o seu lugar.
           </p>
+          <div className={S['image-section']}>
+            <Image className={S.img} src={IMAGE.LOGO_TRABALHAR_1} alt="Certificado de trabalho" />
+            <Image className={S.img} src={IMAGE.LOGO_TRABALHAR_2} alt="Certificado de trabalho" />
+            <Image className={S.img} src={IMAGE.LOGO_TRABALHAR_3} alt="Certificado de trabalho" />
+            <Image className={S.img} src={IMAGE.LOGO_TRABALHAR_4} alt="Certificado de trabalho" />
+          </div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={S.form}>
           <fieldset>
