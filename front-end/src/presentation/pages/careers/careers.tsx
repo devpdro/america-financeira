@@ -200,8 +200,9 @@ const Careers = () => {
             <input
               {...register('telefone', { required: 'Telefone é obrigatório' })}
               className={`${S['input-text']} ${errors.telefone ? S['input-text-error'] : ''}`}
-              type="text"
               placeholder="Telefone"
+              type="tel"
+              inputMode="tel"
             />
             {errors.telefone && <span className={S.error}>{errors.telefone.message}</span>}
 
@@ -245,6 +246,7 @@ const Careers = () => {
               className={`${S['input-text']} ${errors.cep ? S['input-text-error'] : ''}`}
               type="text"
               placeholder="CEP"
+              inputMode="tel"
             />
             {errors.cep && <span className={S.error}>{errors.cep.message}</span>}
 
