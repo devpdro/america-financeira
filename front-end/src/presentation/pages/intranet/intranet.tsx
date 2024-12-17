@@ -39,6 +39,7 @@ const ITEMS = [
     icon: <IconBuildingBank />,
     title: 'Bancos',
     info: [
+      { text: 'Banco Sabemi', link: 'https://www.portalseguro.srv.br/Login.aspx?ReturnUrl=%2f' },
       { text: 'Banco Santander', link: 'https://www.parceirosantander.com.br/spa-base/landing-page' },
       { text: 'Banco Mercantil', link: 'https://meu.bancomercantil.com.br/login' },
       { text: 'Banco Safra', link: 'https://epfweb.safra.com.br/Home/Login' },
