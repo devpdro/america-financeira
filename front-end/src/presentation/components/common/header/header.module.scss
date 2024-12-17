@@ -27,12 +27,12 @@
     @media (min-width: 625px) and (max-width: 994px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-    
+      margin-top: 9.8rem;
     }
     @media (max-width: 624px) {
       @include display-flex(center, flex-start);
       flex-direction: column;
-     
+      margin-top: 11rem;
     }
     .text-section {
       gap: 8px;
