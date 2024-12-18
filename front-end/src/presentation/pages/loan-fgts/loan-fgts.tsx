@@ -1,5 +1,8 @@
 import { Meta, Header, Spotlight, Simulation, Banks, Panel, Faq } from 'src/presentation/components'
+
 import { IMAGE } from 'src/presentation/assets'
+
+import S from './loan-fgts.module.scss'
 
 const FAQLOAN = [
   {
@@ -52,7 +55,7 @@ const LoanFGTS = () => {
   const IMAGES = IMAGE.DUAS_PESSOAS_CONVERSANDO
 
   return (
-    <div>
+    <div className={S.container}>
       <Meta
         title="Empréstimo FGTS: Antecipe o saque aniversário do FGTS"
         description="O empréstimo FGTS permite utilizar o saldo do Fundo de Garantia como garantia, oferecendo condições especiais e flexibilidade para o pagamento. Simule agora!"
