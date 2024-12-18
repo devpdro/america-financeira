@@ -18,7 +18,7 @@ const Warning = () => {
           Atenção: Não solicitamos nenhum pagamento prévio para aprovação do empréstimo. Em caso de dúvidas, ligue para
           o 0800 000 0120.
         </h1>
-        <ICON.IconX className={S.icon} onClick={() => setIsVisible(false)} />
+        <ICON.IconX size={30} className={S.icon} onClick={() => setIsVisible(false)} />
       </div>
     </div>
   )
